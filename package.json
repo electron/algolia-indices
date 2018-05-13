@@ -1,0 +1,21 @@
+{
+  "name": "electron-search",
+  "version": "1.0.0",
+  "description": "Experimental Algolia search index for Electron API, docs, etc.",
+  "main": "index.json",
+  "repository": "https://github.com/electron/electron-search",
+  "author": "zeke",
+  "license": "MIT",
+  "scripts": {
+    "build": "script/build.js > index.json",
+    "pretest": "npm run build",
+    "test": "tape test.js | tap-spec && standard --fix"
+  },
+  "devDependencies": {
+    "is-url": "^1.2.4",
+    "prettier-standard": "^8.0.1",
+    "standard": "^11.0.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.9.0"
+  }
+}
