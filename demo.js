@@ -48,8 +48,3 @@ search.addWidget(
 )
 
 search.start()
-
-// autocomplete(/* your existing code */)
-//   .on('autocomplete:selected', function (event, suggestion, dataset) {
-//     location.href = suggestion.url
-//   })
