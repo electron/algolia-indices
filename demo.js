@@ -25,6 +25,7 @@ search.addWidget(
     templates: {
       empty: 'No results',
       item: `
+        {{{_highlightResult.type.value}}} 
         <b>{{{_highlightResult.title.value}}}</b> - 
         {{{_highlightResult.tldr.value}}}
       `
