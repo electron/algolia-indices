@@ -1,12 +1,22 @@
-const apis = require('.')
+const entries = require('.')
 const test = require('tape')
-// const isURL = require('is-url')
+const isURL = require('is-url')
+const types = ['api', 'tutorial']
 
 test('electron-search', t => {
-  t.ok(Array.isArray(apis), 'is an array')
-  t.ok(apis.length > 5, 'with hella entries')
+  // All Entries
+  // ----------------------------------------------------------------------
+  t.ok(Array.isArray(entries), 'is an array')
+  t.ok(entries.length > 5, 'with hella entries')
+  entries.forEach(entry => {
+    t.ok(types.includes(entry.type), `${entry.title} has a known type`)
+  })
 
-  // console.log(apis.map(api => api.title))
+  // APIs
+  // ----------------------------------------------------------------------
+  const apis = entries.filter(entry => entry.type === 'api')
+
+  t.ok(apis.length > 5, 'lots of APIs')
 
   let staticMethod = apis.find(api => api.title === 'Menu.getApplicationMenu()')
   t.equal(staticMethod.url, 'https://electronjs.org/docs/api/menu#menugetapplicationmenu', 'sets proper URL on static methods')
@@ -20,7 +30,22 @@ test('electron-search', t => {
     // t.ok(isURL(api.url), `${api.title} has a valid URL`)
   })
 
+  // Tutorials
+  // ----------------------------------------------------------------------
+  const tutorials = entries.filter(entry => entry.type === 'tutorial')
+
+  tutorials.forEach(tutorial => {
+    if (!tutorial.title) console.log(tutorial)
+    t.equal(typeof tutorial.title, 'string', `${tutorial.title} has a title`)
+    t.equal(typeof tutorial.body, 'string', `${tutorial.title} has a body`)
+    t.ok(isURL(tutorial.githubUrl), `${tutorial.title} has a valid GitHub URL`)
+  })
+
+  // Packages
+  // ----------------------------------------------------------------------
+
+  // Repos
+  // ----------------------------------------------------------------------
+
   t.end()
 })
-
-// https://electronjs.org/docs/api/browser-window#event-page-title-updated

@@ -4,44 +4,6 @@ document.title = 'Electron Search'
 
 const $main = html`
 <main>
-  <style>
-    * {
-     box-sizing: border-box;
-    }
-
-    body {  
-      padding: 50px;
-      font-family: 'helvetica neue', helvetica, arial;
-    }
-
-    #search-box input {
-      padding: 10px;
-      width: 100%;
-    }
-
-    .ais-hits--item {
-      padding: 10px;
-    }
-
-    .ais-hits--item em {
-      background-color: yellow;
-    }
-
-    .ais-search-box--magnifier {
-      display: none;
-    }
-
-    .ais-search-box--reset {
-      top: 12px;
-      width: 30px;
-      height: 30px;
-      border: none;
-      position: absolute;
-      right: 10px;
-      opacity: 0.2;
-    }
-  </style>
-
   <div id="search-box"></div>
   <div id="refinement-list"></div>
   <div id="hits"></div>
