@@ -1,7 +1,7 @@
 const entries = require('.')
 const test = require('tape')
 const isURL = require('is-url')
-const types = ['api', 'tutorial']
+const types = ['api', 'tutorial', 'app']
 
 test('electron-search', t => {
   // All Entries
