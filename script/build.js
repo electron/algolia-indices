@@ -12,9 +12,7 @@ apis.forEach(api => {
     method.type = 'staticMethod'
     method.tldr = getTLDR(method)
     const slug = method.name.replace(/\W/g, '').toLowerCase()
-    method.url = `https://electronjs.org/docs/api/${api.slug}#${
-      api.slug
-    }${slug}`
+    method.url = `https://electronjs.org/docs/api/${api.slug}#${api.slug}${slug}`
     delete method.signature
     results.push(method)
   })
@@ -24,6 +22,8 @@ apis.forEach(api => {
     method.title = `${api.instanceName}.${method.name}${method.signature}`
     method.type = 'instanceMethod'
     method.tldr = getTLDR(method)
+    const slug = method.name.replace(/\W/g, '').toLowerCase()
+    method.url = `https://electronjs.org/docs/api/${api.slug}#${api.slug}${slug}`
     delete method.signature
     results.push(method)
   })
@@ -32,9 +32,7 @@ apis.forEach(api => {
   events.forEach(event => {
     event.title = `${api.name}.on('${event.name}')`
     event.type = 'event'
-    event.url = `https://electronjs.org/docs/api/${api.slug}#event-${
-      event.name
-    }`
+    event.url = `https://electronjs.org/docs/api/${api.slug}#event-${event.name}`
     event.tldr = getTLDR(event)
     results.push(event)
   })
@@ -43,9 +41,7 @@ apis.forEach(api => {
   instanceEvents.forEach(event => {
     event.title = `${api.instanceName}.on('${event.name}')`
     event.type = 'event'
-    event.url = `https://electronjs.org/docs/api/${api.slug}#event-${
-      event.name
-    }`
+    event.url = `https://electronjs.org/docs/api/${api.slug}#event-${event.name}`
     event.tldr = getTLDR(event)
     results.push(event)
   })

@@ -841,7 +841,8 @@
     "description": "Force closing the view, the unload and beforeunload events won't be emitted for the web page. After you're done with a view, call this function in order to free memory and other resources as soon as possible.",
     "title": "view.destroy()",
     "type": "instanceMethod",
-    "tldr": "Force closing the view, the unload and beforeunload events won't be emitted for the web page."
+    "tldr": "Force closing the view, the unload and beforeunload events won't be emitted for the web page.",
+    "url": "https://electronjs.org/docs/api/browser-view#browser-viewdestroy"
   },
   {
     "name": "isDestroyed",
@@ -852,7 +853,8 @@
     },
     "title": "view.isDestroyed()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the view is destroyed."
+    "tldr": "Returns whether the view is destroyed.",
+    "url": "https://electronjs.org/docs/api/browser-view#browser-viewisdestroyed"
   },
   {
     "name": "setAutoResize",
@@ -885,7 +887,8 @@
     ],
     "title": "view.setAutoResize(options)",
     "type": "instanceMethod",
-    "tldr": null
+    "tldr": null,
+    "url": "https://electronjs.org/docs/api/browser-view#browser-viewsetautoresize"
   },
   {
     "name": "setBounds",
@@ -903,7 +906,8 @@
     ],
     "title": "view.setBounds(bounds)",
     "type": "instanceMethod",
-    "tldr": "Resizes and moves the view to the supplied bounds relative to the window.."
+    "tldr": "Resizes and moves the view to the supplied bounds relative to the window..",
+    "url": "https://electronjs.org/docs/api/browser-view#browser-viewsetbounds"
   },
   {
     "name": "setBackgroundColor",
@@ -921,7 +925,8 @@
     ],
     "title": "view.setBackgroundColor(color)",
     "type": "instanceMethod",
-    "tldr": null
+    "tldr": null,
+    "url": "https://electronjs.org/docs/api/browser-view#browser-viewsetbackgroundcolor"
   },
   {
     "name": "getAllWindows",
@@ -1111,28 +1116,32 @@
     "description": "Force closing the window, the unload and beforeunload event won't be emitted for the web page, and close event will also not be emitted for this window, but it guarantees the closed event will be emitted.",
     "title": "win.destroy()",
     "type": "instanceMethod",
-    "tldr": "Force closing the window, the unload and beforeunload event won't be emitted for the web page, and close event will also not be emitted for this window, but it guarantees the closed event will be emitted.."
+    "tldr": "Force closing the window, the unload and beforeunload event won't be emitted for the web page, and close event will also not be emitted for this window, but it guarantees the closed event will be emitted..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowdestroy"
   },
   {
     "name": "close",
     "description": "Try to close the window. This has the same effect as a user manually clicking the close button of the window. The web page may cancel the close though. See the close event.",
     "title": "win.close()",
     "type": "instanceMethod",
-    "tldr": "Try to close the window."
+    "tldr": "Try to close the window.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowclose"
   },
   {
     "name": "focus",
     "description": "Focuses on the window.",
     "title": "win.focus()",
     "type": "instanceMethod",
-    "tldr": "Focuses on the window.."
+    "tldr": "Focuses on the window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowfocus"
   },
   {
     "name": "blur",
     "description": "Removes focus from the window.",
     "title": "win.blur()",
     "type": "instanceMethod",
-    "tldr": "Removes focus from the window.."
+    "tldr": "Removes focus from the window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowblur"
   },
   {
     "name": "isFocused",
@@ -1143,7 +1152,8 @@
     },
     "title": "win.isFocused()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the window is focused."
+    "tldr": "Returns whether the window is focused.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowisfocused"
   },
   {
     "name": "isDestroyed",
@@ -1154,28 +1164,32 @@
     },
     "title": "win.isDestroyed()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the window is destroyed."
+    "tldr": "Returns whether the window is destroyed.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowisdestroyed"
   },
   {
     "name": "show",
     "description": "Shows and gives focus to the window.",
     "title": "win.show()",
     "type": "instanceMethod",
-    "tldr": "Shows and gives focus to the window.."
+    "tldr": "Shows and gives focus to the window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowshow"
   },
   {
     "name": "showInactive",
     "description": "Shows the window but doesn't focus on it.",
     "title": "win.showInactive()",
     "type": "instanceMethod",
-    "tldr": "Shows the window but doesn't focus on it.."
+    "tldr": "Shows the window but doesn't focus on it..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowshowinactive"
   },
   {
     "name": "hide",
     "description": "Hides the window.",
     "title": "win.hide()",
     "type": "instanceMethod",
-    "tldr": "Hides the window.."
+    "tldr": "Hides the window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowhide"
   },
   {
     "name": "isVisible",
@@ -1186,7 +1200,8 @@
     },
     "title": "win.isVisible()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the window is visible to the user."
+    "tldr": "Returns whether the window is visible to the user.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowisvisible"
   },
   {
     "name": "isModal",
@@ -1197,21 +1212,24 @@
     },
     "title": "win.isModal()",
     "type": "instanceMethod",
-    "tldr": "Returns whether current window is a modal window."
+    "tldr": "Returns whether current window is a modal window.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowismodal"
   },
   {
     "name": "maximize",
     "description": "Maximizes the window. This will also show (but not focus) the window if it isn't being displayed already.",
     "title": "win.maximize()",
     "type": "instanceMethod",
-    "tldr": "Maximizes the window."
+    "tldr": "Maximizes the window.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowmaximize"
   },
   {
     "name": "unmaximize",
     "description": "Unmaximizes the window.",
     "title": "win.unmaximize()",
     "type": "instanceMethod",
-    "tldr": "Unmaximizes the window.."
+    "tldr": "Unmaximizes the window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowunmaximize"
   },
   {
     "name": "isMaximized",
@@ -1222,21 +1240,24 @@
     },
     "title": "win.isMaximized()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the window is maximized."
+    "tldr": "Returns whether the window is maximized.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowismaximized"
   },
   {
     "name": "minimize",
     "description": "Minimizes the window. On some platforms the minimized window will be shown in the Dock.",
     "title": "win.minimize()",
     "type": "instanceMethod",
-    "tldr": "Minimizes the window."
+    "tldr": "Minimizes the window.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowminimize"
   },
   {
     "name": "restore",
     "description": "Restores the window from minimized state to its previous state.",
     "title": "win.restore()",
     "type": "instanceMethod",
-    "tldr": "Restores the window from minimized state to its previous state.."
+    "tldr": "Restores the window from minimized state to its previous state..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowrestore"
   },
   {
     "name": "isMinimized",
@@ -1247,7 +1268,8 @@
     },
     "title": "win.isMinimized()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the window is minimized."
+    "tldr": "Returns whether the window is minimized.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowisminimized"
   },
   {
     "name": "setFullScreen",
@@ -1262,7 +1284,8 @@
     ],
     "title": "win.setFullScreen(flag)",
     "type": "instanceMethod",
-    "tldr": "Sets whether the window should be in fullscreen mode.."
+    "tldr": "Sets whether the window should be in fullscreen mode..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetfullscreen"
   },
   {
     "name": "isFullScreen",
@@ -1273,7 +1296,8 @@
     },
     "title": "win.isFullScreen()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the window is in fullscreen mode."
+    "tldr": "Returns whether the window is in fullscreen mode.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowisfullscreen"
   },
   {
     "name": "setSimpleFullScreen",
@@ -1291,7 +1315,8 @@
     ],
     "title": "win.setSimpleFullScreen(flag)",
     "type": "instanceMethod",
-    "tldr": "Enters or leaves simple fullscreen mode."
+    "tldr": "Enters or leaves simple fullscreen mode.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetsimplefullscreen"
   },
   {
     "name": "isSimpleFullScreen",
@@ -1305,7 +1330,8 @@
     },
     "title": "win.isSimpleFullScreen()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the window is in simple (pre-Lion) fullscreen mode."
+    "tldr": "Returns whether the window is in simple (pre-Lion) fullscreen mode.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowissimplefullscreen"
   },
   {
     "name": "setAspectRatio",
@@ -1331,7 +1357,8 @@
     ],
     "title": "win.setAspectRatio(aspectRatio[, extraSize])",
     "type": "instanceMethod",
-    "tldr": "This will make a window maintain an aspect ratio."
+    "tldr": "This will make a window maintain an aspect ratio.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetaspectratio"
   },
   {
     "name": "previewFile",
@@ -1357,7 +1384,8 @@
     ],
     "title": "win.previewFile(path[, displayName])",
     "type": "instanceMethod",
-    "tldr": "Uses Quick Look to preview a file at a given path.."
+    "tldr": "Uses Quick Look to preview a file at a given path..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowpreviewfile"
   },
   {
     "name": "closeFilePreview",
@@ -1367,7 +1395,8 @@
     "description": "Closes the currently open Quick Look panel.",
     "title": "win.closeFilePreview()",
     "type": "instanceMethod",
-    "tldr": "Closes the currently open Quick Look panel.."
+    "tldr": "Closes the currently open Quick Look panel..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowclosefilepreview"
   },
   {
     "name": "setBounds",
@@ -1388,7 +1417,8 @@
     ],
     "title": "win.setBounds(bounds[, animate])",
     "type": "instanceMethod",
-    "tldr": "Resizes and moves the window to the supplied bounds."
+    "tldr": "Resizes and moves the window to the supplied bounds.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetbounds"
   },
   {
     "name": "getBounds",
@@ -1398,7 +1428,8 @@
     },
     "title": "win.getBounds()",
     "type": "instanceMethod",
-    "tldr": null
+    "tldr": null,
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetbounds"
   },
   {
     "name": "setContentBounds",
@@ -1419,7 +1450,8 @@
     ],
     "title": "win.setContentBounds(bounds[, animate])",
     "type": "instanceMethod",
-    "tldr": "Resizes and moves the window's client area (e.g."
+    "tldr": "Resizes and moves the window's client area (e.g.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetcontentbounds"
   },
   {
     "name": "getContentBounds",
@@ -1429,7 +1461,8 @@
     },
     "title": "win.getContentBounds()",
     "type": "instanceMethod",
-    "tldr": null
+    "tldr": null,
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetcontentbounds"
   },
   {
     "name": "setEnabled",
@@ -1444,7 +1477,8 @@
     ],
     "title": "win.setEnabled(enable)",
     "type": "instanceMethod",
-    "tldr": "Disable or enable the window.."
+    "tldr": "Disable or enable the window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetenabled"
   },
   {
     "name": "setSize",
@@ -1471,7 +1505,8 @@
     ],
     "title": "win.setSize(width, height[, animate])",
     "type": "instanceMethod",
-    "tldr": "Resizes the window to width and height.."
+    "tldr": "Resizes the window to width and height..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetsize"
   },
   {
     "name": "getSize",
@@ -1482,7 +1517,8 @@
     },
     "title": "win.getSize()",
     "type": "instanceMethod",
-    "tldr": "Returns contains the window's width and height."
+    "tldr": "Returns contains the window's width and height.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetsize"
   },
   {
     "name": "setContentSize",
@@ -1509,7 +1545,8 @@
     ],
     "title": "win.setContentSize(width, height[, animate])",
     "type": "instanceMethod",
-    "tldr": "Resizes the window's client area (e.g."
+    "tldr": "Resizes the window's client area (e.g.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetcontentsize"
   },
   {
     "name": "getContentSize",
@@ -1520,7 +1557,8 @@
     },
     "title": "win.getContentSize()",
     "type": "instanceMethod",
-    "tldr": "Returns contains the window's client area's width and height."
+    "tldr": "Returns contains the window's client area's width and height.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetcontentsize"
   },
   {
     "name": "setMinimumSize",
@@ -1541,7 +1579,8 @@
     ],
     "title": "win.setMinimumSize(width, height)",
     "type": "instanceMethod",
-    "tldr": "Sets the minimum size of window to width and height.."
+    "tldr": "Sets the minimum size of window to width and height..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetminimumsize"
   },
   {
     "name": "getMinimumSize",
@@ -1552,7 +1591,8 @@
     },
     "title": "win.getMinimumSize()",
     "type": "instanceMethod",
-    "tldr": "Returns contains the window's minimum width and height."
+    "tldr": "Returns contains the window's minimum width and height.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetminimumsize"
   },
   {
     "name": "setMaximumSize",
@@ -1573,7 +1613,8 @@
     ],
     "title": "win.setMaximumSize(width, height)",
     "type": "instanceMethod",
-    "tldr": "Sets the maximum size of window to width and height.."
+    "tldr": "Sets the maximum size of window to width and height..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetmaximumsize"
   },
   {
     "name": "getMaximumSize",
@@ -1584,7 +1625,8 @@
     },
     "title": "win.getMaximumSize()",
     "type": "instanceMethod",
-    "tldr": "Returns contains the window's maximum width and height."
+    "tldr": "Returns contains the window's maximum width and height.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetmaximumsize"
   },
   {
     "name": "setResizable",
@@ -1599,7 +1641,8 @@
     ],
     "title": "win.setResizable(resizable)",
     "type": "instanceMethod",
-    "tldr": "Sets whether the window can be manually resized by user.."
+    "tldr": "Sets whether the window can be manually resized by user..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetresizable"
   },
   {
     "name": "isResizable",
@@ -1610,7 +1653,8 @@
     },
     "title": "win.isResizable()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the window can be manually resized by user."
+    "tldr": "Returns whether the window can be manually resized by user.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowisresizable"
   },
   {
     "name": "setMovable",
@@ -1629,7 +1673,8 @@
     ],
     "title": "win.setMovable(movable)",
     "type": "instanceMethod",
-    "tldr": "Sets whether the window can be moved by user."
+    "tldr": "Sets whether the window can be moved by user.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetmovable"
   },
   {
     "name": "isMovable",
@@ -1645,7 +1690,8 @@
     },
     "title": "win.isMovable()",
     "type": "instanceMethod",
-    "tldr": "On Linux always returns true.."
+    "tldr": "On Linux always returns true..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowismovable"
   },
   {
     "name": "setMinimizable",
@@ -1664,7 +1710,8 @@
     ],
     "title": "win.setMinimizable(minimizable)",
     "type": "instanceMethod",
-    "tldr": "Sets whether the window can be manually minimized by user."
+    "tldr": "Sets whether the window can be manually minimized by user.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetminimizable"
   },
   {
     "name": "isMinimizable",
@@ -1680,7 +1727,8 @@
     },
     "title": "win.isMinimizable()",
     "type": "instanceMethod",
-    "tldr": "On Linux always returns true.."
+    "tldr": "On Linux always returns true..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowisminimizable"
   },
   {
     "name": "setMaximizable",
@@ -1699,7 +1747,8 @@
     ],
     "title": "win.setMaximizable(maximizable)",
     "type": "instanceMethod",
-    "tldr": "Sets whether the window can be manually maximized by user."
+    "tldr": "Sets whether the window can be manually maximized by user.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetmaximizable"
   },
   {
     "name": "isMaximizable",
@@ -1715,7 +1764,8 @@
     },
     "title": "win.isMaximizable()",
     "type": "instanceMethod",
-    "tldr": "On Linux always returns true.."
+    "tldr": "On Linux always returns true..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowismaximizable"
   },
   {
     "name": "setFullScreenable",
@@ -1730,7 +1780,8 @@
     ],
     "title": "win.setFullScreenable(fullscreenable)",
     "type": "instanceMethod",
-    "tldr": "Sets whether the maximize/zoom window button toggles fullscreen mode or maximizes the window.."
+    "tldr": "Sets whether the maximize/zoom window button toggles fullscreen mode or maximizes the window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetfullscreenable"
   },
   {
     "name": "isFullScreenable",
@@ -1741,7 +1792,8 @@
     },
     "title": "win.isFullScreenable()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the maximize/zoom window button toggles fullscreen mode or maximizes the window."
+    "tldr": "Returns whether the maximize/zoom window button toggles fullscreen mode or maximizes the window.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowisfullscreenable"
   },
   {
     "name": "setClosable",
@@ -1760,7 +1812,8 @@
     ],
     "title": "win.setClosable(closable)",
     "type": "instanceMethod",
-    "tldr": "Sets whether the window can be manually closed by user."
+    "tldr": "Sets whether the window can be manually closed by user.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetclosable"
   },
   {
     "name": "isClosable",
@@ -1776,7 +1829,8 @@
     },
     "title": "win.isClosable()",
     "type": "instanceMethod",
-    "tldr": "On Linux always returns true.."
+    "tldr": "On Linux always returns true..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowisclosable"
   },
   {
     "name": "setAlwaysOnTop",
@@ -1831,7 +1885,8 @@
     ],
     "title": "win.setAlwaysOnTop(flag[, level][, relativeLevel])",
     "type": "instanceMethod",
-    "tldr": "Sets whether the window should show always on top of other windows."
+    "tldr": "Sets whether the window should show always on top of other windows.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetalwaysontop"
   },
   {
     "name": "isAlwaysOnTop",
@@ -1842,14 +1897,16 @@
     },
     "title": "win.isAlwaysOnTop()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the window is always on top of other windows."
+    "tldr": "Returns whether the window is always on top of other windows.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowisalwaysontop"
   },
   {
     "name": "center",
     "description": "Moves window to the center of the screen.",
     "title": "win.center()",
     "type": "instanceMethod",
-    "tldr": "Moves window to the center of the screen.."
+    "tldr": "Moves window to the center of the screen..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowcenter"
   },
   {
     "name": "setPosition",
@@ -1876,7 +1933,8 @@
     ],
     "title": "win.setPosition(x, y[, animate])",
     "type": "instanceMethod",
-    "tldr": "Moves window to x and y.."
+    "tldr": "Moves window to x and y..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetposition"
   },
   {
     "name": "getPosition",
@@ -1887,7 +1945,8 @@
     },
     "title": "win.getPosition()",
     "type": "instanceMethod",
-    "tldr": "Returns contains the window's current position."
+    "tldr": "Returns contains the window's current position.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetposition"
   },
   {
     "name": "setTitle",
@@ -1902,7 +1961,8 @@
     ],
     "title": "win.setTitle(title)",
     "type": "instanceMethod",
-    "tldr": "Changes the title of native window to title.."
+    "tldr": "Changes the title of native window to title..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsettitle"
   },
   {
     "name": "getTitle",
@@ -1914,7 +1974,8 @@
     },
     "title": "win.getTitle()",
     "type": "instanceMethod",
-    "tldr": "Note: The title of web page can be different from the title of the native window.."
+    "tldr": "Note: The title of web page can be different from the title of the native window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgettitle"
   },
   {
     "name": "setSheetOffset",
@@ -1938,7 +1999,8 @@
     ],
     "title": "win.setSheetOffset(offsetY[, offsetX])",
     "type": "instanceMethod",
-    "tldr": "Changes the attachment point for sheets on macOS."
+    "tldr": "Changes the attachment point for sheets on macOS.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetsheetoffset"
   },
   {
     "name": "flashFrame",
@@ -1953,7 +2015,8 @@
     ],
     "title": "win.flashFrame(flag)",
     "type": "instanceMethod",
-    "tldr": "Starts or stops flashing the window to attract user's attention.."
+    "tldr": "Starts or stops flashing the window to attract user's attention..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowflashframe"
   },
   {
     "name": "setSkipTaskbar",
@@ -1968,7 +2031,8 @@
     ],
     "title": "win.setSkipTaskbar(skip)",
     "type": "instanceMethod",
-    "tldr": "Makes the window not show in the taskbar.."
+    "tldr": "Makes the window not show in the taskbar..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetskiptaskbar"
   },
   {
     "name": "setKiosk",
@@ -1983,7 +2047,8 @@
     ],
     "title": "win.setKiosk(flag)",
     "type": "instanceMethod",
-    "tldr": "Enters or leaves the kiosk mode.."
+    "tldr": "Enters or leaves the kiosk mode..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetkiosk"
   },
   {
     "name": "isKiosk",
@@ -1994,7 +2059,8 @@
     },
     "title": "win.isKiosk()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the window is in kiosk mode."
+    "tldr": "Returns whether the window is in kiosk mode.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowiskiosk"
   },
   {
     "name": "getNativeWindowHandle",
@@ -2006,7 +2072,8 @@
     },
     "title": "win.getNativeWindowHandle()",
     "type": "instanceMethod",
-    "tldr": "The native type of the handle is HWND on Windows, NSView* on macOS, and Window (unsigned long) on Linux.."
+    "tldr": "The native type of the handle is HWND on Windows, NSView* on macOS, and Window (unsigned long) on Linux..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetnativewindowhandle"
   },
   {
     "name": "hookWindowMessage",
@@ -2030,7 +2097,8 @@
     ],
     "title": "win.hookWindowMessage(message, callback)",
     "type": "instanceMethod",
-    "tldr": "Hooks a windows message."
+    "tldr": "Hooks a windows message.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowhookwindowmessage"
   },
   {
     "name": "isWindowMessageHooked",
@@ -2052,7 +2120,8 @@
     },
     "title": "win.isWindowMessageHooked(message)",
     "type": "instanceMethod",
-    "tldr": "Returns true or false depending on whether the message is hooked."
+    "tldr": "Returns true or false depending on whether the message is hooked.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowiswindowmessagehooked"
   },
   {
     "name": "unhookWindowMessage",
@@ -2070,7 +2139,8 @@
     ],
     "title": "win.unhookWindowMessage(message)",
     "type": "instanceMethod",
-    "tldr": "Unhook the window message.."
+    "tldr": "Unhook the window message..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowunhookwindowmessage"
   },
   {
     "name": "unhookAllWindowMessages",
@@ -2080,7 +2150,8 @@
     "description": "Unhooks all of the window messages.",
     "title": "win.unhookAllWindowMessages()",
     "type": "instanceMethod",
-    "tldr": "Unhooks all of the window messages.."
+    "tldr": "Unhooks all of the window messages..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowunhookallwindowmessages"
   },
   {
     "name": "setRepresentedFilename",
@@ -2098,7 +2169,8 @@
     ],
     "title": "win.setRepresentedFilename(filename)",
     "type": "instanceMethod",
-    "tldr": "Sets the pathname of the file the window represents, and the icon of the file will show in window's title bar.."
+    "tldr": "Sets the pathname of the file the window represents, and the icon of the file will show in window's title bar..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetrepresentedfilename"
   },
   {
     "name": "getRepresentedFilename",
@@ -2112,7 +2184,8 @@
     },
     "title": "win.getRepresentedFilename()",
     "type": "instanceMethod",
-    "tldr": "Returns the pathname of the file the window represents."
+    "tldr": "Returns the pathname of the file the window represents.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetrepresentedfilename"
   },
   {
     "name": "setDocumentEdited",
@@ -2130,7 +2203,8 @@
     ],
     "title": "win.setDocumentEdited(edited)",
     "type": "instanceMethod",
-    "tldr": "Specifies whether the window’s document has been edited, and the icon in title bar will become gray when set to true.."
+    "tldr": "Specifies whether the window’s document has been edited, and the icon in title bar will become gray when set to true..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetdocumentedited"
   },
   {
     "name": "isDocumentEdited",
@@ -2144,19 +2218,22 @@
     },
     "title": "win.isDocumentEdited()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the window's document has been edited."
+    "tldr": "Returns whether the window's document has been edited.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowisdocumentedited"
   },
   {
     "name": "focusOnWebView",
     "title": "win.focusOnWebView()",
     "type": "instanceMethod",
-    "tldr": null
+    "tldr": null,
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowfocusonwebview"
   },
   {
     "name": "blurWebView",
     "title": "win.blurWebView()",
     "type": "instanceMethod",
-    "tldr": null
+    "tldr": null,
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowblurwebview"
   },
   {
     "name": "capturePage",
@@ -2187,7 +2264,8 @@
     ],
     "title": "win.capturePage([rect, ]callback)",
     "type": "instanceMethod",
-    "tldr": "Same as webContents.capturePage([rect, ]callback).."
+    "tldr": "Same as webContents.capturePage([rect, ]callback)..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowcapturepage"
   },
   {
     "name": "loadURL",
@@ -2262,7 +2340,8 @@
     ],
     "title": "win.loadURL(url[, options])",
     "type": "instanceMethod",
-    "tldr": "Same as webContents.loadURL(url[, options])."
+    "tldr": "Same as webContents.loadURL(url[, options]).",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowloadurl"
   },
   {
     "name": "loadFile",
@@ -2277,14 +2356,16 @@
     ],
     "title": "win.loadFile(filePath)",
     "type": "instanceMethod",
-    "tldr": "Same as webContents.loadFile, filePath should be a path to an HTML file relative to the root of your application."
+    "tldr": "Same as webContents.loadFile, filePath should be a path to an HTML file relative to the root of your application.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowloadfile"
   },
   {
     "name": "reload",
     "description": "Same as webContents.reload.",
     "title": "win.reload()",
     "type": "instanceMethod",
-    "tldr": "Same as webContents.reload.."
+    "tldr": "Same as webContents.reload..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowreload"
   },
   {
     "name": "setMenu",
@@ -2312,7 +2393,8 @@
     ],
     "title": "win.setMenu(menu)",
     "type": "instanceMethod",
-    "tldr": "Sets the menu as the window's menu bar, setting it to null will remove the menu bar.."
+    "tldr": "Sets the menu as the window's menu bar, setting it to null will remove the menu bar..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetmenu"
   },
   {
     "name": "setProgressBar",
@@ -2359,7 +2441,8 @@
     ],
     "title": "win.setProgressBar(progress[, options])",
     "type": "instanceMethod",
-    "tldr": "Sets progress value in progress bar."
+    "tldr": "Sets progress value in progress bar.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetprogressbar"
   },
   {
     "name": "setOverlayIcon",
@@ -2385,7 +2468,8 @@
     ],
     "title": "win.setOverlayIcon(overlay, description)",
     "type": "instanceMethod",
-    "tldr": "Sets a 16 x 16 pixel overlay onto the current taskbar icon, usually used to convey some sort of application status or to passively notify the user.."
+    "tldr": "Sets a 16 x 16 pixel overlay onto the current taskbar icon, usually used to convey some sort of application status or to passively notify the user..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetoverlayicon"
   },
   {
     "name": "setHasShadow",
@@ -2403,7 +2487,8 @@
     ],
     "title": "win.setHasShadow(hasShadow)",
     "type": "instanceMethod",
-    "tldr": "Sets whether the window should have a shadow."
+    "tldr": "Sets whether the window should have a shadow.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsethasshadow"
   },
   {
     "name": "hasShadow",
@@ -2418,7 +2503,8 @@
     },
     "title": "win.hasShadow()",
     "type": "instanceMethod",
-    "tldr": "On Windows and Linux always returns true.."
+    "tldr": "On Windows and Linux always returns true..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowhasshadow"
   },
   {
     "name": "setOpacity",
@@ -2438,7 +2524,8 @@
     ],
     "title": "win.setOpacity(opacity)",
     "type": "instanceMethod",
-    "tldr": "Sets the opacity of the window."
+    "tldr": "Sets the opacity of the window.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetopacity"
   },
   {
     "name": "getOpacity",
@@ -2453,7 +2540,8 @@
     },
     "title": "win.getOpacity()",
     "type": "instanceMethod",
-    "tldr": "Returns between 0.0 (fully transparent) and 1.0 (fully opaque)"
+    "tldr": "Returns between 0.0 (fully transparent) and 1.0 (fully opaque)",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetopacity"
   },
   {
     "name": "setThumbarButtons",
@@ -2476,7 +2564,8 @@
     },
     "title": "win.setThumbarButtons(buttons)",
     "type": "instanceMethod",
-    "tldr": "Add a thumbnail toolbar with a specified set of buttons to the thumbnail image of a window in a taskbar button layout."
+    "tldr": "Add a thumbnail toolbar with a specified set of buttons to the thumbnail image of a window in a taskbar button layout.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetthumbarbuttons"
   },
   {
     "name": "setThumbnailClip",
@@ -2495,7 +2584,8 @@
     ],
     "title": "win.setThumbnailClip(region)",
     "type": "instanceMethod",
-    "tldr": "Sets the region of the window to show as the thumbnail image displayed when hovering over the window in the taskbar."
+    "tldr": "Sets the region of the window to show as the thumbnail image displayed when hovering over the window in the taskbar.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetthumbnailclip"
   },
   {
     "name": "setThumbnailToolTip",
@@ -2513,7 +2603,8 @@
     ],
     "title": "win.setThumbnailToolTip(toolTip)",
     "type": "instanceMethod",
-    "tldr": "Sets the toolTip that is displayed when hovering over the window thumbnail in the taskbar.."
+    "tldr": "Sets the toolTip that is displayed when hovering over the window thumbnail in the taskbar..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetthumbnailtooltip"
   },
   {
     "name": "setAppDetails",
@@ -2568,7 +2659,8 @@
     ],
     "title": "win.setAppDetails(options)",
     "type": "instanceMethod",
-    "tldr": "Sets the properties for the window's taskbar button."
+    "tldr": "Sets the properties for the window's taskbar button.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetappdetails"
   },
   {
     "name": "showDefinitionForSelection",
@@ -2578,7 +2670,8 @@
     "description": "Same as webContents.showDefinitionForSelection().",
     "title": "win.showDefinitionForSelection()",
     "type": "instanceMethod",
-    "tldr": "Same as webContents.showDefinitionForSelection().."
+    "tldr": "Same as webContents.showDefinitionForSelection()..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowshowdefinitionforselection"
   },
   {
     "name": "setIcon",
@@ -2597,7 +2690,8 @@
     ],
     "title": "win.setIcon(icon)",
     "type": "instanceMethod",
-    "tldr": "Changes window icon.."
+    "tldr": "Changes window icon..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowseticon"
   },
   {
     "name": "setAutoHideMenuBar",
@@ -2612,7 +2706,8 @@
     ],
     "title": "win.setAutoHideMenuBar(hide)",
     "type": "instanceMethod",
-    "tldr": "Sets whether the window menu bar should hide itself automatically."
+    "tldr": "Sets whether the window menu bar should hide itself automatically.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetautohidemenubar"
   },
   {
     "name": "isMenuBarAutoHide",
@@ -2623,7 +2718,8 @@
     },
     "title": "win.isMenuBarAutoHide()",
     "type": "instanceMethod",
-    "tldr": "Returns whether menu bar automatically hides itself."
+    "tldr": "Returns whether menu bar automatically hides itself.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowismenubarautohide"
   },
   {
     "name": "setMenuBarVisibility",
@@ -2642,7 +2738,8 @@
     ],
     "title": "win.setMenuBarVisibility(visible)",
     "type": "instanceMethod",
-    "tldr": "Sets whether the menu bar should be visible."
+    "tldr": "Sets whether the menu bar should be visible.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetmenubarvisibility"
   },
   {
     "name": "isMenuBarVisible",
@@ -2653,7 +2750,8 @@
     },
     "title": "win.isMenuBarVisible()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the menu bar is visible."
+    "tldr": "Returns whether the menu bar is visible.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowismenubarvisible"
   },
   {
     "name": "setVisibleOnAllWorkspaces",
@@ -2668,7 +2766,8 @@
     ],
     "title": "win.setVisibleOnAllWorkspaces(visible)",
     "type": "instanceMethod",
-    "tldr": "Sets whether the window should be visible on all workspaces."
+    "tldr": "Sets whether the window should be visible on all workspaces.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetvisibleonallworkspaces"
   },
   {
     "name": "isVisibleOnAllWorkspaces",
@@ -2680,7 +2779,8 @@
     },
     "title": "win.isVisibleOnAllWorkspaces()",
     "type": "instanceMethod",
-    "tldr": "Note: This API always returns false on Windows.."
+    "tldr": "Note: This API always returns false on Windows..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowisvisibleonallworkspaces"
   },
   {
     "name": "setIgnoreMouseEvents",
@@ -2710,7 +2810,8 @@
     ],
     "title": "win.setIgnoreMouseEvents(ignore[, options])",
     "type": "instanceMethod",
-    "tldr": "Makes the window ignore all mouse events."
+    "tldr": "Makes the window ignore all mouse events.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetignoremouseevents"
   },
   {
     "name": "setContentProtection",
@@ -2729,7 +2830,8 @@
     ],
     "title": "win.setContentProtection(enable)",
     "type": "instanceMethod",
-    "tldr": "Prevents the window contents from being captured by other apps."
+    "tldr": "Prevents the window contents from being captured by other apps.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetcontentprotection"
   },
   {
     "name": "setFocusable",
@@ -2747,7 +2849,8 @@
     ],
     "title": "win.setFocusable(focusable)",
     "type": "instanceMethod",
-    "tldr": "Changes whether the window can be focused.."
+    "tldr": "Changes whether the window can be focused..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetfocusable"
   },
   {
     "name": "setParentWindow",
@@ -2766,7 +2869,8 @@
     ],
     "title": "win.setParentWindow(parent)",
     "type": "instanceMethod",
-    "tldr": "Sets parent as current window's parent window, passing null will turn current window into a top-level window.."
+    "tldr": "Sets parent as current window's parent window, passing null will turn current window into a top-level window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetparentwindow"
   },
   {
     "name": "getParentWindow",
@@ -2777,7 +2881,8 @@
     },
     "title": "win.getParentWindow()",
     "type": "instanceMethod",
-    "tldr": "Returns the parent window."
+    "tldr": "Returns the parent window.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetparentwindow"
   },
   {
     "name": "getChildWindows",
@@ -2788,7 +2893,8 @@
     },
     "title": "win.getChildWindows()",
     "type": "instanceMethod",
-    "tldr": "Returns all child windows."
+    "tldr": "Returns all child windows.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetchildwindows"
   },
   {
     "name": "setAutoHideCursor",
@@ -2806,7 +2912,8 @@
     ],
     "title": "win.setAutoHideCursor(autoHide)",
     "type": "instanceMethod",
-    "tldr": "Controls whether to hide cursor when typing.."
+    "tldr": "Controls whether to hide cursor when typing..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetautohidecursor"
   },
   {
     "name": "selectPreviousTab",
@@ -2816,7 +2923,8 @@
     "description": "Selects the previous tab when native tabs are enabled and there are other tabs in the window.",
     "title": "win.selectPreviousTab()",
     "type": "instanceMethod",
-    "tldr": "Selects the previous tab when native tabs are enabled and there are other tabs in the window.."
+    "tldr": "Selects the previous tab when native tabs are enabled and there are other tabs in the window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowselectprevioustab"
   },
   {
     "name": "selectNextTab",
@@ -2826,7 +2934,8 @@
     "description": "Selects the next tab when native tabs are enabled and there are other tabs in the window.",
     "title": "win.selectNextTab()",
     "type": "instanceMethod",
-    "tldr": "Selects the next tab when native tabs are enabled and there are other tabs in the window.."
+    "tldr": "Selects the next tab when native tabs are enabled and there are other tabs in the window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowselectnexttab"
   },
   {
     "name": "mergeAllWindows",
@@ -2836,7 +2945,8 @@
     "description": "Merges all windows into one window with multiple tabs when native tabs are enabled and there is more than one open window.",
     "title": "win.mergeAllWindows()",
     "type": "instanceMethod",
-    "tldr": "Merges all windows into one window with multiple tabs when native tabs are enabled and there is more than one open window.."
+    "tldr": "Merges all windows into one window with multiple tabs when native tabs are enabled and there is more than one open window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowmergeallwindows"
   },
   {
     "name": "moveTabToNewWindow",
@@ -2846,7 +2956,8 @@
     "description": "Moves the current tab into a new window if native tabs are enabled and there is more than one tab in the current window.",
     "title": "win.moveTabToNewWindow()",
     "type": "instanceMethod",
-    "tldr": "Moves the current tab into a new window if native tabs are enabled and there is more than one tab in the current window.."
+    "tldr": "Moves the current tab into a new window if native tabs are enabled and there is more than one tab in the current window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowmovetabtonewwindow"
   },
   {
     "name": "toggleTabBar",
@@ -2856,7 +2967,8 @@
     "description": "Toggles the visibility of the tab bar if native tabs are enabled and there is only one tab in the current window.",
     "title": "win.toggleTabBar()",
     "type": "instanceMethod",
-    "tldr": "Toggles the visibility of the tab bar if native tabs are enabled and there is only one tab in the current window.."
+    "tldr": "Toggles the visibility of the tab bar if native tabs are enabled and there is only one tab in the current window..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowtoggletabbar"
   },
   {
     "name": "addTabbedWindow",
@@ -2874,7 +2986,8 @@
     ],
     "title": "win.addTabbedWindow(browserWindow)",
     "type": "instanceMethod",
-    "tldr": "Adds a window as a tab on this window, after the tab for the window instance.."
+    "tldr": "Adds a window as a tab on this window, after the tab for the window instance..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowaddtabbedwindow"
   },
   {
     "name": "setVibrancy",
@@ -2925,7 +3038,8 @@
     ],
     "title": "win.setVibrancy(type)",
     "type": "instanceMethod",
-    "tldr": "Adds a vibrancy effect to the browser window."
+    "tldr": "Adds a vibrancy effect to the browser window.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetvibrancy"
   },
   {
     "name": "setTouchBar",
@@ -2944,7 +3058,8 @@
     ],
     "title": "win.setTouchBar(touchBar)",
     "type": "instanceMethod",
-    "tldr": "Sets the touchBar layout for the current window."
+    "tldr": "Sets the touchBar layout for the current window.",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsettouchbar"
   },
   {
     "name": "setBrowserView",
@@ -2961,7 +3076,8 @@
     ],
     "title": "win.setBrowserView(browserView)",
     "type": "instanceMethod",
-    "tldr": null
+    "tldr": null,
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowsetbrowserview"
   },
   {
     "name": "getBrowserView",
@@ -2985,7 +3101,8 @@
     },
     "title": "win.getBrowserView()",
     "type": "instanceMethod",
-    "tldr": "Note: The BrowserView API is currently experimental and may change or be removed in future Electron releases.."
+    "tldr": "Note: The BrowserView API is currently experimental and may change or be removed in future Electron releases..",
+    "url": "https://electronjs.org/docs/api/browser-window#browser-windowgetbrowserview"
   },
   {
     "name": "page-title-updated",
@@ -3312,14 +3429,16 @@
     "description": "Removes focus from the child window.",
     "title": "win.blur()",
     "type": "instanceMethod",
-    "tldr": "Removes focus from the child window.."
+    "tldr": "Removes focus from the child window..",
+    "url": "https://electronjs.org/docs/api/browser-window-proxy#browser-window-proxyblur"
   },
   {
     "name": "close",
     "description": "Forcefully closes the child window without calling its unload event.",
     "title": "win.close()",
     "type": "instanceMethod",
-    "tldr": "Forcefully closes the child window without calling its unload event.."
+    "tldr": "Forcefully closes the child window without calling its unload event..",
+    "url": "https://electronjs.org/docs/api/browser-window-proxy#browser-window-proxyclose"
   },
   {
     "name": "eval",
@@ -3334,21 +3453,24 @@
     ],
     "title": "win.eval(code)",
     "type": "instanceMethod",
-    "tldr": "Evaluates the code in the child window.."
+    "tldr": "Evaluates the code in the child window..",
+    "url": "https://electronjs.org/docs/api/browser-window-proxy#browser-window-proxyeval"
   },
   {
     "name": "focus",
     "description": "Focuses the child window (brings the window to front).",
     "title": "win.focus()",
     "type": "instanceMethod",
-    "tldr": "Focuses the child window (brings the window to front).."
+    "tldr": "Focuses the child window (brings the window to front)..",
+    "url": "https://electronjs.org/docs/api/browser-window-proxy#browser-window-proxyfocus"
   },
   {
     "name": "print",
     "description": "Invokes the print dialog on the child window.",
     "title": "win.print()",
     "type": "instanceMethod",
-    "tldr": "Invokes the print dialog on the child window.."
+    "tldr": "Invokes the print dialog on the child window..",
+    "url": "https://electronjs.org/docs/api/browser-window-proxy#browser-window-proxyprint"
   },
   {
     "name": "postMessage",
@@ -3369,7 +3491,8 @@
     ],
     "title": "win.postMessage(message, targetOrigin)",
     "type": "instanceMethod",
-    "tldr": "Sends a message to the child window with the specified origin or * for no origin preference."
+    "tldr": "Sends a message to the child window with the specified origin or * for no origin preference.",
+    "url": "https://electronjs.org/docs/api/browser-window-proxy#browser-window-proxypostmessage"
   },
   {
     "name": "setHeader",
@@ -3392,7 +3515,8 @@
     ],
     "title": "request.setHeader(name, value)",
     "type": "instanceMethod",
-    "tldr": "Adds an extra HTTP header."
+    "tldr": "Adds an extra HTTP header.",
+    "url": "https://electronjs.org/docs/api/client-request#client-requestsetheader"
   },
   {
     "name": "getHeader",
@@ -3421,7 +3545,8 @@
     },
     "title": "request.getHeader(name)",
     "type": "instanceMethod",
-    "tldr": "Returns the value of a previously set extra header name."
+    "tldr": "Returns the value of a previously set extra header name.",
+    "url": "https://electronjs.org/docs/api/client-request#client-requestgetheader"
   },
   {
     "name": "removeHeader",
@@ -3437,7 +3562,8 @@
     ],
     "title": "request.removeHeader(name)",
     "type": "instanceMethod",
-    "tldr": "Removes a previously set extra header name."
+    "tldr": "Removes a previously set extra header name.",
+    "url": "https://electronjs.org/docs/api/client-request#client-requestremoveheader"
   },
   {
     "name": "write",
@@ -3476,7 +3602,8 @@
     ],
     "title": "request.write(chunk[, encoding][, callback])",
     "type": "instanceMethod",
-    "tldr": "callback is essentially a dummy function introduced in the purpose of keeping similarity with the Node.js API."
+    "tldr": "callback is essentially a dummy function introduced in the purpose of keeping similarity with the Node.js API.",
+    "url": "https://electronjs.org/docs/api/client-request#client-requestwrite"
   },
   {
     "name": "end",
@@ -3512,21 +3639,24 @@
     ],
     "title": "request.end([chunk][, encoding][, callback])",
     "type": "instanceMethod",
-    "tldr": "Sends the last chunk of the request data."
+    "tldr": "Sends the last chunk of the request data.",
+    "url": "https://electronjs.org/docs/api/client-request#client-requestend"
   },
   {
     "name": "abort",
     "description": "Cancels an ongoing HTTP transaction. If the request has already emitted the close event, the abort operation will have no effect. Otherwise an ongoing event will emit abort and close events. Additionally, if there is an ongoing response object,it will emit the aborted event.",
     "title": "request.abort()",
     "type": "instanceMethod",
-    "tldr": "Cancels an ongoing HTTP transaction."
+    "tldr": "Cancels an ongoing HTTP transaction.",
+    "url": "https://electronjs.org/docs/api/client-request#client-requestabort"
   },
   {
     "name": "followRedirect",
     "description": "Continues any deferred redirection request when the redirection mode is manual.",
     "title": "request.followRedirect()",
     "type": "instanceMethod",
-    "tldr": "Continues any deferred redirection request when the redirection mode is manual.."
+    "tldr": "Continues any deferred redirection request when the redirection mode is manual..",
+    "url": "https://electronjs.org/docs/api/client-request#client-requestfollowredirect"
   },
   {
     "name": "response",
@@ -3773,7 +3903,8 @@
     ],
     "title": "cookies.get(filter, callback)",
     "type": "instanceMethod",
-    "tldr": "Sends a request to get all cookies matching filter, callback will be called with callback(error, cookies) on complete.."
+    "tldr": "Sends a request to get all cookies matching filter, callback will be called with callback(error, cookies) on complete..",
+    "url": "https://electronjs.org/docs/api/cookies#cookiesget"
   },
   {
     "name": "set",
@@ -3861,7 +3992,8 @@
     ],
     "title": "cookies.set(details, callback)",
     "type": "instanceMethod",
-    "tldr": "Sets a cookie with details, callback will be called with callback(error) on complete.."
+    "tldr": "Sets a cookie with details, callback will be called with callback(error) on complete..",
+    "url": "https://electronjs.org/docs/api/cookies#cookiesset"
   },
   {
     "name": "remove",
@@ -3890,7 +4022,8 @@
     ],
     "title": "cookies.remove(url, name, callback)",
     "type": "instanceMethod",
-    "tldr": "Removes the cookies matching url and name, callback will called with callback() on complete.."
+    "tldr": "Removes the cookies matching url and name, callback will called with callback() on complete..",
+    "url": "https://electronjs.org/docs/api/cookies#cookiesremove"
   },
   {
     "name": "flushStore",
@@ -3905,7 +4038,8 @@
     ],
     "title": "cookies.flushStore(callback)",
     "type": "instanceMethod",
-    "tldr": "Writes any unwritten cookies data to disk.."
+    "tldr": "Writes any unwritten cookies data to disk..",
+    "url": "https://electronjs.org/docs/api/cookies#cookiesflushstore"
   },
   {
     "name": "changed",
@@ -3980,7 +4114,8 @@
     ],
     "title": "debugger.attach([protocolVersion])",
     "type": "instanceMethod",
-    "tldr": "Attaches the debugger to the webContents.."
+    "tldr": "Attaches the debugger to the webContents..",
+    "url": "https://electronjs.org/docs/api/debugger#debuggerattach"
   },
   {
     "name": "isAttached",
@@ -3991,14 +4126,16 @@
     },
     "title": "debugger.isAttached()",
     "type": "instanceMethod",
-    "tldr": "Returns whether a debugger is attached to the webContents."
+    "tldr": "Returns whether a debugger is attached to the webContents.",
+    "url": "https://electronjs.org/docs/api/debugger#debuggerisattached"
   },
   {
     "name": "detach",
     "description": "Detaches the debugger from the webContents.",
     "title": "debugger.detach()",
     "type": "instanceMethod",
-    "tldr": "Detaches the debugger from the webContents.."
+    "tldr": "Detaches the debugger from the webContents..",
+    "url": "https://electronjs.org/docs/api/debugger#debuggerdetach"
   },
   {
     "name": "sendCommand",
@@ -4045,7 +4182,8 @@
     ],
     "title": "debugger.sendCommand(method[, commandParams, callback])",
     "type": "instanceMethod",
-    "tldr": "Send given command to the debugging target.."
+    "tldr": "Send given command to the debugging target..",
+    "url": "https://electronjs.org/docs/api/debugger#debuggersendcommand"
   },
   {
     "name": "detach",
@@ -4114,7 +4252,8 @@
     ],
     "title": "downloadItem.setSavePath(path)",
     "type": "instanceMethod",
-    "tldr": "The API is only available in session's will-download callback function."
+    "tldr": "The API is only available in session's will-download callback function.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemsetsavepath"
   },
   {
     "name": "getSavePath",
@@ -4125,14 +4264,16 @@
     },
     "title": "downloadItem.getSavePath()",
     "type": "instanceMethod",
-    "tldr": "Returns the save path of the download item. This will be either the path set via downloadItem.setSavePath(path) or the path selected from the shown save dialog."
+    "tldr": "Returns the save path of the download item. This will be either the path set via downloadItem.setSavePath(path) or the path selected from the shown save dialog.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemgetsavepath"
   },
   {
     "name": "pause",
     "description": "Pauses the download.",
     "title": "downloadItem.pause()",
     "type": "instanceMethod",
-    "tldr": "Pauses the download.."
+    "tldr": "Pauses the download..",
+    "url": "https://electronjs.org/docs/api/download-item#download-itempause"
   },
   {
     "name": "isPaused",
@@ -4143,14 +4284,16 @@
     },
     "title": "downloadItem.isPaused()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the download is paused."
+    "tldr": "Returns whether the download is paused.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemispaused"
   },
   {
     "name": "resume",
     "description": "Resumes the download that has been paused. Note: To enable resumable downloads the server you are downloading from must support range requests and provide both Last-Modified and ETag header values. Otherwise resume() will dismiss previously received bytes and restart the download from the beginning.",
     "title": "downloadItem.resume()",
     "type": "instanceMethod",
-    "tldr": "Resumes the download that has been paused."
+    "tldr": "Resumes the download that has been paused.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemresume"
   },
   {
     "name": "canResume",
@@ -4161,14 +4304,16 @@
     },
     "title": "downloadItem.canResume()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the download can resume."
+    "tldr": "Returns whether the download can resume.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemcanresume"
   },
   {
     "name": "cancel",
     "description": "Cancels the download operation.",
     "title": "downloadItem.cancel()",
     "type": "instanceMethod",
-    "tldr": "Cancels the download operation.."
+    "tldr": "Cancels the download operation..",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemcancel"
   },
   {
     "name": "getURL",
@@ -4179,7 +4324,8 @@
     },
     "title": "downloadItem.getURL()",
     "type": "instanceMethod",
-    "tldr": "Returns the origin url where the item is downloaded from."
+    "tldr": "Returns the origin url where the item is downloaded from.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemgeturl"
   },
   {
     "name": "getMimeType",
@@ -4190,7 +4336,8 @@
     },
     "title": "downloadItem.getMimeType()",
     "type": "instanceMethod",
-    "tldr": "Returns the files mime type."
+    "tldr": "Returns the files mime type.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemgetmimetype"
   },
   {
     "name": "hasUserGesture",
@@ -4201,7 +4348,8 @@
     },
     "title": "downloadItem.hasUserGesture()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the download has user gesture."
+    "tldr": "Returns whether the download has user gesture.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemhasusergesture"
   },
   {
     "name": "getFilename",
@@ -4213,7 +4361,8 @@
     },
     "title": "downloadItem.getFilename()",
     "type": "instanceMethod",
-    "tldr": "Note: The file name is not always the same as the actual one saved in local disk."
+    "tldr": "Note: The file name is not always the same as the actual one saved in local disk.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemgetfilename"
   },
   {
     "name": "getTotalBytes",
@@ -4225,7 +4374,8 @@
     },
     "title": "downloadItem.getTotalBytes()",
     "type": "instanceMethod",
-    "tldr": "If the size is unknown, it returns 0.."
+    "tldr": "If the size is unknown, it returns 0..",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemgettotalbytes"
   },
   {
     "name": "getReceivedBytes",
@@ -4236,7 +4386,8 @@
     },
     "title": "downloadItem.getReceivedBytes()",
     "type": "instanceMethod",
-    "tldr": "Returns the received bytes of the download item."
+    "tldr": "Returns the received bytes of the download item.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemgetreceivedbytes"
   },
   {
     "name": "getContentDisposition",
@@ -4247,7 +4398,8 @@
     },
     "title": "downloadItem.getContentDisposition()",
     "type": "instanceMethod",
-    "tldr": "Returns the Content-Disposition field from the response header."
+    "tldr": "Returns the Content-Disposition field from the response header.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemgetcontentdisposition"
   },
   {
     "name": "getState",
@@ -4273,7 +4425,8 @@
     },
     "title": "downloadItem.getState()",
     "type": "instanceMethod",
-    "tldr": "Note: The following methods are useful specifically to resume a cancelled item when session is restarted.."
+    "tldr": "Note: The following methods are useful specifically to resume a cancelled item when session is restarted..",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemgetstate"
   },
   {
     "name": "getURLChain",
@@ -4284,7 +4437,8 @@
     },
     "title": "downloadItem.getURLChain()",
     "type": "instanceMethod",
-    "tldr": "Returns the complete url chain of the item including any redirects."
+    "tldr": "Returns the complete url chain of the item including any redirects.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemgeturlchain"
   },
   {
     "name": "getLastModifiedTime",
@@ -4295,7 +4449,8 @@
     },
     "title": "downloadItem.getLastModifiedTime()",
     "type": "instanceMethod",
-    "tldr": "Returns last-Modified header value."
+    "tldr": "Returns last-Modified header value.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemgetlastmodifiedtime"
   },
   {
     "name": "getETag",
@@ -4306,7 +4461,8 @@
     },
     "title": "downloadItem.getETag()",
     "type": "instanceMethod",
-    "tldr": "Returns eTag header value."
+    "tldr": "Returns eTag header value.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemgetetag"
   },
   {
     "name": "getStartTime",
@@ -4317,7 +4473,8 @@
     },
     "title": "downloadItem.getStartTime()",
     "type": "instanceMethod",
-    "tldr": "Returns number of seconds since the UNIX epoch when the download was started."
+    "tldr": "Returns number of seconds since the UNIX epoch when the download was started.",
+    "url": "https://electronjs.org/docs/api/download-item#download-itemgetstarttime"
   },
   {
     "name": "updated",
@@ -4585,7 +4742,8 @@
     ],
     "title": "menu.popup(options)",
     "type": "instanceMethod",
-    "tldr": "Pops up this menu as a context menu in the BrowserWindow.."
+    "tldr": "Pops up this menu as a context menu in the BrowserWindow..",
+    "url": "https://electronjs.org/docs/api/menu#menupopup"
   },
   {
     "name": "closePopup",
@@ -4601,7 +4759,8 @@
     ],
     "title": "menu.closePopup([browserWindow])",
     "type": "instanceMethod",
-    "tldr": "Closes the context menu in the browserWindow.."
+    "tldr": "Closes the context menu in the browserWindow..",
+    "url": "https://electronjs.org/docs/api/menu#menuclosepopup"
   },
   {
     "name": "append",
@@ -4616,7 +4775,8 @@
     ],
     "title": "menu.append(menuItem)",
     "type": "instanceMethod",
-    "tldr": "Appends the menuItem to the menu.."
+    "tldr": "Appends the menuItem to the menu..",
+    "url": "https://electronjs.org/docs/api/menu#menuappend"
   },
   {
     "name": "getMenuItemById",
@@ -4635,7 +4795,8 @@
     },
     "title": "menu.getMenuItemById(id)",
     "type": "instanceMethod",
-    "tldr": "Returns the item with the specified id"
+    "tldr": "Returns the item with the specified id",
+    "url": "https://electronjs.org/docs/api/menu#menugetmenuitembyid"
   },
   {
     "name": "insert",
@@ -4656,7 +4817,8 @@
     ],
     "title": "menu.insert(pos, menuItem)",
     "type": "instanceMethod",
-    "tldr": "Inserts the menuItem to the pos position of the menu.."
+    "tldr": "Inserts the menuItem to the pos position of the menu..",
+    "url": "https://electronjs.org/docs/api/menu#menuinsert"
   },
   {
     "name": "menu-will-show",
@@ -4716,7 +4878,8 @@
     },
     "title": "image.toPNG([options])",
     "type": "instanceMethod",
-    "tldr": "Returns a Buffer that contains the image's PNG encoded data."
+    "tldr": "Returns a Buffer that contains the image's PNG encoded data.",
+    "url": "https://electronjs.org/docs/api/native-image#native-imagetopng"
   },
   {
     "name": "toJPEG",
@@ -4736,7 +4899,8 @@
     },
     "title": "image.toJPEG(quality)",
     "type": "instanceMethod",
-    "tldr": "Returns a Buffer that contains the image's JPEG encoded data."
+    "tldr": "Returns a Buffer that contains the image's JPEG encoded data.",
+    "url": "https://electronjs.org/docs/api/native-image#native-imagetojpeg"
   },
   {
     "name": "toBitmap",
@@ -4764,7 +4928,8 @@
     },
     "title": "image.toBitmap([options])",
     "type": "instanceMethod",
-    "tldr": "Returns a Buffer that contains a copy of the image's raw bitmap pixel data."
+    "tldr": "Returns a Buffer that contains a copy of the image's raw bitmap pixel data.",
+    "url": "https://electronjs.org/docs/api/native-image#native-imagetobitmap"
   },
   {
     "name": "toDataURL",
@@ -4792,7 +4957,8 @@
     },
     "title": "image.toDataURL([options])",
     "type": "instanceMethod",
-    "tldr": "Returns the data URL of the image."
+    "tldr": "Returns the data URL of the image.",
+    "url": "https://electronjs.org/docs/api/native-image#native-imagetodataurl"
   },
   {
     "name": "getBitmap",
@@ -4821,7 +4987,8 @@
     },
     "title": "image.getBitmap([options])",
     "type": "instanceMethod",
-    "tldr": "The difference between getBitmap() and toBitmap() is, getBitmap() does not copy the bitmap data, so you have to use the returned Buffer immediately in current event loop tick, otherwise the data might be changed or destroyed.."
+    "tldr": "The difference between getBitmap() and toBitmap() is, getBitmap() does not copy the bitmap data, so you have to use the returned Buffer immediately in current event loop tick, otherwise the data might be changed or destroyed..",
+    "url": "https://electronjs.org/docs/api/native-image#native-imagegetbitmap"
   },
   {
     "name": "getNativeHandle",
@@ -4836,7 +5003,8 @@
     },
     "title": "image.getNativeHandle()",
     "type": "instanceMethod",
-    "tldr": "Notice that the returned pointer is a weak pointer to the underlying native image instead of a copy, so you must ensure that the associated nativeImage instance is kept around.."
+    "tldr": "Notice that the returned pointer is a weak pointer to the underlying native image instead of a copy, so you must ensure that the associated nativeImage instance is kept around..",
+    "url": "https://electronjs.org/docs/api/native-image#native-imagegetnativehandle"
   },
   {
     "name": "isEmpty",
@@ -4847,7 +5015,8 @@
     },
     "title": "image.isEmpty()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the image is empty."
+    "tldr": "Returns whether the image is empty.",
+    "url": "https://electronjs.org/docs/api/native-image#native-imageisempty"
   },
   {
     "name": "getSize",
@@ -4857,7 +5026,8 @@
     },
     "title": "image.getSize()",
     "type": "instanceMethod",
-    "tldr": null
+    "tldr": null,
+    "url": "https://electronjs.org/docs/api/native-image#native-imagegetsize"
   },
   {
     "name": "setTemplateImage",
@@ -4872,7 +5042,8 @@
     ],
     "title": "image.setTemplateImage(option)",
     "type": "instanceMethod",
-    "tldr": "Marks the image as a template image.."
+    "tldr": "Marks the image as a template image..",
+    "url": "https://electronjs.org/docs/api/native-image#native-imagesettemplateimage"
   },
   {
     "name": "isTemplateImage",
@@ -4883,7 +5054,8 @@
     },
     "title": "image.isTemplateImage()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the image is a template image."
+    "tldr": "Returns whether the image is a template image.",
+    "url": "https://electronjs.org/docs/api/native-image#native-imageistemplateimage"
   },
   {
     "name": "crop",
@@ -4903,7 +5075,8 @@
     },
     "title": "image.crop(rect)",
     "type": "instanceMethod",
-    "tldr": "Returns the cropped image."
+    "tldr": "Returns the cropped image.",
+    "url": "https://electronjs.org/docs/api/native-image#native-imagecrop"
   },
   {
     "name": "resize",
@@ -4946,7 +5119,8 @@
     },
     "title": "image.resize(options)",
     "type": "instanceMethod",
-    "tldr": "If only the height or the width are specified then the current aspect ratio will be preserved in the resized image.."
+    "tldr": "If only the height or the width are specified then the current aspect ratio will be preserved in the resized image..",
+    "url": "https://electronjs.org/docs/api/native-image#native-imageresize"
   },
   {
     "name": "getAspectRatio",
@@ -4957,7 +5131,8 @@
     },
     "title": "image.getAspectRatio()",
     "type": "instanceMethod",
-    "tldr": "Returns the image's aspect ratio."
+    "tldr": "Returns the image's aspect ratio.",
+    "url": "https://electronjs.org/docs/api/native-image#native-imagegetaspectratio"
   },
   {
     "name": "addRepresentation",
@@ -5009,7 +5184,8 @@
     ],
     "title": "image.addRepresentation(options)",
     "type": "instanceMethod",
-    "tldr": "Add an image representation for a specific scale factor."
+    "tldr": "Add an image representation for a specific scale factor.",
+    "url": "https://electronjs.org/docs/api/native-image#native-imageaddrepresentation"
   },
   {
     "name": "isSupported",
@@ -5028,14 +5204,16 @@
     "description": "Immediately shows the notification to the user, please note this means unlike the HTML5 Notification implementation, simply instantiating a new Notification does not immediately show it to the user, you need to call this method before the OS will display it. If the notification has been shown before, this method will dismiss the previously shown notification and create a new one with identical properties.",
     "title": "notification.show()",
     "type": "instanceMethod",
-    "tldr": "Immediately shows the notification to the user, please note this means unlike the HTML5 Notification implementation, simply instantiating a new Notification does not immediately show it to the user, you need to call this method before the OS will display it."
+    "tldr": "Immediately shows the notification to the user, please note this means unlike the HTML5 Notification implementation, simply instantiating a new Notification does not immediately show it to the user, you need to call this method before the OS will display it.",
+    "url": "https://electronjs.org/docs/api/notification#notificationshow"
   },
   {
     "name": "close",
     "description": "Dismisses the notification.",
     "title": "notification.close()",
     "type": "instanceMethod",
-    "tldr": "Dismisses the notification.."
+    "tldr": "Dismisses the notification..",
+    "url": "https://electronjs.org/docs/api/notification#notificationclose"
   },
   {
     "name": "show",
@@ -5288,7 +5466,8 @@
     ],
     "title": "ses.getCacheSize(callback)",
     "type": "instanceMethod",
-    "tldr": "Callback is invoked with the session's current cache size.."
+    "tldr": "Callback is invoked with the session's current cache size..",
+    "url": "https://electronjs.org/docs/api/session#sessiongetcachesize"
   },
   {
     "name": "clearCache",
@@ -5304,7 +5483,8 @@
     ],
     "title": "ses.clearCache(callback)",
     "type": "instanceMethod",
-    "tldr": "Clears the session’s HTTP cache.."
+    "tldr": "Clears the session’s HTTP cache..",
+    "url": "https://electronjs.org/docs/api/session#sessionclearcache"
   },
   {
     "name": "clearStorageData",
@@ -5349,14 +5529,16 @@
     ],
     "title": "ses.clearStorageData([options, callback])",
     "type": "instanceMethod",
-    "tldr": "Clears the data of web storages.."
+    "tldr": "Clears the data of web storages..",
+    "url": "https://electronjs.org/docs/api/session#sessionclearstoragedata"
   },
   {
     "name": "flushStorageData",
     "description": "Writes any unwritten DOMStorage data to disk.",
     "title": "ses.flushStorageData()",
     "type": "instanceMethod",
-    "tldr": "Writes any unwritten DOMStorage data to disk.."
+    "tldr": "Writes any unwritten DOMStorage data to disk..",
+    "url": "https://electronjs.org/docs/api/session#sessionflushstoragedata"
   },
   {
     "name": "setProxy",
@@ -5401,7 +5583,8 @@
     ],
     "title": "ses.setProxy(config, callback)",
     "type": "instanceMethod",
-    "tldr": "Sets the proxy settings."
+    "tldr": "Sets the proxy settings.",
+    "url": "https://electronjs.org/docs/api/session#sessionsetproxy"
   },
   {
     "name": "resolveProxy",
@@ -5431,7 +5614,8 @@
     ],
     "title": "ses.resolveProxy(url, callback)",
     "type": "instanceMethod",
-    "tldr": "Resolves the proxy information for url."
+    "tldr": "Resolves the proxy information for url.",
+    "url": "https://electronjs.org/docs/api/session#sessionresolveproxy"
   },
   {
     "name": "setDownloadPath",
@@ -5447,7 +5631,8 @@
     ],
     "title": "ses.setDownloadPath(path)",
     "type": "instanceMethod",
-    "tldr": "Sets download saving directory."
+    "tldr": "Sets download saving directory.",
+    "url": "https://electronjs.org/docs/api/session#sessionsetdownloadpath"
   },
   {
     "name": "enableNetworkEmulation",
@@ -5492,14 +5677,16 @@
     ],
     "title": "ses.enableNetworkEmulation(options)",
     "type": "instanceMethod",
-    "tldr": "Emulates network with the given configuration for the session.."
+    "tldr": "Emulates network with the given configuration for the session..",
+    "url": "https://electronjs.org/docs/api/session#sessionenablenetworkemulation"
   },
   {
     "name": "disableNetworkEmulation",
     "description": "Disables any network emulation already active for the session. Resets to the original network configuration.",
     "title": "ses.disableNetworkEmulation()",
     "type": "instanceMethod",
-    "tldr": "Disables any network emulation already active for the session."
+    "tldr": "Disables any network emulation already active for the session.",
+    "url": "https://electronjs.org/docs/api/session#sessiondisablenetworkemulation"
   },
   {
     "name": "setCertificateVerifyProc",
@@ -5569,7 +5756,8 @@
     ],
     "title": "ses.setCertificateVerifyProc(proc)",
     "type": "instanceMethod",
-    "tldr": "Sets the certificate verify proc for session, the proc will be called with proc(request, callback) whenever a server certificate verification is requested."
+    "tldr": "Sets the certificate verify proc for session, the proc will be called with proc(request, callback) whenever a server certificate verification is requested.",
+    "url": "https://electronjs.org/docs/api/session#sessionsetcertificateverifyproc"
   },
   {
     "name": "setPermissionRequestHandler",
@@ -5641,7 +5829,8 @@
     ],
     "title": "ses.setPermissionRequestHandler(handler)",
     "type": "instanceMethod",
-    "tldr": "Sets the handler which can be used to respond to permission requests for the session."
+    "tldr": "Sets the handler which can be used to respond to permission requests for the session.",
+    "url": "https://electronjs.org/docs/api/session#sessionsetpermissionrequesthandler"
   },
   {
     "name": "clearHostResolverCache",
@@ -5657,7 +5846,8 @@
     ],
     "title": "ses.clearHostResolverCache([callback])",
     "type": "instanceMethod",
-    "tldr": "Clears the host resolver cache.."
+    "tldr": "Clears the host resolver cache..",
+    "url": "https://electronjs.org/docs/api/session#sessionclearhostresolvercache"
   },
   {
     "name": "allowNTLMCredentialsForDomains",
@@ -5673,7 +5863,8 @@
     ],
     "title": "ses.allowNTLMCredentialsForDomains(domains)",
     "type": "instanceMethod",
-    "tldr": "Dynamically sets whether to always send credentials for HTTP NTLM or Negotiate authentication.."
+    "tldr": "Dynamically sets whether to always send credentials for HTTP NTLM or Negotiate authentication..",
+    "url": "https://electronjs.org/docs/api/session#sessionallowntlmcredentialsfordomains"
   },
   {
     "name": "setUserAgent",
@@ -5694,7 +5885,8 @@
     ],
     "title": "ses.setUserAgent(userAgent[, acceptLanguages])",
     "type": "instanceMethod",
-    "tldr": "Overrides the userAgent and acceptLanguages for this session."
+    "tldr": "Overrides the userAgent and acceptLanguages for this session.",
+    "url": "https://electronjs.org/docs/api/session#sessionsetuseragent"
   },
   {
     "name": "getUserAgent",
@@ -5705,7 +5897,8 @@
     },
     "title": "ses.getUserAgent()",
     "type": "instanceMethod",
-    "tldr": "Returns the user agent for this session."
+    "tldr": "Returns the user agent for this session.",
+    "url": "https://electronjs.org/docs/api/session#sessiongetuseragent"
   },
   {
     "name": "getBlobData",
@@ -5735,7 +5928,8 @@
     ],
     "title": "ses.getBlobData(identifier, callback)",
     "type": "instanceMethod",
-    "tldr": null
+    "tldr": null,
+    "url": "https://electronjs.org/docs/api/session#sessiongetblobdata"
   },
   {
     "name": "createInterruptedDownload",
@@ -5808,7 +6002,8 @@
     ],
     "title": "ses.createInterruptedDownload(options)",
     "type": "instanceMethod",
-    "tldr": "Allows resuming cancelled or interrupted downloads from previous Session."
+    "tldr": "Allows resuming cancelled or interrupted downloads from previous Session.",
+    "url": "https://electronjs.org/docs/api/session#sessioncreateinterrupteddownload"
   },
   {
     "name": "clearAuthCache",
@@ -5839,7 +6034,8 @@
     ],
     "title": "ses.clearAuthCache(options[, callback])",
     "type": "instanceMethod",
-    "tldr": "Clears the session’s HTTP authentication cache.."
+    "tldr": "Clears the session’s HTTP authentication cache..",
+    "url": "https://electronjs.org/docs/api/session#sessionclearauthcache"
   },
   {
     "name": "setPreloads",
@@ -5855,7 +6051,8 @@
     ],
     "title": "ses.setPreloads(preloads)",
     "type": "instanceMethod",
-    "tldr": "Adds scripts that will be executed on ALL web contents that are associated with this session just before normal preload scripts run.."
+    "tldr": "Adds scripts that will be executed on ALL web contents that are associated with this session just before normal preload scripts run..",
+    "url": "https://electronjs.org/docs/api/session#sessionsetpreloads"
   },
   {
     "name": "getPreloads",
@@ -5866,7 +6063,8 @@
     },
     "title": "ses.getPreloads()",
     "type": "instanceMethod",
-    "tldr": "Returns an array of paths to preload scripts that have been registered."
+    "tldr": "Returns an array of paths to preload scripts that have been registered.",
+    "url": "https://electronjs.org/docs/api/session#sessiongetpreloads"
   },
   {
     "name": "will-download",
@@ -5969,7 +6167,8 @@
     "description": "Destroys the tray icon immediately.",
     "title": "tray.destroy()",
     "type": "instanceMethod",
-    "tldr": "Destroys the tray icon immediately.."
+    "tldr": "Destroys the tray icon immediately..",
+    "url": "https://electronjs.org/docs/api/tray#traydestroy"
   },
   {
     "name": "setImage",
@@ -5993,7 +6192,8 @@
     ],
     "title": "tray.setImage(image)",
     "type": "instanceMethod",
-    "tldr": "Sets the image associated with this tray icon.."
+    "tldr": "Sets the image associated with this tray icon..",
+    "url": "https://electronjs.org/docs/api/tray#traysetimage"
   },
   {
     "name": "setPressedImage",
@@ -6011,7 +6211,8 @@
     ],
     "title": "tray.setPressedImage(image)",
     "type": "instanceMethod",
-    "tldr": "Sets the image associated with this tray icon when pressed on macOS.."
+    "tldr": "Sets the image associated with this tray icon when pressed on macOS..",
+    "url": "https://electronjs.org/docs/api/tray#traysetpressedimage"
   },
   {
     "name": "setToolTip",
@@ -6026,7 +6227,8 @@
     ],
     "title": "tray.setToolTip(toolTip)",
     "type": "instanceMethod",
-    "tldr": "Sets the hover text for this tray icon.."
+    "tldr": "Sets the hover text for this tray icon..",
+    "url": "https://electronjs.org/docs/api/tray#traysettooltip"
   },
   {
     "name": "setTitle",
@@ -6044,7 +6246,8 @@
     ],
     "title": "tray.setTitle(title)",
     "type": "instanceMethod",
-    "tldr": "Sets the title displayed aside of the tray icon in the status bar (Support ANSI colors).."
+    "tldr": "Sets the title displayed aside of the tray icon in the status bar (Support ANSI colors)..",
+    "url": "https://electronjs.org/docs/api/tray#traysettitle"
   },
   {
     "name": "setHighlightMode",
@@ -6077,7 +6280,8 @@
     ],
     "title": "tray.setHighlightMode(mode)",
     "type": "instanceMethod",
-    "tldr": "Sets when the tray's icon background becomes highlighted (in blue)."
+    "tldr": "Sets when the tray's icon background becomes highlighted (in blue).",
+    "url": "https://electronjs.org/docs/api/tray#traysethighlightmode"
   },
   {
     "name": "displayBalloon",
@@ -6127,7 +6331,8 @@
     ],
     "title": "tray.displayBalloon(options)",
     "type": "instanceMethod",
-    "tldr": "Displays a tray balloon.."
+    "tldr": "Displays a tray balloon..",
+    "url": "https://electronjs.org/docs/api/tray#traydisplayballoon"
   },
   {
     "name": "popUpContextMenu",
@@ -6153,7 +6358,8 @@
     ],
     "title": "tray.popUpContextMenu([menu, position])",
     "type": "instanceMethod",
-    "tldr": "Pops up the context menu of the tray icon."
+    "tldr": "Pops up the context menu of the tray icon.",
+    "url": "https://electronjs.org/docs/api/tray#traypopupcontextmenu"
   },
   {
     "name": "setContextMenu",
@@ -6168,7 +6374,8 @@
     ],
     "title": "tray.setContextMenu(menu)",
     "type": "instanceMethod",
-    "tldr": "Sets the context menu for this icon.."
+    "tldr": "Sets the context menu for this icon..",
+    "url": "https://electronjs.org/docs/api/tray#traysetcontextmenu"
   },
   {
     "name": "getBounds",
@@ -6183,7 +6390,8 @@
     },
     "title": "tray.getBounds()",
     "type": "instanceMethod",
-    "tldr": "The bounds of this tray icon as Object.."
+    "tldr": "The bounds of this tray icon as Object..",
+    "url": "https://electronjs.org/docs/api/tray#traygetbounds"
   },
   {
     "name": "isDestroyed",
@@ -6194,7 +6402,8 @@
     },
     "title": "tray.isDestroyed()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the tray icon is destroyed."
+    "tldr": "Returns whether the tray icon is destroyed.",
+    "url": "https://electronjs.org/docs/api/tray#trayisdestroyed"
   },
   {
     "name": "click",
@@ -6560,7 +6769,8 @@
     ],
     "title": "contents.loadURL(url[, options])",
     "type": "instanceMethod",
-    "tldr": "Loads the url in the window."
+    "tldr": "Loads the url in the window.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsloadurl"
   },
   {
     "name": "loadFile",
@@ -6575,7 +6785,8 @@
     ],
     "title": "contents.loadFile(filePath)",
     "type": "instanceMethod",
-    "tldr": "Loads the given file in the window, filePath should be a path to an HTML file relative to the root of your application."
+    "tldr": "Loads the given file in the window, filePath should be a path to an HTML file relative to the root of your application.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsloadfile"
   },
   {
     "name": "downloadURL",
@@ -6590,7 +6801,8 @@
     ],
     "title": "contents.downloadURL(url)",
     "type": "instanceMethod",
-    "tldr": "Initiates a download of the resource at url without navigating."
+    "tldr": "Initiates a download of the resource at url without navigating.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsdownloadurl"
   },
   {
     "name": "getURL",
@@ -6601,7 +6813,8 @@
     },
     "title": "contents.getURL()",
     "type": "instanceMethod",
-    "tldr": "Returns the URL of the current web page."
+    "tldr": "Returns the URL of the current web page.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgeturl"
   },
   {
     "name": "getTitle",
@@ -6612,7 +6825,8 @@
     },
     "title": "contents.getTitle()",
     "type": "instanceMethod",
-    "tldr": "Returns the title of the current web page."
+    "tldr": "Returns the title of the current web page.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgettitle"
   },
   {
     "name": "isDestroyed",
@@ -6623,14 +6837,16 @@
     },
     "title": "contents.isDestroyed()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the web page is destroyed."
+    "tldr": "Returns whether the web page is destroyed.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsisdestroyed"
   },
   {
     "name": "focus",
     "description": "Focuses the web page.",
     "title": "contents.focus()",
     "type": "instanceMethod",
-    "tldr": "Focuses the web page.."
+    "tldr": "Focuses the web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsfocus"
   },
   {
     "name": "isFocused",
@@ -6641,7 +6857,8 @@
     },
     "title": "contents.isFocused()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the web page is focused."
+    "tldr": "Returns whether the web page is focused.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsisfocused"
   },
   {
     "name": "isLoading",
@@ -6652,7 +6869,8 @@
     },
     "title": "contents.isLoading()",
     "type": "instanceMethod",
-    "tldr": "Returns whether web page is still loading resources."
+    "tldr": "Returns whether web page is still loading resources.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsisloading"
   },
   {
     "name": "isLoadingMainFrame",
@@ -6663,7 +6881,8 @@
     },
     "title": "contents.isLoadingMainFrame()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the main frame (and not just iframes or frames within it) is still loading."
+    "tldr": "Returns whether the main frame (and not just iframes or frames within it) is still loading.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsisloadingmainframe"
   },
   {
     "name": "isWaitingForResponse",
@@ -6674,28 +6893,32 @@
     },
     "title": "contents.isWaitingForResponse()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the web page is waiting for a first-response from the main resource of the page."
+    "tldr": "Returns whether the web page is waiting for a first-response from the main resource of the page.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsiswaitingforresponse"
   },
   {
     "name": "stop",
     "description": "Stops any pending navigation.",
     "title": "contents.stop()",
     "type": "instanceMethod",
-    "tldr": "Stops any pending navigation.."
+    "tldr": "Stops any pending navigation..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsstop"
   },
   {
     "name": "reload",
     "description": "Reloads the current web page.",
     "title": "contents.reload()",
     "type": "instanceMethod",
-    "tldr": "Reloads the current web page.."
+    "tldr": "Reloads the current web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsreload"
   },
   {
     "name": "reloadIgnoringCache",
     "description": "Reloads current page and ignores cache.",
     "title": "contents.reloadIgnoringCache()",
     "type": "instanceMethod",
-    "tldr": "Reloads current page and ignores cache.."
+    "tldr": "Reloads current page and ignores cache..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsreloadignoringcache"
   },
   {
     "name": "canGoBack",
@@ -6706,7 +6929,8 @@
     },
     "title": "contents.canGoBack()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the browser can go back to previous web page."
+    "tldr": "Returns whether the browser can go back to previous web page.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentscangoback"
   },
   {
     "name": "canGoForward",
@@ -6717,7 +6941,8 @@
     },
     "title": "contents.canGoForward()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the browser can go forward to next web page."
+    "tldr": "Returns whether the browser can go forward to next web page.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentscangoforward"
   },
   {
     "name": "canGoToOffset",
@@ -6736,28 +6961,32 @@
     },
     "title": "contents.canGoToOffset(offset)",
     "type": "instanceMethod",
-    "tldr": "Returns whether the web page can go to offset."
+    "tldr": "Returns whether the web page can go to offset.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentscangotooffset"
   },
   {
     "name": "clearHistory",
     "description": "Clears the navigation history.",
     "title": "contents.clearHistory()",
     "type": "instanceMethod",
-    "tldr": "Clears the navigation history.."
+    "tldr": "Clears the navigation history..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsclearhistory"
   },
   {
     "name": "goBack",
     "description": "Makes the browser go back a web page.",
     "title": "contents.goBack()",
     "type": "instanceMethod",
-    "tldr": "Makes the browser go back a web page.."
+    "tldr": "Makes the browser go back a web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgoback"
   },
   {
     "name": "goForward",
     "description": "Makes the browser go forward a web page.",
     "title": "contents.goForward()",
     "type": "instanceMethod",
-    "tldr": "Makes the browser go forward a web page.."
+    "tldr": "Makes the browser go forward a web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgoforward"
   },
   {
     "name": "goToIndex",
@@ -6772,7 +7001,8 @@
     ],
     "title": "contents.goToIndex(index)",
     "type": "instanceMethod",
-    "tldr": "Navigates browser to the specified absolute web page index.."
+    "tldr": "Navigates browser to the specified absolute web page index..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgotoindex"
   },
   {
     "name": "goToOffset",
@@ -6787,7 +7017,8 @@
     ],
     "title": "contents.goToOffset(offset)",
     "type": "instanceMethod",
-    "tldr": "Navigates to the specified offset from the \"current entry\".."
+    "tldr": "Navigates to the specified offset from the \"current entry\"..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgotooffset"
   },
   {
     "name": "isCrashed",
@@ -6798,7 +7029,8 @@
     },
     "title": "contents.isCrashed()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the renderer process has crashed."
+    "tldr": "Returns whether the renderer process has crashed.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsiscrashed"
   },
   {
     "name": "setUserAgent",
@@ -6813,7 +7045,8 @@
     ],
     "title": "contents.setUserAgent(userAgent)",
     "type": "instanceMethod",
-    "tldr": "Overrides the user agent for this web page.."
+    "tldr": "Overrides the user agent for this web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssetuseragent"
   },
   {
     "name": "getUserAgent",
@@ -6824,7 +7057,8 @@
     },
     "title": "contents.getUserAgent()",
     "type": "instanceMethod",
-    "tldr": "Returns the user agent for this web page."
+    "tldr": "Returns the user agent for this web page.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgetuseragent"
   },
   {
     "name": "insertCSS",
@@ -6839,7 +7073,8 @@
     ],
     "title": "contents.insertCSS(css)",
     "type": "instanceMethod",
-    "tldr": "Injects CSS into the current web page.."
+    "tldr": "Injects CSS into the current web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsinsertcss"
   },
   {
     "name": "executeJavaScript",
@@ -6882,7 +7117,8 @@
     },
     "title": "contents.executeJavaScript(code[, userGesture, callback])",
     "type": "instanceMethod",
-    "tldr": "Evaluates code in page."
+    "tldr": "Evaluates code in page.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsexecutejavascript"
   },
   {
     "name": "setIgnoreMenuShortcuts",
@@ -6900,7 +7136,8 @@
     ],
     "title": "contents.setIgnoreMenuShortcuts(ignore)",
     "type": "instanceMethod",
-    "tldr": "Ignore application menu shortcuts while this web contents is focused.."
+    "tldr": "Ignore application menu shortcuts while this web contents is focused..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssetignoremenushortcuts"
   },
   {
     "name": "setAudioMuted",
@@ -6915,7 +7152,8 @@
     ],
     "title": "contents.setAudioMuted(muted)",
     "type": "instanceMethod",
-    "tldr": "Mute the audio on the current web page.."
+    "tldr": "Mute the audio on the current web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssetaudiomuted"
   },
   {
     "name": "isAudioMuted",
@@ -6926,7 +7164,8 @@
     },
     "title": "contents.isAudioMuted()",
     "type": "instanceMethod",
-    "tldr": "Returns whether this page has been muted."
+    "tldr": "Returns whether this page has been muted.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsisaudiomuted"
   },
   {
     "name": "setZoomFactor",
@@ -6942,7 +7181,8 @@
     ],
     "title": "contents.setZoomFactor(factor)",
     "type": "instanceMethod",
-    "tldr": "Changes the zoom factor to the specified factor."
+    "tldr": "Changes the zoom factor to the specified factor.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssetzoomfactor"
   },
   {
     "name": "getZoomFactor",
@@ -6966,7 +7206,8 @@
     ],
     "title": "contents.getZoomFactor(callback)",
     "type": "instanceMethod",
-    "tldr": "Sends a request to get current zoom factor, the callback will be called with callback(zoomFactor).."
+    "tldr": "Sends a request to get current zoom factor, the callback will be called with callback(zoomFactor)..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgetzoomfactor"
   },
   {
     "name": "setZoomLevel",
@@ -6982,7 +7223,8 @@
     ],
     "title": "contents.setZoomLevel(level)",
     "type": "instanceMethod",
-    "tldr": "Changes the zoom level to the specified level."
+    "tldr": "Changes the zoom level to the specified level.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssetzoomlevel"
   },
   {
     "name": "getZoomLevel",
@@ -7006,7 +7248,8 @@
     ],
     "title": "contents.getZoomLevel(callback)",
     "type": "instanceMethod",
-    "tldr": "Sends a request to get current zoom level, the callback will be called with callback(zoomLevel).."
+    "tldr": "Sends a request to get current zoom level, the callback will be called with callback(zoomLevel)..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgetzoomlevel"
   },
   {
     "name": "setVisualZoomLevelLimits",
@@ -7027,7 +7270,8 @@
     ],
     "title": "contents.setVisualZoomLevelLimits(minimumLevel, maximumLevel)",
     "type": "instanceMethod",
-    "tldr": "Sets the maximum and minimum pinch-to-zoom level.."
+    "tldr": "Sets the maximum and minimum pinch-to-zoom level..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssetvisualzoomlevellimits"
   },
   {
     "name": "setLayoutZoomLevelLimits",
@@ -7048,35 +7292,40 @@
     ],
     "title": "contents.setLayoutZoomLevelLimits(minimumLevel, maximumLevel)",
     "type": "instanceMethod",
-    "tldr": "Sets the maximum and minimum layout-based (i.e."
+    "tldr": "Sets the maximum and minimum layout-based (i.e.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssetlayoutzoomlevellimits"
   },
   {
     "name": "undo",
     "description": "Executes the editing command undo in web page.",
     "title": "contents.undo()",
     "type": "instanceMethod",
-    "tldr": "Executes the editing command undo in web page.."
+    "tldr": "Executes the editing command undo in web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsundo"
   },
   {
     "name": "redo",
     "description": "Executes the editing command redo in web page.",
     "title": "contents.redo()",
     "type": "instanceMethod",
-    "tldr": "Executes the editing command redo in web page.."
+    "tldr": "Executes the editing command redo in web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsredo"
   },
   {
     "name": "cut",
     "description": "Executes the editing command cut in web page.",
     "title": "contents.cut()",
     "type": "instanceMethod",
-    "tldr": "Executes the editing command cut in web page.."
+    "tldr": "Executes the editing command cut in web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentscut"
   },
   {
     "name": "copy",
     "description": "Executes the editing command copy in web page.",
     "title": "contents.copy()",
     "type": "instanceMethod",
-    "tldr": "Executes the editing command copy in web page.."
+    "tldr": "Executes the editing command copy in web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentscopy"
   },
   {
     "name": "copyImageAt",
@@ -7097,42 +7346,48 @@
     ],
     "title": "contents.copyImageAt(x, y)",
     "type": "instanceMethod",
-    "tldr": "Copy the image at the given position to the clipboard.."
+    "tldr": "Copy the image at the given position to the clipboard..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentscopyimageat"
   },
   {
     "name": "paste",
     "description": "Executes the editing command paste in web page.",
     "title": "contents.paste()",
     "type": "instanceMethod",
-    "tldr": "Executes the editing command paste in web page.."
+    "tldr": "Executes the editing command paste in web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentspaste"
   },
   {
     "name": "pasteAndMatchStyle",
     "description": "Executes the editing command pasteAndMatchStyle in web page.",
     "title": "contents.pasteAndMatchStyle()",
     "type": "instanceMethod",
-    "tldr": "Executes the editing command pasteAndMatchStyle in web page.."
+    "tldr": "Executes the editing command pasteAndMatchStyle in web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentspasteandmatchstyle"
   },
   {
     "name": "delete",
     "description": "Executes the editing command delete in web page.",
     "title": "contents.delete()",
     "type": "instanceMethod",
-    "tldr": "Executes the editing command delete in web page.."
+    "tldr": "Executes the editing command delete in web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsdelete"
   },
   {
     "name": "selectAll",
     "description": "Executes the editing command selectAll in web page.",
     "title": "contents.selectAll()",
     "type": "instanceMethod",
-    "tldr": "Executes the editing command selectAll in web page.."
+    "tldr": "Executes the editing command selectAll in web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsselectall"
   },
   {
     "name": "unselect",
     "description": "Executes the editing command unselect in web page.",
     "title": "contents.unselect()",
     "type": "instanceMethod",
-    "tldr": "Executes the editing command unselect in web page.."
+    "tldr": "Executes the editing command unselect in web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsunselect"
   },
   {
     "name": "replace",
@@ -7147,7 +7402,8 @@
     ],
     "title": "contents.replace(text)",
     "type": "instanceMethod",
-    "tldr": "Executes the editing command replace in web page.."
+    "tldr": "Executes the editing command replace in web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsreplace"
   },
   {
     "name": "replaceMisspelling",
@@ -7162,7 +7418,8 @@
     ],
     "title": "contents.replaceMisspelling(text)",
     "type": "instanceMethod",
-    "tldr": "Executes the editing command replaceMisspelling in web page.."
+    "tldr": "Executes the editing command replaceMisspelling in web page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsreplacemisspelling"
   },
   {
     "name": "insertText",
@@ -7177,7 +7434,8 @@
     ],
     "title": "contents.insertText(text)",
     "type": "instanceMethod",
-    "tldr": "Inserts text to the focused element.."
+    "tldr": "Inserts text to the focused element..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsinserttext"
   },
   {
     "name": "findInPage",
@@ -7241,7 +7499,8 @@
     },
     "title": "contents.findInPage(text[, options])",
     "type": "instanceMethod",
-    "tldr": "Starts a request to find all matches for the text in the web page."
+    "tldr": "Starts a request to find all matches for the text in the web page.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsfindinpage"
   },
   {
     "name": "stopFindInPage",
@@ -7271,7 +7530,8 @@
     ],
     "title": "contents.stopFindInPage(action)",
     "type": "instanceMethod",
-    "tldr": "Stops any findInPage request for the webContents with the provided action.."
+    "tldr": "Stops any findInPage request for the webContents with the provided action..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsstopfindinpage"
   },
   {
     "name": "capturePage",
@@ -7302,7 +7562,8 @@
     ],
     "title": "contents.capturePage([rect, ]callback)",
     "type": "instanceMethod",
-    "tldr": "Captures a snapshot of the page within rect."
+    "tldr": "Captures a snapshot of the page within rect.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentscapturepage"
   },
   {
     "name": "hasServiceWorker",
@@ -7326,7 +7587,8 @@
     ],
     "title": "contents.hasServiceWorker(callback)",
     "type": "instanceMethod",
-    "tldr": "Checks if any ServiceWorker is registered and returns a boolean as response to callback.."
+    "tldr": "Checks if any ServiceWorker is registered and returns a boolean as response to callback..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentshasserviceworker"
   },
   {
     "name": "unregisterServiceWorker",
@@ -7350,7 +7612,8 @@
     ],
     "title": "contents.unregisterServiceWorker(callback)",
     "type": "instanceMethod",
-    "tldr": "Unregisters any ServiceWorker if present and returns a boolean as response to callback when the JS promise is fulfilled or false when the JS promise is rejected.."
+    "tldr": "Unregisters any ServiceWorker if present and returns a boolean as response to callback when the JS promise is fulfilled or false when the JS promise is rejected..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsunregisterserviceworker"
   },
   {
     "name": "getPrinters",
@@ -7362,7 +7625,8 @@
     },
     "title": "contents.getPrinters()",
     "type": "instanceMethod",
-    "tldr": "Get the system printer list.."
+    "tldr": "Get the system printer list..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgetprinters"
   },
   {
     "name": "print",
@@ -7415,7 +7679,8 @@
     ],
     "title": "contents.print([options], [callback])",
     "type": "instanceMethod",
-    "tldr": "Prints window's web page."
+    "tldr": "Prints window's web page.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsprint"
   },
   {
     "name": "printToPDF",
@@ -7489,7 +7754,8 @@
     ],
     "title": "contents.printToPDF(options, callback)",
     "type": "instanceMethod",
-    "tldr": "Prints window's web page as PDF with Chromium's preview printing custom settings."
+    "tldr": "Prints window's web page as PDF with Chromium's preview printing custom settings.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsprinttopdf"
   },
   {
     "name": "addWorkSpace",
@@ -7504,7 +7770,8 @@
     ],
     "title": "contents.addWorkSpace(path)",
     "type": "instanceMethod",
-    "tldr": "Adds the specified path to DevTools workspace."
+    "tldr": "Adds the specified path to DevTools workspace.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsaddworkspace"
   },
   {
     "name": "removeWorkSpace",
@@ -7519,7 +7786,8 @@
     ],
     "title": "contents.removeWorkSpace(path)",
     "type": "instanceMethod",
-    "tldr": "Removes the specified path from DevTools workspace.."
+    "tldr": "Removes the specified path from DevTools workspace..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsremoveworkspace"
   },
   {
     "name": "setDevToolsWebContents",
@@ -7534,7 +7802,8 @@
     ],
     "title": "contents.setDevToolsWebContents(devToolsWebContents)",
     "type": "instanceMethod",
-    "tldr": "Uses the devToolsWebContents as the target WebContents to show devtools."
+    "tldr": "Uses the devToolsWebContents as the target WebContents to show devtools.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssetdevtoolswebcontents"
   },
   {
     "name": "openDevTools",
@@ -7572,14 +7841,16 @@
     ],
     "title": "contents.openDevTools([options])",
     "type": "instanceMethod",
-    "tldr": "Opens the devtools."
+    "tldr": "Opens the devtools.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsopendevtools"
   },
   {
     "name": "closeDevTools",
     "description": "Closes the devtools.",
     "title": "contents.closeDevTools()",
     "type": "instanceMethod",
-    "tldr": "Closes the devtools.."
+    "tldr": "Closes the devtools..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsclosedevtools"
   },
   {
     "name": "isDevToolsOpened",
@@ -7590,7 +7861,8 @@
     },
     "title": "contents.isDevToolsOpened()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the devtools is opened."
+    "tldr": "Returns whether the devtools is opened.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsisdevtoolsopened"
   },
   {
     "name": "isDevToolsFocused",
@@ -7601,14 +7873,16 @@
     },
     "title": "contents.isDevToolsFocused()",
     "type": "instanceMethod",
-    "tldr": "Returns whether the devtools view is focused ."
+    "tldr": "Returns whether the devtools view is focused .",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsisdevtoolsfocused"
   },
   {
     "name": "toggleDevTools",
     "description": "Toggles the developer tools.",
     "title": "contents.toggleDevTools()",
     "type": "instanceMethod",
-    "tldr": "Toggles the developer tools.."
+    "tldr": "Toggles the developer tools..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentstoggledevtools"
   },
   {
     "name": "inspectElement",
@@ -7629,14 +7903,16 @@
     ],
     "title": "contents.inspectElement(x, y)",
     "type": "instanceMethod",
-    "tldr": "Starts inspecting element at position (x, y).."
+    "tldr": "Starts inspecting element at position (x, y)..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsinspectelement"
   },
   {
     "name": "inspectServiceWorker",
     "description": "Opens the developer tools for the service worker context.",
     "title": "contents.inspectServiceWorker()",
     "type": "instanceMethod",
-    "tldr": "Opens the developer tools for the service worker context.."
+    "tldr": "Opens the developer tools for the service worker context..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsinspectserviceworker"
   },
   {
     "name": "send",
@@ -7657,7 +7933,8 @@
     ],
     "title": "contents.send(channel[, arg1][, arg2][, ...])",
     "type": "instanceMethod",
-    "tldr": "Send an asynchronous message to renderer process via channel, you can also send arbitrary arguments."
+    "tldr": "Send an asynchronous message to renderer process via channel, you can also send arbitrary arguments.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssend"
   },
   {
     "name": "enableDeviceEmulation",
@@ -7726,14 +8003,16 @@
     ],
     "title": "contents.enableDeviceEmulation(parameters)",
     "type": "instanceMethod",
-    "tldr": "Enable device emulation with the given parameters.."
+    "tldr": "Enable device emulation with the given parameters..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsenabledeviceemulation"
   },
   {
     "name": "disableDeviceEmulation",
     "description": "Disable device emulation enabled by webContents.enableDeviceEmulation.",
     "title": "contents.disableDeviceEmulation()",
     "type": "instanceMethod",
-    "tldr": "Disable device emulation enabled by webContents.enableDeviceEmulation.."
+    "tldr": "Disable device emulation enabled by webContents.enableDeviceEmulation..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsdisabledeviceemulation"
   },
   {
     "name": "sendInputEvent",
@@ -7796,7 +8075,8 @@
     ],
     "title": "contents.sendInputEvent(event)",
     "type": "instanceMethod",
-    "tldr": "Sends an input event to the page."
+    "tldr": "Sends an input event to the page.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssendinputevent"
   },
   {
     "name": "beginFrameSubscription",
@@ -7834,14 +8114,16 @@
     ],
     "title": "contents.beginFrameSubscription([onlyDirty ,]callback)",
     "type": "instanceMethod",
-    "tldr": "Begin subscribing for presentation events and captured frames, the callback will be called with callback(frameBuffer, dirtyRect) when there is a presentation event."
+    "tldr": "Begin subscribing for presentation events and captured frames, the callback will be called with callback(frameBuffer, dirtyRect) when there is a presentation event.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsbeginframesubscription"
   },
   {
     "name": "endFrameSubscription",
     "description": "End subscribing for frame presentation events.",
     "title": "contents.endFrameSubscription()",
     "type": "instanceMethod",
-    "tldr": "End subscribing for frame presentation events.."
+    "tldr": "End subscribing for frame presentation events..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsendframesubscription"
   },
   {
     "name": "startDrag",
@@ -7872,7 +8154,8 @@
     ],
     "title": "contents.startDrag(item)",
     "type": "instanceMethod",
-    "tldr": "Sets the item as dragging item for current drag-drop operation, file is the absolute path of the file to be dragged, and icon is the image showing under the cursor when dragging.."
+    "tldr": "Sets the item as dragging item for current drag-drop operation, file is the absolute path of the file to be dragged, and icon is the image showing under the cursor when dragging..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsstartdrag"
   },
   {
     "name": "savePage",
@@ -7929,7 +8212,8 @@
     },
     "title": "contents.savePage(fullPath, saveType, callback)",
     "type": "instanceMethod",
-    "tldr": "Returns true if the process of saving page has been initiated successfully."
+    "tldr": "Returns true if the process of saving page has been initiated successfully.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssavepage"
   },
   {
     "name": "showDefinitionForSelection",
@@ -7939,7 +8223,8 @@
     "description": "Shows pop-up dictionary that searches the selected word on the page.",
     "title": "contents.showDefinitionForSelection()",
     "type": "instanceMethod",
-    "tldr": "Shows pop-up dictionary that searches the selected word on the page.."
+    "tldr": "Shows pop-up dictionary that searches the selected word on the page..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsshowdefinitionforselection"
   },
   {
     "name": "setSize",
@@ -7979,7 +8264,8 @@
     ],
     "title": "contents.setSize(options)",
     "type": "instanceMethod",
-    "tldr": "Set the size of the page."
+    "tldr": "Set the size of the page.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssetsize"
   },
   {
     "name": "isOffscreen",
@@ -7990,21 +8276,24 @@
     },
     "title": "contents.isOffscreen()",
     "type": "instanceMethod",
-    "tldr": "Returns indicates whether offscreen rendering is enabled."
+    "tldr": "Returns indicates whether offscreen rendering is enabled.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsisoffscreen"
   },
   {
     "name": "startPainting",
     "description": "If offscreen rendering is enabled and not painting, start painting.",
     "title": "contents.startPainting()",
     "type": "instanceMethod",
-    "tldr": "If offscreen rendering is enabled and not painting, start painting.."
+    "tldr": "If offscreen rendering is enabled and not painting, start painting..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsstartpainting"
   },
   {
     "name": "stopPainting",
     "description": "If offscreen rendering is enabled and painting, stop painting.",
     "title": "contents.stopPainting()",
     "type": "instanceMethod",
-    "tldr": "If offscreen rendering is enabled and painting, stop painting.."
+    "tldr": "If offscreen rendering is enabled and painting, stop painting..",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsstoppainting"
   },
   {
     "name": "isPainting",
@@ -8015,7 +8304,8 @@
     },
     "title": "contents.isPainting()",
     "type": "instanceMethod",
-    "tldr": "Returns if offscreen rendering is enabled returns whether it is currently painting."
+    "tldr": "Returns if offscreen rendering is enabled returns whether it is currently painting.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsispainting"
   },
   {
     "name": "setFrameRate",
@@ -8030,7 +8320,8 @@
     ],
     "title": "contents.setFrameRate(fps)",
     "type": "instanceMethod",
-    "tldr": "If offscreen rendering is enabled sets the frame rate to the specified number."
+    "tldr": "If offscreen rendering is enabled sets the frame rate to the specified number.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssetframerate"
   },
   {
     "name": "getFrameRate",
@@ -8041,14 +8332,16 @@
     },
     "title": "contents.getFrameRate()",
     "type": "instanceMethod",
-    "tldr": "Returns if offscreen rendering is enabled returns the current frame rate."
+    "tldr": "Returns if offscreen rendering is enabled returns the current frame rate.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgetframerate"
   },
   {
     "name": "invalidate",
     "description": "Schedules a full repaint of the window this web contents is in. If offscreen rendering is enabled invalidates the frame and generates a new one through the 'paint' event.",
     "title": "contents.invalidate()",
     "type": "instanceMethod",
-    "tldr": "Schedules a full repaint of the window this web contents is in."
+    "tldr": "Schedules a full repaint of the window this web contents is in.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsinvalidate"
   },
   {
     "name": "getWebRTCIPHandlingPolicy",
@@ -8059,7 +8352,8 @@
     },
     "title": "contents.getWebRTCIPHandlingPolicy()",
     "type": "instanceMethod",
-    "tldr": "Returns returns the WebRTC IP Handling Policy."
+    "tldr": "Returns returns the WebRTC IP Handling Policy.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgetwebrtciphandlingpolicy"
   },
   {
     "name": "setWebRTCIPHandlingPolicy",
@@ -8093,7 +8387,8 @@
     ],
     "title": "contents.setWebRTCIPHandlingPolicy(policy)",
     "type": "instanceMethod",
-    "tldr": "Setting the WebRTC IP handling policy allows you to control which IPs are exposed via WebRTC."
+    "tldr": "Setting the WebRTC IP handling policy allows you to control which IPs are exposed via WebRTC.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentssetwebrtciphandlingpolicy"
   },
   {
     "name": "getOSProcessId",
@@ -8104,7 +8399,8 @@
     },
     "title": "contents.getOSProcessId()",
     "type": "instanceMethod",
-    "tldr": "Returns the pid of the associated renderer process."
+    "tldr": "Returns the pid of the associated renderer process.",
+    "url": "https://electronjs.org/docs/api/web-contents#web-contentsgetosprocessid"
   },
   {
     "name": "did-finish-load",
@@ -9635,7 +9931,8 @@
     ],
     "title": "webRequest.onBeforeRequest([filter, ]listener)",
     "type": "instanceMethod",
-    "tldr": "The listener will be called with listener(details, callback) when a request is about to occur."
+    "tldr": "The listener will be called with listener(details, callback) when a request is about to occur.",
+    "url": "https://electronjs.org/docs/api/web-request#web-requestonbeforerequest"
   },
   {
     "name": "onBeforeSendHeaders",
@@ -9665,7 +9962,8 @@
     ],
     "title": "webRequest.onBeforeSendHeaders([filter, ]listener)",
     "type": "instanceMethod",
-    "tldr": "The listener will be called with listener(details, callback) before sending an HTTP request, once the request headers are available."
+    "tldr": "The listener will be called with listener(details, callback) before sending an HTTP request, once the request headers are available.",
+    "url": "https://electronjs.org/docs/api/web-request#web-requestonbeforesendheaders"
   },
   {
     "name": "onSendHeaders",
@@ -9756,7 +10054,8 @@
     ],
     "title": "webRequest.onSendHeaders([filter, ]listener)",
     "type": "instanceMethod",
-    "tldr": "The listener will be called with listener(details) just before a request is going to be sent to the server, modifications of previous onBeforeSendHeaders response are visible by the time this listener is fired.."
+    "tldr": "The listener will be called with listener(details) just before a request is going to be sent to the server, modifications of previous onBeforeSendHeaders response are visible by the time this listener is fired..",
+    "url": "https://electronjs.org/docs/api/web-request#web-requestonsendheaders"
   },
   {
     "name": "onHeadersReceived",
@@ -9786,7 +10085,8 @@
     ],
     "title": "webRequest.onHeadersReceived([filter, ]listener)",
     "type": "instanceMethod",
-    "tldr": "The listener will be called with listener(details, callback) when HTTP response headers of a request have been received."
+    "tldr": "The listener will be called with listener(details, callback) when HTTP response headers of a request have been received.",
+    "url": "https://electronjs.org/docs/api/web-request#web-requestonheadersreceived"
   },
   {
     "name": "onResponseStarted",
@@ -9898,7 +10198,8 @@
     ],
     "title": "webRequest.onResponseStarted([filter, ]listener)",
     "type": "instanceMethod",
-    "tldr": "The listener will be called with listener(details) when first byte of the response body is received."
+    "tldr": "The listener will be called with listener(details) when first byte of the response body is received.",
+    "url": "https://electronjs.org/docs/api/web-request#web-requestonresponsestarted"
   },
   {
     "name": "onBeforeRedirect",
@@ -10017,7 +10318,8 @@
     ],
     "title": "webRequest.onBeforeRedirect([filter, ]listener)",
     "type": "instanceMethod",
-    "tldr": "The listener will be called with listener(details) when a server initiated redirect is about to occur.."
+    "tldr": "The listener will be called with listener(details) when a server initiated redirect is about to occur..",
+    "url": "https://electronjs.org/docs/api/web-request#web-requestonbeforeredirect"
   },
   {
     "name": "onCompleted",
@@ -10129,7 +10431,8 @@
     ],
     "title": "webRequest.onCompleted([filter, ]listener)",
     "type": "instanceMethod",
-    "tldr": "The listener will be called with listener(details) when a request is completed.."
+    "tldr": "The listener will be called with listener(details) when a request is completed..",
+    "url": "https://electronjs.org/docs/api/web-request#web-requestoncompleted"
   },
   {
     "name": "onErrorOccurred",
@@ -10226,6 +10529,7 @@
     ],
     "title": "webRequest.onErrorOccurred([filter, ]listener)",
     "type": "instanceMethod",
-    "tldr": "The listener will be called with listener(details) when an error occurs.."
+    "tldr": "The listener will be called with listener(details) when an error occurs..",
+    "url": "https://electronjs.org/docs/api/web-request#web-requestonerroroccurred"
   }
 ]
