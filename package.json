@@ -2,9 +2,9 @@
   "name": "electron-search",
   "private": true,
   "version": "1.0.0",
-  "description": "Algolia search index for Electron APIs, Tutorials, Packages, and Repos",
+  "description": "Algolia search index data for Electron APIs, Tutorials, Packages, and Repos",
   "main": "index.json",
-  "repository": "https://github.com/electron/electron-search",
+  "repository": "https://github.com/electron/electron-algolia-index",
   "author": "zeke",
   "license": "MIT",
   "scripts": {
@@ -12,12 +12,14 @@
     "pretest": "npm run build",
     "test": "tape test.js | tap-spec && standard --fix",
     "lint": "standard --fix",
-    "demo": "budo demo.js --live --no-debug --open --css demo.css",
+    "prestart": "npm run build",
+    "start": "budo demo.js --live --no-debug --open --css demo.css",
     "repl": "local-repl"
   },
   "devDependencies": {
     "budo": "^11.2.0",
     "cheerio": "^1.0.0-rc.2",
+    "electron-apps": "^1.2899.0",
     "electron-i18n": "^1.86.0",
     "instantsearch.js": "^2.7.4",
     "is-url": "^1.2.4",
