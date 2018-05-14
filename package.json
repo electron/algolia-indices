@@ -1,7 +1,8 @@
 {
   "name": "electron-search",
+  "private": true,
   "version": "1.0.0",
-  "description": "Experimental Algolia search index for Electron API, docs, etc.",
+  "description": "Algolia search index for Electron APIs, Tutorials, Packages, and Repos",
   "main": "index.json",
   "repository": "https://github.com/electron/electron-search",
   "author": "zeke",
