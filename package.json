@@ -9,10 +9,17 @@
   "scripts": {
     "build": "script/build.js > index.json",
     "pretest": "npm run build",
-    "test": "tape test.js | tap-spec && standard --fix"
+    "test": "tape test.js | tap-spec && standard --fix",
+    "lint": "standard --fix",
+    "demo": "budo demo.js --live --no-debug --open",
+    "repl": "local-repl"
   },
   "devDependencies": {
+    "budo": "^11.2.0",
+    "instantsearch.js": "^2.7.4",
     "is-url": "^1.2.4",
+    "local-repl": "^4.0.0",
+    "nanohtml": "^1.2.4",
     "prettier-standard": "^8.0.1",
     "standard": "^11.0.1",
     "tap-spec": "^4.1.1",
