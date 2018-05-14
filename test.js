@@ -9,7 +9,9 @@ test('electron-search', t => {
   t.ok(Array.isArray(entries), 'is an array')
   t.ok(entries.length > 500, 'with hella entries')
   entries.forEach(entry => {
-    t.ok(types.includes(entry.type), `${entry.title} has a known type`)
+    t.ok(types.includes(entry.type), `${entry.title} has a 'type' property`)
+    // t.ok(types.includes(entry.tldr), `${entry.title} has a 'tldr' property`)
+    // t.ok(types.includes(entry.url), `${entry.title} has a 'url' property`)
   })
 
   // APIs

@@ -14,6 +14,9 @@
 
  .ais-hits--item {
    padding: 10px;
+   border: 1px solid #EEE;
+   border-radius: 3px;
+   margin: 5px 0;
  }
 
  .ais-hits--item em {

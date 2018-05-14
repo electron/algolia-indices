@@ -43,8 +43,20 @@ search.addWidget(
 search.addWidget(
   instantsearch.widgets.refinementList({
     container: '#refinement-list',
-    attributeName: 'type'
+    attributeName: 'type',
+    limit: 10,
+    templates: {
+      header: 'Types'
+    }
   })
 )
 
 search.start()
+
+search.on('render', (...args) => {
+  console.log('algolia render', args)
+})
+
+search.on('error', (...args) => {
+  console.log('algolia error', args)
+})
