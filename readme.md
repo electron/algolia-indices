@@ -17,6 +17,7 @@ Repos | [electron/dependent-repos](https://github.com/electron/dependent-repos)
 
 - how do we see the context object that is passed to the hit template?
 - how can we use a different HTML template per data type?
+  - fallback idea: mustache logic - https://stackoverflow.com/a/6479017/95670
 - refinementList in demo.js is not working. What is missing?
 - how can we update the index using node (instead of the website)?
 
