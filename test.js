@@ -1,7 +1,7 @@
 const entries = require('.')
 const test = require('tape')
 const isURL = require('is-url')
-const types = ['api', 'tutorial', 'app']
+const types = ['api', 'tutorial', 'app', 'package', 'repo']
 
 test('electron-search', t => {
   // All Entries
@@ -48,6 +48,16 @@ test('electron-search', t => {
 
   // Packages
   // ----------------------------------------------------------------------
+  const packages = entries.filter(entry => entry.type === 'package')
+
+  t.ok(packages.length > 25, 'lots of packages')
+
+  packages.forEach(pkg => {
+    if (!pkg.title) console.log(pkg)
+    t.equal(typeof pkg.title, 'string', `${pkg.title} has a title`)
+    // t.ok(isURL(pkg.githubUrl), `${pkg.title} has a valid GitHub URL`)
+    // t.ok(isURL(pkg.url), `${pkg.title} has a valid website URL`)
+  })
 
   // Repos
   // ----------------------------------------------------------------------

@@ -2,9 +2,10 @@
 
 const {chain} = require('lodash')
 const apis = require('../lib/electron-apis')
-const tutorials = require('../lib/tutorials.js')
-const apps = require('../lib/apps.js')
-const results = chain([apis, tutorials, apps])
+const tutorials = require('../lib/tutorials')
+const apps = require('../lib/apps')
+const packages = require('../lib/packages')
+const results = chain([apis, tutorials, apps, packages])
   .flatten()
   .value()
 
