@@ -10,6 +10,18 @@ const $main = html`
 </main>
 `
 
+const hitTemplate = `
+{{#_highlightResult.icon64}}
+  <img src="https://electronjs.org/node_modules/electron-apps/apps/{{_highlightResult.slug.value}}/{{_highlightResult.icon64.value}}">
+{{/_highlightResult.icon64}}
+{{^_highlightResult.icon64}}
+  {{{type.value}}} 
+{{/_highlightResult.icon64}}
+
+<b>{{{_highlightResult.title.value}}} Hello {{{title.value}}}</b> - 
+{{{_highlightResult.tldr.value}}}
+`
+
 document.body.appendChild($main)
 
 const search = instantsearch({
@@ -24,11 +36,14 @@ search.addWidget(
     container: '#hits',
     templates: {
       empty: 'No results',
-      item: `
-        {{{_highlightResult.type.value}}} 
-        <b>{{{_highlightResult.title.value}}}</b> - 
-        {{{_highlightResult.tldr.value}}}
-      `
+      item: hitTemplate
+    },
+    transformData: {
+      item: data => {   
+        // useful for viewing template context:
+        console.log('data', data)
+        return data
+      }
     }
   })
 )
@@ -54,7 +69,7 @@ search.addWidget(
 search.start()
 
 search.on('render', (...args) => {
-  console.log('algolia render', args)
+  // console.log('algolia render', args)
 })
 
 search.on('error', (...args) => {
