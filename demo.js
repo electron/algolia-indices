@@ -13,13 +13,15 @@ const $main = html`
 const hitTemplate = `
 {{#_highlightResult.icon64}}
   <img src="https://electronjs.org/node_modules/electron-apps/apps/{{_highlightResult.slug.value}}/{{_highlightResult.icon64.value}}">
-{{/_highlightResult.icon64}}
-{{^_highlightResult.icon64}}
-  {{{type.value}}} 
+  <b>{{{_highlightResult.name.value}}}</b> -
+  {{{_highlightResult.description.value}}}
 {{/_highlightResult.icon64}}
 
-<b>{{{_highlightResult.title.value}}} Hello {{{title.value}}}</b> - 
-{{{_highlightResult.tldr.value}}}
+{{^_highlightResult.icon64}}
+  {{{type.value}}} 
+  <b>{{{_highlightResult.title.value}}}</b> - 
+  {{{_highlightResult.tldr.value}}}
+{{/_highlightResult.icon64}}
 `
 
 document.body.appendChild($main)
