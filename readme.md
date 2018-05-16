@@ -11,8 +11,8 @@ search engine.
 Type | Source
 ------------ | -----------
 APIs | [electron-api.json](https://electronjs.org/blog/api-docs-json-schema)
-Tutorials | [electron-i18n](https://github.com/electron/i18n#usage)
-Packages | [electron-npm-packages](https://ghub.io/electron-npm-packages)
+Tutorials | [electron/i18n](https://github.com/electron/i18n#usage)
+Packages | [electron/packages](https://ghub.io/electron-npm-packages)
 Repos | [electron/dependent-repos](https://github.com/electron/dependent-repos)
 Apps | [electron/apps](https://github.com/electron/apps)
 
