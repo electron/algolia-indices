@@ -32,32 +32,6 @@ npm test
 npm start
 ```
 
-## Questions for Algolia Folks
-
-#### how do we see the context object that is passed to the hit template?
-
-`transformData()` doesn't seem to correlate.
-
-#### how can we use a different HTML template per data type?
-  
-fallback: [mustache logic](https://stackoverflow.com/a/6479017/95670).
-
-#### how can we separate search results by type? tutorials, APis, packages, apps, repos
-
-`refinementList` in [demo.js](demo.js) is not working. What is missing?
-
-#### how can we update the index using node (instead of the website)?
-
-clear existing index and re-upload the whole thing?
-
-#### how can we exempt parts of the template from search query emphasis?
-
-Example: `<img src="https://electronjs.org/node_modules/electron-apps/apps/iease-<em>music</em>/iease-<em>music</em>-icon-64.png"`>
-
-#### localization?
-
-How can cater to different language speakers?
-
 ...
 
 ## License
