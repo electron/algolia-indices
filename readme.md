@@ -1,10 +1,6 @@
 # electron-algolia-index
 
-> Structured searchable data from Electron's APIs, Tutorials, Packages, Repos, and Apps
-
-This project collects Electron-related documentation from various sources
-and assembles it into a single JSON object for consumption by the Algolia
-search engine.
+> Searchable data about Electron APIs, Tutorials, Packages, Repos, and Apps
 
 ## Data Sources
 
@@ -18,7 +14,7 @@ Apps | [electron/apps](https://github.com/electron/apps)
 
 ## Demo
 
-See a crude demo UI at [electron-algolia.herokuapp.com](https://electron-algolia.herokuapp.com/)
+See [electron-algolia.herokuapp.com](https://electron-algolia.herokuapp.com/)
 
 ## Development
 
@@ -31,8 +27,6 @@ npm install
 npm test
 npm start
 ```
-
-...
 
 ## License
 
