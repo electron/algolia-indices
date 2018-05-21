@@ -7,7 +7,10 @@
   "author": "zeke",
   "license": "MIT",
   "scripts": {
+    "echo": "script/echo.js",
+    "preupload": "npm run test",
     "upload": "script/upload.js",
+    "update": "script/update.sh",
     "test": "tape test.js | tap-spec && standard --fix",
     "lint": "standard --fix",
     "start": "budo demo.js --live --no-debug --open --css demo.css",

@@ -12,11 +12,20 @@ function getRecords () {
       const objectID = `tutorial-${slug}`
       const html = sections.map(section => section.html).join('\n\n')
       const body = cheerio.load(html).text()
+
+      // ignore files that have been renamed
       if (!title && body.startsWith('Moved to')) return
       if (slug === 'README') return
 
       const url = `https://electronjs.org/docs/tutorial/${slug}`
-      return {objectID, title, githubUrl, url, slug, body}
+      return {
+        objectID,
+        title,
+        githubUrl,
+        url,
+        slug,
+        body
+      }
     })
     .compact() // remove nulls from early returns above
     .value()

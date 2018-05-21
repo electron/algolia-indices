@@ -56,7 +56,7 @@ test('electron-search', t => {
     if (!pkg.name) console.log(pkg)
     t.equal(typeof pkg.name, 'string', `${pkg.name} has a name`)
     // t.ok(isURL(pkg.githubUrl), `${pkg.title} has a valid GitHub URL`)
-    // t.ok(isURL(pkg.url), `${pkg.title} has a valid website URL`)
+    // t.ok(isURL(pkg.repository), `${pkg.title} has a valid repository`)
   })
 
   // Repos
