@@ -41,7 +41,7 @@ search.addWidget(
       item: hitTemplate
     },
     transformData: {
-      item: data => {   
+      item: data => {
         // useful for viewing template context:
         console.log('data', data)
         return data
