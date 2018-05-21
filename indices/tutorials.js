@@ -17,6 +17,15 @@ function getRecords () {
       if (!title && body.startsWith('Moved to')) return
       if (slug === 'README') return
 
+      const keyValuePairs = [
+        'is:doc',
+        'is:tutorial',
+        `doc:${title}`,
+        `doc:${slug}`,
+        `tutorial:${title}`,
+        `tutorial:${slug}`
+      ]
+
       const url = `https://electronjs.org/docs/tutorial/${slug}`
       return {
         objectID,
@@ -24,7 +33,8 @@ function getRecords () {
         githubUrl,
         url,
         slug,
-        body
+        body,
+        keyValuePairs
       }
     })
     .compact() // remove nulls from early returns above
