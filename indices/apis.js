@@ -53,6 +53,17 @@ function getRecords () {
   })
 
   return records.map(record => {
+    record.keyValuePairs = [
+      'is:doc',
+      'is:api',
+      `api:${record.name}`,
+      `api:${record.slug}`,
+      `api:${record.fullSignature}`,
+      `doc:${record.name}`,
+      `doc:${record.slug}`,
+      `doc:${record.fullSignature}`
+    ]
+
     return Object.assign(
       {objectID: record.url.replace('https://electronjs.org/docs/api/', 'api-')},
       record

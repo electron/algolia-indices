@@ -10,6 +10,12 @@ function getRecords () {
     delete app.readmeCleaned
     delete app.readmeOriginal
 
+    app.keyValuePairs = [
+      'is:app',
+      `app:${app.name}`,
+      `app:${app.slug}`
+    ]
+
     return Object.assign(
       {objectID: `app-${app.slug}`},
       app

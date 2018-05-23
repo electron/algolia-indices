@@ -29,7 +29,8 @@ test('electron-search', t => {
   apis.forEach(api => {
     t.equal(typeof api.fullSignature, 'string', `${api.fullSignature} has a fullSignature`)
     t.equal(typeof api.name, 'string', `${api.fullSignature} has a name`)
-    // t.ok(isURL(api.url), `${api.title} has a valid URL`)
+    t.ok(api.keyValuePairs.includes('is:api'), `${api.fullSignature} has is:api key-value pair`)
+    t.ok(api.keyValuePairs.includes('is:doc'), `${api.fullSignature} has is:api key-value pair`)
   })
 
   // Tutorials
@@ -44,6 +45,8 @@ test('electron-search', t => {
     t.equal(typeof tutorial.body, 'string', `${tutorial.title} has a body`)
     t.ok(isURL(tutorial.githubUrl), `${tutorial.title} has a valid GitHub URL`)
     t.ok(isURL(tutorial.url), `${tutorial.title} has a valid website URL`)
+    t.ok(tutorial.keyValuePairs.includes('is:doc'), `${tutorial.title} has is:doc key-value pair`)
+    t.ok(tutorial.keyValuePairs.includes('is:tutorial'), `${tutorial.title} has is:tutorial key-value pair`)
   })
 
   // Packages
@@ -55,11 +58,16 @@ test('electron-search', t => {
   packages.forEach(pkg => {
     if (!pkg.name) console.log(pkg)
     t.equal(typeof pkg.name, 'string', `${pkg.name} has a name`)
+    t.ok(pkg.keyValuePairs.includes('is:pkg'), `${pkg.name} has is:pkg key-value pair`)
+    t.ok(pkg.keyValuePairs.includes('is:pkg'), `${pkg.name} has is:package key-value pair`)
     // t.ok(isURL(pkg.githubUrl), `${pkg.title} has a valid GitHub URL`)
     // t.ok(isURL(pkg.repository), `${pkg.title} has a valid repository`)
   })
 
-  // Repos
+  // TODO: Apps
+  // ----------------------------------------------------------------------
+
+  // TODO: Repos
   // ----------------------------------------------------------------------
 
   t.end()
