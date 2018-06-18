@@ -33,6 +33,10 @@ test('electron-search', t => {
     t.ok(api.keyValuePairs.includes('is:doc'), `${api.fullSignature} has is:api key-value pair`)
   })
 
+  const apisWithTldrs = apis.filter(api => api.tldr && api.tldr.length > 10)
+  const tldrThreshold = 95
+  t.ok(apisWithTldrs.length / apis.length * 100 > tldrThreshold, `At least ${tldrThreshold}% of APIs have a tldr`)
+
   // Tutorials
   // ----------------------------------------------------------------------
   const tutorials = indices.tutorials.records
