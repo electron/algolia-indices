@@ -29,9 +29,14 @@ test('electron-search', t => {
   apis.forEach(api => {
     t.equal(typeof api.fullSignature, 'string', `${api.fullSignature} has a fullSignature`)
     t.equal(typeof api.name, 'string', `${api.fullSignature} has a name`)
+    t.ok(!api.tldr || (api.tldr.endsWith('.') && !api.tldr.endsWith('..')), `${api.fullSignature} has a valid tldr, or no tldr`)
     t.ok(api.keyValuePairs.includes('is:api'), `${api.fullSignature} has is:api key-value pair`)
     t.ok(api.keyValuePairs.includes('is:doc'), `${api.fullSignature} has is:api key-value pair`)
   })
+
+  const apisWithTldrs = apis.filter(api => api.tldr && api.tldr.length > 10)
+  const tldrThreshold = 95
+  t.ok(apisWithTldrs.length / apis.length * 100 > tldrThreshold, `At least ${tldrThreshold}% of APIs have a tldr`)
 
   // Tutorials
   // ----------------------------------------------------------------------

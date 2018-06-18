@@ -73,15 +73,20 @@ function getRecords () {
 
 function getTLDR (api) {
   const { description, returns } = api
+  let tldr = null
 
   if (!description && returns && returns.description) {
-    return (
+    tldr =
       'Returns ' +
       returns.description.charAt(0).toLowerCase() +
       returns.description.slice(1)
-    )
+  } else if (typeof description !== 'string' || !description.length) {
+    return null
+  } else {
+    tldr = description.split('. ')[0]
   }
 
-  if (typeof description !== 'string' || !description.length) return null
-  return description.split('. ')[0] + '.'
+  if (!tldr.endsWith('.')) tldr += '.'
+
+  return tldr
 }
