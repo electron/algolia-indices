@@ -25,6 +25,7 @@
     "electron-apps": "^1.2899.0",
     "electron-i18n": "^1.86.0",
     "electron-npm-packages": "^4.1.2",
+    "github-slugger": "^1.2.0",
     "instantsearch.js": "^2.7.4",
     "is-url": "^1.2.4",
     "local-repl": "^4.0.0",

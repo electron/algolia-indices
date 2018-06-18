@@ -1,5 +1,6 @@
 const AlgoliaIndex = require('../lib/algolia-index')
 const apis = require('../electron-api.json')
+const slugger = new (require('github-slugger'))()
 
 module.exports = new AlgoliaIndex('apis', getRecords())
 
@@ -16,8 +17,8 @@ function getRecords () {
       method.apiType = 'staticMethod'
       method.fullSignature = `${api.name}.${method.name}${method.signature}`
       method.tldr = getTLDR(method)
-      const slug = method.name.replace(/\W/g, '').toLowerCase()
-      method.url = `https://electronjs.org/docs/api/${api.slug}#${api.slug}${slug}`
+      method.slug = slugger.slug(method.fullSignature)
+      method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}`
       delete method.signature
       records.push(method)
     })
@@ -27,8 +28,8 @@ function getRecords () {
       method.apiType = 'instanceMethod'
       method.fullSignature = `${api.instanceName}.${method.name}${method.signature}`
       method.tldr = getTLDR(method)
-      const slug = method.name.replace(/\W/g, '').toLowerCase()
-      method.url = `https://electronjs.org/docs/api/${api.slug}#${api.slug}${slug}`
+      method.slug = slugger.slug(method.fullSignature)
+      method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}`
       delete method.signature
       records.push(method)
     })
