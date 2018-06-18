@@ -29,6 +29,7 @@ test('electron-search', t => {
   apis.forEach(api => {
     t.equal(typeof api.fullSignature, 'string', `${api.fullSignature} has a fullSignature`)
     t.equal(typeof api.name, 'string', `${api.fullSignature} has a name`)
+    t.ok(!api.tldr || (api.tldr.endsWith('.') && !api.tldr.endsWith('..')), `${api.fullSignature} has a valid tldr, or no tldr`)
     t.ok(api.keyValuePairs.includes('is:api'), `${api.fullSignature} has is:api key-value pair`)
     t.ok(api.keyValuePairs.includes('is:doc'), `${api.fullSignature} has is:api key-value pair`)
   })
