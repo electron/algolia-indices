@@ -1,4 +1,4 @@
-# electron-algolia-index
+# Electron Algolia Indices
 
 > Searchable data about Electron APIs, Tutorials, Packages, Repos, and Apps
 
@@ -21,8 +21,8 @@ See [electron-algolia.herokuapp.com](https://electron-algolia.herokuapp.com/)
 Try it out locally:
 
 ```sh
-git clone https://github.com/electron/electron-algolia-index
-cd electron-algolia-index
+git clone https://github.com/electron/algolia-indices
+cd algolia-indices
 npm install
 npm test
 npm start
