@@ -39,5 +39,9 @@
     "standard": "^11.0.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.9.0"
-  }
+  },
+  "files": [
+    "index.js",
+    "dist/**/*"
+  ]
 }
