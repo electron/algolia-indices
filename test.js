@@ -1,8 +1,13 @@
 const test = require('tape')
 const isURL = require('is-url')
 const indices = require('./indices')
+const exportedIndices = require('.')
 
 test('electron-search', t => {
+  // ensure the object exported by `require('electron-algolia-indices')`
+  // is the same as what we are testing in this file
+  t.deepEqual(indices, exportedIndices, 'exports and indices object')
+
   // All Indices
   // ----------------------------------------------------------------------
   const indexNames = ['apis', 'apps', 'packages', 'tutorials']

@@ -1,20 +1,24 @@
 {
   "name": "electron-algolia-indices",
-  "private": true,
   "version": "1.0.0",
   "description": "Searchable data about Electron APIs, Tutorials, Packages, Repos, and Apps",
   "repository": "https://github.com/electron/algolia-indices",
   "author": "zeke",
   "license": "MIT",
+  "main": "index.js",
   "scripts": {
-    "echo": "script/echo.js",
+    "build": "script/build.js",
     "preupload": "npm run test",
     "upload": "script/upload.js",
     "update": "script/update.sh",
+    "pretest": "npm run build",
     "test": "tape test.js | tap-spec && standard --fix",
     "lint": "standard --fix",
     "start": "budo demo.js --live --no-debug --open --css demo.css",
     "repl": "local-repl"
+  },
+  "dependencies": {
+    "require-directory": "^2.1.1"
   },
   "devDependencies": {
     "algoliasearch": "^3.27.1",
@@ -32,9 +36,12 @@
     "lodash": "^4.17.10",
     "nanohtml": "^1.2.4",
     "prettier-standard": "^8.0.1",
-    "require-directory": "^2.1.1",
     "standard": "^11.0.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.9.0"
-  }
+  },
+  "files": [
+    "index.js",
+    "dist/**/*"
+  ]
 }
