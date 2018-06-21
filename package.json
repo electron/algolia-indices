@@ -21,7 +21,7 @@
     "budo": "^11.2.0",
     "cheerio": "^1.0.0-rc.2",
     "count-array-values": "^1.2.1",
-    "dotenv-safe": "^5.0.1",
+    "dotenv-safe": "^6.0.0",
     "electron-apps": "^1.2899.0",
     "electron-i18n": "^1.86.0",
     "electron-npm-packages": "^4.1.2",
