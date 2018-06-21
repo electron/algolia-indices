@@ -1,6 +1,5 @@
 {
   "name": "electron-algolia-indices",
-  "private": true,
   "version": "1.0.0",
   "description": "Searchable data about Electron APIs, Tutorials, Packages, Repos, and Apps",
   "repository": "https://github.com/electron/algolia-indices",
