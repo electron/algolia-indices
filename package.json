@@ -1,6 +1,6 @@
 {
   "name": "electron-algolia-indices",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Searchable data about Electron APIs, Tutorials, Packages, Repos, and Apps",
   "repository": "https://github.com/electron/algolia-indices",
   "author": "zeke",
@@ -15,7 +15,9 @@
     "test": "tape test.js | tap-spec && standard --fix",
     "lint": "standard --fix",
     "start": "budo demo.js --live --no-debug --open --css demo.css",
-    "repl": "local-repl"
+    "repl": "local-repl",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "require-directory": "^2.1.1"
@@ -38,7 +40,9 @@
     "prettier-standard": "^8.0.1",
     "standard": "^11.0.1",
     "tap-spec": "^5.0.0",
-    "tape": "^4.9.0"
+    "tape": "^4.9.0",
+    "travis-deploy-once": "^5.0.0",
+    "semantic-release": "^15.6.0"
   },
   "files": [
     "index.js",
