@@ -38,7 +38,7 @@
     "lodash": "^4.17.10",
     "nanohtml": "^1.2.4",
     "prettier-standard": "^8.0.1",
-    "standard": "^11.0.1",
+    "standard": "^12.0.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.0",
     "travis-deploy-once": "^5.0.0",
