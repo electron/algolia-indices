@@ -29,6 +29,17 @@ function getRecords () {
       records.push(property)
     })
 
+    const methods = api.methods || []
+    methods.forEach(method => {
+      console.log(method)
+      method.apiType = 'methods'
+      method.fullSignature = `${api.name}.${method.name}${method.signature}`
+      method.tldr = getTLDR(method)
+      method.slug = slugger.slug(method.fullSignature)
+      method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}`
+      records.push(method)
+    })
+
     const staticMethods = api.staticMethods || []
     staticMethods.forEach(method => {
       method.apiType = 'staticMethod'
