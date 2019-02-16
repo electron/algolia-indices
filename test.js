@@ -94,8 +94,23 @@ test('electron-search', t => {
     // t.ok(isURL(pkg.repository), `${pkg.title} has a valid repository`)
   })
 
-  // TODO: Apps
+  // Apps
   // ----------------------------------------------------------------------
+  const apps = indices.apps.records
+
+  t.ok(apps.length > 500, 'lots of APPS')
+
+  apps.forEach(app => {
+    if (!app.name) console.log(app)
+    t.equal(typeof app.name, 'string', `${app.name} has a name`)
+    t.ok(app.keyValuePairs.includes('is:app'), `${app.name} has is:pkg key-value pair`)
+    t.ok(app.keyValuePairs.includes('is:app'), `${app.name} has is:package key-value pair`)
+    t.equal(typeof app.category, 'string', `${app.name} has category`)
+    t.equal(typeof app.icon, 'string', `${app.name} has icon`)
+    // Skipped, not all apps have a website or repository.
+    // t.ok(isURL(app.website), `${app.title} has a valid website URL`)
+    // t.ok(isURL(app.repository), `${app.title} has a valid repository`)
+  })
 
   // TODO: Repos
   // ----------------------------------------------------------------------
