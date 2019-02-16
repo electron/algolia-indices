@@ -7,7 +7,6 @@ module.exports = new AlgoliaIndex('glossary', getRecords())
 function getRecords () {
   return chain(Object.values(require('electron-i18n').glossary['en-US']))
     .map(glossary => {
-      console.log(glossary)
       const {term, description} = glossary
       const objectID = `glossary-${term}`
 
