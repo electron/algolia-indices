@@ -7,9 +7,9 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "build": "script/build.js",
+    "build": "node script/build.js",
     "preupload": "npm run test",
-    "upload": "script/upload.js",
+    "upload": "node script/upload.js",
     "update": "script/update.sh",
     "pretest": "npm run build",
     "test": "tape test.js | tap-spec && standard --fix",

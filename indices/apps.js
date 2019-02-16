@@ -17,7 +17,7 @@ function getRecords () {
     ]
 
     return Object.assign(
-      {objectID: `app-${app.slug}`},
+      { objectID: `app-${app.slug}` },
       app
     )
   })

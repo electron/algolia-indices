@@ -31,7 +31,6 @@ function getRecords () {
 
     const methods = api.methods || []
     methods.forEach(method => {
-      console.log(method)
       method.apiType = 'methods'
       method.fullSignature = `${api.name}.${method.name}${method.signature}`
       method.tldr = getTLDR(method)
@@ -92,7 +91,7 @@ function getRecords () {
     ]
 
     return Object.assign(
-      {objectID: record.url.replace('https://electronjs.org/docs/api/', 'api-')},
+      { objectID: record.url.replace('https://electronjs.org/docs/api/', 'api-') },
       record
     )
   })
