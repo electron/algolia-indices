@@ -82,7 +82,7 @@
       "objectID": "glossary-main process",
       "term": "main process",
       "description": "The main process, commonly a file named main.js, is the entry point to every Electron app. It controls the life of the app, from open to close. It also manages native elements such as the Menu, Menu Bar, Dock, Tray, etc. The main process is responsible for creating each new renderer process in the app. The full Node API is built in.",
-      "url": "https://electronjs.org/docs/glossary#main process",
+      "url": "https://electronjs.org/docs/glossary#main-process",
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
@@ -115,7 +115,7 @@
       "objectID": "glossary-native modules",
       "term": "native modules",
       "description": "Native modules (also called addons in Node.js) are modules written in C or C++ that can be loaded into Node.js or Electron using the require() function, and used as if they were an ordinary Node.js module. They are used primarily to provide an interface between JavaScript running in Node.js and C/C++ libraries.",
-      "url": "https://electronjs.org/docs/glossary#native modules",
+      "url": "https://electronjs.org/docs/glossary#native-modules",
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
@@ -159,7 +159,7 @@
       "objectID": "glossary-renderer process",
       "term": "renderer process",
       "description": "The renderer process is a browser window in your app. Unlike the main process, there can be multiple of these and each is run in a separate process. They can also be hidden.",
-      "url": "https://electronjs.org/docs/glossary#renderer process",
+      "url": "https://electronjs.org/docs/glossary#renderer-process",
       "keyValuePairs": [
         "is:doc",
         "is:glossary",

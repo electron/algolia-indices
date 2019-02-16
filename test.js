@@ -64,6 +64,21 @@ test('electron-search', t => {
     t.ok(tutorial.keyValuePairs.includes('is:tutorial'), `${tutorial.title} has is:tutorial key-value pair`)
   })
 
+  // Glossary
+  // ----------------------------------------------------------------------
+  const glossarys = indices.glossary.records
+
+  t.ok(glossarys.length > 15, 'lots of glossary')
+
+  glossarys.forEach(glossary => {
+    if (!glossary.term) console.log(glossary)
+    t.equal(typeof glossary.term, 'string', `${glossary.title} has a title`)
+    t.equal(typeof glossary.description, 'string', `${glossary.title} has a body`)
+    t.ok(isURL(glossary.url), `${glossary.title} has a valid website URL`)
+    t.ok(glossary.keyValuePairs.includes('is:doc'), `${glossary.title} has is:doc key-value pair`)
+    t.ok(glossary.keyValuePairs.includes('is:glossary'), `${glossary.title} has is:glossary key-value pair`)
+  })
+
   // Packages
   // ----------------------------------------------------------------------
   const packages = indices.packages.records

@@ -15,7 +15,7 @@ function getRecords () {
         `glossary:${term}`
       ]
 
-      const url = `https://electronjs.org/docs/glossary#${term.toLowerCase()}`
+      const url = `https://electronjs.org/docs/glossary#${term.toLowerCase()}`.replace(/ /g, '-')
       return {
         objectID,
         term,
