@@ -1,0 +1,233 @@
+{
+  "name": "glossary",
+  "records": [
+    {
+      "objectID": "glossary-ASAR",
+      "term": "ASAR",
+      "description": "ASAR stands for Atom Shell Archive Format. An asar archive is a simple tar-like format that concatenates files into a single file. Electron can read arbitrary files from it without unpacking the whole file.",
+      "url": "https://electronjs.org/docs/glossary#asar",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:ASAR",
+        "glossary:ASAR"
+      ]
+    },
+    {
+      "objectID": "glossary-CRT",
+      "term": "CRT",
+      "description": "The C Run-time Library (CRT) is the part of the C++ Standard Library that incorporates the ISO C99 standard library. The Visual C++ libraries that implement the CRT support native code development, and both mixed native and managed code, and pure managed code for .NET development.",
+      "url": "https://electronjs.org/docs/glossary#crt",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:CRT",
+        "glossary:CRT"
+      ]
+    },
+    {
+      "objectID": "glossary-DMG",
+      "term": "DMG",
+      "description": "An Apple Disk Image is a packaging format used by macOS. DMG files are commonly used for distributing application \"installers\". electron-builder supports dmg as a build target.",
+      "url": "https://electronjs.org/docs/glossary#dmg",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:DMG",
+        "glossary:DMG"
+      ]
+    },
+    {
+      "objectID": "glossary-IME",
+      "term": "IME",
+      "description": "Input Method Editor. A program that allows users to enter characters and symbols not found on their keyboard. For example, this allows users of Latin keyboards to input Chinese, Japanese, Korean and Indic characters.",
+      "url": "https://electronjs.org/docs/glossary#ime",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:IME",
+        "glossary:IME"
+      ]
+    },
+    {
+      "objectID": "glossary-IDL",
+      "term": "IDL",
+      "description": "Interface description language. Write function signatures and data types in a format that can be used to generate interfaces in Java, C++, JavaScript, etc.",
+      "url": "https://electronjs.org/docs/glossary#idl",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:IDL",
+        "glossary:IDL"
+      ]
+    },
+    {
+      "objectID": "glossary-IPC",
+      "term": "IPC",
+      "description": "IPC stands for Inter-Process Communication. Electron uses IPC to send serialized JSON messages between the main and renderer processes.",
+      "url": "https://electronjs.org/docs/glossary#ipc",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:IPC",
+        "glossary:IPC"
+      ]
+    },
+    {
+      "objectID": "glossary-libchromiumcontent",
+      "term": "libchromiumcontent",
+      "description": "A shared library that includes the Chromium Content module and all its dependencies (e.g., Blink, V8, etc.). Also referred to as \"libcc\".",
+      "url": "https://electronjs.org/docs/glossary#libchromiumcontent",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:libchromiumcontent",
+        "glossary:libchromiumcontent"
+      ]
+    },
+    {
+      "objectID": "glossary-main process",
+      "term": "main process",
+      "description": "The main process, commonly a file named main.js, is the entry point to every Electron app. It controls the life of the app, from open to close. It also manages native elements such as the Menu, Menu Bar, Dock, Tray, etc. The main process is responsible for creating each new renderer process in the app. The full Node API is built in.",
+      "url": "https://electronjs.org/docs/glossary#main process",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:main process",
+        "glossary:main process"
+      ]
+    },
+    {
+      "objectID": "glossary-MAS",
+      "term": "MAS",
+      "description": "Acronym for Apple's Mac App Store. For details on submitting your app to the MAS, see the Mac App Store Submission Guide.",
+      "url": "https://electronjs.org/docs/glossary#mas",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:MAS",
+        "glossary:MAS"
+      ]
+    },
+    {
+      "objectID": "glossary-Mojo",
+      "term": "Mojo",
+      "description": "An IPC system for communicating intra- or inter-process, and that's important because Chrome is keen on being able to split its work into separate processes or not, depending on memory pressures etc.",
+      "url": "https://electronjs.org/docs/glossary#mojo",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:Mojo",
+        "glossary:Mojo"
+      ]
+    },
+    {
+      "objectID": "glossary-native modules",
+      "term": "native modules",
+      "description": "Native modules (also called addons in Node.js) are modules written in C or C++ that can be loaded into Node.js or Electron using the require() function, and used as if they were an ordinary Node.js module. They are used primarily to provide an interface between JavaScript running in Node.js and C/C++ libraries.",
+      "url": "https://electronjs.org/docs/glossary#native modules",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:native modules",
+        "glossary:native modules"
+      ]
+    },
+    {
+      "objectID": "glossary-NSIS",
+      "term": "NSIS",
+      "description": "Nullsoft Scriptable Install System is a script-driven Installer authoring tool for Microsoft Windows. It is released under a combination of free software licenses, and is a widely-used alternative to commercial proprietary products like InstallShield. electron-builder supports NSIS as a build target.",
+      "url": "https://electronjs.org/docs/glossary#nsis",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:NSIS",
+        "glossary:NSIS"
+      ]
+    },
+    {
+      "objectID": "glossary-OSR",
+      "term": "OSR",
+      "description": "OSR (Off-screen rendering) can be used for loading heavy page in background and then displaying it after (it will be much faster). It allows you to render page without showing it on screen.",
+      "url": "https://electronjs.org/docs/glossary#osr",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:OSR",
+        "glossary:OSR"
+      ]
+    },
+    {
+      "objectID": "glossary-process",
+      "term": "process",
+      "description": "A process is an instance of a computer program that is being executed. Electron apps that make use of the main and one or many renderer process are actually running several programs simultaneously.",
+      "url": "https://electronjs.org/docs/glossary#process",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:process",
+        "glossary:process"
+      ]
+    },
+    {
+      "objectID": "glossary-renderer process",
+      "term": "renderer process",
+      "description": "The renderer process is a browser window in your app. Unlike the main process, there can be multiple of these and each is run in a separate process. They can also be hidden.",
+      "url": "https://electronjs.org/docs/glossary#renderer process",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:renderer process",
+        "glossary:renderer process"
+      ]
+    },
+    {
+      "objectID": "glossary-Squirrel",
+      "term": "Squirrel",
+      "description": "Squirrel is an open-source framework that enables Electron apps to update automatically as new versions are released. See the autoUpdater API for info about getting started with Squirrel.",
+      "url": "https://electronjs.org/docs/glossary#squirrel",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:Squirrel",
+        "glossary:Squirrel"
+      ]
+    },
+    {
+      "objectID": "glossary-userland",
+      "term": "userland",
+      "description": "This term originated in the Unix community, where \"userland\" or \"userspace\" referred to programs that run outside of the operating system kernel. More recently, the term has been popularized in the Node and npm community to distinguish between the features available in \"Node core\" versus packages published to the npm registry by the much larger \"user\" community.",
+      "url": "https://electronjs.org/docs/glossary#userland",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:userland",
+        "glossary:userland"
+      ]
+    },
+    {
+      "objectID": "glossary-V8",
+      "term": "V8",
+      "description": "V8 is Google's open source JavaScript engine. It is written in C++ and is used in Google Chrome. V8 can run standalone, or can be embedded into any C++ application.",
+      "url": "https://electronjs.org/docs/glossary#v8",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:V8",
+        "glossary:V8"
+      ]
+    },
+    {
+      "objectID": "glossary-webview",
+      "term": "webview",
+      "description": "webview tags are used to embed 'guest' content (such as external web pages) in your Electron app. They are similar to iframes, but differ in that each webview runs in a separate process. It doesn't have the same permissions as your web page and all interactions between your app and embedded content will be asynchronous. This keeps your app safe from the embedded content.",
+      "url": "https://electronjs.org/docs/glossary#webview",
+      "keyValuePairs": [
+        "is:doc",
+        "is:glossary",
+        "doc:webview",
+        "glossary:webview"
+      ]
+    }
+  ]
+}
