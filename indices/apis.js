@@ -9,8 +9,25 @@ function getRecords () {
 
   apis.forEach(api => {
     // TODO constructorMethod
-    // TODO properties
-    // TODO instanceProperties
+    const properties = api.properties || []
+    properties.forEach(property => {
+      property.apiType = 'properties'
+      property.fullSignature = `${api.name}.${property.name}${property.signature}`
+      property.tldr = getTLDR(property)
+      property.slug = slugger.slug(property.fullSignature)
+      property.url = `https://electronjs.org/docs/api/${api.slug}#${property.slug}`
+      records.push(property)
+    })
+
+    const instanceProperties = api.instanceProperties || []
+    instanceProperties.forEach(property => {
+      property.apiType = 'instanceProperties'
+      property.fullSignature = `${api.name}.${property.name}${property.signature}`
+      property.tldr = getTLDR(property)
+      property.slug = slugger.slug(property.fullSignature)
+      property.url = `https://electronjs.org/docs/api/${api.slug}#${property.slug}`
+      records.push(property)
+    })
 
     const staticMethods = api.staticMethods || []
     staticMethods.forEach(method => {
@@ -19,7 +36,6 @@ function getRecords () {
       method.tldr = getTLDR(method)
       method.slug = slugger.slug(method.fullSignature)
       method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}`
-      delete method.signature
       records.push(method)
     })
 
@@ -30,7 +46,6 @@ function getRecords () {
       method.tldr = getTLDR(method)
       method.slug = slugger.slug(method.fullSignature)
       method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}`
-      delete method.signature
       records.push(method)
     })
 
