@@ -9,7 +9,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:ASAR",
         "glossary:ASAR"
       ]
     },
@@ -21,7 +20,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:CRT",
         "glossary:CRT"
       ]
     },
@@ -33,7 +31,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:DMG",
         "glossary:DMG"
       ]
     },
@@ -45,7 +42,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:IME",
         "glossary:IME"
       ]
     },
@@ -57,7 +53,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:IDL",
         "glossary:IDL"
       ]
     },
@@ -69,7 +64,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:IPC",
         "glossary:IPC"
       ]
     },
@@ -81,7 +75,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:libchromiumcontent",
         "glossary:libchromiumcontent"
       ]
     },
@@ -93,7 +86,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:main process",
         "glossary:main process"
       ]
     },
@@ -105,7 +97,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:MAS",
         "glossary:MAS"
       ]
     },
@@ -117,7 +108,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:Mojo",
         "glossary:Mojo"
       ]
     },
@@ -129,7 +119,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:native modules",
         "glossary:native modules"
       ]
     },
@@ -141,7 +130,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:NSIS",
         "glossary:NSIS"
       ]
     },
@@ -153,7 +141,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:OSR",
         "glossary:OSR"
       ]
     },
@@ -165,7 +152,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:process",
         "glossary:process"
       ]
     },
@@ -177,7 +163,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:renderer process",
         "glossary:renderer process"
       ]
     },
@@ -189,7 +174,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:Squirrel",
         "glossary:Squirrel"
       ]
     },
@@ -201,7 +185,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:userland",
         "glossary:userland"
       ]
     },
@@ -213,7 +196,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:V8",
         "glossary:V8"
       ]
     },
@@ -225,7 +207,6 @@
       "keyValuePairs": [
         "is:doc",
         "is:glossary",
-        "doc:webview",
         "glossary:webview"
       ]
     }

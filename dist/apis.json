@@ -4,7 +4,7 @@
     {
       "objectID": "api-app#event-will-finish-launching",
       "name": "will-finish-launching",
-      "description": "Emitted when the application has finished basic startup. On Windows and Linux, the will-finish-launching event is the same as the ready event; on macOS, this event represents the applicationWillFinishLaunching notification of NSApplication. You would usually set up listeners for the open-file and open-url events here, and start the crash reporter and auto updater. In most cases, you should just do everything in the ready event handler.",
+      "description": "Emitted when the application has finished basic startup. On Windows and Linux, the will-finish-launching event is the same as the ready event; on macOS, this event represents the applicationWillFinishLaunching notification of NSApplication. You would usually set up listeners for the open-file and open-url events here, and start the crash reporter and auto updater. In most cases, you should do everything in the ready event handler.",
       "apiType": "event",
       "fullSignature": "app.on('will-finish-launching')",
       "url": "https://electronjs.org/docs/api/app#event-will-finish-launching",
@@ -69,7 +69,7 @@
     {
       "objectID": "api-app#event-before-quit",
       "name": "before-quit",
-      "description": "Emitted before the application starts closing its windows. Calling event.preventDefault() will prevent the default behaviour, which is terminating the application. Note: If application quit was initiated by autoUpdater.quitAndInstall() then before-quit is emitted after emitting close event on all windows and closing them.",
+      "description": "Emitted before the application starts closing its windows. Calling event.preventDefault() will prevent the default behavior, which is terminating the application. Note: If application quit was initiated by autoUpdater.quitAndInstall(), then before-quit is emitted after emitting close event on all windows and closing them. Note: On Windows, this event will not be emitted if the app is closed due to a shutdown/restart of the system or a user logout.",
       "returns": [
         {
           "name": "event",
@@ -96,7 +96,7 @@
     {
       "objectID": "api-app#event-will-quit",
       "name": "will-quit",
-      "description": "Emitted when all windows have been closed and the application will quit. Calling event.preventDefault() will prevent the default behaviour, which is terminating the application. See the description of the window-all-closed event for the differences between the will-quit and window-all-closed events.",
+      "description": "Emitted when all windows have been closed and the application will quit. Calling event.preventDefault() will prevent the default behaviour, which is terminating the application. See the description of the window-all-closed event for the differences between the will-quit and window-all-closed events. Note: On Windows, this event will not be emitted if the app is closed due to a shutdown/restart of the system or a user logout.",
       "returns": [
         {
           "name": "event",
@@ -123,7 +123,7 @@
     {
       "objectID": "api-app#event-quit",
       "name": "quit",
-      "description": "Emitted when the application is quitting.",
+      "description": "Emitted when the application is quitting. Note: On Windows, this event will not be emitted if the app is closed due to a shutdown/restart of the system or a user logout.",
       "returns": [
         {
           "name": "event",
@@ -433,7 +433,7 @@
     {
       "objectID": "api-app#event-update-activity-state",
       "name": "update-activity-state",
-      "description": "Emitted when Handoff is about to be resumed on another device. If you need to update the state to be transferred, you should call event.preventDefault() immediately, construct a new userInfo dictionary and call app.updateCurrentActiviy() in a timely manner. Otherwise the operation will fail and continue-activity-error will be called.",
+      "description": "Emitted when Handoff is about to be resumed on another device. If you need to update the state to be transferred, you should call event.preventDefault() immediately, construct a new userInfo dictionary and call app.updateCurrentActiviy() in a timely manner. Otherwise, the operation will fail and continue-activity-error will be called.",
       "platforms": [
         "macOS"
       ],
@@ -766,7 +766,7 @@
     {
       "objectID": "api-app#event-login",
       "name": "login",
-      "description": "Emitted when webContents wants to do basic auth. The default behavior is to cancel all authentications, to override this you should prevent the default behavior with event.preventDefault() and call callback(username, password) with the credentials.",
+      "description": "Emitted when webContents wants to do basic auth. The default behavior is to cancel all authentications. To override this you should prevent the default behavior with event.preventDefault() and call callback(username, password) with the credentials.",
       "returns": [
         {
           "name": "event",
@@ -962,6 +962,329 @@
       ]
     },
     {
+      "objectID": "api-app#event-session-created",
+      "name": "session-created",
+      "description": "Emitted when Electron has created a new session.",
+      "returns": [
+        {
+          "name": "session",
+          "type": "Session",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "app.on('session-created')",
+      "url": "https://electronjs.org/docs/api/app#event-session-created",
+      "tldr": "Emitted when Electron has created a new session.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:session-created",
+        "api:undefined",
+        "api:app.on('session-created')",
+        "doc:session-created",
+        "doc:undefined",
+        "doc:app.on('session-created')"
+      ]
+    },
+    {
+      "objectID": "api-app#event-second-instance",
+      "name": "second-instance",
+      "description": "This event will be emitted inside the primary instance of your application when a second instance has been executed. argv is an Array of the second instance's command line arguments, and workingDirectory is its current working directory. Usually applications respond to this by making their primary window focused and non-minimized. This event is guaranteed to be emitted after the ready event of app gets emitted. Note: Extra command line arguments might be added by Chromium, such as --original-process-start-time.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "argv",
+          "type": "String",
+          "collection": true,
+          "description": "An array of the second instance's command line arguments",
+          "required": true
+        },
+        {
+          "name": "workingDirectory",
+          "type": "String",
+          "collection": false,
+          "description": "The second instance's working directory",
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "app.on('second-instance')",
+      "url": "https://electronjs.org/docs/api/app#event-second-instance",
+      "tldr": "This event will be emitted inside the primary instance of your application when a second instance has been executed.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:second-instance",
+        "api:undefined",
+        "api:app.on('second-instance')",
+        "doc:second-instance",
+        "doc:undefined",
+        "doc:app.on('second-instance')"
+      ]
+    },
+    {
+      "objectID": "api-app#event-desktop-capturer-get-sources",
+      "name": "desktop-capturer-get-sources",
+      "description": "Emitted when desktopCapturer.getSources() is called in the renderer process of webContents. Calling event.preventDefault() will make it return empty sources.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "webContents",
+          "type": "WebContents",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "app.on('desktop-capturer-get-sources')",
+      "url": "https://electronjs.org/docs/api/app#event-desktop-capturer-get-sources",
+      "tldr": "Emitted when desktopCapturer.getSources() is called in the renderer process of webContents.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:desktop-capturer-get-sources",
+        "api:undefined",
+        "api:app.on('desktop-capturer-get-sources')",
+        "doc:desktop-capturer-get-sources",
+        "doc:undefined",
+        "doc:app.on('desktop-capturer-get-sources')"
+      ]
+    },
+    {
+      "objectID": "api-app#event-remote-require",
+      "name": "remote-require",
+      "description": "Emitted when remote.require() is called in the renderer process of webContents. Calling event.preventDefault() will prevent the module from being returned. Custom value can be returned by setting event.returnValue.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "webContents",
+          "type": "WebContents",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "moduleName",
+          "type": "String",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "app.on('remote-require')",
+      "url": "https://electronjs.org/docs/api/app#event-remote-require",
+      "tldr": "Emitted when remote.require() is called in the renderer process of webContents.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remote-require",
+        "api:undefined",
+        "api:app.on('remote-require')",
+        "doc:remote-require",
+        "doc:undefined",
+        "doc:app.on('remote-require')"
+      ]
+    },
+    {
+      "objectID": "api-app#event-remote-get-global",
+      "name": "remote-get-global",
+      "description": "Emitted when remote.getGlobal() is called in the renderer process of webContents. Calling event.preventDefault() will prevent the global from being returned. Custom value can be returned by setting event.returnValue.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "webContents",
+          "type": "WebContents",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "globalName",
+          "type": "String",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "app.on('remote-get-global')",
+      "url": "https://electronjs.org/docs/api/app#event-remote-get-global",
+      "tldr": "Emitted when remote.getGlobal() is called in the renderer process of webContents.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remote-get-global",
+        "api:undefined",
+        "api:app.on('remote-get-global')",
+        "doc:remote-get-global",
+        "doc:undefined",
+        "doc:app.on('remote-get-global')"
+      ]
+    },
+    {
+      "objectID": "api-app#event-remote-get-builtin",
+      "name": "remote-get-builtin",
+      "description": "Emitted when remote.getBuiltin() is called in the renderer process of webContents. Calling event.preventDefault() will prevent the module from being returned. Custom value can be returned by setting event.returnValue.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "webContents",
+          "type": "WebContents",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "moduleName",
+          "type": "String",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "app.on('remote-get-builtin')",
+      "url": "https://electronjs.org/docs/api/app#event-remote-get-builtin",
+      "tldr": "Emitted when remote.getBuiltin() is called in the renderer process of webContents.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remote-get-builtin",
+        "api:undefined",
+        "api:app.on('remote-get-builtin')",
+        "doc:remote-get-builtin",
+        "doc:undefined",
+        "doc:app.on('remote-get-builtin')"
+      ]
+    },
+    {
+      "objectID": "api-app#event-remote-get-current-window",
+      "name": "remote-get-current-window",
+      "description": "Emitted when remote.getCurrentWindow() is called in the renderer process of webContents. Calling event.preventDefault() will prevent the object from being returned. Custom value can be returned by setting event.returnValue.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "webContents",
+          "type": "WebContents",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "app.on('remote-get-current-window')",
+      "url": "https://electronjs.org/docs/api/app#event-remote-get-current-window",
+      "tldr": "Emitted when remote.getCurrentWindow() is called in the renderer process of webContents.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remote-get-current-window",
+        "api:undefined",
+        "api:app.on('remote-get-current-window')",
+        "doc:remote-get-current-window",
+        "doc:undefined",
+        "doc:app.on('remote-get-current-window')"
+      ]
+    },
+    {
+      "objectID": "api-app#event-remote-get-current-web-contents",
+      "name": "remote-get-current-web-contents",
+      "description": "Emitted when remote.getCurrentWebContents() is called in the renderer process of webContents. Calling event.preventDefault() will prevent the object from being returned. Custom value can be returned by setting event.returnValue.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "webContents",
+          "type": "WebContents",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "app.on('remote-get-current-web-contents')",
+      "url": "https://electronjs.org/docs/api/app#event-remote-get-current-web-contents",
+      "tldr": "Emitted when remote.getCurrentWebContents() is called in the renderer process of webContents.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remote-get-current-web-contents",
+        "api:undefined",
+        "api:app.on('remote-get-current-web-contents')",
+        "doc:remote-get-current-web-contents",
+        "doc:undefined",
+        "doc:app.on('remote-get-current-web-contents')"
+      ]
+    },
+    {
+      "objectID": "api-app#event-remote-get-guest-web-contents",
+      "name": "remote-get-guest-web-contents",
+      "description": "Emitted when <webview>.getWebContents() is called in the renderer process of webContents. Calling event.preventDefault() will prevent the object from being returned. Custom value can be returned by setting event.returnValue.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "webContents",
+          "type": "WebContents",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "guestWebContents",
+          "type": "WebContents",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "app.on('remote-get-guest-web-contents')",
+      "url": "https://electronjs.org/docs/api/app#event-remote-get-guest-web-contents",
+      "tldr": "Emitted when <webview>.getWebContents() is called in the renderer process of webContents.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remote-get-guest-web-contents",
+        "api:undefined",
+        "api:app.on('remote-get-guest-web-contents')",
+        "doc:remote-get-guest-web-contents",
+        "doc:undefined",
+        "doc:app.on('remote-get-guest-web-contents')"
+      ]
+    },
+    {
       "objectID": "api-auto-updater#event-error",
       "name": "error",
       "description": "Emitted when there is an error while updating.",
@@ -1048,7 +1371,7 @@
     {
       "objectID": "api-auto-updater#event-update-downloaded",
       "name": "update-downloaded",
-      "description": "Emitted when an update has been downloaded. On Windows only releaseName is available.",
+      "description": "Emitted when an update has been downloaded. On Windows only releaseName is available. Note: It is not strictly necessary to handle this event. A successfully downloaded update will still be applied the next time the application starts.",
       "returns": [
         {
           "name": "event",
@@ -1094,6 +1417,25 @@
         "doc:update-downloaded",
         "doc:undefined",
         "doc:autoUpdater.on('update-downloaded')"
+      ]
+    },
+    {
+      "objectID": "api-auto-updater#event-before-quit-for-update",
+      "name": "before-quit-for-update",
+      "description": "This event is emitted after a user calls quitAndInstall(). When this API is called, the before-quit event is not emitted before all windows are closed. As a result you should listen to this event if you wish to perform actions before the windows are closed while a process is quitting, as well as listening to before-quit.",
+      "apiType": "event",
+      "fullSignature": "autoUpdater.on('before-quit-for-update')",
+      "url": "https://electronjs.org/docs/api/auto-updater#event-before-quit-for-update",
+      "tldr": "This event is emitted after a user calls quitAndInstall().",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:before-quit-for-update",
+        "api:undefined",
+        "api:autoUpdater.on('before-quit-for-update')",
+        "doc:before-quit-for-update",
+        "doc:undefined",
+        "doc:autoUpdater.on('before-quit-for-update')"
       ]
     },
     {
@@ -1373,7 +1715,16 @@
       "objectID": "api-browser-window#browserwindowgetfocusedwindow",
       "name": "getFocusedWindow",
       "returns": {
-        "type": "BrowserWindow",
+        "type": [
+          {
+            "typeName": "BrowserWindow",
+            "collection": false
+          },
+          {
+            "typeName": "null",
+            "collection": false
+          }
+        ],
         "collection": false,
         "description": "The window that is focused in this application, otherwise returns null."
       },
@@ -2135,12 +2486,36 @@
       ]
     },
     {
+      "objectID": "api-browser-window#winisnormal",
+      "name": "isNormal",
+      "returns": {
+        "type": "Boolean",
+        "collection": false,
+        "description": "Whether the window is in normal state (not maximized, not minimized, not in fullscreen mode)."
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "win.isNormal()",
+      "tldr": "Returns whether the window is in normal state (not maximized, not minimized, not in fullscreen mode).",
+      "slug": "winisnormal",
+      "url": "https://electronjs.org/docs/api/browser-window#winisnormal",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:isNormal",
+        "api:winisnormal",
+        "api:win.isNormal()",
+        "doc:isNormal",
+        "doc:winisnormal",
+        "doc:win.isNormal()"
+      ]
+    },
+    {
       "objectID": "api-browser-window#winsetaspectratioaspectratio-extrasize",
       "name": "setAspectRatio",
       "platforms": [
         "macOS"
       ],
-      "description": "This will make a window maintain an aspect ratio. The extra size allows a developer to have space, specified in pixels, not included within the aspect ratio calculations. This API already takes into account the difference between a window's size and its content size. Consider a normal window with an HD video player and associated controls. Perhaps there are 15 pixels of controls on the left edge, 25 pixels of controls on the right edge and 50 pixels of controls below the player. In order to maintain a 16:9 aspect ratio (standard aspect ratio for HD @1920x1080) within the player itself we would call this function with arguments of 16/9 and [ 40, 50 ]. The second argument doesn't care where the extra width and height are within the content view--only that they exist. Just sum any extra width and height areas you have within the overall content view.",
+      "description": "This will make a window maintain an aspect ratio. The extra size allows a developer to have space, specified in pixels, not included within the aspect ratio calculations. This API already takes into account the difference between a window's size and its content size. Consider a normal window with an HD video player and associated controls. Perhaps there are 15 pixels of controls on the left edge, 25 pixels of controls on the right edge and 50 pixels of controls below the player. In order to maintain a 16:9 aspect ratio (standard aspect ratio for HD @1920x1080) within the player itself we would call this function with arguments of 16/9 and [ 40, 50 ]. The second argument doesn't care where the extra width and height are within the content view--only that they exist. Sum any extra width and height areas you have within the overall content view. Calling this function with a value of 0 will remove any previously set aspect ratios.",
       "parameters": [
         {
           "name": "aspectRatio",
@@ -2171,6 +2546,35 @@
         "doc:setAspectRatio",
         "doc:winsetaspectratioaspectratio-extrasize",
         "doc:win.setAspectRatio(aspectRatio[, extraSize])"
+      ]
+    },
+    {
+      "objectID": "api-browser-window#winsetbackgroundcolorbackgroundcolor",
+      "name": "setBackgroundColor",
+      "description": "Sets the background color of the window. See Setting backgroundColor.",
+      "parameters": [
+        {
+          "name": "backgroundColor",
+          "type": "String",
+          "collection": false,
+          "description": "Window's background color as a hexadecimal value, like `#66CD00` or `#FFF` or `#80FFFFFF` (alpha is supported if `transparent` is `true`). Default is `#FFF` (white).",
+          "required": true
+        }
+      ],
+      "apiType": "instanceMethod",
+      "fullSignature": "win.setBackgroundColor(backgroundColor)",
+      "tldr": "Sets the background color of the window.",
+      "slug": "winsetbackgroundcolorbackgroundcolor",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetbackgroundcolorbackgroundcolor",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:setBackgroundColor",
+        "api:winsetbackgroundcolorbackgroundcolor",
+        "api:win.setBackgroundColor(backgroundColor)",
+        "doc:setBackgroundColor",
+        "doc:winsetbackgroundcolorbackgroundcolor",
+        "doc:win.setBackgroundColor(backgroundColor)"
       ]
     },
     {
@@ -2238,7 +2642,7 @@
     {
       "objectID": "api-browser-window#winsetboundsbounds-animate",
       "name": "setBounds",
-      "description": "Resizes and moves the window to the supplied bounds",
+      "description": "Resizes and moves the window to the supplied bounds. Any properties that are not supplied will default to their current values.",
       "parameters": [
         {
           "name": "bounds",
@@ -2350,6 +2754,31 @@
       ]
     },
     {
+      "objectID": "api-browser-window#wingetnormalbounds",
+      "name": "getNormalBounds",
+      "description": "Note: whatever the current state of the window : maximized, minimized or in fullscreen, this function always returns the position and size of the window in normal state. In normal state, getBounds and getNormalBounds returns the same Rectangle.",
+      "returns": {
+        "type": "Rectangle",
+        "collection": false,
+        "description": "Contains the window bounds of the normal state"
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "win.getNormalBounds()",
+      "tldr": "Note: whatever the current state of the window : maximized, minimized or in fullscreen, this function always returns the position and size of the window in normal state.",
+      "slug": "wingetnormalbounds",
+      "url": "https://electronjs.org/docs/api/browser-window#wingetnormalbounds",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:getNormalBounds",
+        "api:wingetnormalbounds",
+        "api:win.getNormalBounds()",
+        "doc:getNormalBounds",
+        "doc:wingetnormalbounds",
+        "doc:win.getNormalBounds()"
+      ]
+    },
+    {
       "objectID": "api-browser-window#winsetenabledenable",
       "name": "setEnabled",
       "description": "Disable or enable the window.",
@@ -2380,7 +2809,7 @@
     {
       "objectID": "api-browser-window#winsetsizewidth-height-animate",
       "name": "setSize",
-      "description": "Resizes the window to width and height.",
+      "description": "Resizes the window to width and height. If width or height are below any set minimum size constraints the window will snap to its minimum size.",
       "parameters": [
         {
           "name": "width",
@@ -3062,6 +3491,30 @@
       ]
     },
     {
+      "objectID": "api-browser-window#winmovetop",
+      "name": "moveTop",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "description": "Moves window to top(z-order) regardless of focus",
+      "apiType": "instanceMethod",
+      "fullSignature": "win.moveTop()",
+      "tldr": "Moves window to top(z-order) regardless of focus.",
+      "slug": "winmovetop",
+      "url": "https://electronjs.org/docs/api/browser-window#winmovetop",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:moveTop",
+        "api:winmovetop",
+        "api:win.moveTop()",
+        "doc:moveTop",
+        "doc:winmovetop",
+        "doc:win.moveTop()"
+      ]
+    },
+    {
       "objectID": "api-browser-window#wincenter",
       "name": "center",
       "description": "Moves window to the center of the screen.",
@@ -3176,7 +3629,7 @@
     {
       "objectID": "api-browser-window#wingettitle",
       "name": "getTitle",
-      "description": "Note: The title of web page can be different from the title of the native window.",
+      "description": "Note: The title of the web page can be different from the title of the native window.",
       "returns": {
         "type": "String",
         "collection": false,
@@ -3184,7 +3637,7 @@
       },
       "apiType": "instanceMethod",
       "fullSignature": "win.getTitle()",
-      "tldr": "Note: The title of web page can be different from the title of the native window.",
+      "tldr": "Note: The title of the web page can be different from the title of the native window.",
       "slug": "wingettitle",
       "url": "https://electronjs.org/docs/api/browser-window#wingettitle",
       "keyValuePairs": [
@@ -3651,7 +4104,7 @@
     {
       "objectID": "api-browser-window#wincapturepagerect-callback",
       "name": "capturePage",
-      "description": "Same as webContents.capturePage([rect, ]callback).",
+      "description": "Captures a snapshot of the page within rect. Upon completion callback will be called with callback(image). The image is an instance of NativeImage that stores data of the snapshot. Omitting rect will capture the whole visible page. Deprecated Soon",
       "parameters": [
         {
           "name": "rect",
@@ -3678,7 +4131,7 @@
       ],
       "apiType": "instanceMethod",
       "fullSignature": "win.capturePage([rect, ]callback)",
-      "tldr": "Same as webContents.capturePage([rect, ]callback).",
+      "tldr": "Captures a snapshot of the page within rect.",
       "slug": "wincapturepagerect-callback",
       "url": "https://electronjs.org/docs/api/browser-window#wincapturepagerect-callback",
       "keyValuePairs": [
@@ -3690,6 +4143,35 @@
         "doc:capturePage",
         "doc:wincapturepagerect-callback",
         "doc:win.capturePage([rect, ]callback)"
+      ]
+    },
+    {
+      "objectID": "api-browser-window#wincapturepagerect",
+      "name": "capturePage",
+      "description": "Captures a snapshot of the page within rect. Omitting rect will capture the whole visible page.",
+      "parameters": [
+        {
+          "name": "rect",
+          "type": "Rectangle",
+          "collection": false,
+          "description": "The bounds to capture",
+          "required": false
+        }
+      ],
+      "apiType": "instanceMethod",
+      "fullSignature": "win.capturePage([rect])",
+      "tldr": "Captures a snapshot of the page within rect.",
+      "slug": "wincapturepagerect",
+      "url": "https://electronjs.org/docs/api/browser-window#wincapturepagerect",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:capturePage",
+        "api:wincapturepagerect",
+        "api:win.capturePage([rect])",
+        "doc:capturePage",
+        "doc:wincapturepagerect",
+        "doc:win.capturePage([rect])"
       ]
     },
     {
@@ -3711,9 +4193,18 @@
           "properties": [
             {
               "name": "httpReferrer",
-              "type": "String",
+              "type": [
+                {
+                  "typeName": "String",
+                  "collection": false
+                },
+                {
+                  "typeName": "Referrer",
+                  "collection": false
+                }
+              ],
               "collection": false,
-              "description": "A HTTP Referrer url.",
+              "description": "An HTTP Referrer url.",
               "required": false
             },
             {
@@ -3742,10 +4233,6 @@
                   "collection": true
                 },
                 {
-                  "typeName": "UploadFileSystem",
-                  "collection": true
-                },
-                {
                   "typeName": "UploadBlob",
                   "collection": true
                 }
@@ -3764,6 +4251,12 @@
           ]
         }
       ],
+      "returns": {
+        "type": "Promise",
+        "collection": false,
+        "innerType": "void",
+        "description": "the promise will resolve when the page has finished loading (see did-finish-load), and rejects if the page fails to load (see did-fail-load)."
+      },
       "apiType": "instanceMethod",
       "fullSignature": "win.loadURL(url[, options])",
       "tldr": "Same as webContents.loadURL(url[, options]).",
@@ -3781,7 +4274,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winloadfilefilepath",
+      "objectID": "api-browser-window#winloadfilefilepath-options",
       "name": "loadFile",
       "description": "Same as webContents.loadFile, filePath should be a path to an HTML file relative to the root of your application.  See the webContents docs for more information.",
       "parameters": [
@@ -3790,22 +4283,58 @@
           "type": "String",
           "collection": false,
           "required": true
+        },
+        {
+          "name": "options",
+          "type": "Object",
+          "collection": false,
+          "required": false,
+          "properties": [
+            {
+              "name": "query",
+              "type": "Object",
+              "collection": false,
+              "description": "Passed to url.format().",
+              "required": false,
+              "properties": []
+            },
+            {
+              "name": "search",
+              "type": "String",
+              "collection": false,
+              "description": "Passed to url.format().",
+              "required": false
+            },
+            {
+              "name": "hash",
+              "type": "String",
+              "collection": false,
+              "description": "Passed to url.format().",
+              "required": false
+            }
+          ]
         }
       ],
+      "returns": {
+        "type": "Promise",
+        "collection": false,
+        "innerType": "void",
+        "description": "the promise will resolve when the page has finished loading (see did-finish-load), and rejects if the page fails to load (see did-fail-load)."
+      },
       "apiType": "instanceMethod",
-      "fullSignature": "win.loadFile(filePath)",
+      "fullSignature": "win.loadFile(filePath[, options])",
       "tldr": "Same as webContents.loadFile, filePath should be a path to an HTML file relative to the root of your application.",
-      "slug": "winloadfilefilepath",
-      "url": "https://electronjs.org/docs/api/browser-window#winloadfilefilepath",
+      "slug": "winloadfilefilepath-options",
+      "url": "https://electronjs.org/docs/api/browser-window#winloadfilefilepath-options",
       "keyValuePairs": [
         "is:doc",
         "is:api",
         "api:loadFile",
-        "api:winloadfilefilepath",
-        "api:win.loadFile(filePath)",
+        "api:winloadfilefilepath-options",
+        "api:win.loadFile(filePath[, options])",
         "doc:loadFile",
-        "doc:winloadfilefilepath",
-        "doc:win.loadFile(filePath)"
+        "doc:winloadfilefilepath-options",
+        "doc:win.loadFile(filePath[, options])"
       ]
     },
     {
@@ -3835,7 +4364,7 @@
         "Linux",
         "Windows"
       ],
-      "description": "Sets the menu as the window's menu bar, setting it to null will remove the menu bar.",
+      "description": "Sets the menu as the window's menu bar.",
       "parameters": [
         {
           "name": "menu",
@@ -3855,7 +4384,7 @@
       ],
       "apiType": "instanceMethod",
       "fullSignature": "win.setMenu(menu)",
-      "tldr": "Sets the menu as the window's menu bar, setting it to null will remove the menu bar.",
+      "tldr": "Sets the menu as the window's menu bar.",
       "slug": "winsetmenumenu",
       "url": "https://electronjs.org/docs/api/browser-window#winsetmenumenu",
       "keyValuePairs": [
@@ -3867,6 +4396,30 @@
         "doc:setMenu",
         "doc:winsetmenumenu",
         "doc:win.setMenu(menu)"
+      ]
+    },
+    {
+      "objectID": "api-browser-window#winremovemenu",
+      "name": "removeMenu",
+      "platforms": [
+        "Linux",
+        "Windows"
+      ],
+      "description": "Remove the window's menu bar.",
+      "apiType": "instanceMethod",
+      "fullSignature": "win.removeMenu()",
+      "tldr": "Remove the window's menu bar.",
+      "slug": "winremovemenu",
+      "url": "https://electronjs.org/docs/api/browser-window#winremovemenu",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:removeMenu",
+        "api:winremovemenu",
+        "api:win.removeMenu()",
+        "doc:removeMenu",
+        "doc:winremovemenu",
+        "doc:win.removeMenu()"
       ]
     },
     {
@@ -3939,7 +4492,16 @@
       "parameters": [
         {
           "name": "overlay",
-          "type": "NativeImage",
+          "type": [
+            {
+              "typeName": "NativeImage",
+              "collection": false
+            },
+            {
+              "typeName": "null",
+              "collection": false
+            }
+          ],
           "collection": false,
           "description": "the icon to display on the bottom right corner of the taskbar icon. If this parameter is `null`, the overlay is cleared",
           "required": true
@@ -4089,6 +4651,40 @@
       ]
     },
     {
+      "objectID": "api-browser-window#winsetshaperects",
+      "name": "setShape",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "Experimental"
+      ],
+      "description": "Setting a window shape determines the area within the window where the system permits drawing and user interaction. Outside of the given region, no pixels will be drawn and no mouse events will be registered. Mouse events outside of the region will not be received by that window, but will fall through to whatever is behind the window.",
+      "parameters": [
+        {
+          "name": "rects",
+          "type": "Rectangle",
+          "collection": true,
+          "description": "Sets a shape on the window. Passing an empty list reverts the window to being rectangular.",
+          "required": true
+        }
+      ],
+      "apiType": "instanceMethod",
+      "fullSignature": "win.setShape(rects)",
+      "tldr": "Setting a window shape determines the area within the window where the system permits drawing and user interaction.",
+      "slug": "winsetshaperects",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetshaperects",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:setShape",
+        "api:winsetshaperects",
+        "api:win.setShape(rects)",
+        "doc:setShape",
+        "doc:winsetshaperects",
+        "doc:win.setShape(rects)"
+      ]
+    },
+    {
       "objectID": "api-browser-window#winsetthumbarbuttonsbuttons",
       "name": "setThumbarButtons",
       "platforms": [
@@ -4130,7 +4726,7 @@
       "platforms": [
         "Windows"
       ],
-      "description": "Sets the region of the window to show as the thumbnail image displayed when hovering over the window in the taskbar. You can reset the thumbnail to be the entire window by specifying an empty region: {x: 0, y: 0, width: 0, height: 0}.",
+      "description": "Sets the region of the window to show as the thumbnail image displayed when hovering over the window in the taskbar. You can reset the thumbnail to be the entire window by specifying an empty region: { x: 0, y: 0, width: 0, height: 0 }.",
       "parameters": [
         {
           "name": "region",
@@ -4311,6 +4907,37 @@
       ]
     },
     {
+      "objectID": "api-browser-window#winsetwindowbuttonvisibilityvisible",
+      "name": "setWindowButtonVisibility",
+      "platforms": [
+        "macOS"
+      ],
+      "description": "Sets whether the window traffic light buttons should be visible. This cannot be called when titleBarStyle is set to customButtonsOnHover.",
+      "parameters": [
+        {
+          "name": "visible",
+          "type": "Boolean",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "instanceMethod",
+      "fullSignature": "win.setWindowButtonVisibility(visible)",
+      "tldr": "Sets whether the window traffic light buttons should be visible.",
+      "slug": "winsetwindowbuttonvisibilityvisible",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetwindowbuttonvisibilityvisible",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:setWindowButtonVisibility",
+        "api:winsetwindowbuttonvisibilityvisible",
+        "api:win.setWindowButtonVisibility(visible)",
+        "doc:setWindowButtonVisibility",
+        "doc:winsetwindowbuttonvisibilityvisible",
+        "doc:win.setWindowButtonVisibility(visible)"
+      ]
+    },
+    {
       "objectID": "api-browser-window#winsetautohidemenubarhide",
       "name": "setAutoHideMenuBar",
       "description": "Sets whether the window menu bar should hide itself automatically. Once set the menu bar will only show when users press the single Alt key. If the menu bar is already visible, calling setAutoHideMenuBar(true) won't hide it immediately.",
@@ -4419,7 +5046,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetvisibleonallworkspacesvisible",
+      "objectID": "api-browser-window#winsetvisibleonallworkspacesvisible-options",
       "name": "setVisibleOnAllWorkspaces",
       "description": "Sets whether the window should be visible on all workspaces. Note: This API does nothing on Windows.",
       "parameters": [
@@ -4428,22 +5055,37 @@
           "type": "Boolean",
           "collection": false,
           "required": true
+        },
+        {
+          "name": "options",
+          "type": "Object",
+          "collection": false,
+          "required": false,
+          "properties": [
+            {
+              "name": "visibleOnFullScreen",
+              "type": "Boolean",
+              "collection": false,
+              "description": "Sets whether the window should be visible above fullscreen windows",
+              "required": false
+            }
+          ]
         }
       ],
       "apiType": "instanceMethod",
-      "fullSignature": "win.setVisibleOnAllWorkspaces(visible)",
+      "fullSignature": "win.setVisibleOnAllWorkspaces(visible[, options])",
       "tldr": "Sets whether the window should be visible on all workspaces.",
-      "slug": "winsetvisibleonallworkspacesvisible",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetvisibleonallworkspacesvisible",
+      "slug": "winsetvisibleonallworkspacesvisible-options",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetvisibleonallworkspacesvisible-options",
       "keyValuePairs": [
         "is:doc",
         "is:api",
         "api:setVisibleOnAllWorkspaces",
-        "api:winsetvisibleonallworkspacesvisible",
-        "api:win.setVisibleOnAllWorkspaces(visible)",
+        "api:winsetvisibleonallworkspacesvisible-options",
+        "api:win.setVisibleOnAllWorkspaces(visible[, options])",
         "doc:setVisibleOnAllWorkspaces",
-        "doc:winsetvisibleonallworkspacesvisible",
-        "doc:win.setVisibleOnAllWorkspaces(visible)"
+        "doc:winsetvisibleonallworkspacesvisible-options",
+        "doc:win.setVisibleOnAllWorkspaces(visible[, options])"
       ]
     },
     {
@@ -4580,10 +5222,6 @@
     {
       "objectID": "api-browser-window#winsetparentwindowparent",
       "name": "setParentWindow",
-      "platforms": [
-        "Linux",
-        "macOS"
-      ],
       "description": "Sets parent as current window's parent window, passing null will turn current window into a top-level window.",
       "parameters": [
         {
@@ -4941,6 +5579,7 @@
           "name": "browserView",
           "type": "BrowserView",
           "collection": false,
+          "description": ". Attach browserView to win. If there is some other browserViews was attached they will be removed from this window.",
           "required": true
         }
       ],
@@ -4966,7 +5605,6 @@
       "platforms": [
         "Experimental"
       ],
-      "description": "Note: The BrowserView API is currently experimental and may change or be removed in future Electron releases.",
       "returns": {
         "type": [
           {
@@ -4979,11 +5617,11 @@
           }
         ],
         "collection": false,
-        "description": "an attached BrowserView. Returns null if none is attached."
+        "description": "an BrowserView what is attached. Returns null if none is attached. Throw error if multiple BrowserViews is attached."
       },
       "apiType": "instanceMethod",
       "fullSignature": "win.getBrowserView()",
-      "tldr": "Note: The BrowserView API is currently experimental and may change or be removed in future Electron releases.",
+      "tldr": "Returns an BrowserView what is attached. Returns null if none is attached. Throw error if multiple BrowserViews is attached.",
       "slug": "wingetbrowserview",
       "url": "https://electronjs.org/docs/api/browser-window#wingetbrowserview",
       "keyValuePairs": [
@@ -4995,6 +5633,90 @@
         "doc:getBrowserView",
         "doc:wingetbrowserview",
         "doc:win.getBrowserView()"
+      ]
+    },
+    {
+      "objectID": "api-browser-window#winaddbrowserviewbrowserview",
+      "name": "addBrowserView",
+      "platforms": [
+        "Experimental"
+      ],
+      "description": "Replacement API for setBrowserView supporting work with multi browser views.",
+      "parameters": [
+        {
+          "name": "browserView",
+          "type": "BrowserView",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "instanceMethod",
+      "fullSignature": "win.addBrowserView(browserView)",
+      "tldr": "Replacement API for setBrowserView supporting work with multi browser views.",
+      "slug": "winaddbrowserviewbrowserview",
+      "url": "https://electronjs.org/docs/api/browser-window#winaddbrowserviewbrowserview",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:addBrowserView",
+        "api:winaddbrowserviewbrowserview",
+        "api:win.addBrowserView(browserView)",
+        "doc:addBrowserView",
+        "doc:winaddbrowserviewbrowserview",
+        "doc:win.addBrowserView(browserView)"
+      ]
+    },
+    {
+      "objectID": "api-browser-window#winremovebrowserviewbrowserview",
+      "name": "removeBrowserView",
+      "platforms": [
+        "Experimental"
+      ],
+      "parameters": [
+        {
+          "name": "browserView",
+          "type": "BrowserView",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "instanceMethod",
+      "fullSignature": "win.removeBrowserView(browserView)",
+      "tldr": null,
+      "slug": "winremovebrowserviewbrowserview",
+      "url": "https://electronjs.org/docs/api/browser-window#winremovebrowserviewbrowserview",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:removeBrowserView",
+        "api:winremovebrowserviewbrowserview",
+        "api:win.removeBrowserView(browserView)",
+        "doc:removeBrowserView",
+        "doc:winremovebrowserviewbrowserview",
+        "doc:win.removeBrowserView(browserView)"
+      ]
+    },
+    {
+      "objectID": "api-browser-window#wingetbrowserviews",
+      "name": "getBrowserViews",
+      "platforms": [
+        "Experimental"
+      ],
+      "description": "Returns array of BrowserView what was an attached with addBrowserView or setBrowserView. Note: The BrowserView API is currently experimental and may change or be removed in future Electron releases.",
+      "apiType": "instanceMethod",
+      "fullSignature": "win.getBrowserViews()",
+      "tldr": "Returns array of BrowserView what was an attached with addBrowserView or setBrowserView.",
+      "slug": "wingetbrowserviews",
+      "url": "https://electronjs.org/docs/api/browser-window#wingetbrowserviews",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:getBrowserViews",
+        "api:wingetbrowserviews",
+        "api:win.getBrowserViews()",
+        "doc:getBrowserViews",
+        "doc:wingetbrowserviews",
+        "doc:win.getBrowserViews()"
       ]
     },
     {
@@ -5033,7 +5755,7 @@
     {
       "objectID": "api-browser-window#event-close",
       "name": "close",
-      "description": "Emitted when the window is going to be closed. It's emitted before the beforeunload and unload event of the DOM. Calling event.preventDefault() will cancel the close. Usually you would want to use the beforeunload handler to decide whether the window should be closed, which will also be called when the window is reloaded. In Electron, returning any value other than undefined would cancel the close. For example: Note: There is a subtle difference between the behaviors of window.onbeforeunload = handler and window.addEventListener('beforeunload', handler). It is recommended to always set the event.returnValue explicitly, instead of just returning a value, as the former works more consistently within Electron.",
+      "description": "Emitted when the window is going to be closed. It's emitted before the beforeunload and unload event of the DOM. Calling event.preventDefault() will cancel the close. Usually you would want to use the beforeunload handler to decide whether the window should be closed, which will also be called when the window is reloaded. In Electron, returning any value other than undefined would cancel the close. For example: Note: There is a subtle difference between the behaviors of window.onbeforeunload = handler and window.addEventListener('beforeunload', handler). It is recommended to always set the event.returnValue explicitly, instead of only returning a value, as the former works more consistently within Electron.",
       "returns": [
         {
           "name": "event",
@@ -5308,13 +6030,51 @@
       ]
     },
     {
+      "objectID": "api-browser-window#event-will-resize",
+      "name": "will-resize",
+      "description": "Emitted before the window is resized. Calling event.preventDefault() will prevent the window from being resized. Note that this is only emitted when the window is being resized manually. Resizing the window with setBounds/setSize will not emit this event.",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "newBounds",
+          "type": "Rectangle",
+          "collection": false,
+          "description": "` Size the window is being resized to.",
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "win.on('will-resize')",
+      "url": "https://electronjs.org/docs/api/browser-window#event-will-resize",
+      "tldr": "Emitted before the window is resized.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:will-resize",
+        "api:undefined",
+        "api:win.on('will-resize')",
+        "doc:will-resize",
+        "doc:undefined",
+        "doc:win.on('will-resize')"
+      ]
+    },
+    {
       "objectID": "api-browser-window#event-resize",
       "name": "resize",
-      "description": "Emitted when the window is being resized.",
+      "description": "Emitted after the window has been resized.",
       "apiType": "event",
       "fullSignature": "win.on('resize')",
       "url": "https://electronjs.org/docs/api/browser-window#event-resize",
-      "tldr": "Emitted when the window is being resized.",
+      "tldr": "Emitted after the window has been resized.",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5327,9 +6087,46 @@
       ]
     },
     {
+      "objectID": "api-browser-window#event-will-move",
+      "name": "will-move",
+      "description": "Emitted before the window is moved. Calling event.preventDefault() will prevent the window from being moved. Note that this is only emitted when the window is being resized manually. Resizing the window with setBounds/setSize will not emit this event.",
+      "platforms": [
+        "Windows"
+      ],
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "newBounds",
+          "type": "Rectangle",
+          "collection": false,
+          "description": "` Location the window is being moved to.",
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "win.on('will-move')",
+      "url": "https://electronjs.org/docs/api/browser-window#event-will-move",
+      "tldr": "Emitted before the window is moved.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:will-move",
+        "api:undefined",
+        "api:win.on('will-move')",
+        "doc:will-move",
+        "doc:undefined",
+        "doc:win.on('will-move')"
+      ]
+    },
+    {
       "objectID": "api-browser-window#event-move",
       "name": "move",
-      "description": "Emitted when the window is being moved to a new position. Note: On macOS this event is just an alias of moved.",
+      "description": "Emitted when the window is being moved to a new position. Note: On macOS this event is an alias of moved.",
       "apiType": "event",
       "fullSignature": "win.on('move')",
       "url": "https://electronjs.org/docs/api/browser-window#event-move",
@@ -5444,11 +6241,48 @@
       ]
     },
     {
+      "objectID": "api-browser-window#event-always-on-top-changed",
+      "name": "always-on-top-changed",
+      "description": "Emitted when the window is set or unset to show always on top of other windows.",
+      "platforms": [
+        "macOS"
+      ],
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "isAlwaysOnTop",
+          "type": "Boolean",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "win.on('always-on-top-changed')",
+      "url": "https://electronjs.org/docs/api/browser-window#event-always-on-top-changed",
+      "tldr": "Emitted when the window is set or unset to show always on top of other windows.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:always-on-top-changed",
+        "api:undefined",
+        "api:win.on('always-on-top-changed')",
+        "doc:always-on-top-changed",
+        "doc:undefined",
+        "doc:win.on('always-on-top-changed')"
+      ]
+    },
+    {
       "objectID": "api-browser-window#event-app-command",
       "name": "app-command",
-      "description": "Emitted when an App Command is invoked. These are typically related to keyboard media keys or browser commands, as well as the \"Back\" button built into some mice on Windows. Commands are lowercased, underscores are replaced with hyphens, and the APPCOMMAND_ prefix is stripped off. e.g. APPCOMMAND_BROWSER_BACKWARD is emitted as browser-backward.",
+      "description": "Emitted when an App Command is invoked. These are typically related to keyboard media keys or browser commands, as well as the \"Back\" button built into some mice on Windows. Commands are lowercased, underscores are replaced with hyphens, and the APPCOMMAND_ prefix is stripped off. e.g. APPCOMMAND_BROWSER_BACKWARD is emitted as browser-backward. The following app commands are explictly supported on Linux:",
       "platforms": [
-        "Windows"
+        "Windows",
+        "Linux"
       ],
       "returns": [
         {
@@ -6038,6 +6872,60 @@
       ]
     },
     {
+      "objectID": "api-client-request#requestgetuploadprogress",
+      "name": "getUploadProgress",
+      "description": "You can use this method in conjunction with POST requests to get the progress of a file upload or other data transfer.",
+      "returns": {
+        "type": "Object",
+        "collection": false,
+        "properties": [
+          {
+            "name": "active",
+            "type": "Boolean",
+            "collection": false,
+            "description": "Whether the request is currently active. If this is false no other properties will be set",
+            "required": true
+          },
+          {
+            "name": "started",
+            "type": "Boolean",
+            "collection": false,
+            "description": "Whether the upload has started. If this is false both current and total will be set to 0.",
+            "required": true
+          },
+          {
+            "name": "current",
+            "type": "Integer",
+            "collection": false,
+            "description": "The number of bytes that have been uploaded so far",
+            "required": true
+          },
+          {
+            "name": "total",
+            "type": "Integer",
+            "collection": false,
+            "description": "The number of bytes that will be uploaded this request",
+            "required": true
+          }
+        ]
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "request.getUploadProgress()",
+      "tldr": "You can use this method in conjunction with POST requests to get the progress of a file upload or other data transfer.",
+      "slug": "requestgetuploadprogress",
+      "url": "https://electronjs.org/docs/api/client-request#requestgetuploadprogress",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:getUploadProgress",
+        "api:requestgetuploadprogress",
+        "api:request.getUploadProgress()",
+        "doc:getUploadProgress",
+        "doc:requestgetuploadprogress",
+        "doc:request.getUploadProgress()"
+      ]
+    },
+    {
       "objectID": "api-client-request#event-response",
       "name": "response",
       "returns": [
@@ -6281,9 +7169,87 @@
       ]
     },
     {
+      "objectID": "api-cookies#cookiesgetfilter",
+      "name": "get",
+      "description": "Sends a request to get all cookies matching filter, and resolves a promise with the response.",
+      "parameters": [
+        {
+          "name": "filter",
+          "type": "Object",
+          "collection": false,
+          "required": true,
+          "properties": [
+            {
+              "name": "url",
+              "type": "String",
+              "collection": false,
+              "description": "Retrieves cookies which are associated with url. Empty implies retrieving cookies of all urls.",
+              "required": false
+            },
+            {
+              "name": "name",
+              "type": "String",
+              "collection": false,
+              "description": "Filters cookies by name.",
+              "required": false
+            },
+            {
+              "name": "domain",
+              "type": "String",
+              "collection": false,
+              "description": "Retrieves cookies whose domains match or are subdomains of domains.",
+              "required": false
+            },
+            {
+              "name": "path",
+              "type": "String",
+              "collection": false,
+              "description": "Retrieves cookies whose path matches path.",
+              "required": false
+            },
+            {
+              "name": "secure",
+              "type": "Boolean",
+              "collection": false,
+              "description": "Filters cookies by their Secure property.",
+              "required": false
+            },
+            {
+              "name": "session",
+              "type": "Boolean",
+              "collection": false,
+              "description": "Filters out session or persistent cookies.",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "returns": {
+        "type": "Promise",
+        "collection": false,
+        "innerType": "Cookie",
+        "description": "A promise which resolves an array of cookie objects."
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "cookies.get(filter)",
+      "tldr": "Sends a request to get all cookies matching filter, and resolves a promise with the response.",
+      "slug": "cookiesgetfilter",
+      "url": "https://electronjs.org/docs/api/cookies#cookiesgetfilter",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:get",
+        "api:cookiesgetfilter",
+        "api:cookies.get(filter)",
+        "doc:get",
+        "doc:cookiesgetfilter",
+        "doc:cookies.get(filter)"
+      ]
+    },
+    {
       "objectID": "api-cookies#cookiesgetfilter-callback",
       "name": "get",
-      "description": "Sends a request to get all cookies matching filter, callback will be called with callback(error, cookies) on complete.",
+      "description": "Sends a request to get all cookies matching filter, callback will be called with callback(error, cookies) on complete. Deprecated Soon",
       "parameters": [
         {
           "name": "filter",
@@ -6375,9 +7341,101 @@
       ]
     },
     {
+      "objectID": "api-cookies#cookiessetdetails",
+      "name": "set",
+      "description": "Sets a cookie with details.",
+      "parameters": [
+        {
+          "name": "details",
+          "type": "Object",
+          "collection": false,
+          "required": true,
+          "properties": [
+            {
+              "name": "url",
+              "type": "String",
+              "collection": false,
+              "description": "The url to associate the cookie with.",
+              "required": true
+            },
+            {
+              "name": "name",
+              "type": "String",
+              "collection": false,
+              "description": "The name of the cookie. Empty by default if omitted.",
+              "required": false
+            },
+            {
+              "name": "value",
+              "type": "String",
+              "collection": false,
+              "description": "The value of the cookie. Empty by default if omitted.",
+              "required": false
+            },
+            {
+              "name": "domain",
+              "type": "String",
+              "collection": false,
+              "description": "The domain of the cookie. Empty by default if omitted.",
+              "required": false
+            },
+            {
+              "name": "path",
+              "type": "String",
+              "collection": false,
+              "description": "The path of the cookie. Empty by default if omitted.",
+              "required": false
+            },
+            {
+              "name": "secure",
+              "type": "Boolean",
+              "collection": false,
+              "description": "Whether the cookie should be marked as Secure. Defaults to false.",
+              "required": false
+            },
+            {
+              "name": "httpOnly",
+              "type": "Boolean",
+              "collection": false,
+              "description": "Whether the cookie should be marked as HTTP only. Defaults to false.",
+              "required": false
+            },
+            {
+              "name": "expirationDate",
+              "type": "Double",
+              "collection": false,
+              "description": "The expiration date of the cookie as the number of seconds since the UNIX epoch. If omitted then the cookie becomes a session cookie and will not be retained between sessions.",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "returns": {
+        "type": "Promise",
+        "collection": false,
+        "innerType": "void",
+        "description": "A promise which resolves when the cookie has been set"
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "cookies.set(details)",
+      "tldr": "Sets a cookie with details.",
+      "slug": "cookiessetdetails",
+      "url": "https://electronjs.org/docs/api/cookies#cookiessetdetails",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:set",
+        "api:cookiessetdetails",
+        "api:cookies.set(details)",
+        "doc:set",
+        "doc:cookiessetdetails",
+        "doc:cookies.set(details)"
+      ]
+    },
+    {
       "objectID": "api-cookies#cookiessetdetails-callback",
       "name": "set",
-      "description": "Sets a cookie with details, callback will be called with callback(error) on complete.",
+      "description": "Sets a cookie with details, callback will be called with callback(error) on complete. Deprecated Soon",
       "parameters": [
         {
           "name": "details",
@@ -6476,9 +7534,51 @@
       ]
     },
     {
+      "objectID": "api-cookies#cookiesremoveurl-name",
+      "name": "remove",
+      "description": "Removes the cookies matching url and name",
+      "parameters": [
+        {
+          "name": "url",
+          "type": "String",
+          "collection": false,
+          "description": "The URL associated with the cookie.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "collection": false,
+          "description": "The name of cookie to remove.",
+          "required": true
+        }
+      ],
+      "returns": {
+        "type": "Promise",
+        "collection": false,
+        "innerType": "void",
+        "description": "A promise which resolves when the cookie has been removed"
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "cookies.remove(url, name)",
+      "tldr": "Removes the cookies matching url and name.",
+      "slug": "cookiesremoveurl-name",
+      "url": "https://electronjs.org/docs/api/cookies#cookiesremoveurl-name",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remove",
+        "api:cookiesremoveurl-name",
+        "api:cookies.remove(url, name)",
+        "doc:remove",
+        "doc:cookiesremoveurl-name",
+        "doc:cookies.remove(url, name)"
+      ]
+    },
+    {
       "objectID": "api-cookies#cookiesremoveurl-name-callback",
       "name": "remove",
-      "description": "Removes the cookies matching url and name, callback will called with callback() on complete.",
+      "description": "Removes the cookies matching url and name, callback will called with callback() on complete. Deprecated Soon",
       "parameters": [
         {
           "name": "url",
@@ -6518,9 +7618,35 @@
       ]
     },
     {
-      "objectID": "api-cookies#cookiesflushstorecallback",
+      "objectID": "api-cookies#cookiesflushstore",
       "name": "flushStore",
       "description": "Writes any unwritten cookies data to disk.",
+      "returns": {
+        "type": "Promise",
+        "collection": false,
+        "innerType": "void",
+        "description": "A promise which resolves when the cookie store has been flushed"
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "cookies.flushStore()",
+      "tldr": "Writes any unwritten cookies data to disk.",
+      "slug": "cookiesflushstore",
+      "url": "https://electronjs.org/docs/api/cookies#cookiesflushstore",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:flushStore",
+        "api:cookiesflushstore",
+        "api:cookies.flushStore()",
+        "doc:flushStore",
+        "doc:cookiesflushstore",
+        "doc:cookies.flushStore()"
+      ]
+    },
+    {
+      "objectID": "api-cookies#cookiesflushstorecallback",
+      "name": "flushStore",
+      "description": "Writes any unwritten cookies data to disk. Deprecated Soon",
       "parameters": [
         {
           "name": "callback",
@@ -6691,13 +7817,13 @@
     {
       "objectID": "api-debugger#debuggersendcommandmethod-commandparams-callback",
       "name": "sendCommand",
-      "description": "Send given command to the debugging target.",
+      "description": "Send given command to the debugging target. Deprecated Soon",
       "parameters": [
         {
           "name": "method",
           "type": "String",
           "collection": false,
-          "description": "Method name, should be one of the methods defined by the remote debugging protocol.",
+          "description": "Method name, should be one of the methods defined by the .",
           "required": true
         },
         {
@@ -6746,6 +7872,48 @@
         "doc:sendCommand",
         "doc:debuggersendcommandmethod-commandparams-callback",
         "doc:debugger.sendCommand(method[, commandParams, callback])"
+      ]
+    },
+    {
+      "objectID": "api-debugger#debuggersendcommandmethod-commandparams",
+      "name": "sendCommand",
+      "description": "Send given command to the debugging target.",
+      "parameters": [
+        {
+          "name": "method",
+          "type": "String",
+          "collection": false,
+          "description": "Method name, should be one of the methods defined by the .",
+          "required": true
+        },
+        {
+          "name": "commandParams",
+          "type": "Object",
+          "collection": false,
+          "description": "JSON object with request parameters.",
+          "required": false
+        }
+      ],
+      "returns": {
+        "type": "Promise",
+        "collection": false,
+        "innerType": "any",
+        "description": "A promise that resolves with the response defined by the 'returns' attribute of the command description in the remote debugging protocol or is rejected indicating the failure of the command."
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "debugger.sendCommand(method[, commandParams])",
+      "tldr": "Send given command to the debugging target.",
+      "slug": "debuggersendcommandmethod-commandparams",
+      "url": "https://electronjs.org/docs/api/debugger#debuggersendcommandmethod-commandparams",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:sendCommand",
+        "api:debuggersendcommandmethod-commandparams",
+        "api:debugger.sendCommand(method[, commandParams])",
+        "doc:sendCommand",
+        "doc:debuggersendcommandmethod-commandparams",
+        "doc:debugger.sendCommand(method[, commandParams])"
       ]
     },
     {
@@ -6874,6 +8042,59 @@
         "doc:getSavePath",
         "doc:downloaditemgetsavepath",
         "doc:downloadItem.getSavePath()"
+      ]
+    },
+    {
+      "objectID": "api-download-item#downloaditemsetsavedialogoptionsoptions",
+      "name": "setSaveDialogOptions",
+      "description": "This API allows the user to set custom options for the save dialog that opens for the download item by default. The API is only available in session's will-download callback function.",
+      "parameters": [
+        {
+          "name": "options",
+          "type": "SaveDialogOptions",
+          "collection": false,
+          "description": "Set the save file dialog options. This object has the same properties as the `options` parameter of .",
+          "required": true
+        }
+      ],
+      "apiType": "instanceMethod",
+      "fullSignature": "downloadItem.setSaveDialogOptions(options)",
+      "tldr": "This API allows the user to set custom options for the save dialog that opens for the download item by default.",
+      "slug": "downloaditemsetsavedialogoptionsoptions",
+      "url": "https://electronjs.org/docs/api/download-item#downloaditemsetsavedialogoptionsoptions",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:setSaveDialogOptions",
+        "api:downloaditemsetsavedialogoptionsoptions",
+        "api:downloadItem.setSaveDialogOptions(options)",
+        "doc:setSaveDialogOptions",
+        "doc:downloaditemsetsavedialogoptionsoptions",
+        "doc:downloadItem.setSaveDialogOptions(options)"
+      ]
+    },
+    {
+      "objectID": "api-download-item#downloaditemgetsavedialogoptions",
+      "name": "getSaveDialogOptions",
+      "returns": {
+        "type": "SaveDialogOptions",
+        "collection": false,
+        "description": "Returns the object previously set by downloadItem.setSaveDialogOptions(options)."
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "downloadItem.getSaveDialogOptions()",
+      "tldr": "Returns returns the object previously set by downloadItem.setSaveDialogOptions(options).",
+      "slug": "downloaditemgetsavedialogoptions",
+      "url": "https://electronjs.org/docs/api/download-item#downloaditemgetsavedialogoptions",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:getSaveDialogOptions",
+        "api:downloaditemgetsavedialogoptions",
+        "api:downloadItem.getSaveDialogOptions()",
+        "doc:getSaveDialogOptions",
+        "doc:downloaditemgetsavedialogoptions",
+        "doc:downloadItem.getSaveDialogOptions()"
       ]
     },
     {
@@ -7391,7 +8612,7 @@
           "name": "transactions",
           "type": "Transaction",
           "collection": true,
-          "description": "Array of transactions.",
+          "description": "Array of objects.",
           "required": true
         }
       ],
@@ -7498,7 +8719,7 @@
     {
       "objectID": "api-menu#menusetapplicationmenumenu",
       "name": "setApplicationMenu",
-      "description": "Sets menu as the application menu on macOS. On Windows and Linux, the menu will be set as each window's top menu. Passing null will remove the menu bar on Windows and Linux but has no effect on macOS. Note: This API has to be called after the ready event of app module.",
+      "description": "Sets menu as the application menu on macOS. On Windows and Linux, the menu will be set as each window's top menu. Also on Windows and Linux, you can use a & in the top-level item name to indicate which letter should get a generated accelerator. For example, using &File for the file menu would result in a generated Alt-F accelerator that opens the associated menu. The indicated character in the button label gets an underline. The & character is not displayed on the button label. Passing null will suppress the default menu. On Windows and Linux, this has the additional effect of removing the menu bar from the window. Note: The default menu will be created automatically if the app does not set one. It contains standard items such as File, Edit, View, Window and Help.",
       "parameters": [
         {
           "name": "menu",
@@ -7572,7 +8793,7 @@
       "platforms": [
         "macOS"
       ],
-      "description": "Sends the action to the first responder of application. This is used for emulating default macOS menu behaviors. Usually you would just use the role property of a MenuItem. See the macOS Cocoa Event Handling Guide for more information on macOS' native actions.",
+      "description": "Sends the action to the first responder of application. This is used for emulating default macOS menu behaviors. Usually you would use the role property of a MenuItem. See the macOS Cocoa Event Handling Guide for more information on macOS' native actions.",
       "parameters": [
         {
           "name": "action",
@@ -7600,11 +8821,20 @@
     {
       "objectID": "api-menu#menubuildfromtemplatetemplate",
       "name": "buildFromTemplate",
-      "description": "Generally, the template is just an array of options for constructing a MenuItem. The usage can be referenced above. You can also attach other fields to the element of the template and they will become properties of the constructed menu items.",
+      "description": "Generally, the template is an array of options for constructing a MenuItem. The usage can be referenced above. You can also attach other fields to the element of the template and they will become properties of the constructed menu items.",
       "parameters": [
         {
           "name": "template",
-          "type": "MenuItemConstructorOptions",
+          "type": [
+            {
+              "typeName": "MenuItemConstructorOptions",
+              "collection": false
+            },
+            {
+              "typeName": "MenuItem",
+              "collection": false
+            }
+          ],
           "collection": true,
           "required": true
         }
@@ -7615,7 +8845,7 @@
       },
       "apiType": "staticMethod",
       "fullSignature": "Menu.buildFromTemplate(template)",
-      "tldr": "Generally, the template is just an array of options for constructing a MenuItem.",
+      "tldr": "Generally, the template is an array of options for constructing a MenuItem.",
       "slug": "menubuildfromtemplatetemplate",
       "url": "https://electronjs.org/docs/api/menu#menubuildfromtemplatetemplate",
       "keyValuePairs": [
@@ -7638,7 +8868,7 @@
           "name": "options",
           "type": "Object",
           "collection": false,
-          "required": true,
+          "required": false,
           "properties": [
             {
               "name": "window",
@@ -8402,10 +9632,10 @@
     {
       "objectID": "api-notification#notificationshow",
       "name": "show",
-      "description": "Immediately shows the notification to the user, please note this means unlike the HTML5 Notification implementation, simply instantiating a new Notification does not immediately show it to the user, you need to call this method before the OS will display it. If the notification has been shown before, this method will dismiss the previously shown notification and create a new one with identical properties.",
+      "description": "Immediately shows the notification to the user, please note this means unlike the HTML5 Notification implementation, instantiating a new Notification does not immediately show it to the user, you need to call this method before the OS will display it. If the notification has been shown before, this method will dismiss the previously shown notification and create a new one with identical properties.",
       "apiType": "instanceMethod",
       "fullSignature": "notification.show()",
-      "tldr": "Immediately shows the notification to the user, please note this means unlike the HTML5 Notification implementation, simply instantiating a new Notification does not immediately show it to the user, you need to call this method before the OS will display it.",
+      "tldr": "Immediately shows the notification to the user, please note this means unlike the HTML5 Notification implementation, instantiating a new Notification does not immediately show it to the user, you need to call this method before the OS will display it.",
       "slug": "notificationshow",
       "url": "https://electronjs.org/docs/api/notification#notificationshow",
       "keyValuePairs": [
@@ -8699,6 +9929,52 @@
       ]
     },
     {
+      "objectID": "api-power-monitor#event-lock-screen",
+      "name": "lock-screen",
+      "description": "Emitted when the system is about to lock the screen.",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "apiType": "event",
+      "fullSignature": "powerMonitor.on('lock-screen')",
+      "url": "https://electronjs.org/docs/api/power-monitor#event-lock-screen",
+      "tldr": "Emitted when the system is about to lock the screen.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:lock-screen",
+        "api:undefined",
+        "api:powerMonitor.on('lock-screen')",
+        "doc:lock-screen",
+        "doc:undefined",
+        "doc:powerMonitor.on('lock-screen')"
+      ]
+    },
+    {
+      "objectID": "api-power-monitor#event-unlock-screen",
+      "name": "unlock-screen",
+      "description": "Emitted as soon as the systems screen is unlocked.",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "apiType": "event",
+      "fullSignature": "powerMonitor.on('unlock-screen')",
+      "url": "https://electronjs.org/docs/api/power-monitor#event-unlock-screen",
+      "tldr": "Emitted as soon as the systems screen is unlocked.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:unlock-screen",
+        "api:undefined",
+        "api:powerMonitor.on('unlock-screen')",
+        "doc:unlock-screen",
+        "doc:undefined",
+        "doc:powerMonitor.on('unlock-screen')"
+      ]
+    },
+    {
       "objectID": "api-process#event-loaded",
       "name": "loaded",
       "description": "Emitted when Electron has loaded its internal initialization script and is beginning to load the web page or the main script. It can be used by the preload script to add removed Node global symbols back to the global scope when node integration is turned off:",
@@ -8910,7 +10186,7 @@
               "name": "storages",
               "type": "String",
               "collection": true,
-              "description": "The types of storages to clear, can contain: appcache, cookies, filesystem, indexdb, localstorage, shadercache, websql, serviceworkers.",
+              "description": "The types of storages to clear, can contain: appcache, cookies, filesystem, indexdb, localstorage, shadercache, websql, serviceworkers, cachestorage.",
               "required": false
             },
             {
@@ -9320,6 +10596,21 @@
                   "collection": false,
                   "description": "The url of the openExternal request.",
                   "required": true
+                },
+                {
+                  "name": "mediaTypes",
+                  "type": "String",
+                  "collection": true,
+                  "description": "The types of media access being requested, elements can be video or audio",
+                  "required": true,
+                  "possibleValues": [
+                    {
+                      "value": "video"
+                    },
+                    {
+                      "value": "audio"
+                    }
+                  ]
                 }
               ]
             }
@@ -9340,6 +10631,101 @@
         "doc:setPermissionRequestHandler",
         "doc:sessetpermissionrequesthandlerhandler",
         "doc:ses.setPermissionRequestHandler(handler)"
+      ]
+    },
+    {
+      "objectID": "api-session#sessetpermissioncheckhandlerhandler",
+      "name": "setPermissionCheckHandler",
+      "description": "Sets the handler which can be used to respond to permission checks for the session. Returning true will allow the permission and false will reject it. To clear the handler, call setPermissionCheckHandler(null).",
+      "parameters": [
+        {
+          "name": "handler",
+          "type": [
+            {
+              "typeName": "Function",
+              "collection": false,
+              "innerType": "Boolean"
+            },
+            {
+              "typeName": "null",
+              "collection": false
+            }
+          ],
+          "collection": false,
+          "required": true,
+          "parameters": [
+            {
+              "name": "webContents",
+              "type": "WebContents",
+              "collection": false,
+              "description": "WebContents checking the permission.",
+              "required": true
+            },
+            {
+              "name": "permission",
+              "type": "String",
+              "collection": false,
+              "description": "Enum of 'media'.",
+              "required": true
+            },
+            {
+              "name": "requestingOrigin",
+              "type": "String",
+              "collection": false,
+              "description": "The origin URL of the permission check",
+              "required": true
+            },
+            {
+              "name": "details",
+              "type": "Object",
+              "collection": false,
+              "description": "Some properties are only available on certain permission types.",
+              "required": true,
+              "properties": [
+                {
+                  "name": "securityOrigin",
+                  "type": "String",
+                  "collection": false,
+                  "description": "The security orign of the media check.",
+                  "required": true
+                },
+                {
+                  "name": "mediaType",
+                  "type": "String",
+                  "collection": false,
+                  "description": "The type of media access being requested, can be video, audio or unknown",
+                  "required": true,
+                  "possibleValues": [
+                    {
+                      "value": "video"
+                    },
+                    {
+                      "value": "audio"
+                    },
+                    {
+                      "value": "unknown"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "apiType": "instanceMethod",
+      "fullSignature": "ses.setPermissionCheckHandler(handler)",
+      "tldr": "Sets the handler which can be used to respond to permission checks for the session.",
+      "slug": "sessetpermissioncheckhandlerhandler",
+      "url": "https://electronjs.org/docs/api/session#sessetpermissioncheckhandlerhandler",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:setPermissionCheckHandler",
+        "api:sessetpermissioncheckhandlerhandler",
+        "api:ses.setPermissionCheckHandler(handler)",
+        "doc:setPermissionCheckHandler",
+        "doc:sessetpermissioncheckhandlerhandler",
+        "doc:ses.setPermissionCheckHandler(handler)"
       ]
     },
     {
@@ -9805,7 +11191,7 @@
           "name": "invertedColorScheme",
           "type": "Boolean",
           "collection": false,
-          "description": "`true` if an inverted color scheme, such as a high contrast theme, is being used, `false` otherwise.",
+          "description": "`true` if an inverted color scheme (a high contrast color scheme with light text and dark backgrounds) is being used, `false` otherwise.",
           "required": true
         }
       ],
@@ -9822,6 +11208,81 @@
         "doc:inverted-color-scheme-changed",
         "doc:undefined",
         "doc:systemPreferences.on('inverted-color-scheme-changed')"
+      ]
+    },
+    {
+      "objectID": "api-system-preferences#event-high-contrast-color-scheme-changed",
+      "name": "high-contrast-color-scheme-changed",
+      "platforms": [
+        "Windows"
+      ],
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "highContrastColorScheme",
+          "type": "Boolean",
+          "collection": false,
+          "description": "`true` if a high contrast theme is being used, `false` otherwise.",
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "systemPreferences.on('high-contrast-color-scheme-changed')",
+      "url": "https://electronjs.org/docs/api/system-preferences#event-high-contrast-color-scheme-changed",
+      "tldr": null,
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:high-contrast-color-scheme-changed",
+        "api:undefined",
+        "api:systemPreferences.on('high-contrast-color-scheme-changed')",
+        "doc:high-contrast-color-scheme-changed",
+        "doc:undefined",
+        "doc:systemPreferences.on('high-contrast-color-scheme-changed')"
+      ]
+    },
+    {
+      "objectID": "api-system-preferences#event-appearance-changed",
+      "name": "appearance-changed",
+      "description": "NOTE: This event is only emitted after you have called startAppLevelAppearanceTrackingOS",
+      "platforms": [
+        "macOS"
+      ],
+      "returns": [
+        {
+          "name": "newAppearance",
+          "type": "String",
+          "collection": false,
+          "description": "Can be `dark` or `light`",
+          "required": true,
+          "possibleValues": [
+            {
+              "value": "dark"
+            },
+            {
+              "value": "light"
+            }
+          ]
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "systemPreferences.on('appearance-changed')",
+      "url": "https://electronjs.org/docs/api/system-preferences#event-appearance-changed",
+      "tldr": "NOTE: This event is only emitted after you have called startAppLevelAppearanceTrackingOS.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:appearance-changed",
+        "api:undefined",
+        "api:systemPreferences.on('appearance-changed')",
+        "doc:appearance-changed",
+        "doc:undefined",
+        "doc:systemPreferences.on('appearance-changed')"
       ]
     },
     {
@@ -9891,7 +11352,16 @@
       "parameters": [
         {
           "name": "image",
-          "type": "NativeImage",
+          "type": [
+            {
+              "typeName": "NativeImage",
+              "collection": false
+            },
+            {
+              "typeName": "String",
+              "collection": false
+            }
+          ],
           "collection": false,
           "required": true
         }
@@ -10018,6 +11488,64 @@
       ]
     },
     {
+      "objectID": "api-tray#traysetignoredoubleclickeventsignore",
+      "name": "setIgnoreDoubleClickEvents",
+      "platforms": [
+        "macOS"
+      ],
+      "description": "Sets the option to ignore double click events. Ignoring these events allows you to detect every individual click of the tray icon. This value is set to false by default.",
+      "parameters": [
+        {
+          "name": "ignore",
+          "type": "Boolean",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "instanceMethod",
+      "fullSignature": "tray.setIgnoreDoubleClickEvents(ignore)",
+      "tldr": "Sets the option to ignore double click events.",
+      "slug": "traysetignoredoubleclickeventsignore",
+      "url": "https://electronjs.org/docs/api/tray#traysetignoredoubleclickeventsignore",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:setIgnoreDoubleClickEvents",
+        "api:traysetignoredoubleclickeventsignore",
+        "api:tray.setIgnoreDoubleClickEvents(ignore)",
+        "doc:setIgnoreDoubleClickEvents",
+        "doc:traysetignoredoubleclickeventsignore",
+        "doc:tray.setIgnoreDoubleClickEvents(ignore)"
+      ]
+    },
+    {
+      "objectID": "api-tray#traygetignoredoubleclickevents",
+      "name": "getIgnoreDoubleClickEvents",
+      "platforms": [
+        "macOS"
+      ],
+      "returns": {
+        "type": "Boolean",
+        "collection": false,
+        "description": "Whether double click events will be ignored."
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "tray.getIgnoreDoubleClickEvents()",
+      "tldr": "Returns whether double click events will be ignored.",
+      "slug": "traygetignoredoubleclickevents",
+      "url": "https://electronjs.org/docs/api/tray#traygetignoredoubleclickevents",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:getIgnoreDoubleClickEvents",
+        "api:traygetignoredoubleclickevents",
+        "api:tray.getIgnoreDoubleClickEvents()",
+        "doc:getIgnoreDoubleClickEvents",
+        "doc:traygetignoredoubleclickevents",
+        "doc:tray.getIgnoreDoubleClickEvents()"
+      ]
+    },
+    {
       "objectID": "api-tray#traydisplayballoonoptions",
       "name": "displayBalloon",
       "platforms": [
@@ -10126,7 +11654,16 @@
       "parameters": [
         {
           "name": "menu",
-          "type": "Menu",
+          "type": [
+            {
+              "typeName": "Menu",
+              "collection": false
+            },
+            {
+              "typeName": "null",
+              "collection": false
+            }
+          ],
           "collection": false,
           "required": true
         }
@@ -10674,9 +12211,18 @@
           "properties": [
             {
               "name": "httpReferrer",
-              "type": "String",
+              "type": [
+                {
+                  "typeName": "String",
+                  "collection": false
+                },
+                {
+                  "typeName": "Referrer",
+                  "collection": false
+                }
+              ],
               "collection": false,
-              "description": "A HTTP Referrer url.",
+              "description": "An HTTP Referrer url.",
               "required": false
             },
             {
@@ -10705,10 +12251,6 @@
                   "collection": true
                 },
                 {
-                  "typeName": "UploadFileSystem",
-                  "collection": true
-                },
-                {
                   "typeName": "UploadBlob",
                   "collection": true
                 }
@@ -10727,6 +12269,12 @@
           ]
         }
       ],
+      "returns": {
+        "type": "Promise",
+        "collection": false,
+        "innerType": "void",
+        "description": "the promise will resolve when the page has finished loading (see did-finish-load), and rejects if the page fails to load (see did-fail-load)."
+      },
       "apiType": "instanceMethod",
       "fullSignature": "contents.loadURL(url[, options])",
       "tldr": "Loads the url in the window.",
@@ -10744,7 +12292,7 @@
       ]
     },
     {
-      "objectID": "api-web-contents#contentsloadfilefilepath",
+      "objectID": "api-web-contents#contentsloadfilefilepath-options",
       "name": "loadFile",
       "description": "Loads the given file in the window, filePath should be a path to an HTML file relative to the root of your application.  For instance an app structure like this: Would require code like this",
       "parameters": [
@@ -10753,22 +12301,58 @@
           "type": "String",
           "collection": false,
           "required": true
+        },
+        {
+          "name": "options",
+          "type": "Object",
+          "collection": false,
+          "required": false,
+          "properties": [
+            {
+              "name": "query",
+              "type": "Object",
+              "collection": false,
+              "description": "Passed to url.format().",
+              "required": false,
+              "properties": []
+            },
+            {
+              "name": "search",
+              "type": "String",
+              "collection": false,
+              "description": "Passed to url.format().",
+              "required": false
+            },
+            {
+              "name": "hash",
+              "type": "String",
+              "collection": false,
+              "description": "Passed to url.format().",
+              "required": false
+            }
+          ]
         }
       ],
+      "returns": {
+        "type": "Promise",
+        "collection": false,
+        "innerType": "void",
+        "description": "the promise will resolve when the page has finished loading (see did-finish-load), and rejects if the page fails to load (see did-fail-load)."
+      },
       "apiType": "instanceMethod",
-      "fullSignature": "contents.loadFile(filePath)",
+      "fullSignature": "contents.loadFile(filePath[, options])",
       "tldr": "Loads the given file in the window, filePath should be a path to an HTML file relative to the root of your application.",
-      "slug": "contentsloadfilefilepath",
-      "url": "https://electronjs.org/docs/api/web-contents#contentsloadfilefilepath",
+      "slug": "contentsloadfilefilepath-options",
+      "url": "https://electronjs.org/docs/api/web-contents#contentsloadfilefilepath-options",
       "keyValuePairs": [
         "is:doc",
         "is:api",
         "api:loadFile",
-        "api:contentsloadfilefilepath",
-        "api:contents.loadFile(filePath)",
+        "api:contentsloadfilefilepath-options",
+        "api:contents.loadFile(filePath[, options])",
         "doc:loadFile",
-        "doc:contentsloadfilefilepath",
-        "doc:contents.loadFile(filePath)"
+        "doc:contentsloadfilefilepath-options",
+        "doc:contents.loadFile(filePath[, options])"
       ]
     },
     {
@@ -11385,6 +12969,7 @@
       "returns": {
         "type": "Promise",
         "collection": false,
+        "innerType": "any",
         "description": "A promise that resolves with the result of the executed code or is rejected if the result of the code is a rejected promise."
       },
       "apiType": "instanceMethod",
@@ -11487,6 +13072,30 @@
       ]
     },
     {
+      "objectID": "api-web-contents#contentsiscurrentlyaudible",
+      "name": "isCurrentlyAudible",
+      "returns": {
+        "type": "Boolean",
+        "collection": false,
+        "description": "Whether audio is currently playing."
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "contents.isCurrentlyAudible()",
+      "tldr": "Returns whether audio is currently playing.",
+      "slug": "contentsiscurrentlyaudible",
+      "url": "https://electronjs.org/docs/api/web-contents#contentsiscurrentlyaudible",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:isCurrentlyAudible",
+        "api:contentsiscurrentlyaudible",
+        "api:contents.isCurrentlyAudible()",
+        "doc:isCurrentlyAudible",
+        "doc:contentsiscurrentlyaudible",
+        "doc:contents.isCurrentlyAudible()"
+      ]
+    },
+    {
       "objectID": "api-web-contents#contentssetzoomfactorfactor",
       "name": "setZoomFactor",
       "description": "Changes the zoom factor to the specified factor. Zoom factor is zoom percent divided by 100, so 300% = 3.0.",
@@ -11516,40 +13125,27 @@
       ]
     },
     {
-      "objectID": "api-web-contents#contentsgetzoomfactorcallback",
+      "objectID": "api-web-contents#contentsgetzoomfactor",
       "name": "getZoomFactor",
-      "description": "Sends a request to get current zoom factor, the callback will be called with callback(zoomFactor).",
-      "parameters": [
-        {
-          "name": "callback",
-          "type": "Function",
-          "collection": false,
-          "required": true,
-          "parameters": [
-            {
-              "name": "zoomFactor",
-              "type": "Number",
-              "collection": false,
-              "description": "",
-              "required": true
-            }
-          ]
-        }
-      ],
+      "returns": {
+        "type": "Number",
+        "collection": false,
+        "description": "the current zoom factor."
+      },
       "apiType": "instanceMethod",
-      "fullSignature": "contents.getZoomFactor(callback)",
-      "tldr": "Sends a request to get current zoom factor, the callback will be called with callback(zoomFactor).",
-      "slug": "contentsgetzoomfactorcallback",
-      "url": "https://electronjs.org/docs/api/web-contents#contentsgetzoomfactorcallback",
+      "fullSignature": "contents.getZoomFactor()",
+      "tldr": "Returns the current zoom factor.",
+      "slug": "contentsgetzoomfactor",
+      "url": "https://electronjs.org/docs/api/web-contents#contentsgetzoomfactor",
       "keyValuePairs": [
         "is:doc",
         "is:api",
         "api:getZoomFactor",
-        "api:contentsgetzoomfactorcallback",
-        "api:contents.getZoomFactor(callback)",
+        "api:contentsgetzoomfactor",
+        "api:contents.getZoomFactor()",
         "doc:getZoomFactor",
-        "doc:contentsgetzoomfactorcallback",
-        "doc:contents.getZoomFactor(callback)"
+        "doc:contentsgetzoomfactor",
+        "doc:contents.getZoomFactor()"
       ]
     },
     {
@@ -11582,40 +13178,27 @@
       ]
     },
     {
-      "objectID": "api-web-contents#contentsgetzoomlevelcallback",
+      "objectID": "api-web-contents#contentsgetzoomlevel",
       "name": "getZoomLevel",
-      "description": "Sends a request to get current zoom level, the callback will be called with callback(zoomLevel).",
-      "parameters": [
-        {
-          "name": "callback",
-          "type": "Function",
-          "collection": false,
-          "required": true,
-          "parameters": [
-            {
-              "name": "zoomLevel",
-              "type": "Number",
-              "collection": false,
-              "description": "",
-              "required": true
-            }
-          ]
-        }
-      ],
+      "returns": {
+        "type": "Number",
+        "collection": false,
+        "description": "the current zoom level."
+      },
       "apiType": "instanceMethod",
-      "fullSignature": "contents.getZoomLevel(callback)",
-      "tldr": "Sends a request to get current zoom level, the callback will be called with callback(zoomLevel).",
-      "slug": "contentsgetzoomlevelcallback",
-      "url": "https://electronjs.org/docs/api/web-contents#contentsgetzoomlevelcallback",
+      "fullSignature": "contents.getZoomLevel()",
+      "tldr": "Returns the current zoom level.",
+      "slug": "contentsgetzoomlevel",
+      "url": "https://electronjs.org/docs/api/web-contents#contentsgetzoomlevel",
       "keyValuePairs": [
         "is:doc",
         "is:api",
         "api:getZoomLevel",
-        "api:contentsgetzoomlevelcallback",
-        "api:contents.getZoomLevel(callback)",
+        "api:contentsgetzoomlevel",
+        "api:contents.getZoomLevel()",
         "doc:getZoomLevel",
-        "doc:contentsgetzoomlevelcallback",
-        "doc:contents.getZoomLevel(callback)"
+        "doc:contentsgetzoomlevel",
+        "doc:contents.getZoomLevel()"
       ]
     },
     {
@@ -12107,13 +13690,13 @@
     {
       "objectID": "api-web-contents#contentscapturepagerect-callback",
       "name": "capturePage",
-      "description": "Captures a snapshot of the page within rect. Upon completion callback will be called with callback(image). The image is an instance of NativeImage that stores data of the snapshot. Omitting rect will capture the whole visible page.",
+      "description": "Captures a snapshot of the page within rect. Upon completion callback will be called with callback(image). The image is an instance of NativeImage that stores data of the snapshot. Omitting rect will capture the whole visible page. Deprecated Soon",
       "parameters": [
         {
           "name": "rect",
           "type": "Rectangle",
           "collection": false,
-          "description": "The area of the page to be captured.",
+          "description": "The bounds to capture",
           "required": false
         },
         {
@@ -12146,6 +13729,35 @@
         "doc:capturePage",
         "doc:contentscapturepagerect-callback",
         "doc:contents.capturePage([rect, ]callback)"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#contentscapturepagerect",
+      "name": "capturePage",
+      "description": "Captures a snapshot of the page within rect. Omitting rect will capture the whole visible page.",
+      "parameters": [
+        {
+          "name": "rect",
+          "type": "Rectangle",
+          "collection": false,
+          "description": "The area of the page to be captured.",
+          "required": false
+        }
+      ],
+      "apiType": "instanceMethod",
+      "fullSignature": "contents.capturePage([rect])",
+      "tldr": "Captures a snapshot of the page within rect.",
+      "slug": "contentscapturepagerect",
+      "url": "https://electronjs.org/docs/api/web-contents#contentscapturepagerect",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:capturePage",
+        "api:contentscapturepagerect",
+        "api:contents.capturePage([rect])",
+        "doc:capturePage",
+        "doc:contentscapturepagerect",
+        "doc:contents.capturePage([rect])"
       ]
     },
     {
@@ -12250,7 +13862,7 @@
     {
       "objectID": "api-web-contents#contentsprintoptions-callback",
       "name": "print",
-      "description": "Prints window's web page. When silent is set to true, Electron will pick the system's default printer if deviceName is empty and the default settings for printing. Calling window.print() in web page is equivalent to calling webContents.print({silent: false, printBackground: false, deviceName: ''}). Use page-break-before: always; CSS style to force to print to a new page.",
+      "description": "Prints window's web page. When silent is set to true, Electron will pick the system's default printer if deviceName is empty and the default settings for printing. Calling window.print() in web page is equivalent to calling webContents.print({ silent: false, printBackground: false, deviceName: '' }). Use page-break-before: always; CSS style to force to print to a new page.",
       "parameters": [
         {
           "name": "options",
@@ -12333,7 +13945,16 @@
             },
             {
               "name": "pageSize",
-              "type": "String",
+              "type": [
+                {
+                  "typeName": "String",
+                  "collection": false
+                },
+                {
+                  "typeName": "Size",
+                  "collection": false
+                }
+              ],
               "collection": false,
               "description": "Specify page size of the generated PDF. Can be A3, A4, A5, Legal, Letter, Tabloid or an Object containing height and width in microns.",
               "required": false
@@ -12515,6 +14136,13 @@
                   "value": "detach"
                 }
               ]
+            },
+            {
+              "name": "activate",
+              "type": "Boolean",
+              "collection": false,
+              "description": "Whether to bring the opened devtools window to the foreground. The default is true.",
+              "required": false
             }
           ]
         }
@@ -12712,6 +14340,46 @@
       ]
     },
     {
+      "objectID": "api-web-contents#contentssendtoframeframeid-channel-arg1-arg2-",
+      "name": "sendToFrame",
+      "description": "Send an asynchronous message to a specific frame in a renderer process via channel. Arguments will be serialized as JSON internally and as such no functions or prototype chains will be included. The renderer process can handle the message by listening to channel with the ipcRenderer module. If you want to get the frameId of a given renderer context you should use the webFrame.routingId value.  E.g. You can also read frameId from all incoming IPC messages in the main process.",
+      "parameters": [
+        {
+          "name": "frameId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "channel",
+          "type": "String",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "...args",
+          "type": "any",
+          "collection": true,
+          "required": true
+        }
+      ],
+      "apiType": "instanceMethod",
+      "fullSignature": "contents.sendToFrame(frameId, channel[, arg1][, arg2][, ...])",
+      "tldr": "Send an asynchronous message to a specific frame in a renderer process via channel.",
+      "slug": "contentssendtoframeframeid-channel-arg1-arg2-",
+      "url": "https://electronjs.org/docs/api/web-contents#contentssendtoframeframeid-channel-arg1-arg2-",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:sendToFrame",
+        "api:contentssendtoframeframeid-channel-arg1-arg2-",
+        "api:contents.sendToFrame(frameId, channel[, arg1][, arg2][, ...])",
+        "doc:sendToFrame",
+        "doc:contentssendtoframeframeid-channel-arg1-arg2-",
+        "doc:contents.sendToFrame(frameId, channel[, arg1][, arg2][, ...])"
+      ]
+    },
+    {
       "objectID": "api-web-contents#contentsenabledeviceemulationparameters",
       "name": "enableDeviceEmulation",
       "description": "Enable device emulation with the given parameters.",
@@ -12750,7 +14418,7 @@
               "name": "viewPosition",
               "type": "Point",
               "collection": false,
-              "description": "Position the view on the screen (screenPosition == mobile) (default: {x: 0, y: 0}).",
+              "description": "Position the view on the screen (screenPosition == mobile) (default: { x: 0, y: 0 }).",
               "required": true
             },
             {
@@ -12892,7 +14560,7 @@
     {
       "objectID": "api-web-contents#contentsbeginframesubscriptiononlydirty-callback",
       "name": "beginFrameSubscription",
-      "description": "Begin subscribing for presentation events and captured frames, the callback will be called with callback(frameBuffer, dirtyRect) when there is a presentation event. The frameBuffer is a Buffer that contains raw pixel data. On most machines, the pixel data is effectively stored in 32bit BGRA format, but the actual representation depends on the endianness of the processor (most modern processors are little-endian, on machines with big-endian processors the data is in 32bit ARGB format). The dirtyRect is an object with x, y, width, height properties that describes which part of the page was repainted. If onlyDirty is set to true, frameBuffer will only contain the repainted area. onlyDirty defaults to false.",
+      "description": "Begin subscribing for presentation events and captured frames, the callback will be called with callback(image, dirtyRect) when there is a presentation event. The image is an instance of NativeImage that stores the captured frame. The dirtyRect is an object with x, y, width, height properties that describes which part of the page was repainted. If onlyDirty is set to true, image will only contain the repainted area. onlyDirty defaults to false.",
       "parameters": [
         {
           "name": "onlyDirty",
@@ -12908,8 +14576,8 @@
           "required": true,
           "parameters": [
             {
-              "name": "frameBuffer",
-              "type": "Buffer",
+              "name": "image",
+              "type": "NativeImage",
               "collection": false,
               "description": "",
               "required": true
@@ -12926,7 +14594,7 @@
       ],
       "apiType": "instanceMethod",
       "fullSignature": "contents.beginFrameSubscription([onlyDirty ,]callback)",
-      "tldr": "Begin subscribing for presentation events and captured frames, the callback will be called with callback(frameBuffer, dirtyRect) when there is a presentation event.",
+      "tldr": "Begin subscribing for presentation events and captured frames, the callback will be called with callback(image, dirtyRect) when there is a presentation event.",
       "slug": "contentsbeginframesubscriptiononlydirty-callback",
       "url": "https://electronjs.org/docs/api/web-contents#contentsbeginframesubscriptiononlydirty-callback",
       "keyValuePairs": [
@@ -13095,59 +14763,6 @@
         "doc:showDefinitionForSelection",
         "doc:contentsshowdefinitionforselection",
         "doc:contents.showDefinitionForSelection()"
-      ]
-    },
-    {
-      "objectID": "api-web-contents#contentssetsizeoptions",
-      "name": "setSize",
-      "description": "Set the size of the page. This is only supported for <webview> guest contents.",
-      "parameters": [
-        {
-          "name": "options",
-          "type": "Object",
-          "collection": false,
-          "required": true,
-          "properties": [
-            {
-              "name": "normal",
-              "type": "Object",
-              "collection": false,
-              "description": "Normal size of the page. This can be used in combination with the attribute to manually resize the webview guest contents.",
-              "required": false,
-              "properties": [
-                {
-                  "name": "width",
-                  "type": "Integer",
-                  "collection": false,
-                  "description": "",
-                  "required": true
-                },
-                {
-                  "name": "height",
-                  "type": "Integer",
-                  "collection": false,
-                  "description": "",
-                  "required": true
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "apiType": "instanceMethod",
-      "fullSignature": "contents.setSize(options)",
-      "tldr": "Set the size of the page.",
-      "slug": "contentssetsizeoptions",
-      "url": "https://electronjs.org/docs/api/web-contents#contentssetsizeoptions",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:setSize",
-        "api:contentssetsizeoptions",
-        "api:contents.setSize(options)",
-        "doc:setSize",
-        "doc:contentssetsizeoptions",
-        "doc:contents.setSize(options)"
       ]
     },
     {
@@ -13387,11 +15002,11 @@
       "returns": {
         "type": "Integer",
         "collection": false,
-        "description": "The pid of the associated renderer process."
+        "description": "The operating system pid of the associated renderer process."
       },
       "apiType": "instanceMethod",
       "fullSignature": "contents.getOSProcessId()",
-      "tldr": "Returns the pid of the associated renderer process.",
+      "tldr": "Returns the operating system pid of the associated renderer process.",
       "slug": "contentsgetosprocessid",
       "url": "https://electronjs.org/docs/api/web-contents#contentsgetosprocessid",
       "keyValuePairs": [
@@ -13403,6 +15018,137 @@
         "doc:getOSProcessId",
         "doc:contentsgetosprocessid",
         "doc:contents.getOSProcessId()"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#contentsgetprocessid",
+      "name": "getProcessId",
+      "returns": {
+        "type": "Integer",
+        "collection": false,
+        "description": "The Chromium internal pid of the associated renderer. Can be compared to the frameProcessId passed by frame specific navigation events (e.g. did-frame-navigate)"
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "contents.getProcessId()",
+      "tldr": "Returns the Chromium internal pid of the associated renderer. Can be compared to the frameProcessId passed by frame specific navigation events (e.g. did-frame-navigate).",
+      "slug": "contentsgetprocessid",
+      "url": "https://electronjs.org/docs/api/web-contents#contentsgetprocessid",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:getProcessId",
+        "api:contentsgetprocessid",
+        "api:contents.getProcessId()",
+        "doc:getProcessId",
+        "doc:contentsgetprocessid",
+        "doc:contents.getProcessId()"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#contentstakeheapsnapshotfilepath",
+      "name": "takeHeapSnapshot",
+      "description": "Takes a V8 heap snapshot and saves it to filePath.",
+      "parameters": [
+        {
+          "name": "filePath",
+          "type": "String",
+          "collection": false,
+          "description": "Path to the output file.",
+          "required": true
+        }
+      ],
+      "returns": {
+        "type": "Promise",
+        "collection": false,
+        "innerType": "void",
+        "description": "Indicates whether the snapshot has been created successfully."
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "contents.takeHeapSnapshot(filePath)",
+      "tldr": "Takes a V8 heap snapshot and saves it to filePath.",
+      "slug": "contentstakeheapsnapshotfilepath",
+      "url": "https://electronjs.org/docs/api/web-contents#contentstakeheapsnapshotfilepath",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:takeHeapSnapshot",
+        "api:contentstakeheapsnapshotfilepath",
+        "api:contents.takeHeapSnapshot(filePath)",
+        "doc:takeHeapSnapshot",
+        "doc:contentstakeheapsnapshotfilepath",
+        "doc:contents.takeHeapSnapshot(filePath)"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#contentssetbackgroundthrottlingallowed",
+      "name": "setBackgroundThrottling",
+      "description": "Controls whether or not this WebContents will throttle animations and timers when the page becomes backgrounded. This also affects the Page Visibility API.",
+      "parameters": [
+        {
+          "name": "allowed",
+          "type": "Boolean",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "instanceMethod",
+      "fullSignature": "contents.setBackgroundThrottling(allowed)",
+      "tldr": "Controls whether or not this WebContents will throttle animations and timers when the page becomes backgrounded.",
+      "slug": "contentssetbackgroundthrottlingallowed",
+      "url": "https://electronjs.org/docs/api/web-contents#contentssetbackgroundthrottlingallowed",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:setBackgroundThrottling",
+        "api:contentssetbackgroundthrottlingallowed",
+        "api:contents.setBackgroundThrottling(allowed)",
+        "doc:setBackgroundThrottling",
+        "doc:contentssetbackgroundthrottlingallowed",
+        "doc:contents.setBackgroundThrottling(allowed)"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#contentsgettype",
+      "name": "getType",
+      "returns": {
+        "type": "String",
+        "collection": false,
+        "description": "the type of the webContent. Can be backgroundPage, window, browserView, remote, webview or offscreen.",
+        "possibleValues": [
+          {
+            "value": "backgroundPage"
+          },
+          {
+            "value": "window"
+          },
+          {
+            "value": "browserView"
+          },
+          {
+            "value": "remote"
+          },
+          {
+            "value": "webview"
+          },
+          {
+            "value": "offscreen"
+          }
+        ]
+      },
+      "apiType": "instanceMethod",
+      "fullSignature": "contents.getType()",
+      "tldr": "Returns the type of the webContent. Can be backgroundPage, window, browserView, remote, webview or offscreen.",
+      "slug": "contentsgettype",
+      "url": "https://electronjs.org/docs/api/web-contents#contentsgettype",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:getType",
+        "api:contentsgettype",
+        "api:contents.getType()",
+        "doc:getType",
+        "doc:contentsgettype",
+        "doc:contents.getType()"
       ]
     },
     {
@@ -13458,6 +15204,18 @@
           "type": "Boolean",
           "collection": false,
           "required": true
+        },
+        {
+          "name": "frameProcessId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "frameRoutingId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
         }
       ],
       "apiType": "event",
@@ -13489,6 +15247,18 @@
         {
           "name": "isMainFrame",
           "type": "Boolean",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "frameProcessId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "frameRoutingId",
+          "type": "Integer",
           "collection": false,
           "required": true
         }
@@ -13544,150 +15314,6 @@
         "doc:did-stop-loading",
         "doc:undefined",
         "doc:contents.on('did-stop-loading')"
-      ]
-    },
-    {
-      "objectID": "api-web-contents#event-did-get-response-details",
-      "name": "did-get-response-details",
-      "description": "Emitted when details regarding a requested resource are available. status indicates the socket connection to download the resource.",
-      "returns": [
-        {
-          "name": "event",
-          "type": "Event",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "status",
-          "type": "Boolean",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "newURL",
-          "type": "String",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "originalURL",
-          "type": "String",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "httpResponseCode",
-          "type": "Integer",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "requestMethod",
-          "type": "String",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "referrer",
-          "type": "String",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "headers",
-          "type": "Object",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "resourceType",
-          "type": "String",
-          "collection": false,
-          "required": true
-        }
-      ],
-      "apiType": "event",
-      "fullSignature": "contents.on('did-get-response-details')",
-      "url": "https://electronjs.org/docs/api/web-contents#event-did-get-response-details",
-      "tldr": "Emitted when details regarding a requested resource are available.",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:did-get-response-details",
-        "api:undefined",
-        "api:contents.on('did-get-response-details')",
-        "doc:did-get-response-details",
-        "doc:undefined",
-        "doc:contents.on('did-get-response-details')"
-      ]
-    },
-    {
-      "objectID": "api-web-contents#event-did-get-redirect-request",
-      "name": "did-get-redirect-request",
-      "description": "Emitted when a redirect is received while requesting a resource.",
-      "returns": [
-        {
-          "name": "event",
-          "type": "Event",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "oldURL",
-          "type": "String",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "newURL",
-          "type": "String",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "isMainFrame",
-          "type": "Boolean",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "httpResponseCode",
-          "type": "Integer",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "requestMethod",
-          "type": "String",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "referrer",
-          "type": "String",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "headers",
-          "type": "Object",
-          "collection": false,
-          "required": true
-        }
-      ],
-      "apiType": "event",
-      "fullSignature": "contents.on('did-get-redirect-request')",
-      "url": "https://electronjs.org/docs/api/web-contents#event-did-get-redirect-request",
-      "tldr": "Emitted when a redirect is received while requesting a resource.",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:did-get-redirect-request",
-        "api:undefined",
-        "api:contents.on('did-get-redirect-request')",
-        "doc:did-get-redirect-request",
-        "doc:undefined",
-        "doc:contents.on('did-get-redirect-request')"
       ]
     },
     {
@@ -13814,6 +15440,13 @@
           "collection": true,
           "description": "The non-standard features (features not handled by Chromium or Electron) given to `window.open()`.",
           "required": true
+        },
+        {
+          "name": "referrer",
+          "type": "Referrer",
+          "collection": false,
+          "description": "The referrer that will be passed to the new window. May or may not result in the `Referer` header being sent, depending on the referrer policy.",
+          "required": true
         }
       ],
       "apiType": "event",
@@ -13865,9 +15498,9 @@
       ]
     },
     {
-      "objectID": "api-web-contents#event-did-navigate",
-      "name": "did-navigate",
-      "description": "Emitted when a navigation is done. This event is not emitted for in-page navigations, such as clicking anchor links or updating the window.location.hash. Use did-navigate-in-page event for this purpose.",
+      "objectID": "api-web-contents#event-did-start-navigation",
+      "name": "did-start-navigation",
+      "description": "Emitted when any frame (including main) starts navigating. isInplace will be true for in-page navigations.",
       "returns": [
         {
           "name": "event",
@@ -13880,12 +15513,197 @@
           "type": "String",
           "collection": false,
           "required": true
+        },
+        {
+          "name": "isInPlace",
+          "type": "Boolean",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "isMainFrame",
+          "type": "Boolean",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "frameProcessId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "frameRoutingId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('did-start-navigation')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-did-start-navigation",
+      "tldr": "Emitted when any frame (including main) starts navigating.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:did-start-navigation",
+        "api:undefined",
+        "api:contents.on('did-start-navigation')",
+        "doc:did-start-navigation",
+        "doc:undefined",
+        "doc:contents.on('did-start-navigation')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-will-redirect",
+      "name": "will-redirect",
+      "description": "Emitted as a server side redirect occurs during navigation.  For example a 302 redirect. This event will be emitted after did-start-navigation and always before the did-redirect-navigation event for the same navigation. Calling event.preventDefault() will prevent the navigation (not just the redirect).",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "isInPlace",
+          "type": "Boolean",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "isMainFrame",
+          "type": "Boolean",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "frameProcessId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "frameRoutingId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('will-redirect')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-will-redirect",
+      "tldr": "Emitted as a server side redirect occurs during navigation.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:will-redirect",
+        "api:undefined",
+        "api:contents.on('will-redirect')",
+        "doc:will-redirect",
+        "doc:undefined",
+        "doc:contents.on('will-redirect')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-did-redirect-navigation",
+      "name": "did-redirect-navigation",
+      "description": "Emitted after a server side redirect occurs during navigation.  For example a 302 redirect. This event can not be prevented, if you want to prevent redirects you should checkout out the will-redirect event above.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "isInPlace",
+          "type": "Boolean",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "isMainFrame",
+          "type": "Boolean",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "frameProcessId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "frameRoutingId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('did-redirect-navigation')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-did-redirect-navigation",
+      "tldr": "Emitted after a server side redirect occurs during navigation.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:did-redirect-navigation",
+        "api:undefined",
+        "api:contents.on('did-redirect-navigation')",
+        "doc:did-redirect-navigation",
+        "doc:undefined",
+        "doc:contents.on('did-redirect-navigation')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-did-navigate",
+      "name": "did-navigate",
+      "description": "Emitted when a main frame navigation is done. This event is not emitted for in-page navigations, such as clicking anchor links or updating the window.location.hash. Use did-navigate-in-page event for this purpose.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "httpResponseCode",
+          "type": "Integer",
+          "collection": false,
+          "description": "-1 for non HTTP navigations",
+          "required": true
+        },
+        {
+          "name": "httpStatusText",
+          "type": "String",
+          "collection": false,
+          "description": "empty for non HTTP navigations",
+          "required": true
         }
       ],
       "apiType": "event",
       "fullSignature": "contents.on('did-navigate')",
       "url": "https://electronjs.org/docs/api/web-contents#event-did-navigate",
-      "tldr": "Emitted when a navigation is done.",
+      "tldr": "Emitted when a main frame navigation is done.",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -13898,9 +15716,74 @@
       ]
     },
     {
+      "objectID": "api-web-contents#event-did-frame-navigate",
+      "name": "did-frame-navigate",
+      "description": "Emitted when any frame navigation is done. This event is not emitted for in-page navigations, such as clicking anchor links or updating the window.location.hash. Use did-navigate-in-page event for this purpose.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "httpResponseCode",
+          "type": "Integer",
+          "collection": false,
+          "description": "-1 for non HTTP navigations",
+          "required": true
+        },
+        {
+          "name": "httpStatusText",
+          "type": "String",
+          "collection": false,
+          "description": "empty for non HTTP navigations,",
+          "required": true
+        },
+        {
+          "name": "isMainFrame",
+          "type": "Boolean",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "frameProcessId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "frameRoutingId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('did-frame-navigate')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-did-frame-navigate",
+      "tldr": "Emitted when any frame navigation is done.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:did-frame-navigate",
+        "api:undefined",
+        "api:contents.on('did-frame-navigate')",
+        "doc:did-frame-navigate",
+        "doc:undefined",
+        "doc:contents.on('did-frame-navigate')"
+      ]
+    },
+    {
       "objectID": "api-web-contents#event-did-navigate-in-page",
       "name": "did-navigate-in-page",
-      "description": "Emitted when an in-page navigation happened. When in-page navigation happens, the page URL changes but does not cause navigation outside of the page. Examples of this occurring are when anchor links are clicked or when the DOM hashchange event is triggered.",
+      "description": "Emitted when an in-page navigation happened in any frame. When in-page navigation happens, the page URL changes but does not cause navigation outside of the page. Examples of this occurring are when anchor links are clicked or when the DOM hashchange event is triggered.",
       "returns": [
         {
           "name": "event",
@@ -13919,12 +15802,24 @@
           "type": "Boolean",
           "collection": false,
           "required": true
+        },
+        {
+          "name": "frameProcessId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "frameRoutingId",
+          "type": "Integer",
+          "collection": false,
+          "required": true
         }
       ],
       "apiType": "event",
       "fullSignature": "contents.on('did-navigate-in-page')",
       "url": "https://electronjs.org/docs/api/web-contents#event-did-navigate-in-page",
-      "tldr": "Emitted when an in-page navigation happened.",
+      "tldr": "Emitted when an in-page navigation happened in any frame.",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -13994,6 +15889,44 @@
         "doc:crashed",
         "doc:undefined",
         "doc:contents.on('crashed')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-unresponsive",
+      "name": "unresponsive",
+      "description": "Emitted when the web page becomes unresponsive.",
+      "apiType": "event",
+      "fullSignature": "contents.on('unresponsive')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-unresponsive",
+      "tldr": "Emitted when the web page becomes unresponsive.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:unresponsive",
+        "api:undefined",
+        "api:contents.on('unresponsive')",
+        "doc:unresponsive",
+        "doc:undefined",
+        "doc:contents.on('unresponsive')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-responsive",
+      "name": "responsive",
+      "description": "Emitted when the unresponsive web page becomes responsive again.",
+      "apiType": "event",
+      "fullSignature": "contents.on('responsive')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-responsive",
+      "tldr": "Emitted when the unresponsive web page becomes responsive again.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:responsive",
+        "api:undefined",
+        "api:contents.on('responsive')",
+        "doc:responsive",
+        "doc:undefined",
+        "doc:contents.on('responsive')"
       ]
     },
     {
@@ -15123,7 +17056,7 @@
           "name": "params",
           "type": "Object",
           "collection": false,
-          "description": "The other `<webview>` parameters such as the `src` URL. This object can be modified to adjust the parameters of the guest page.",
+          "description": "The other `",
           "required": true
         }
       ],
@@ -15157,7 +17090,7 @@
           "name": "webContents",
           "type": "WebContents",
           "collection": false,
-          "description": "The guest web contents that is used by the `<webview>`.",
+          "description": "The guest web contents that is used by the `",
           "required": true
         }
       ],
@@ -15181,6 +17114,12 @@
       "name": "console-message",
       "description": "Emitted when the associated window logs a console message. Will not be emitted for windows with offscreen rendering enabled.",
       "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
         {
           "name": "level",
           "type": "Integer",
@@ -15219,6 +17158,336 @@
         "doc:console-message",
         "doc:undefined",
         "doc:contents.on('console-message')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-preload-error",
+      "name": "preload-error",
+      "description": "Emitted when the preload script preloadPath throws an unhandled exception error.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "preloadPath",
+          "type": "String",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "error",
+          "type": "Error",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('preload-error')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-preload-error",
+      "tldr": "Emitted when the preload script preloadPath throws an unhandled exception error.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:preload-error",
+        "api:undefined",
+        "api:contents.on('preload-error')",
+        "doc:preload-error",
+        "doc:undefined",
+        "doc:contents.on('preload-error')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-ipc-message",
+      "name": "ipc-message",
+      "description": "Emitted when the renderer process sends an asynchronous message via ipcRenderer.send().",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "channel",
+          "type": "String",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "...args",
+          "type": "any",
+          "collection": true,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('ipc-message')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-ipc-message",
+      "tldr": "Emitted when the renderer process sends an asynchronous message via ipcRenderer.send().",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:ipc-message",
+        "api:undefined",
+        "api:contents.on('ipc-message')",
+        "doc:ipc-message",
+        "doc:undefined",
+        "doc:contents.on('ipc-message')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-ipc-message-sync",
+      "name": "ipc-message-sync",
+      "description": "Emitted when the renderer process sends a synchronous message via ipcRenderer.sendSync().",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "channel",
+          "type": "String",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "...args",
+          "type": "any",
+          "collection": true,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('ipc-message-sync')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-ipc-message-sync",
+      "tldr": "Emitted when the renderer process sends a synchronous message via ipcRenderer.sendSync().",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:ipc-message-sync",
+        "api:undefined",
+        "api:contents.on('ipc-message-sync')",
+        "doc:ipc-message-sync",
+        "doc:undefined",
+        "doc:contents.on('ipc-message-sync')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-desktop-capturer-get-sources",
+      "name": "desktop-capturer-get-sources",
+      "description": "Emitted when desktopCapturer.getSources() is called in the renderer process. Calling event.preventDefault() will make it return empty sources.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('desktop-capturer-get-sources')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-desktop-capturer-get-sources",
+      "tldr": "Emitted when desktopCapturer.getSources() is called in the renderer process.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:desktop-capturer-get-sources",
+        "api:undefined",
+        "api:contents.on('desktop-capturer-get-sources')",
+        "doc:desktop-capturer-get-sources",
+        "doc:undefined",
+        "doc:contents.on('desktop-capturer-get-sources')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-remote-require",
+      "name": "remote-require",
+      "description": "Emitted when remote.require() is called in the renderer process. Calling event.preventDefault() will prevent the module from being returned. Custom value can be returned by setting event.returnValue.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "moduleName",
+          "type": "String",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('remote-require')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-remote-require",
+      "tldr": "Emitted when remote.require() is called in the renderer process.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remote-require",
+        "api:undefined",
+        "api:contents.on('remote-require')",
+        "doc:remote-require",
+        "doc:undefined",
+        "doc:contents.on('remote-require')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-remote-get-global",
+      "name": "remote-get-global",
+      "description": "Emitted when remote.getGlobal() is called in the renderer process. Calling event.preventDefault() will prevent the global from being returned. Custom value can be returned by setting event.returnValue.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "globalName",
+          "type": "String",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('remote-get-global')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-global",
+      "tldr": "Emitted when remote.getGlobal() is called in the renderer process.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remote-get-global",
+        "api:undefined",
+        "api:contents.on('remote-get-global')",
+        "doc:remote-get-global",
+        "doc:undefined",
+        "doc:contents.on('remote-get-global')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-remote-get-builtin",
+      "name": "remote-get-builtin",
+      "description": "Emitted when remote.getBuiltin() is called in the renderer process. Calling event.preventDefault() will prevent the module from being returned. Custom value can be returned by setting event.returnValue.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "moduleName",
+          "type": "String",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('remote-get-builtin')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-builtin",
+      "tldr": "Emitted when remote.getBuiltin() is called in the renderer process.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remote-get-builtin",
+        "api:undefined",
+        "api:contents.on('remote-get-builtin')",
+        "doc:remote-get-builtin",
+        "doc:undefined",
+        "doc:contents.on('remote-get-builtin')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-remote-get-current-window",
+      "name": "remote-get-current-window",
+      "description": "Emitted when remote.getCurrentWindow() is called in the renderer process. Calling event.preventDefault() will prevent the object from being returned. Custom value can be returned by setting event.returnValue.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('remote-get-current-window')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-current-window",
+      "tldr": "Emitted when remote.getCurrentWindow() is called in the renderer process.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remote-get-current-window",
+        "api:undefined",
+        "api:contents.on('remote-get-current-window')",
+        "doc:remote-get-current-window",
+        "doc:undefined",
+        "doc:contents.on('remote-get-current-window')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-remote-get-current-web-contents",
+      "name": "remote-get-current-web-contents",
+      "description": "Emitted when remote.getCurrentWebContents() is called in the renderer process. Calling event.preventDefault() will prevent the object from being returned. Custom value can be returned by setting event.returnValue.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('remote-get-current-web-contents')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-current-web-contents",
+      "tldr": "Emitted when remote.getCurrentWebContents() is called in the renderer process.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remote-get-current-web-contents",
+        "api:undefined",
+        "api:contents.on('remote-get-current-web-contents')",
+        "doc:remote-get-current-web-contents",
+        "doc:undefined",
+        "doc:contents.on('remote-get-current-web-contents')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-remote-get-guest-web-contents",
+      "name": "remote-get-guest-web-contents",
+      "description": "Emitted when <webview>.getWebContents() is called in the renderer process. Calling event.preventDefault() will prevent the object from being returned. Custom value can be returned by setting event.returnValue.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "guestWebContents",
+          "type": "WebContents",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('remote-get-guest-web-contents')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-guest-web-contents",
+      "tldr": "Emitted when <webview>.getWebContents() is called in the renderer process.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:remote-get-guest-web-contents",
+        "api:undefined",
+        "api:contents.on('remote-get-guest-web-contents')",
+        "doc:remote-get-guest-web-contents",
+        "doc:undefined",
+        "doc:contents.on('remote-get-guest-web-contents')"
       ]
     },
     {
@@ -15380,7 +17649,101 @@
           "name": "listener",
           "type": "Function",
           "collection": false,
-          "required": true
+          "required": true,
+          "parameters": [
+            {
+              "name": "details",
+              "type": "Object",
+              "collection": false,
+              "description": "",
+              "required": true,
+              "properties": [
+                {
+                  "name": "id",
+                  "type": "Integer",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "url",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "method",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "webContentsId",
+                  "type": "Integer",
+                  "collection": false,
+                  "description": "",
+                  "required": false
+                },
+                {
+                  "name": "resourceType",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "timestamp",
+                  "type": "Double",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "requestHeaders",
+                  "type": "Object",
+                  "collection": false,
+                  "description": "",
+                  "required": true,
+                  "properties": []
+                }
+              ]
+            },
+            {
+              "name": "callback",
+              "type": "Function",
+              "collection": false,
+              "description": "",
+              "required": true,
+              "parameters": [
+                {
+                  "name": "response",
+                  "type": "Object",
+                  "collection": false,
+                  "description": "",
+                  "required": true,
+                  "properties": [
+                    {
+                      "name": "cancel",
+                      "type": "Boolean",
+                      "collection": false,
+                      "description": "",
+                      "required": false
+                    },
+                    {
+                      "name": "requestHeaders",
+                      "type": "Object",
+                      "collection": false,
+                      "description": "When provided, request will be made with these headers.",
+                      "required": false,
+                      "properties": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "apiType": "instanceMethod",
@@ -15527,7 +17890,122 @@
           "name": "listener",
           "type": "Function",
           "collection": false,
-          "required": true
+          "required": true,
+          "parameters": [
+            {
+              "name": "details",
+              "type": "Object",
+              "collection": false,
+              "description": "",
+              "required": true,
+              "properties": [
+                {
+                  "name": "id",
+                  "type": "Integer",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "url",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "method",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "webContentsId",
+                  "type": "Integer",
+                  "collection": false,
+                  "description": "",
+                  "required": false
+                },
+                {
+                  "name": "resourceType",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "timestamp",
+                  "type": "Double",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "statusLine",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "statusCode",
+                  "type": "Integer",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "responseHeaders",
+                  "type": "Object",
+                  "collection": false,
+                  "description": "",
+                  "required": true,
+                  "properties": []
+                }
+              ]
+            },
+            {
+              "name": "callback",
+              "type": "Function",
+              "collection": false,
+              "description": "",
+              "required": true,
+              "parameters": [
+                {
+                  "name": "response",
+                  "type": "Object",
+                  "collection": false,
+                  "description": "",
+                  "required": true,
+                  "properties": [
+                    {
+                      "name": "cancel",
+                      "type": "Boolean",
+                      "collection": false,
+                      "description": "",
+                      "required": false
+                    },
+                    {
+                      "name": "responseHeaders",
+                      "type": "Object",
+                      "collection": false,
+                      "description": "When provided, the server is assumed to have responded with these headers.",
+                      "required": false,
+                      "properties": []
+                    },
+                    {
+                      "name": "statusLine",
+                      "type": "String",
+                      "collection": false,
+                      "description": "Should be provided when overriding responseHeaders to change header status otherwise original response header's status will be used.",
+                      "required": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "apiType": "instanceMethod",
@@ -15866,6 +18344,13 @@
                 },
                 {
                   "name": "resourceType",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "referrer",
                   "type": "String",
                   "collection": false,
                   "description": "",
