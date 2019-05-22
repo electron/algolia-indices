@@ -6,24 +6,31 @@ set -o pipefail   # honor exit codes when piping
 set -o nounset    # fail on unset variables
 
 # bootstrap
-git clone "https://github.com/electron/algolia-search-index" project
-cd project
-npm install
+git clone "https://electron-bot:$GH_TOKEN@github.com/electron/algolia-indices" module
+cd module
+npm ci
 
 # update stuff
 npm update electron-apps
 npm update electron-i18n
 npm update electron-npm-packages
+npm update electron-releases
+
+npm run build
+npm test
 
 # bail if nothing changed
-[[ `git status --porcelain` ]] || exit
-
-# upload to algolia
-npm run upload
+if [ "$(git status --porcelain)" = "" ]; then
+  echo "no new content found; goodbye!"
+  exit
+else
+  echo "Indices updated, uploading"
+  npm run upload
+fi
 
 # save changes in git
-git add .
 git config user.email electron@github.com
 git config user.name electron-bot
-git commit -am "update data sources"
-git push origin master --follow-tags
+git add .
+git commit -am "feat: update data sources (auto-roll 🤖)"
+git pull --rebase && git push origin master --follow-tags
