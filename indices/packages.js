@@ -1,4 +1,4 @@
-const {pick} = require('lodash')
+const { pick } = require('lodash')
 const packages = require('electron-npm-packages')
 const AlgoliaIndex = require('../lib/algolia-index')
 const props = 'name description sourcerank repository keywords license homepage owners created modified dependencies devDependencies scripts'.split(' ')
@@ -8,7 +8,7 @@ module.exports = new AlgoliaIndex('packages', getRecords())
 function getRecords () {
   return packages.map(pkg => {
     pkg = Object.assign(
-      {objectID: `package-${pkg.name}`},
+      { objectID: `package-${pkg.name}` },
       pick(pkg, props)
     )
 
@@ -24,7 +24,7 @@ function getRecords () {
     ]
 
     if (Array.isArray(pkg.owners)) {
-      pkg.owners.forEach(({name}) => {
+      pkg.owners.forEach(({ name }) => {
         if (!name) return
         pkg.keyValuePairs.push(`owner:${name}`)
         pkg.keyValuePairs.push(`author:${name}`)
