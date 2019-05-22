@@ -11334,11 +11334,11 @@
       "name": "domain",
       "type": "String",
       "collection": false,
-      "description": "The domain of the cookie.",
+      "description": "The domain of the cookie; this will be normalized with a preceding dot so that it's also valid for subdomains.",
       "required": false,
       "apiType": "properties",
       "fullSignature": "Cookie.domain",
-      "tldr": "The domain of the cookie.",
+      "tldr": "The domain of the cookie; this will be normalized with a preceding dot so that it's also valid for subdomains.",
       "slug": "cookiedomain",
       "url": "https://electronjs.org/docs/api/cookie#cookiedomain",
       "keyValuePairs": [
@@ -11357,11 +11357,11 @@
       "name": "hostOnly",
       "type": "Boolean",
       "collection": false,
-      "description": "Whether the cookie is a host-only cookie.",
+      "description": "Whether the cookie is a host-only cookie; this will only be true if no domain was passed.",
       "required": false,
       "apiType": "properties",
       "fullSignature": "Cookie.hostOnly",
-      "tldr": "Whether the cookie is a host-only cookie.",
+      "tldr": "Whether the cookie is a host-only cookie; this will only be true if no domain was passed.",
       "slug": "cookiehostonly",
       "url": "https://electronjs.org/docs/api/cookie#cookiehostonly",
       "keyValuePairs": [
@@ -11701,7 +11701,7 @@
               "name": "domain",
               "type": "String",
               "collection": false,
-              "description": "The domain of the cookie. Empty by default if omitted.",
+              "description": "The domain of the cookie; this will be normalized with a preceding dot so that it's also valid for subdomains. Empty by default if omitted.",
               "required": false
             },
             {
@@ -12249,7 +12249,7 @@
       "objectID": "api-crash-reporter#crashreportergetlastcrashreport",
       "name": "getLastCrashReport",
       "signature": "()",
-      "description": "Returns the date and ID of the last crash report. If no crash reports have been sent or the crash reporter has not been started, null is returned.",
+      "description": "Returns the date and ID of the last crash report. Only crash reports that have been uploaded will be returned; even if a crash report is present on disk it will not be returned until it is uploaded. In the case that there are no uploaded reports, null is returned.",
       "returns": {
         "type": "CrashReport",
         "collection": false
@@ -13173,8 +13173,17 @@
         }
       ],
       "returns": {
-        "type": "String",
-        "collection": true,
+        "type": [
+          {
+            "typeName": "String",
+            "collection": true
+          },
+          {
+            "typeName": "undefined",
+            "collection": false
+          }
+        ],
+        "collection": false,
         "description": ", an array of file paths chosen by the user, if the callback is provided it returns undefined."
       },
       "apiType": "methods",
@@ -13293,9 +13302,18 @@
         }
       ],
       "returns": {
-        "type": "String",
+        "type": [
+          {
+            "typeName": "String",
+            "collection": false
+          },
+          {
+            "typeName": "undefined",
+            "collection": false
+          }
+        ],
         "collection": false,
-        "description": ", the path of the file chosen by the user, if a callback is provided it returns undefined."
+        "description": ", the path of the file chosen by the user, if a callback is provided or the dialog is cancelled it returns undefined."
       },
       "apiType": "methods",
       "fullSignature": "dialog.showSaveDialog",
@@ -13317,7 +13335,7 @@
       "objectID": "api-dialog#dialogshowmessagebox",
       "name": "showMessageBox",
       "signature": "([browserWindow, ]options[, callback])",
-      "description": "Shows a message box, it will block the process until the message box is closed. It returns the index of the clicked button. The browserWindow argument allows the dialog to attach itself to a parent window, making it modal. If a callback is passed, the dialog will not block the process. The API call will be asynchronous and the result will be passed via callback(response).",
+      "description": "Shows a message box, it will block the process until the message box is closed. It returns the index of the clicked button. The browserWindow argument allows the dialog to attach itself to a parent window, making it modal. If the callback and browserWindow arguments are passed, the dialog will not block the process. The API call will be asynchronous and the result will be passed via callback(response).",
       "parameters": [
         {
           "name": "browserWindow",
@@ -14448,6 +14466,11 @@
           "required": true
         }
       ],
+      "returns": {
+        "type": "Boolean",
+        "collection": false,
+        "description": "Whether or not the shortcut was registered successfully."
+      },
       "apiType": "methods",
       "fullSignature": "globalShortcut.register",
       "tldr": "Registers a global shortcut of accelerator.",
@@ -17100,7 +17123,7 @@
       "platforms": [
         "macOS"
       ],
-      "description": "Creates a new NativeImage instance from the NSImage that maps to the given image name. See NSImageName for a list of possible values. The hslShift is applied to the image with the following rules This means that [-1, 0, 1] will make the image completely white and [-1, 1, 0] will make the image completely black.",
+      "description": "Creates a new NativeImage instance from the NSImage that maps to the given image name. See NSImageName for a list of possible values. The hslShift is applied to the image with the following rules This means that [-1, 0, 1] will make the image completely white and [-1, 1, 0] will make the image completely black. In some cases, the NSImageName doesn't match its string representation; one example of this is NSFolderImageName, whose string representation would actually be NSFolder. Therefore, you'll need to determine the correct string representation for your image before passing it in. This can be done with the following: echo -e '#import <Cocoa/Cocoa.h>\\nint main() { NSLog(@\"%@\", SYSTEM_IMAGE_NAME); }' | clang -otest -x objective-c -framework Cocoa - && ./test where SYSTEM_IMAGE_NAME should be replaced with any value from this list.",
       "parameters": [
         {
           "name": "imageName",
@@ -19508,7 +19531,7 @@
       "objectID": "api-protocol#protocolregisterfileprotocol",
       "name": "registerFileProtocol",
       "signature": "(scheme, handler[, completion])",
-      "description": "Registers a protocol of scheme that will send the file as a response. The handler will be called with handler(request, callback) when a request is going to be created with scheme. completion will be called with completion(null) when scheme is successfully registered or completion(error) when failed. To handle the request, the callback should be called with either the file's path or an object that has a path property, e.g. callback(filePath) or callback({ path: filePath }). The object may also have a headers property which gives a list of strings for the response headers, e.g. callback({ path: filePath, headers: [\"Content-Security-Policy: default-src 'none'\"]}). When callback is called with nothing, a number, or an object that has an error property, the request will fail with the error number you specified. For the available error numbers you can use, please see the net error list. By default the scheme is treated like http:, which is parsed differently than protocols that follow the \"generic URI syntax\" like file:, so you probably want to call protocol.registerStandardSchemes to have your scheme treated as a standard scheme.",
+      "description": "Registers a protocol of scheme that will send the file as a response. The handler will be called with handler(request, callback) when a request is going to be created with scheme. completion will be called with completion(null) when scheme is successfully registered or completion(error) when failed. To handle the request, the callback should be called with either the file's path or an object that has a path property, e.g. callback(filePath) or callback({ path: filePath }). The object may also have a headers property which gives a map of headers to values for the response headers, e.g. callback({ path: filePath, headers: {\"Content-Security-Policy\": \"default-src 'none'\"]}). When callback is called with nothing, a number, or an object that has an error property, the request will fail with the error number you specified. For the available error numbers you can use, please see the net error list. By default the scheme is treated like http:, which is parsed differently than protocols that follow the \"generic URI syntax\" like file:, so you probably want to call protocol.registerStandardSchemes to have your scheme treated as a standard scheme.",
       "parameters": [
         {
           "name": "scheme",
@@ -33607,7 +33630,16 @@
         },
         {
           "name": "listener",
-          "type": "Function",
+          "type": [
+            {
+              "typeName": "Function",
+              "collection": false
+            },
+            {
+              "typeName": "null",
+              "collection": false
+            }
+          ],
           "collection": false,
           "required": true,
           "parameters": [
@@ -33648,6 +33680,13 @@
                 },
                 {
                   "name": "resourceType",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "referrer",
                   "type": "String",
                   "collection": false,
                   "description": "",
@@ -33743,7 +33782,16 @@
         },
         {
           "name": "listener",
-          "type": "Function",
+          "type": [
+            {
+              "typeName": "Function",
+              "collection": false
+            },
+            {
+              "typeName": "null",
+              "collection": false
+            }
+          ],
           "collection": false,
           "required": true,
           "parameters": [
@@ -33784,6 +33832,13 @@
                 },
                 {
                   "name": "resourceType",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "referrer",
                   "type": "String",
                   "collection": false,
                   "description": "",
@@ -33881,7 +33936,16 @@
         },
         {
           "name": "listener",
-          "type": "Function",
+          "type": [
+            {
+              "typeName": "Function",
+              "collection": false
+            },
+            {
+              "typeName": "null",
+              "collection": false
+            }
+          ],
           "collection": false,
           "required": true,
           "parameters": [
@@ -33922,6 +33986,13 @@
                 },
                 {
                   "name": "resourceType",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "referrer",
                   "type": "String",
                   "collection": false,
                   "description": "",
@@ -33986,7 +34057,16 @@
         },
         {
           "name": "listener",
-          "type": "Function",
+          "type": [
+            {
+              "typeName": "Function",
+              "collection": false
+            },
+            {
+              "typeName": "null",
+              "collection": false
+            }
+          ],
           "collection": false,
           "required": true,
           "parameters": [
@@ -34027,6 +34107,13 @@
                 },
                 {
                   "name": "resourceType",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "referrer",
                   "type": "String",
                   "collection": false,
                   "description": "",
@@ -34145,7 +34232,16 @@
         },
         {
           "name": "listener",
-          "type": "Function",
+          "type": [
+            {
+              "typeName": "Function",
+              "collection": false
+            },
+            {
+              "typeName": "null",
+              "collection": false
+            }
+          ],
           "collection": false,
           "required": true,
           "parameters": [
@@ -34186,6 +34282,13 @@
                 },
                 {
                   "name": "resourceType",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "referrer",
                   "type": "String",
                   "collection": false,
                   "description": "",
@@ -34271,7 +34374,16 @@
         },
         {
           "name": "listener",
-          "type": "Function",
+          "type": [
+            {
+              "typeName": "Function",
+              "collection": false
+            },
+            {
+              "typeName": "null",
+              "collection": false
+            }
+          ],
           "collection": false,
           "required": true,
           "parameters": [
@@ -34312,6 +34424,13 @@
                 },
                 {
                   "name": "resourceType",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "referrer",
                   "type": "String",
                   "collection": false,
                   "description": "",
@@ -34404,7 +34523,16 @@
         },
         {
           "name": "listener",
-          "type": "Function",
+          "type": [
+            {
+              "typeName": "Function",
+              "collection": false
+            },
+            {
+              "typeName": "null",
+              "collection": false
+            }
+          ],
           "collection": false,
           "required": true,
           "parameters": [
@@ -34537,7 +34665,16 @@
         },
         {
           "name": "listener",
-          "type": "Function",
+          "type": [
+            {
+              "typeName": "Function",
+              "collection": false
+            },
+            {
+              "typeName": "null",
+              "collection": false
+            }
+          ],
           "collection": false,
           "required": true,
           "parameters": [
@@ -34578,6 +34715,13 @@
                 },
                 {
                   "name": "resourceType",
+                  "type": "String",
+                  "collection": false,
+                  "description": "",
+                  "required": true
+                },
+                {
+                  "name": "referrer",
                   "type": "String",
                   "collection": false,
                   "description": "",
