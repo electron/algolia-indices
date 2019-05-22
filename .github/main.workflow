@@ -1,19 +1,18 @@
-// workflow "Update source content" {
-//  on = "schedule(0 */6 * * *)"
-//  resolves = ["Fetch latest source content"]
-//}
+workflow "Update data sources" {
+  on = "schedule(0 09 * * *)"
+  resolves = ["Fetch latest data sources"]
+}
 
-// action "Fetch latest source content" {
-//  uses = "actions/npm@master"
-//  args = "run update-source-content"
-//  env = {
-//    NODE_OPTIONS = "--max_old_space_size=4096"
-//  }
-//  secrets = [
-//    "CROWDIN_KEY",
-//    "GH_TOKEN",
-//  ]
-//}
+action "Fetch latest data sources" {
+  uses = "actions/npm@master"
+  args = "run update-data-sources"
+  env = {
+    NODE_OPTIONS = "--max_old_space_size=4096"
+  }
+  secrets = [
+    "GH_TOKEN"
+  ]
+}
 
 workflow "Test and publish" {
   on = "push"
@@ -32,55 +31,4 @@ action "Run tests" {
   env = {
     NODE_OPTIONS = "--max_old_space_size=4096"
   }
-}
-
-workflow "Update source content" {
-  on = "push"
-  resolves = ["Update indices"]
-
-  // workflow "Update source content" {
-  //  on = "schedule(0 */6 * * *)"
-  //  resolves = ["Fetch latest source content"]
-  //}
-
-  // action "Fetch latest source content" {
-  //  uses = "actions/npm@master"
-  //  args = "run update-source-content"
-  //  env = {
-  //    NODE_OPTIONS = "--max_old_space_size=4096"
-  //  }
-  //  secrets = [
-  //    "CROWDIN_KEY",
-  //    "GH_TOKEN",
-  //  ]
-  //}
-}
-
-action "Update Source dependencies" {
-  uses = "actions/npm@master"
-  args = "update electron-i18n && npm update electron-apps && npm update electron-releases"
-  needs = ["Install dependencies"]
-}
-
-action "Update indices" {
-  uses = "actions/npm@master"
-  needs = ["Update Source dependencies"]
-  args = "run build"
-
-  // workflow "Update source content" {
-  //  on = "schedule(0 */6 * * *)"
-  //  resolves = ["Fetch latest source content"]
-  //}
-
-  // action "Fetch latest source content" {
-  //  uses = "actions/npm@master"
-  //  args = "run update-source-content"
-  //  env = {
-  //    NODE_OPTIONS = "--max_old_space_size=4096"
-  //  }
-  //  secrets = [
-  //    "CROWDIN_KEY",
-  //    "GH_TOKEN",
-  //  ]
-  //}
 }
