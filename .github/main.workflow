@@ -10,13 +10,13 @@ action "Fetch latest data sources" {
     NODE_OPTIONS = "--max_old_space_size=4096"
   }
   secrets = [
-    "GH_TOKEN"
+    "GH_TOKEN",
   ]
 }
 
 workflow "Test and publish" {
   on = "push"
-  resolves = ["Run tests"]
+  resolves = ["Publish via semantic-release", "Upload Algolia Indices"]
 }
 
 action "Install dependencies" {
@@ -31,4 +31,23 @@ action "Run tests" {
   env = {
     NODE_OPTIONS = "--max_old_space_size=4096"
   }
+}
+
+action "Filters for GitHub Actions" {
+  uses = "actions/bin/filter@master"
+  needs = ["Run tests"]
+  args = "branch master"
+}
+
+action "Publish via semantic-release" {
+  uses = "actions/npm@master"
+  needs = ["Filters for GitHub Actions"]
+  args = "run semantic-release"
+  secrets = ["GITHUB_TOKEN"]
+}
+
+action "Upload Algolia Indices" {
+  uses = "actions/npm@master"
+  needs = ["Filters for GitHub Actions"]
+  args = "run upload"
 }
