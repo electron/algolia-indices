@@ -12,7 +12,7 @@
     "upload": "node script/upload.js",
     "update": "script/update.sh",
     "pretest": "npm run build",
-    "test": "tape test.js | tap-summary && standard --fix",
+    "test": "tape test.js | tap-summary --no-progress && standard --fix",
     "lint": "standard --fix",
     "start": "budo demo.js --live --no-debug --open --css demo.css",
     "repl": "local-repl",
