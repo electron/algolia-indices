@@ -8380,7 +8380,7 @@
     {
       "objectID": "api-browser-window#event-page-title-updated",
       "name": "page-title-updated",
-      "description": "Emitted when the document changed its title, calling event.preventDefault() will prevent the native window's title from changing.",
+      "description": "Emitted when the document changed its title, calling event.preventDefault() will prevent the native window's title from changing. explicitSet is false when title is synthesized from file url.",
       "returns": [
         {
           "name": "event",
@@ -8391,6 +8391,12 @@
         {
           "name": "title",
           "type": "String",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "explicitSet",
+          "type": "Boolean",
           "collection": false,
           "required": true
         }
@@ -10301,7 +10307,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "returns": {
@@ -10341,7 +10356,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "apiType": "methods",
@@ -10369,7 +10393,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "returns": {
@@ -10409,7 +10442,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "apiType": "methods",
@@ -10437,7 +10479,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "returns": {
@@ -10477,7 +10528,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "apiType": "methods",
@@ -10505,7 +10565,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "returns": {
@@ -10545,7 +10614,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "apiType": "methods",
@@ -10635,7 +10713,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "apiType": "methods",
@@ -10724,7 +10811,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "apiType": "methods",
@@ -10752,7 +10848,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "returns": {
@@ -10794,7 +10899,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "returns": {
@@ -10915,7 +11029,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "apiType": "methods",
@@ -10987,7 +11110,16 @@
           "name": "type",
           "type": "String",
           "collection": false,
-          "required": false
+          "description": "Can be `selection` or `clipboard`. `selection` is only available on Linux.",
+          "required": false,
+          "possibleValues": [
+            {
+              "value": "selection"
+            },
+            {
+              "value": "clipboard"
+            }
+          ]
         }
       ],
       "apiType": "methods",
@@ -30519,6 +30651,46 @@
         "doc:dom-ready",
         "doc:contentsondom-ready",
         "doc:contents.on('dom-ready')"
+      ]
+    },
+    {
+      "objectID": "api-web-contents#event-page-title-updated",
+      "name": "page-title-updated",
+      "description": "Fired when page title is set during navigation. explicitSet is false when title is synthesized from file url.",
+      "returns": [
+        {
+          "name": "event",
+          "type": "Event",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "explicitSet",
+          "type": "Boolean",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "apiType": "event",
+      "fullSignature": "contents.on('page-title-updated')",
+      "url": "https://electronjs.org/docs/api/web-contents#event-page-title-updated",
+      "slug": "contentsonpage-title-updated",
+      "tldr": "Fired when page title is set during navigation.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:page-title-updated",
+        "api:contentsonpage-title-updated",
+        "api:contents.on('page-title-updated')",
+        "doc:page-title-updated",
+        "doc:contentsonpage-title-updated",
+        "doc:contents.on('page-title-updated')"
       ]
     },
     {
