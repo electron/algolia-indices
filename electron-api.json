@@ -129,7 +129,7 @@
       {
         "name": "getFileIcon",
         "signature": "(path[, options], callback)",
-        "description": "Fetches a path's associated icon. On Windows, there a 2 kinds of icons: On Linux and macOS, icons depend on the application associated with file mime type. Deprecated Soon",
+        "description": "Fetches a path's associated icon. On Windows, there are 2 kinds of icons: On Linux and macOS, icons depend on the application associated with file mime type. Deprecated Soon",
         "parameters": [
           {
             "name": "path",
@@ -193,7 +193,7 @@
       {
         "name": "getFileIcon",
         "signature": "(path[, options])",
-        "description": "Fetches a path's associated icon. On Windows, there a 2 kinds of icons: On Linux and macOS, icons depend on the application associated with file mime type.",
+        "description": "Fetches a path's associated icon. On Windows, there are 2 kinds of icons: On Linux and macOS, icons depend on the application associated with file mime type.",
         "parameters": [
           {
             "name": "path",
