@@ -2,7 +2,7 @@
   box-sizing: border-box;
  }
 
- body {  
+ body {
    padding: 50px;
    font-family: 'helvetica neue', helvetica, arial;
  }
@@ -12,22 +12,22 @@
    width: 100%;
  }
 
- .ais-hits--item {
+ .ais-Hits--item {
    padding: 10px;
    border: 1px solid #EEE;
    border-radius: 3px;
    margin: 5px 0;
  }
 
- .ais-hits--item em {
+ .ais-Hits--item em {
    background-color: yellow;
  }
 
- .ais-search-box--magnifier {
+ .ais-Search-box--magnifier {
    display: none;
  }
 
- .ais-search-box--reset {
+ .ais-Search-box--reset {
    top: 12px;
    width: 30px;
    height: 30px;
