@@ -13,15 +13,15 @@ const $main = html`
 
 const hitTemplate = `
 {{#_highlightResult.icon64}}
-  <img src="https://electronjs.org/app-img/{{#helpers.highlight}}{ "attribute": "slug", "highlightedTagName": "mark" }{{/helpers.highlight}}/{{_highlightResult.icon64.value}}">
+  <img src="https://electronjs.org/app-img/{{#helpers.highlight}}{ "attribute": "slug" }{{/helpers.highlight}}/{{#helpers.highlight}}{ "attribute": "icon64" }{{/helpers.highlight}}">
   <b>{{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</b> -
-  {{{_highlightResult.description.value}}}
+  {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
 {{/_highlightResult.icon64}}
 
 {{^_highlightResult.icon64}}
   {{{type.value}}}
-  <b>{{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</b> -
-  {{{_highlightResult.tldr.value}}}
+  <b>{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</b> -
+  {{#helpers.highlight}}{ "attribute": "tldr" }{{/helpers.highlight}}
 {{/_highlightResult.icon64}}
 `
 
@@ -40,13 +40,11 @@ search.addWidget(
       empty: 'No results',
       item: hitTemplate
     },
-    transformData: {
-      item: data => {
-        // useful for viewing template context:
-        console.log('data', data)
-        return data
-      }
-    }
+    transformItems: items =>
+      // eslint-disable-next-line
+      items.map(item => (console.log(item), {
+        ...item
+      }))
   })
 )
 
