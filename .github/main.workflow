@@ -42,6 +42,6 @@ action "Publish via semantic-release" {
 
 action "Upload Algolia Indices" {
   uses = "actions/npm@master"
-  needs = ["Filters for GitHub Actions"]
+  needs = ["Only publish master branch"]
   args = "run upload"
 }
