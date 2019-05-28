@@ -1,14 +1,12 @@
 workflow "Update data sources" {
-  on = "schedule(0 09 * * *)"
   resolves = ["Fetch latest data sources"]
+  on = "schedule(15 09 * * *)"
 }
 
 action "Fetch latest data sources" {
   uses = "actions/npm@master"
   args = "run update-data-sources"
-  secrets = [
-    "GITHUB_TOKEN",
-  ]
+  secrets = ["GH_TOKEN"]
 }
 
 workflow "Test and publish" {
@@ -37,11 +35,12 @@ action "Publish via semantic-release" {
   uses = "actions/npm@master"
   needs = ["Only publish master branch"]
   args = "run semantic-release"
-  secrets = ["GITHUB_TOKEN"]
+  secrets = ["GH_TOKEN", "NPM_TOKEN"]
 }
 
 action "Upload Algolia Indices" {
   uses = "actions/npm@master"
   needs = ["Only publish master branch"]
   args = "run upload"
+  secrets = ["ALGOLIA_API_KEY", "ALGOLIA_APPLICATION_ID"]
 }
