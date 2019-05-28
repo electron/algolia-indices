@@ -6,9 +6,6 @@ workflow "Update data sources" {
 action "Fetch latest data sources" {
   uses = "actions/npm@master"
   args = "run update-data-sources"
-  env = {
-    NODE_OPTIONS = "--max_old_space_size=4096"
-  }
   secrets = [
     "GH_TOKEN",
   ]
@@ -28,9 +25,6 @@ action "Run tests" {
   uses = "actions/npm@master"
   needs = ["Install dependencies"]
   args = "test"
-  env = {
-    NODE_OPTIONS = "--max_old_space_size=4096"
-  }
 }
 
 action "Filters for GitHub Actions" {
