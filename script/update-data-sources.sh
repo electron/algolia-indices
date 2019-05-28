@@ -5,12 +5,10 @@ set -o errexit    # always exit on error
 set -o pipefail   # honor exit codes when piping
 set -o nounset    # fail on unset variables
 
-# DEBUGGING, REMOVE BEFORE MERGE
-ls
-
 # bootstrap
 git clone "https://electron-bot:$GITHUB_TOKEN@github.com/electron/algolia-indices" module
 cd module
+git checkout hashi-the-debugger
 npm ci
 
 # update stuff
