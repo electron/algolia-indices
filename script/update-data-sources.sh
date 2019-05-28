@@ -9,7 +9,7 @@ set -o nounset    # fail on unset variables
 ls
 
 # bootstrap
-git clone "https://electron-bot:$GH_TOKEN@github.com/electron/algolia-indices" module
+git clone "https://electron-bot:$GITHUB_TOKEN@github.com/electron/algolia-indices" module
 cd module
 npm ci
 

@@ -7,7 +7,7 @@ action "Fetch latest data sources" {
   uses = "actions/npm@master"
   args = "run update-data-sources"
   secrets = [
-    "GH_TOKEN",
+    "GITHUB_TOKEN",
   ]
 }
 
