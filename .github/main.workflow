@@ -1,5 +1,5 @@
 workflow "Update data sources" {
-  on = "schedule(0 09 * * *)"
+  on = "push"
   resolves = ["Fetch latest data sources"]
 }
 

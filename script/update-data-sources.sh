@@ -17,7 +17,7 @@ npm ci
 npm update electron-apps
 npm update electron-i18n
 npm update electron-npm-packages
-npm update electron-releases
+# npm update electron-releases
 
 npm run build
 npm test
@@ -28,7 +28,7 @@ if [ "$(git status --porcelain)" = "" ]; then
   exit
 else
   echo "Indices updated, uploading"
-  npm run upload
+  # npm run upload
 fi
 
 # save changes in git
@@ -36,4 +36,4 @@ git config user.email electron@github.com
 git config user.name electron-bot
 git add .
 git commit -am "feat: update data sources (auto-roll 🤖)"
-git pull --rebase && git push origin master --follow-tags
+git pull --rebase && git push origin hashi-the-debugger --follow-tags
