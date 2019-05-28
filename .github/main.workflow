@@ -27,7 +27,7 @@ action "Run tests" {
   args = "test"
 }
 
-action "Filters for GitHub Actions" {
+action "Only publish master branch" {
   uses = "actions/bin/filter@master"
   needs = ["Run tests"]
   args = "branch master"
@@ -35,7 +35,7 @@ action "Filters for GitHub Actions" {
 
 action "Publish via semantic-release" {
   uses = "actions/npm@master"
-  needs = ["Filters for GitHub Actions"]
+  needs = ["Only publish master branch"]
   args = "run semantic-release"
   secrets = ["GITHUB_TOKEN"]
 }
