@@ -10,7 +10,7 @@
     "build": "node script/build.js",
     "preupload": "npm run test",
     "upload": "node script/upload.js",
-    "fetch-data-sources": "script/update.sh",
+    "update-data-sources": "script/update-data-sources.sh",
     "pretest": "npm run build",
     "test": "tape test.js | tap-summary --no-progress && standard --fix",
     "lint": "standard --fix",

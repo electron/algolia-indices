@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-set -x            # print commands before execution
+set -v            # print commands before execution, but don't expand env vars in output
 set -o errexit    # always exit on error
 set -o pipefail   # honor exit codes when piping
 set -o nounset    # fail on unset variables
+
+# DEBUGGING, REMOVE BEFORE MERGE
+ls
 
 # bootstrap
 git clone "https://electron-bot:$GH_TOKEN@github.com/electron/algolia-indices" module
