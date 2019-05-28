@@ -1,5 +1,6 @@
 const html = require('nanohtml')
-const instantsearch = require('instantsearch.js')
+const algoliasearch = require('algoliasearch')
+const instantsearch = require('instantsearch.js').default
 document.title = 'Electron Search'
 
 const $main = html`
@@ -12,23 +13,22 @@ const $main = html`
 
 const hitTemplate = `
 {{#_highlightResult.icon64}}
-  <img src="https://electronjs.org/node_modules/electron-apps/apps/{{_highlightResult.slug.value}}/{{_highlightResult.icon64.value}}">
-  <b>{{{_highlightResult.name.value}}}</b> -
-  {{{_highlightResult.description.value}}}
+  <img src="https://electronjs.org/app-img/{{#helpers.highlight}}{ "attribute": "slug" }{{/helpers.highlight}}/{{#helpers.highlight}}{ "attribute": "icon64" }{{/helpers.highlight}}">
+  <b>{{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</b> -
+  {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
 {{/_highlightResult.icon64}}
 
 {{^_highlightResult.icon64}}
-  {{{type.value}}} 
-  <b>{{{_highlightResult.title.value}}}</b> - 
-  {{{_highlightResult.tldr.value}}}
+  {{{type.value}}}
+  <b>{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</b> -
+  {{#helpers.highlight}}{ "attribute": "tldr" }{{/helpers.highlight}}
 {{/_highlightResult.icon64}}
 `
 
 document.body.appendChild($main)
 
 const search = instantsearch({
-  appId: 'L9LD9GHGQJ',
-  apiKey: '24e7e99910a15eb5d9d93531e5682370',
+  searchClient: algoliasearch('L9LD9GHGQJ', '24e7e99910a15eb5d9d93531e5682370'),
   indexName: 'electron-apis',
   routing: true
 })
@@ -40,13 +40,11 @@ search.addWidget(
       empty: 'No results',
       item: hitTemplate
     },
-    transformData: {
-      item: data => {
-        // useful for viewing template context:
-        console.log('data', data)
-        return data
-      }
-    }
+    transformItems: items =>
+      // eslint-disable-next-line
+      items.map(item => (console.log(item), {
+        ...item
+      }))
   })
 )
 
@@ -60,7 +58,7 @@ search.addWidget(
 search.addWidget(
   instantsearch.widgets.refinementList({
     container: '#refinement-list',
-    attributeName: 'type',
+    attribute: 'type',
     limit: 10,
     templates: {
       header: 'Types'
