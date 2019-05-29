@@ -8,7 +8,7 @@ function getRecords () {
   return chain(Object.values(require('electron-i18n').docs['en-US']))
     .filter(tutorial => !tutorial.isApiDoc && !tutorial.isApiStructureDoc)
     .map(tutorial => {
-      const { title, githubUrl, slug, sections } = tutorial
+      const { title, githubUrl, slug, sections, href } = tutorial
       const objectID = `tutorial-${slug}`
       const html = sections.map(section => section.html).join('\n\n')
       const body = cheerio.load(html).text()
@@ -26,7 +26,7 @@ function getRecords () {
         `tutorial:${slug}`
       ]
 
-      const url = `https://electronjs.org/docs/tutorial/${slug}`
+      const url = `https://electronjs.org${href}` // href includes leading slash
       return {
         objectID,
         title,

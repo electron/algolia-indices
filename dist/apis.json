@@ -482,7 +482,7 @@
       ]
     },
     {
-      "objectID": "api-app#apphide",
+      "objectID": "api-app#apphide-macos",
       "name": "hide",
       "signature": "()",
       "platforms": [
@@ -493,7 +493,7 @@
       "fullSignature": "app.hide",
       "tldr": "Hides all application windows without minimizing them.",
       "slug": "apphide",
-      "url": "https://electronjs.org/docs/api/app#apphide",
+      "url": "https://electronjs.org/docs/api/app#apphide-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -506,7 +506,7 @@
       ]
     },
     {
-      "objectID": "api-app#appshow",
+      "objectID": "api-app#appshow-macos",
       "name": "show",
       "signature": "()",
       "platforms": [
@@ -517,7 +517,7 @@
       "fullSignature": "app.show",
       "tldr": "Shows application windows after they were hidden.",
       "slug": "appshow",
-      "url": "https://electronjs.org/docs/api/app#appshow",
+      "url": "https://electronjs.org/docs/api/app#appshow-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -900,7 +900,7 @@
       ]
     },
     {
-      "objectID": "api-app#appaddrecentdocument",
+      "objectID": "api-app#appaddrecentdocument-macos-windows",
       "name": "addRecentDocument",
       "signature": "(path)",
       "platforms": [
@@ -920,7 +920,7 @@
       "fullSignature": "app.addRecentDocument",
       "tldr": "Adds path to the recent documents list.",
       "slug": "appaddrecentdocument",
-      "url": "https://electronjs.org/docs/api/app#appaddrecentdocument",
+      "url": "https://electronjs.org/docs/api/app#appaddrecentdocument-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -933,7 +933,7 @@
       ]
     },
     {
-      "objectID": "api-app#appclearrecentdocuments",
+      "objectID": "api-app#appclearrecentdocuments-macos-windows",
       "name": "clearRecentDocuments",
       "signature": "()",
       "platforms": [
@@ -945,7 +945,7 @@
       "fullSignature": "app.clearRecentDocuments",
       "tldr": "Clears the recent documents list.",
       "slug": "appclearrecentdocuments",
-      "url": "https://electronjs.org/docs/api/app#appclearrecentdocuments",
+      "url": "https://electronjs.org/docs/api/app#appclearrecentdocuments-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1007,7 +1007,7 @@
       ]
     },
     {
-      "objectID": "api-app#appremoveasdefaultprotocolclient",
+      "objectID": "api-app#appremoveasdefaultprotocolclient-macos-windows",
       "name": "removeAsDefaultProtocolClient",
       "signature": "(protocol[, path, args])",
       "platforms": [
@@ -1047,7 +1047,7 @@
       "fullSignature": "app.removeAsDefaultProtocolClient",
       "tldr": "This method checks if the current executable as the default handler for a protocol (aka URI scheme).",
       "slug": "appremoveasdefaultprotocolclient",
-      "url": "https://electronjs.org/docs/api/app#appremoveasdefaultprotocolclient",
+      "url": "https://electronjs.org/docs/api/app#appremoveasdefaultprotocolclient-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1108,7 +1108,7 @@
       ]
     },
     {
-      "objectID": "api-app#appsetusertasks",
+      "objectID": "api-app#appsetusertasks-windows",
       "name": "setUserTasks",
       "signature": "(tasks)",
       "platforms": [
@@ -1133,7 +1133,7 @@
       "fullSignature": "app.setUserTasks",
       "tldr": "Adds tasks to the Tasks category of the JumpList on Windows.",
       "slug": "appsetusertasks",
-      "url": "https://electronjs.org/docs/api/app#appsetusertasks",
+      "url": "https://electronjs.org/docs/api/app#appsetusertasks-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1146,7 +1146,7 @@
       ]
     },
     {
-      "objectID": "api-app#appgetjumplistsettings",
+      "objectID": "api-app#appgetjumplistsettings-windows",
       "name": "getJumpListSettings",
       "signature": "()",
       "platforms": [
@@ -1176,7 +1176,7 @@
       "fullSignature": "app.getJumpListSettings",
       "tldr": null,
       "slug": "appgetjumplistsettings",
-      "url": "https://electronjs.org/docs/api/app#appgetjumplistsettings",
+      "url": "https://electronjs.org/docs/api/app#appgetjumplistsettings-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1189,7 +1189,7 @@
       ]
     },
     {
-      "objectID": "api-app#appsetjumplist",
+      "objectID": "api-app#appsetjumplist-windows",
       "name": "setJumpList",
       "signature": "(categories)",
       "platforms": [
@@ -1209,7 +1209,7 @@
       "fullSignature": "app.setJumpList",
       "tldr": "Sets or removes a custom Jump List for the application, and returns one of the following strings: If categories is null the previously set custom Jump List (if any) will be replaced by the standard Jump List for the app (managed by Windows).",
       "slug": "appsetjumplist",
-      "url": "https://electronjs.org/docs/api/app#appsetjumplist",
+      "url": "https://electronjs.org/docs/api/app#appsetjumplist-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1293,7 +1293,7 @@
       ]
     },
     {
-      "objectID": "api-app#appsetuseractivity",
+      "objectID": "api-app#appsetuseractivity-macos",
       "name": "setUserActivity",
       "signature": "(type, userInfo[, webpageURL])",
       "platforms": [
@@ -1327,7 +1327,7 @@
       "fullSignature": "app.setUserActivity",
       "tldr": "Creates an NSUserActivity and sets it as the current activity.",
       "slug": "appsetuseractivity",
-      "url": "https://electronjs.org/docs/api/app#appsetuseractivity",
+      "url": "https://electronjs.org/docs/api/app#appsetuseractivity-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1340,7 +1340,7 @@
       ]
     },
     {
-      "objectID": "api-app#appgetcurrentactivitytype",
+      "objectID": "api-app#appgetcurrentactivitytype-macos",
       "name": "getCurrentActivityType",
       "signature": "()",
       "platforms": [
@@ -1355,7 +1355,7 @@
       "fullSignature": "app.getCurrentActivityType",
       "tldr": "Returns the type of the currently running activity.",
       "slug": "appgetcurrentactivitytype",
-      "url": "https://electronjs.org/docs/api/app#appgetcurrentactivitytype",
+      "url": "https://electronjs.org/docs/api/app#appgetcurrentactivitytype-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1368,7 +1368,7 @@
       ]
     },
     {
-      "objectID": "api-app#appinvalidatecurrentactivity",
+      "objectID": "api-app#appinvalidatecurrentactivity-macos",
       "name": "invalidateCurrentActivity",
       "signature": "()",
       "platforms": [
@@ -1388,7 +1388,7 @@
       "fullSignature": "app.invalidateCurrentActivity",
       "tldr": "Invalidates the current Handoff user activity.",
       "slug": "appinvalidatecurrentactivity",
-      "url": "https://electronjs.org/docs/api/app#appinvalidatecurrentactivity",
+      "url": "https://electronjs.org/docs/api/app#appinvalidatecurrentactivity-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1401,7 +1401,7 @@
       ]
     },
     {
-      "objectID": "api-app#appupdatecurrentactivity",
+      "objectID": "api-app#appupdatecurrentactivity-macos",
       "name": "updateCurrentActivity",
       "signature": "(type, userInfo)",
       "platforms": [
@@ -1428,7 +1428,7 @@
       "fullSignature": "app.updateCurrentActivity",
       "tldr": "Updates the current activity if its type matches type, merging the entries from userInfo into its current userInfo dictionary.",
       "slug": "appupdatecurrentactivity",
-      "url": "https://electronjs.org/docs/api/app#appupdatecurrentactivity",
+      "url": "https://electronjs.org/docs/api/app#appupdatecurrentactivity-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1441,7 +1441,7 @@
       ]
     },
     {
-      "objectID": "api-app#appsetappusermodelid",
+      "objectID": "api-app#appsetappusermodelid-windows",
       "name": "setAppUserModelId",
       "signature": "(id)",
       "platforms": [
@@ -1460,7 +1460,7 @@
       "fullSignature": "app.setAppUserModelId",
       "tldr": "Changes the Application User Model ID to id.",
       "slug": "appsetappusermodelid",
-      "url": "https://electronjs.org/docs/api/app#appsetappusermodelid",
+      "url": "https://electronjs.org/docs/api/app#appsetappusermodelid-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1473,7 +1473,7 @@
       ]
     },
     {
-      "objectID": "api-app#appimportcertificate",
+      "objectID": "api-app#appimportcertificate-linux",
       "name": "importCertificate",
       "signature": "(options, callback)",
       "platforms": [
@@ -1523,7 +1523,7 @@
       "fullSignature": "app.importCertificate",
       "tldr": "Imports the certificate in pkcs12 format into the platform certificate store.",
       "slug": "appimportcertificate",
-      "url": "https://electronjs.org/docs/api/app#appimportcertificate",
+      "url": "https://electronjs.org/docs/api/app#appimportcertificate-linux",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1662,7 +1662,7 @@
       ]
     },
     {
-      "objectID": "api-app#appsetbadgecount",
+      "objectID": "api-app#appsetbadgecount-linux-macos",
       "name": "setBadgeCount",
       "signature": "(count)",
       "platforms": [
@@ -1687,7 +1687,7 @@
       "fullSignature": "app.setBadgeCount",
       "tldr": "Sets the counter badge for current app.",
       "slug": "appsetbadgecount",
-      "url": "https://electronjs.org/docs/api/app#appsetbadgecount",
+      "url": "https://electronjs.org/docs/api/app#appsetbadgecount-linux-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1700,7 +1700,7 @@
       ]
     },
     {
-      "objectID": "api-app#appgetbadgecount",
+      "objectID": "api-app#appgetbadgecount-linux-macos",
       "name": "getBadgeCount",
       "signature": "()",
       "platforms": [
@@ -1716,7 +1716,7 @@
       "fullSignature": "app.getBadgeCount",
       "tldr": "Returns the current value displayed in the counter badge.",
       "slug": "appgetbadgecount",
-      "url": "https://electronjs.org/docs/api/app#appgetbadgecount",
+      "url": "https://electronjs.org/docs/api/app#appgetbadgecount-linux-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1729,7 +1729,7 @@
       ]
     },
     {
-      "objectID": "api-app#appisunityrunning",
+      "objectID": "api-app#appisunityrunning-linux",
       "name": "isUnityRunning",
       "signature": "()",
       "platforms": [
@@ -1744,7 +1744,7 @@
       "fullSignature": "app.isUnityRunning",
       "tldr": "Returns whether the current desktop environment is Unity launcher.",
       "slug": "appisunityrunning",
-      "url": "https://electronjs.org/docs/api/app#appisunityrunning",
+      "url": "https://electronjs.org/docs/api/app#appisunityrunning-linux",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1757,7 +1757,7 @@
       ]
     },
     {
-      "objectID": "api-app#appgetloginitemsettings",
+      "objectID": "api-app#appgetloginitemsettings-macos-windows",
       "name": "getLoginItemSettings",
       "signature": "([options])",
       "platforms": [
@@ -1857,7 +1857,7 @@
       "fullSignature": "app.getLoginItemSettings",
       "tldr": "If you provided path and args options to app.setLoginItemSettings, then you need to pass the same arguments here for openAtLogin to be set correctly.",
       "slug": "appgetloginitemsettings",
-      "url": "https://electronjs.org/docs/api/app#appgetloginitemsettings",
+      "url": "https://electronjs.org/docs/api/app#appgetloginitemsettings-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1870,7 +1870,7 @@
       ]
     },
     {
-      "objectID": "api-app#appsetloginitemsettings",
+      "objectID": "api-app#appsetloginitemsettings-macos-windows",
       "name": "setLoginItemSettings",
       "signature": "(settings)",
       "platforms": [
@@ -1920,7 +1920,7 @@
       "fullSignature": "app.setLoginItemSettings",
       "tldr": "Set the app's login item settings.",
       "slug": "appsetloginitemsettings",
-      "url": "https://electronjs.org/docs/api/app#appsetloginitemsettings",
+      "url": "https://electronjs.org/docs/api/app#appsetloginitemsettings-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1933,7 +1933,7 @@
       ]
     },
     {
-      "objectID": "api-app#appisaccessibilitysupportenabled",
+      "objectID": "api-app#appisaccessibilitysupportenabled-macos-windows",
       "name": "isAccessibilitySupportEnabled",
       "signature": "()",
       "platforms": [
@@ -1949,7 +1949,7 @@
       "fullSignature": "app.isAccessibilitySupportEnabled",
       "tldr": "Returns true if Chrome's accessibility support is enabled, false otherwise. This API will return true if the use of assistive technologies, such as screen readers, has been detected. See https://www.chromium.org/developers/design-documents/accessibility for more details.",
       "slug": "appisaccessibilitysupportenabled",
-      "url": "https://electronjs.org/docs/api/app#appisaccessibilitysupportenabled",
+      "url": "https://electronjs.org/docs/api/app#appisaccessibilitysupportenabled-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1962,7 +1962,7 @@
       ]
     },
     {
-      "objectID": "api-app#appsetaccessibilitysupportenabled",
+      "objectID": "api-app#appsetaccessibilitysupportenabled-macos-windows",
       "name": "setAccessibilitySupportEnabled",
       "signature": "(enabled)",
       "platforms": [
@@ -1983,7 +1983,7 @@
       "fullSignature": "app.setAccessibilitySupportEnabled",
       "tldr": "Manually enables Chrome's accessibility support, allowing to expose accessibility switch to users in application settings.",
       "slug": "appsetaccessibilitysupportenabled",
-      "url": "https://electronjs.org/docs/api/app#appsetaccessibilitysupportenabled",
+      "url": "https://electronjs.org/docs/api/app#appsetaccessibilitysupportenabled-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -1996,7 +1996,7 @@
       ]
     },
     {
-      "objectID": "api-app#appshowaboutpanel",
+      "objectID": "api-app#appshowaboutpanel-macos-linux",
       "name": "showAboutPanel",
       "platforms": [
         "macOS",
@@ -2007,7 +2007,7 @@
       "fullSignature": "app.showAboutPanel",
       "tldr": "Show the app's about panel options.",
       "slug": "appshowaboutpanel",
-      "url": "https://electronjs.org/docs/api/app#appshowaboutpanel",
+      "url": "https://electronjs.org/docs/api/app#appshowaboutpanel-macos-linux",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -2020,7 +2020,7 @@
       ]
     },
     {
-      "objectID": "api-app#appsetaboutpaneloptions",
+      "objectID": "api-app#appsetaboutpaneloptions-macos-linux",
       "name": "setAboutPanelOptions",
       "signature": "(options)",
       "platforms": [
@@ -2091,7 +2091,7 @@
       "fullSignature": "app.setAboutPanelOptions",
       "tldr": "Set the about panel options.",
       "slug": "appsetaboutpaneloptions",
-      "url": "https://electronjs.org/docs/api/app#appsetaboutpaneloptions",
+      "url": "https://electronjs.org/docs/api/app#appsetaboutpaneloptions-macos-linux",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -2104,7 +2104,7 @@
       ]
     },
     {
-      "objectID": "api-app#appstartaccessingsecurityscopedresource",
+      "objectID": "api-app#appstartaccessingsecurityscopedresource-macos (mas)",
       "name": "startAccessingSecurityScopedResource",
       "signature": "(bookmarkData)",
       "platforms": [
@@ -2129,7 +2129,7 @@
       "fullSignature": "app.startAccessingSecurityScopedResource",
       "tldr": "Start accessing a security scoped resource.",
       "slug": "appstartaccessingsecurityscopedresource",
-      "url": "https://electronjs.org/docs/api/app#appstartaccessingsecurityscopedresource",
+      "url": "https://electronjs.org/docs/api/app#appstartaccessingsecurityscopedresource-macos (mas)",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -2142,7 +2142,7 @@
       ]
     },
     {
-      "objectID": "api-app#appenablesandbox",
+      "objectID": "api-app#appenablesandbox-experimental-macos-windows",
       "name": "enableSandbox",
       "signature": "()",
       "platforms": [
@@ -2155,7 +2155,7 @@
       "fullSignature": "app.enableSandbox",
       "tldr": "Enables full sandbox mode on the app.",
       "slug": "appenablesandbox",
-      "url": "https://electronjs.org/docs/api/app#appenablesandbox",
+      "url": "https://electronjs.org/docs/api/app#appenablesandbox-experimental-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -2168,7 +2168,7 @@
       ]
     },
     {
-      "objectID": "api-app#appisinapplicationsfolder",
+      "objectID": "api-app#appisinapplicationsfolder-macos",
       "name": "isInApplicationsFolder",
       "signature": "()",
       "platforms": [
@@ -2183,7 +2183,7 @@
       "fullSignature": "app.isInApplicationsFolder",
       "tldr": "Returns whether the application is currently running from the systems Application folder. Use in combination with app.moveToApplicationsFolder().",
       "slug": "appisinapplicationsfolder",
-      "url": "https://electronjs.org/docs/api/app#appisinapplicationsfolder",
+      "url": "https://electronjs.org/docs/api/app#appisinapplicationsfolder-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -2196,7 +2196,7 @@
       ]
     },
     {
-      "objectID": "api-app#appmovetoapplicationsfolder",
+      "objectID": "api-app#appmovetoapplicationsfolder-macos",
       "name": "moveToApplicationsFolder",
       "signature": "()",
       "platforms": [
@@ -2212,7 +2212,7 @@
       "fullSignature": "app.moveToApplicationsFolder",
       "tldr": "No confirmation dialog will be presented by default.",
       "slug": "appmovetoapplicationsfolder",
-      "url": "https://electronjs.org/docs/api/app#appmovetoapplicationsfolder",
+      "url": "https://electronjs.org/docs/api/app#appmovetoapplicationsfolder-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -2383,7 +2383,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-open-file",
+      "objectID": "api-app#event-open-file-macos",
       "name": "open-file",
       "description": "Emitted when the user wants to open a file with the application. The open-file event is usually emitted when the application is already open and the OS wants to reuse the application to open the file. open-file is also emitted when a file is dropped onto the dock and the application is not yet running. Make sure to listen for the open-file event very early in your application startup to handle this case (even before the ready event is emitted). You should call event.preventDefault() if you want to handle this event. On Windows, you have to parse process.argv (in the main process) to get the filepath.",
       "platforms": [
@@ -2405,7 +2405,7 @@
       ],
       "apiType": "event",
       "fullSignature": "app.on('open-file')",
-      "url": "https://electronjs.org/docs/api/app#event-open-file",
+      "url": "https://electronjs.org/docs/api/app#event-open-file-macos",
       "slug": "apponopen-file",
       "tldr": "Emitted when the user wants to open a file with the application.",
       "keyValuePairs": [
@@ -2420,7 +2420,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-open-url",
+      "objectID": "api-app#event-open-url-macos",
       "name": "open-url",
       "description": "Emitted when the user wants to open a URL with the application. Your application's Info.plist file must define the url scheme within the CFBundleURLTypes key, and set NSPrincipalClass to AtomApplication. You should call event.preventDefault() if you want to handle this event.",
       "platforms": [
@@ -2442,7 +2442,7 @@
       ],
       "apiType": "event",
       "fullSignature": "app.on('open-url')",
-      "url": "https://electronjs.org/docs/api/app#event-open-url",
+      "url": "https://electronjs.org/docs/api/app#event-open-url-macos",
       "slug": "apponopen-url",
       "tldr": "Emitted when the user wants to open a URL with the application.",
       "keyValuePairs": [
@@ -2457,7 +2457,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-activate",
+      "objectID": "api-app#event-activate-macos",
       "name": "activate",
       "description": "Emitted when the application is activated. Various actions can trigger this event, such as launching the application for the first time, attempting to re-launch the application when it's already running, or clicking on the application's dock or taskbar icon.",
       "platforms": [
@@ -2479,7 +2479,7 @@
       ],
       "apiType": "event",
       "fullSignature": "app.on('activate')",
-      "url": "https://electronjs.org/docs/api/app#event-activate",
+      "url": "https://electronjs.org/docs/api/app#event-activate-macos",
       "slug": "apponactivate",
       "tldr": "Emitted when the application is activated.",
       "keyValuePairs": [
@@ -2494,7 +2494,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-continue-activity",
+      "objectID": "api-app#event-continue-activity-macos",
       "name": "continue-activity",
       "description": "Emitted during Handoff when an activity from a different device wants to be resumed. You should call event.preventDefault() if you want to handle this event. A user activity can be continued only in an app that has the same developer Team ID as the activity's source app and that supports the activity's type. Supported activity types are specified in the app's Info.plist under the NSUserActivityTypes key.",
       "platforms": [
@@ -2524,7 +2524,7 @@
       ],
       "apiType": "event",
       "fullSignature": "app.on('continue-activity')",
-      "url": "https://electronjs.org/docs/api/app#event-continue-activity",
+      "url": "https://electronjs.org/docs/api/app#event-continue-activity-macos",
       "slug": "apponcontinue-activity",
       "tldr": "Emitted during Handoff when an activity from a different device wants to be resumed.",
       "keyValuePairs": [
@@ -2539,7 +2539,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-will-continue-activity",
+      "objectID": "api-app#event-will-continue-activity-macos",
       "name": "will-continue-activity",
       "description": "Emitted during Handoff before an activity from a different device wants to be resumed. You should call event.preventDefault() if you want to handle this event.",
       "platforms": [
@@ -2562,7 +2562,7 @@
       ],
       "apiType": "event",
       "fullSignature": "app.on('will-continue-activity')",
-      "url": "https://electronjs.org/docs/api/app#event-will-continue-activity",
+      "url": "https://electronjs.org/docs/api/app#event-will-continue-activity-macos",
       "slug": "apponwill-continue-activity",
       "tldr": "Emitted during Handoff before an activity from a different device wants to be resumed.",
       "keyValuePairs": [
@@ -2577,7 +2577,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-continue-activity-error",
+      "objectID": "api-app#event-continue-activity-error-macos",
       "name": "continue-activity-error",
       "description": "Emitted during Handoff when an activity from a different device fails to be resumed.",
       "platforms": [
@@ -2607,7 +2607,7 @@
       ],
       "apiType": "event",
       "fullSignature": "app.on('continue-activity-error')",
-      "url": "https://electronjs.org/docs/api/app#event-continue-activity-error",
+      "url": "https://electronjs.org/docs/api/app#event-continue-activity-error-macos",
       "slug": "apponcontinue-activity-error",
       "tldr": "Emitted during Handoff when an activity from a different device fails to be resumed.",
       "keyValuePairs": [
@@ -2622,7 +2622,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-activity-was-continued",
+      "objectID": "api-app#event-activity-was-continued-macos",
       "name": "activity-was-continued",
       "description": "Emitted during Handoff after an activity from this device was successfully resumed on another one.",
       "platforms": [
@@ -2652,7 +2652,7 @@
       ],
       "apiType": "event",
       "fullSignature": "app.on('activity-was-continued')",
-      "url": "https://electronjs.org/docs/api/app#event-activity-was-continued",
+      "url": "https://electronjs.org/docs/api/app#event-activity-was-continued-macos",
       "slug": "apponactivity-was-continued",
       "tldr": "Emitted during Handoff after an activity from this device was successfully resumed on another one.",
       "keyValuePairs": [
@@ -2667,7 +2667,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-update-activity-state",
+      "objectID": "api-app#event-update-activity-state-macos",
       "name": "update-activity-state",
       "description": "Emitted when Handoff is about to be resumed on another device. If you need to update the state to be transferred, you should call event.preventDefault() immediately, construct a new userInfo dictionary and call app.updateCurrentActiviy() in a timely manner. Otherwise, the operation will fail and continue-activity-error will be called.",
       "platforms": [
@@ -2697,7 +2697,7 @@
       ],
       "apiType": "event",
       "fullSignature": "app.on('update-activity-state')",
-      "url": "https://electronjs.org/docs/api/app#event-update-activity-state",
+      "url": "https://electronjs.org/docs/api/app#event-update-activity-state-macos",
       "slug": "apponupdate-activity-state",
       "tldr": "Emitted when Handoff is about to be resumed on another device.",
       "keyValuePairs": [
@@ -2712,7 +2712,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-new-window-for-tab",
+      "objectID": "api-app#event-new-window-for-tab-macos",
       "name": "new-window-for-tab",
       "description": "Emitted when the user clicks the native macOS new tab button. The new tab button is only visible if the current BrowserWindow has a tabbingIdentifier",
       "platforms": [
@@ -2728,7 +2728,7 @@
       ],
       "apiType": "event",
       "fullSignature": "app.on('new-window-for-tab')",
-      "url": "https://electronjs.org/docs/api/app#event-new-window-for-tab",
+      "url": "https://electronjs.org/docs/api/app#event-new-window-for-tab-macos",
       "slug": "apponnew-window-for-tab",
       "tldr": "Emitted when the user clicks the native macOS new tab button.",
       "keyValuePairs": [
@@ -3170,7 +3170,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-accessibility-support-changed",
+      "objectID": "api-app#event-accessibility-support-changed-macos-windows",
       "name": "accessibility-support-changed",
       "description": "Emitted when Chrome's accessibility support changes. This event fires when assistive technologies, such as screen readers, are enabled or disabled. See https://www.chromium.org/developers/design-documents/accessibility for more details.",
       "platforms": [
@@ -3194,7 +3194,7 @@
       ],
       "apiType": "event",
       "fullSignature": "app.on('accessibility-support-changed')",
-      "url": "https://electronjs.org/docs/api/app#event-accessibility-support-changed",
+      "url": "https://electronjs.org/docs/api/app#event-accessibility-support-changed-macos-windows",
       "slug": "apponaccessibility-support-changed",
       "tldr": "Emitted when Chrome's accessibility support changes.",
       "keyValuePairs": [
@@ -4057,7 +4057,7 @@
       ]
     },
     {
-      "objectID": "api-browser-view#viewsetautoresizeoptions",
+      "objectID": "api-browser-view#viewsetautoresizeoptions-experimental",
       "name": "setAutoResize",
       "signature": "(options)",
       "platforms": [
@@ -4091,7 +4091,7 @@
       "fullSignature": "view.setAutoResize(options)",
       "tldr": null,
       "slug": "viewsetautoresizeoptions",
-      "url": "https://electronjs.org/docs/api/browser-view#viewsetautoresizeoptions",
+      "url": "https://electronjs.org/docs/api/browser-view#viewsetautoresizeoptions-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -4104,7 +4104,7 @@
       ]
     },
     {
-      "objectID": "api-browser-view#viewsetboundsbounds",
+      "objectID": "api-browser-view#viewsetboundsbounds-experimental",
       "name": "setBounds",
       "signature": "(bounds)",
       "platforms": [
@@ -4123,7 +4123,7 @@
       "fullSignature": "view.setBounds(bounds)",
       "tldr": "Resizes and moves the view to the supplied bounds relative to the window.",
       "slug": "viewsetboundsbounds",
-      "url": "https://electronjs.org/docs/api/browser-view#viewsetboundsbounds",
+      "url": "https://electronjs.org/docs/api/browser-view#viewsetboundsbounds-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -4136,7 +4136,7 @@
       ]
     },
     {
-      "objectID": "api-browser-view#viewsetbackgroundcolorcolor",
+      "objectID": "api-browser-view#viewsetbackgroundcolorcolor-experimental",
       "name": "setBackgroundColor",
       "signature": "(color)",
       "platforms": [
@@ -4155,7 +4155,7 @@
       "fullSignature": "view.setBackgroundColor(color)",
       "tldr": null,
       "slug": "viewsetbackgroundcolorcolor",
-      "url": "https://electronjs.org/docs/api/browser-view#viewsetbackgroundcolorcolor",
+      "url": "https://electronjs.org/docs/api/browser-view#viewsetbackgroundcolorcolor-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -4982,7 +4982,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetsimplefullscreenflag",
+      "objectID": "api-browser-window#winsetsimplefullscreenflag-macos",
       "name": "setSimpleFullScreen",
       "signature": "(flag)",
       "platforms": [
@@ -5001,7 +5001,7 @@
       "fullSignature": "win.setSimpleFullScreen(flag)",
       "tldr": "Enters or leaves simple fullscreen mode.",
       "slug": "winsetsimplefullscreenflag",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetsimplefullscreenflag",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetsimplefullscreenflag-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5014,7 +5014,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winissimplefullscreen",
+      "objectID": "api-browser-window#winissimplefullscreen-macos",
       "name": "isSimpleFullScreen",
       "signature": "()",
       "platforms": [
@@ -5029,7 +5029,7 @@
       "fullSignature": "win.isSimpleFullScreen()",
       "tldr": "Returns whether the window is in simple (pre-Lion) fullscreen mode.",
       "slug": "winissimplefullscreen",
-      "url": "https://electronjs.org/docs/api/browser-window#winissimplefullscreen",
+      "url": "https://electronjs.org/docs/api/browser-window#winissimplefullscreen-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5067,7 +5067,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetaspectratioaspectratio-extrasize",
+      "objectID": "api-browser-window#winsetaspectratioaspectratio-extrasize-macos",
       "name": "setAspectRatio",
       "signature": "(aspectRatio[, extraSize])",
       "platforms": [
@@ -5094,7 +5094,7 @@
       "fullSignature": "win.setAspectRatio(aspectRatio[, extraSize])",
       "tldr": "This will make a window maintain an aspect ratio.",
       "slug": "winsetaspectratioaspectratio-extrasize",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetaspectratioaspectratio-extrasize",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetaspectratioaspectratio-extrasize-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5137,7 +5137,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winpreviewfilepath-displayname",
+      "objectID": "api-browser-window#winpreviewfilepath-displayname-macos",
       "name": "previewFile",
       "signature": "(path[, displayName])",
       "platforms": [
@@ -5164,7 +5164,7 @@
       "fullSignature": "win.previewFile(path[, displayName])",
       "tldr": "Uses Quick Look to preview a file at a given path.",
       "slug": "winpreviewfilepath-displayname",
-      "url": "https://electronjs.org/docs/api/browser-window#winpreviewfilepath-displayname",
+      "url": "https://electronjs.org/docs/api/browser-window#winpreviewfilepath-displayname-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5177,7 +5177,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winclosefilepreview",
+      "objectID": "api-browser-window#winclosefilepreview-macos",
       "name": "closeFilePreview",
       "signature": "()",
       "platforms": [
@@ -5188,7 +5188,7 @@
       "fullSignature": "win.closeFilePreview()",
       "tldr": "Closes the currently open Quick Look panel.",
       "slug": "winclosefilepreview",
-      "url": "https://electronjs.org/docs/api/browser-window#winclosefilepreview",
+      "url": "https://electronjs.org/docs/api/browser-window#winclosefilepreview-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5680,7 +5680,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetmovablemovable",
+      "objectID": "api-browser-window#winsetmovablemovable-macos-windows",
       "name": "setMovable",
       "signature": "(movable)",
       "platforms": [
@@ -5700,7 +5700,7 @@
       "fullSignature": "win.setMovable(movable)",
       "tldr": "Sets whether the window can be moved by user.",
       "slug": "winsetmovablemovable",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetmovablemovable",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetmovablemovable-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5713,7 +5713,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winismovable",
+      "objectID": "api-browser-window#winismovable-macos-windows",
       "name": "isMovable",
       "signature": "()",
       "platforms": [
@@ -5730,7 +5730,7 @@
       "fullSignature": "win.isMovable()",
       "tldr": "On Linux always returns true.",
       "slug": "winismovable",
-      "url": "https://electronjs.org/docs/api/browser-window#winismovable",
+      "url": "https://electronjs.org/docs/api/browser-window#winismovable-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5743,7 +5743,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetminimizableminimizable",
+      "objectID": "api-browser-window#winsetminimizableminimizable-macos-windows",
       "name": "setMinimizable",
       "signature": "(minimizable)",
       "platforms": [
@@ -5763,7 +5763,7 @@
       "fullSignature": "win.setMinimizable(minimizable)",
       "tldr": "Sets whether the window can be manually minimized by user.",
       "slug": "winsetminimizableminimizable",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetminimizableminimizable",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetminimizableminimizable-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5776,7 +5776,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winisminimizable",
+      "objectID": "api-browser-window#winisminimizable-macos-windows",
       "name": "isMinimizable",
       "signature": "()",
       "platforms": [
@@ -5793,7 +5793,7 @@
       "fullSignature": "win.isMinimizable()",
       "tldr": "On Linux always returns true.",
       "slug": "winisminimizable",
-      "url": "https://electronjs.org/docs/api/browser-window#winisminimizable",
+      "url": "https://electronjs.org/docs/api/browser-window#winisminimizable-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5806,7 +5806,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetmaximizablemaximizable",
+      "objectID": "api-browser-window#winsetmaximizablemaximizable-macos-windows",
       "name": "setMaximizable",
       "signature": "(maximizable)",
       "platforms": [
@@ -5826,7 +5826,7 @@
       "fullSignature": "win.setMaximizable(maximizable)",
       "tldr": "Sets whether the window can be manually maximized by user.",
       "slug": "winsetmaximizablemaximizable",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetmaximizablemaximizable",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetmaximizablemaximizable-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5839,7 +5839,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winismaximizable",
+      "objectID": "api-browser-window#winismaximizable-macos-windows",
       "name": "isMaximizable",
       "signature": "()",
       "platforms": [
@@ -5856,7 +5856,7 @@
       "fullSignature": "win.isMaximizable()",
       "tldr": "On Linux always returns true.",
       "slug": "winismaximizable",
-      "url": "https://electronjs.org/docs/api/browser-window#winismaximizable",
+      "url": "https://electronjs.org/docs/api/browser-window#winismaximizable-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5923,7 +5923,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetclosableclosable",
+      "objectID": "api-browser-window#winsetclosableclosable-macos-windows",
       "name": "setClosable",
       "signature": "(closable)",
       "platforms": [
@@ -5943,7 +5943,7 @@
       "fullSignature": "win.setClosable(closable)",
       "tldr": "Sets whether the window can be manually closed by user.",
       "slug": "winsetclosableclosable",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetclosableclosable",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetclosableclosable-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -5956,7 +5956,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winisclosable",
+      "objectID": "api-browser-window#winisclosable-macos-windows",
       "name": "isClosable",
       "signature": "()",
       "platforms": [
@@ -5973,7 +5973,7 @@
       "fullSignature": "win.isClosable()",
       "tldr": "On Linux always returns true.",
       "slug": "winisclosable",
-      "url": "https://electronjs.org/docs/api/browser-window#winisclosable",
+      "url": "https://electronjs.org/docs/api/browser-window#winisclosable-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -6080,7 +6080,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winmovetop",
+      "objectID": "api-browser-window#winmovetop-macos-windows",
       "name": "moveTop",
       "signature": "()",
       "platforms": [
@@ -6092,7 +6092,7 @@
       "fullSignature": "win.moveTop()",
       "tldr": "Moves window to top(z-order) regardless of focus.",
       "slug": "winmovetop",
-      "url": "https://electronjs.org/docs/api/browser-window#winmovetop",
+      "url": "https://electronjs.org/docs/api/browser-window#winmovetop-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -6247,7 +6247,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetsheetoffsetoffsety-offsetx",
+      "objectID": "api-browser-window#winsetsheetoffsetoffsety-offsetx-macos",
       "name": "setSheetOffset",
       "signature": "(offsetY[, offsetX])",
       "platforms": [
@@ -6272,7 +6272,7 @@
       "fullSignature": "win.setSheetOffset(offsetY[, offsetX])",
       "tldr": "Changes the attachment point for sheets on macOS.",
       "slug": "winsetsheetoffsetoffsety-offsetx",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetsheetoffsetoffsety-offsetx",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetsheetoffsetoffsety-offsetx-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -6423,7 +6423,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winhookwindowmessagemessage-callback",
+      "objectID": "api-browser-window#winhookwindowmessagemessage-callback-windows",
       "name": "hookWindowMessage",
       "signature": "(message, callback)",
       "platforms": [
@@ -6448,7 +6448,7 @@
       "fullSignature": "win.hookWindowMessage(message, callback)",
       "tldr": "Hooks a windows message.",
       "slug": "winhookwindowmessagemessage-callback",
-      "url": "https://electronjs.org/docs/api/browser-window#winhookwindowmessagemessage-callback",
+      "url": "https://electronjs.org/docs/api/browser-window#winhookwindowmessagemessage-callback-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -6461,7 +6461,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winiswindowmessagehookedmessage",
+      "objectID": "api-browser-window#winiswindowmessagehookedmessage-windows",
       "name": "isWindowMessageHooked",
       "signature": "(message)",
       "platforms": [
@@ -6484,7 +6484,7 @@
       "fullSignature": "win.isWindowMessageHooked(message)",
       "tldr": "Returns true or false depending on whether the message is hooked.",
       "slug": "winiswindowmessagehookedmessage",
-      "url": "https://electronjs.org/docs/api/browser-window#winiswindowmessagehookedmessage",
+      "url": "https://electronjs.org/docs/api/browser-window#winiswindowmessagehookedmessage-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -6497,7 +6497,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winunhookwindowmessagemessage",
+      "objectID": "api-browser-window#winunhookwindowmessagemessage-windows",
       "name": "unhookWindowMessage",
       "signature": "(message)",
       "platforms": [
@@ -6516,7 +6516,7 @@
       "fullSignature": "win.unhookWindowMessage(message)",
       "tldr": "Unhook the window message.",
       "slug": "winunhookwindowmessagemessage",
-      "url": "https://electronjs.org/docs/api/browser-window#winunhookwindowmessagemessage",
+      "url": "https://electronjs.org/docs/api/browser-window#winunhookwindowmessagemessage-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -6529,7 +6529,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winunhookallwindowmessages",
+      "objectID": "api-browser-window#winunhookallwindowmessages-windows",
       "name": "unhookAllWindowMessages",
       "signature": "()",
       "platforms": [
@@ -6540,7 +6540,7 @@
       "fullSignature": "win.unhookAllWindowMessages()",
       "tldr": "Unhooks all of the window messages.",
       "slug": "winunhookallwindowmessages",
-      "url": "https://electronjs.org/docs/api/browser-window#winunhookallwindowmessages",
+      "url": "https://electronjs.org/docs/api/browser-window#winunhookallwindowmessages-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -6553,7 +6553,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetrepresentedfilenamefilename",
+      "objectID": "api-browser-window#winsetrepresentedfilenamefilename-macos",
       "name": "setRepresentedFilename",
       "signature": "(filename)",
       "platforms": [
@@ -6572,7 +6572,7 @@
       "fullSignature": "win.setRepresentedFilename(filename)",
       "tldr": "Sets the pathname of the file the window represents, and the icon of the file will show in window's title bar.",
       "slug": "winsetrepresentedfilenamefilename",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetrepresentedfilenamefilename",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetrepresentedfilenamefilename-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -6585,7 +6585,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#wingetrepresentedfilename",
+      "objectID": "api-browser-window#wingetrepresentedfilename-macos",
       "name": "getRepresentedFilename",
       "signature": "()",
       "platforms": [
@@ -6600,7 +6600,7 @@
       "fullSignature": "win.getRepresentedFilename()",
       "tldr": "Returns the pathname of the file the window represents.",
       "slug": "wingetrepresentedfilename",
-      "url": "https://electronjs.org/docs/api/browser-window#wingetrepresentedfilename",
+      "url": "https://electronjs.org/docs/api/browser-window#wingetrepresentedfilename-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -6613,7 +6613,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetdocumenteditededited",
+      "objectID": "api-browser-window#winsetdocumenteditededited-macos",
       "name": "setDocumentEdited",
       "signature": "(edited)",
       "platforms": [
@@ -6632,7 +6632,7 @@
       "fullSignature": "win.setDocumentEdited(edited)",
       "tldr": "Specifies whether the window’s document has been edited, and the icon in title bar will become gray when set to true.",
       "slug": "winsetdocumenteditededited",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetdocumenteditededited",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetdocumenteditededited-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -6645,7 +6645,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winisdocumentedited",
+      "objectID": "api-browser-window#winisdocumentedited-macos",
       "name": "isDocumentEdited",
       "signature": "()",
       "platforms": [
@@ -6660,7 +6660,7 @@
       "fullSignature": "win.isDocumentEdited()",
       "tldr": "Returns whether the window's document has been edited.",
       "slug": "winisdocumentedited",
-      "url": "https://electronjs.org/docs/api/browser-window#winisdocumentedited",
+      "url": "https://electronjs.org/docs/api/browser-window#winisdocumentedited-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -6974,7 +6974,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetmenumenu",
+      "objectID": "api-browser-window#winsetmenumenu-linux-windows",
       "name": "setMenu",
       "signature": "(menu)",
       "platforms": [
@@ -7003,7 +7003,7 @@
       "fullSignature": "win.setMenu(menu)",
       "tldr": "Sets the menu as the window's menu bar.",
       "slug": "winsetmenumenu",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetmenumenu",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetmenumenu-linux-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7016,7 +7016,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winremovemenu",
+      "objectID": "api-browser-window#winremovemenu-linux-windows",
       "name": "removeMenu",
       "signature": "()",
       "platforms": [
@@ -7028,7 +7028,7 @@
       "fullSignature": "win.removeMenu()",
       "tldr": "Remove the window's menu bar.",
       "slug": "winremovemenu",
-      "url": "https://electronjs.org/docs/api/browser-window#winremovemenu",
+      "url": "https://electronjs.org/docs/api/browser-window#winremovemenu-linux-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7102,7 +7102,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetoverlayiconoverlay-description",
+      "objectID": "api-browser-window#winsetoverlayiconoverlay-description-windows",
       "name": "setOverlayIcon",
       "signature": "(overlay, description)",
       "platforms": [
@@ -7138,7 +7138,7 @@
       "fullSignature": "win.setOverlayIcon(overlay, description)",
       "tldr": "Sets a 16 x 16 pixel overlay onto the current taskbar icon, usually used to convey some sort of application status or to passively notify the user.",
       "slug": "winsetoverlayiconoverlay-description",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetoverlayiconoverlay-description",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetoverlayiconoverlay-description-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7151,7 +7151,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsethasshadowhasshadow",
+      "objectID": "api-browser-window#winsethasshadowhasshadow-macos",
       "name": "setHasShadow",
       "signature": "(hasShadow)",
       "platforms": [
@@ -7170,7 +7170,7 @@
       "fullSignature": "win.setHasShadow(hasShadow)",
       "tldr": "Sets whether the window should have a shadow.",
       "slug": "winsethasshadowhasshadow",
-      "url": "https://electronjs.org/docs/api/browser-window#winsethasshadowhasshadow",
+      "url": "https://electronjs.org/docs/api/browser-window#winsethasshadowhasshadow-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7183,7 +7183,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winhasshadow",
+      "objectID": "api-browser-window#winhasshadow-macos",
       "name": "hasShadow",
       "signature": "()",
       "platforms": [
@@ -7199,7 +7199,7 @@
       "fullSignature": "win.hasShadow()",
       "tldr": "On Windows and Linux always returns true.",
       "slug": "winhasshadow",
-      "url": "https://electronjs.org/docs/api/browser-window#winhasshadow",
+      "url": "https://electronjs.org/docs/api/browser-window#winhasshadow-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7212,7 +7212,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetopacityopacity",
+      "objectID": "api-browser-window#winsetopacityopacity-windows-macos",
       "name": "setOpacity",
       "signature": "(opacity)",
       "platforms": [
@@ -7233,7 +7233,7 @@
       "fullSignature": "win.setOpacity(opacity)",
       "tldr": "Sets the opacity of the window.",
       "slug": "winsetopacityopacity",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetopacityopacity",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetopacityopacity-windows-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7246,7 +7246,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#wingetopacity",
+      "objectID": "api-browser-window#wingetopacity-windows-macos",
       "name": "getOpacity",
       "signature": "()",
       "platforms": [
@@ -7262,7 +7262,7 @@
       "fullSignature": "win.getOpacity()",
       "tldr": "Returns between 0.0 (fully transparent) and 1.0 (fully opaque).",
       "slug": "wingetopacity",
-      "url": "https://electronjs.org/docs/api/browser-window#wingetopacity",
+      "url": "https://electronjs.org/docs/api/browser-window#wingetopacity-windows-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7275,7 +7275,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetshaperects",
+      "objectID": "api-browser-window#winsetshaperects-windows-linux-experimental",
       "name": "setShape",
       "signature": "(rects)",
       "platforms": [
@@ -7297,7 +7297,7 @@
       "fullSignature": "win.setShape(rects)",
       "tldr": "Setting a window shape determines the area within the window where the system permits drawing and user interaction.",
       "slug": "winsetshaperects",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetshaperects",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetshaperects-windows-linux-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7310,7 +7310,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetthumbarbuttonsbuttons",
+      "objectID": "api-browser-window#winsetthumbarbuttonsbuttons-windows",
       "name": "setThumbarButtons",
       "signature": "(buttons)",
       "platforms": [
@@ -7334,7 +7334,7 @@
       "fullSignature": "win.setThumbarButtons(buttons)",
       "tldr": "Add a thumbnail toolbar with a specified set of buttons to the thumbnail image of a window in a taskbar button layout.",
       "slug": "winsetthumbarbuttonsbuttons",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetthumbarbuttonsbuttons",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetthumbarbuttonsbuttons-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7347,7 +7347,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetthumbnailclipregion",
+      "objectID": "api-browser-window#winsetthumbnailclipregion-windows",
       "name": "setThumbnailClip",
       "signature": "(region)",
       "platforms": [
@@ -7367,7 +7367,7 @@
       "fullSignature": "win.setThumbnailClip(region)",
       "tldr": "Sets the region of the window to show as the thumbnail image displayed when hovering over the window in the taskbar.",
       "slug": "winsetthumbnailclipregion",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetthumbnailclipregion",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetthumbnailclipregion-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7380,7 +7380,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetthumbnailtooltiptooltip",
+      "objectID": "api-browser-window#winsetthumbnailtooltiptooltip-windows",
       "name": "setThumbnailToolTip",
       "signature": "(toolTip)",
       "platforms": [
@@ -7399,7 +7399,7 @@
       "fullSignature": "win.setThumbnailToolTip(toolTip)",
       "tldr": "Sets the toolTip that is displayed when hovering over the window thumbnail in the taskbar.",
       "slug": "winsetthumbnailtooltiptooltip",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetthumbnailtooltiptooltip",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetthumbnailtooltiptooltip-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7412,7 +7412,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetappdetailsoptions",
+      "objectID": "api-browser-window#winsetappdetailsoptions-windows",
       "name": "setAppDetails",
       "signature": "(options)",
       "platforms": [
@@ -7468,7 +7468,7 @@
       "fullSignature": "win.setAppDetails(options)",
       "tldr": "Sets the properties for the window's taskbar button.",
       "slug": "winsetappdetailsoptions",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetappdetailsoptions",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetappdetailsoptions-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7481,7 +7481,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winshowdefinitionforselection",
+      "objectID": "api-browser-window#winshowdefinitionforselection-macos",
       "name": "showDefinitionForSelection",
       "signature": "()",
       "platforms": [
@@ -7492,7 +7492,7 @@
       "fullSignature": "win.showDefinitionForSelection()",
       "tldr": "Same as webContents.showDefinitionForSelection().",
       "slug": "winshowdefinitionforselection",
-      "url": "https://electronjs.org/docs/api/browser-window#winshowdefinitionforselection",
+      "url": "https://electronjs.org/docs/api/browser-window#winshowdefinitionforselection-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7505,7 +7505,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winseticonicon",
+      "objectID": "api-browser-window#winseticonicon-windows-linux",
       "name": "setIcon",
       "signature": "(icon)",
       "platforms": [
@@ -7525,7 +7525,7 @@
       "fullSignature": "win.setIcon(icon)",
       "tldr": "Changes window icon.",
       "slug": "winseticonicon",
-      "url": "https://electronjs.org/docs/api/browser-window#winseticonicon",
+      "url": "https://electronjs.org/docs/api/browser-window#winseticonicon-windows-linux",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7538,7 +7538,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetwindowbuttonvisibilityvisible",
+      "objectID": "api-browser-window#winsetwindowbuttonvisibilityvisible-macos",
       "name": "setWindowButtonVisibility",
       "signature": "(visible)",
       "platforms": [
@@ -7557,7 +7557,7 @@
       "fullSignature": "win.setWindowButtonVisibility(visible)",
       "tldr": "Sets whether the window traffic light buttons should be visible.",
       "slug": "winsetwindowbuttonvisibilityvisible",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetwindowbuttonvisibilityvisible",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetwindowbuttonvisibilityvisible-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7624,7 +7624,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetmenubarvisibilityvisible",
+      "objectID": "api-browser-window#winsetmenubarvisibilityvisible-windows-linux",
       "name": "setMenuBarVisibility",
       "signature": "(visible)",
       "platforms": [
@@ -7644,7 +7644,7 @@
       "fullSignature": "win.setMenuBarVisibility(visible)",
       "tldr": "Sets whether the menu bar should be visible.",
       "slug": "winsetmenubarvisibilityvisible",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetmenubarvisibilityvisible",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetmenubarvisibilityvisible-windows-linux",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7796,7 +7796,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetcontentprotectionenable",
+      "objectID": "api-browser-window#winsetcontentprotectionenable-macos-windows",
       "name": "setContentProtection",
       "signature": "(enable)",
       "platforms": [
@@ -7816,7 +7816,7 @@
       "fullSignature": "win.setContentProtection(enable)",
       "tldr": "Prevents the window contents from being captured by other apps.",
       "slug": "winsetcontentprotectionenable",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetcontentprotectionenable",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetcontentprotectionenable-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7829,7 +7829,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetfocusablefocusable",
+      "objectID": "api-browser-window#winsetfocusablefocusable-windows",
       "name": "setFocusable",
       "signature": "(focusable)",
       "platforms": [
@@ -7848,7 +7848,7 @@
       "fullSignature": "win.setFocusable(focusable)",
       "tldr": "Changes whether the window can be focused.",
       "slug": "winsetfocusablefocusable",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetfocusablefocusable",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetfocusablefocusable-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7940,7 +7940,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetautohidecursorautohide",
+      "objectID": "api-browser-window#winsetautohidecursorautohide-macos",
       "name": "setAutoHideCursor",
       "signature": "(autoHide)",
       "platforms": [
@@ -7959,7 +7959,7 @@
       "fullSignature": "win.setAutoHideCursor(autoHide)",
       "tldr": "Controls whether to hide cursor when typing.",
       "slug": "winsetautohidecursorautohide",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetautohidecursorautohide",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetautohidecursorautohide-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7972,7 +7972,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winselectprevioustab",
+      "objectID": "api-browser-window#winselectprevioustab-macos",
       "name": "selectPreviousTab",
       "signature": "()",
       "platforms": [
@@ -7983,7 +7983,7 @@
       "fullSignature": "win.selectPreviousTab()",
       "tldr": "Selects the previous tab when native tabs are enabled and there are other tabs in the window.",
       "slug": "winselectprevioustab",
-      "url": "https://electronjs.org/docs/api/browser-window#winselectprevioustab",
+      "url": "https://electronjs.org/docs/api/browser-window#winselectprevioustab-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7996,7 +7996,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winselectnexttab",
+      "objectID": "api-browser-window#winselectnexttab-macos",
       "name": "selectNextTab",
       "signature": "()",
       "platforms": [
@@ -8007,7 +8007,7 @@
       "fullSignature": "win.selectNextTab()",
       "tldr": "Selects the next tab when native tabs are enabled and there are other tabs in the window.",
       "slug": "winselectnexttab",
-      "url": "https://electronjs.org/docs/api/browser-window#winselectnexttab",
+      "url": "https://electronjs.org/docs/api/browser-window#winselectnexttab-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -8020,7 +8020,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winmergeallwindows",
+      "objectID": "api-browser-window#winmergeallwindows-macos",
       "name": "mergeAllWindows",
       "signature": "()",
       "platforms": [
@@ -8031,7 +8031,7 @@
       "fullSignature": "win.mergeAllWindows()",
       "tldr": "Merges all windows into one window with multiple tabs when native tabs are enabled and there is more than one open window.",
       "slug": "winmergeallwindows",
-      "url": "https://electronjs.org/docs/api/browser-window#winmergeallwindows",
+      "url": "https://electronjs.org/docs/api/browser-window#winmergeallwindows-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -8044,7 +8044,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winmovetabtonewwindow",
+      "objectID": "api-browser-window#winmovetabtonewwindow-macos",
       "name": "moveTabToNewWindow",
       "signature": "()",
       "platforms": [
@@ -8055,7 +8055,7 @@
       "fullSignature": "win.moveTabToNewWindow()",
       "tldr": "Moves the current tab into a new window if native tabs are enabled and there is more than one tab in the current window.",
       "slug": "winmovetabtonewwindow",
-      "url": "https://electronjs.org/docs/api/browser-window#winmovetabtonewwindow",
+      "url": "https://electronjs.org/docs/api/browser-window#winmovetabtonewwindow-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -8068,7 +8068,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#wintoggletabbar",
+      "objectID": "api-browser-window#wintoggletabbar-macos",
       "name": "toggleTabBar",
       "signature": "()",
       "platforms": [
@@ -8079,7 +8079,7 @@
       "fullSignature": "win.toggleTabBar()",
       "tldr": "Toggles the visibility of the tab bar if native tabs are enabled and there is only one tab in the current window.",
       "slug": "wintoggletabbar",
-      "url": "https://electronjs.org/docs/api/browser-window#wintoggletabbar",
+      "url": "https://electronjs.org/docs/api/browser-window#wintoggletabbar-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -8092,7 +8092,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winaddtabbedwindowbrowserwindow",
+      "objectID": "api-browser-window#winaddtabbedwindowbrowserwindow-macos",
       "name": "addTabbedWindow",
       "signature": "(browserWindow)",
       "platforms": [
@@ -8111,7 +8111,7 @@
       "fullSignature": "win.addTabbedWindow(browserWindow)",
       "tldr": "Adds a window as a tab on this window, after the tab for the window instance.",
       "slug": "winaddtabbedwindowbrowserwindow",
-      "url": "https://electronjs.org/docs/api/browser-window#winaddtabbedwindowbrowserwindow",
+      "url": "https://electronjs.org/docs/api/browser-window#winaddtabbedwindowbrowserwindow-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -8124,7 +8124,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetvibrancytype",
+      "objectID": "api-browser-window#winsetvibrancytype-macos",
       "name": "setVibrancy",
       "signature": "(type)",
       "platforms": [
@@ -8176,7 +8176,7 @@
       "fullSignature": "win.setVibrancy(type)",
       "tldr": "Adds a vibrancy effect to the browser window.",
       "slug": "winsetvibrancytype",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetvibrancytype",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetvibrancytype-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -8189,7 +8189,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsettouchbartouchbar",
+      "objectID": "api-browser-window#winsettouchbartouchbar-macos-experimental",
       "name": "setTouchBar",
       "signature": "(touchBar)",
       "platforms": [
@@ -8209,7 +8209,7 @@
       "fullSignature": "win.setTouchBar(touchBar)",
       "tldr": "Sets the touchBar layout for the current window.",
       "slug": "winsettouchbartouchbar",
-      "url": "https://electronjs.org/docs/api/browser-window#winsettouchbartouchbar",
+      "url": "https://electronjs.org/docs/api/browser-window#winsettouchbartouchbar-macos-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -8222,7 +8222,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetbrowserviewbrowserview",
+      "objectID": "api-browser-window#winsetbrowserviewbrowserview-experimental",
       "name": "setBrowserView",
       "signature": "(browserView)",
       "platforms": [
@@ -8241,7 +8241,7 @@
       "fullSignature": "win.setBrowserView(browserView)",
       "tldr": null,
       "slug": "winsetbrowserviewbrowserview",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetbrowserviewbrowserview",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetbrowserviewbrowserview-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -8254,7 +8254,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#wingetbrowserview",
+      "objectID": "api-browser-window#wingetbrowserview-experimental",
       "name": "getBrowserView",
       "signature": "()",
       "platforms": [
@@ -8278,7 +8278,7 @@
       "fullSignature": "win.getBrowserView()",
       "tldr": "Returns an BrowserView what is attached. Returns null if none is attached. Throw error if multiple BrowserViews is attached.",
       "slug": "wingetbrowserview",
-      "url": "https://electronjs.org/docs/api/browser-window#wingetbrowserview",
+      "url": "https://electronjs.org/docs/api/browser-window#wingetbrowserview-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -8291,7 +8291,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winaddbrowserviewbrowserview",
+      "objectID": "api-browser-window#winaddbrowserviewbrowserview-experimental",
       "name": "addBrowserView",
       "signature": "(browserView)",
       "platforms": [
@@ -8310,7 +8310,7 @@
       "fullSignature": "win.addBrowserView(browserView)",
       "tldr": "Replacement API for setBrowserView supporting work with multi browser views.",
       "slug": "winaddbrowserviewbrowserview",
-      "url": "https://electronjs.org/docs/api/browser-window#winaddbrowserviewbrowserview",
+      "url": "https://electronjs.org/docs/api/browser-window#winaddbrowserviewbrowserview-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -8323,7 +8323,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winremovebrowserviewbrowserview",
+      "objectID": "api-browser-window#winremovebrowserviewbrowserview-experimental",
       "name": "removeBrowserView",
       "signature": "(browserView)",
       "platforms": [
@@ -8341,7 +8341,7 @@
       "fullSignature": "win.removeBrowserView(browserView)",
       "tldr": null,
       "slug": "winremovebrowserviewbrowserview",
-      "url": "https://electronjs.org/docs/api/browser-window#winremovebrowserviewbrowserview",
+      "url": "https://electronjs.org/docs/api/browser-window#winremovebrowserviewbrowserview-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -8354,7 +8354,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#wingetbrowserviews",
+      "objectID": "api-browser-window#wingetbrowserviews-experimental",
       "name": "getBrowserViews",
       "signature": "()",
       "platforms": [
@@ -8365,7 +8365,7 @@
       "fullSignature": "win.getBrowserViews()",
       "tldr": "Returns array of BrowserView what was an attached with addBrowserView or setBrowserView.",
       "slug": "wingetbrowserviews",
-      "url": "https://electronjs.org/docs/api/browser-window#wingetbrowserviews",
+      "url": "https://electronjs.org/docs/api/browser-window#wingetbrowserviews-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -8460,7 +8460,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-session-end",
+      "objectID": "api-browser-window#event-session-end-windows",
       "name": "session-end",
       "description": "Emitted when window session is going to end due to force shutdown or machine restart or session log off.",
       "platforms": [
@@ -8468,7 +8468,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('session-end')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-session-end",
+      "url": "https://electronjs.org/docs/api/browser-window#event-session-end-windows",
       "slug": "winonsession-end",
       "tldr": "Emitted when window session is going to end due to force shutdown or machine restart or session log off.",
       "keyValuePairs": [
@@ -8703,7 +8703,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-will-resize",
+      "objectID": "api-browser-window#event-will-resize-macos-windows",
       "name": "will-resize",
       "description": "Emitted before the window is resized. Calling event.preventDefault() will prevent the window from being resized. Note that this is only emitted when the window is being resized manually. Resizing the window with setBounds/setSize will not emit this event.",
       "platforms": [
@@ -8727,7 +8727,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('will-resize')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-will-resize",
+      "url": "https://electronjs.org/docs/api/browser-window#event-will-resize-macos-windows",
       "slug": "winonwill-resize",
       "tldr": "Emitted before the window is resized.",
       "keyValuePairs": [
@@ -8762,7 +8762,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-will-move",
+      "objectID": "api-browser-window#event-will-move-windows",
       "name": "will-move",
       "description": "Emitted before the window is moved. Calling event.preventDefault() will prevent the window from being moved. Note that this is only emitted when the window is being resized manually. Resizing the window with setBounds/setSize will not emit this event.",
       "platforms": [
@@ -8785,7 +8785,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('will-move')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-will-move",
+      "url": "https://electronjs.org/docs/api/browser-window#event-will-move-windows",
       "slug": "winonwill-move",
       "tldr": "Emitted before the window is moved.",
       "keyValuePairs": [
@@ -8820,7 +8820,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-moved",
+      "objectID": "api-browser-window#event-moved-macos",
       "name": "moved",
       "description": "Emitted once when the window is moved to a new position.",
       "platforms": [
@@ -8828,7 +8828,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('moved')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-moved",
+      "url": "https://electronjs.org/docs/api/browser-window#event-moved-macos",
       "slug": "winonmoved",
       "tldr": "Emitted once when the window is moved to a new position.",
       "keyValuePairs": [
@@ -8923,7 +8923,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-always-on-top-changed",
+      "objectID": "api-browser-window#event-always-on-top-changed-macos",
       "name": "always-on-top-changed",
       "description": "Emitted when the window is set or unset to show always on top of other windows.",
       "platforms": [
@@ -8945,7 +8945,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('always-on-top-changed')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-always-on-top-changed",
+      "url": "https://electronjs.org/docs/api/browser-window#event-always-on-top-changed-macos",
       "slug": "winonalways-on-top-changed",
       "tldr": "Emitted when the window is set or unset to show always on top of other windows.",
       "keyValuePairs": [
@@ -8960,7 +8960,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-app-command",
+      "objectID": "api-browser-window#event-app-command-windows-linux",
       "name": "app-command",
       "description": "Emitted when an App Command is invoked. These are typically related to keyboard media keys or browser commands, as well as the \"Back\" button built into some mice on Windows. Commands are lowercased, underscores are replaced with hyphens, and the APPCOMMAND_ prefix is stripped off. e.g. APPCOMMAND_BROWSER_BACKWARD is emitted as browser-backward. The following app commands are explictly supported on Linux:",
       "platforms": [
@@ -8983,7 +8983,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('app-command')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-app-command",
+      "url": "https://electronjs.org/docs/api/browser-window#event-app-command-windows-linux",
       "slug": "winonapp-command",
       "tldr": "Emitted when an App Command is invoked.",
       "keyValuePairs": [
@@ -8998,7 +8998,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-scroll-touch-begin",
+      "objectID": "api-browser-window#event-scroll-touch-begin-macos",
       "name": "scroll-touch-begin",
       "description": "Emitted when scroll wheel event phase has begun.",
       "platforms": [
@@ -9006,7 +9006,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('scroll-touch-begin')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-scroll-touch-begin",
+      "url": "https://electronjs.org/docs/api/browser-window#event-scroll-touch-begin-macos",
       "slug": "winonscroll-touch-begin",
       "tldr": "Emitted when scroll wheel event phase has begun.",
       "keyValuePairs": [
@@ -9021,7 +9021,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-scroll-touch-end",
+      "objectID": "api-browser-window#event-scroll-touch-end-macos",
       "name": "scroll-touch-end",
       "description": "Emitted when scroll wheel event phase has ended.",
       "platforms": [
@@ -9029,7 +9029,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('scroll-touch-end')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-scroll-touch-end",
+      "url": "https://electronjs.org/docs/api/browser-window#event-scroll-touch-end-macos",
       "slug": "winonscroll-touch-end",
       "tldr": "Emitted when scroll wheel event phase has ended.",
       "keyValuePairs": [
@@ -9044,7 +9044,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-scroll-touch-edge",
+      "objectID": "api-browser-window#event-scroll-touch-edge-macos",
       "name": "scroll-touch-edge",
       "description": "Emitted when scroll wheel event phase filed upon reaching the edge of element.",
       "platforms": [
@@ -9052,7 +9052,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('scroll-touch-edge')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-scroll-touch-edge",
+      "url": "https://electronjs.org/docs/api/browser-window#event-scroll-touch-edge-macos",
       "slug": "winonscroll-touch-edge",
       "tldr": "Emitted when scroll wheel event phase filed upon reaching the edge of element.",
       "keyValuePairs": [
@@ -9067,7 +9067,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-swipe",
+      "objectID": "api-browser-window#event-swipe-macos",
       "name": "swipe",
       "description": "Emitted on 3-finger swipe. Possible directions are up, right, down, left.",
       "platforms": [
@@ -9089,7 +9089,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('swipe')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-swipe",
+      "url": "https://electronjs.org/docs/api/browser-window#event-swipe-macos",
       "slug": "winonswipe",
       "tldr": "Emitted on 3-finger swipe.",
       "keyValuePairs": [
@@ -9104,7 +9104,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-sheet-begin",
+      "objectID": "api-browser-window#event-sheet-begin-macos",
       "name": "sheet-begin",
       "description": "Emitted when the window opens a sheet.",
       "platforms": [
@@ -9112,7 +9112,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('sheet-begin')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-sheet-begin",
+      "url": "https://electronjs.org/docs/api/browser-window#event-sheet-begin-macos",
       "slug": "winonsheet-begin",
       "tldr": "Emitted when the window opens a sheet.",
       "keyValuePairs": [
@@ -9127,7 +9127,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-sheet-end",
+      "objectID": "api-browser-window#event-sheet-end-macos",
       "name": "sheet-end",
       "description": "Emitted when the window has closed a sheet.",
       "platforms": [
@@ -9135,7 +9135,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('sheet-end')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-sheet-end",
+      "url": "https://electronjs.org/docs/api/browser-window#event-sheet-end-macos",
       "slug": "winonsheet-end",
       "tldr": "Emitted when the window has closed a sheet.",
       "keyValuePairs": [
@@ -9150,7 +9150,7 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-new-window-for-tab",
+      "objectID": "api-browser-window#event-new-window-for-tab-macos",
       "name": "new-window-for-tab",
       "description": "Emitted when the native new tab button is clicked.",
       "platforms": [
@@ -9158,7 +9158,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('new-window-for-tab')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-new-window-for-tab",
+      "url": "https://electronjs.org/docs/api/browser-window#event-new-window-for-tab-macos",
       "slug": "winonnew-window-for-tab",
       "tldr": "Emitted when the native new tab button is clicked.",
       "keyValuePairs": [
@@ -10565,7 +10565,7 @@
       ]
     },
     {
-      "objectID": "api-clipboard#clipboardreadbookmark",
+      "objectID": "api-clipboard#clipboardreadbookmark-macos-windows",
       "name": "readBookmark",
       "signature": "()",
       "platforms": [
@@ -10597,7 +10597,7 @@
       "fullSignature": "clipboard.readBookmark",
       "tldr": "Returns an Object containing title and url keys representing the bookmark in the clipboard.",
       "slug": "clipboardreadbookmark",
-      "url": "https://electronjs.org/docs/api/clipboard#clipboardreadbookmark",
+      "url": "https://electronjs.org/docs/api/clipboard#clipboardreadbookmark-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -10610,7 +10610,7 @@
       ]
     },
     {
-      "objectID": "api-clipboard#clipboardwritebookmark",
+      "objectID": "api-clipboard#clipboardwritebookmark-macos-windows",
       "name": "writeBookmark",
       "signature": "(title, url[, type])",
       "platforms": [
@@ -10642,7 +10642,7 @@
       "fullSignature": "clipboard.writeBookmark",
       "tldr": "Writes the title and url into the clipboard as a bookmark.",
       "slug": "clipboardwritebookmark",
-      "url": "https://electronjs.org/docs/api/clipboard#clipboardwritebookmark",
+      "url": "https://electronjs.org/docs/api/clipboard#clipboardwritebookmark-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -10655,7 +10655,7 @@
       ]
     },
     {
-      "objectID": "api-clipboard#clipboardreadfindtext",
+      "objectID": "api-clipboard#clipboardreadfindtext-macos",
       "name": "readFindText",
       "signature": "()",
       "platforms": [
@@ -10670,7 +10670,7 @@
       "fullSignature": "clipboard.readFindText",
       "tldr": "Returns the text on the find pasteboard. This method uses synchronous IPC when called from the renderer process. The cached value is reread from the find pasteboard whenever the application is activated.",
       "slug": "clipboardreadfindtext",
-      "url": "https://electronjs.org/docs/api/clipboard#clipboardreadfindtext",
+      "url": "https://electronjs.org/docs/api/clipboard#clipboardreadfindtext-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -10683,7 +10683,7 @@
       ]
     },
     {
-      "objectID": "api-clipboard#clipboardwritefindtext",
+      "objectID": "api-clipboard#clipboardwritefindtext-macos",
       "name": "writeFindText",
       "signature": "(text)",
       "platforms": [
@@ -10702,7 +10702,7 @@
       "fullSignature": "clipboard.writeFindText",
       "tldr": "Writes the text into the find pasteboard as plain text.",
       "slug": "clipboardwritefindtext",
-      "url": "https://electronjs.org/docs/api/clipboard#clipboardwritefindtext",
+      "url": "https://electronjs.org/docs/api/clipboard#clipboardwritefindtext-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -10777,7 +10777,7 @@
       ]
     },
     {
-      "objectID": "api-clipboard#clipboardhas",
+      "objectID": "api-clipboard#clipboardhas-experimental",
       "name": "has",
       "signature": "(format[, type])",
       "platforms": [
@@ -10806,7 +10806,7 @@
       "fullSignature": "clipboard.has",
       "tldr": "Returns whether the clipboard supports the specified format.",
       "slug": "clipboardhas",
-      "url": "https://electronjs.org/docs/api/clipboard#clipboardhas",
+      "url": "https://electronjs.org/docs/api/clipboard#clipboardhas-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -10819,7 +10819,7 @@
       ]
     },
     {
-      "objectID": "api-clipboard#clipboardread",
+      "objectID": "api-clipboard#clipboardread-experimental",
       "name": "read",
       "signature": "(format)",
       "platforms": [
@@ -10842,7 +10842,7 @@
       "fullSignature": "clipboard.read",
       "tldr": "Returns reads format type from the clipboard.",
       "slug": "clipboardread",
-      "url": "https://electronjs.org/docs/api/clipboard#clipboardread",
+      "url": "https://electronjs.org/docs/api/clipboard#clipboardread-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -10855,7 +10855,7 @@
       ]
     },
     {
-      "objectID": "api-clipboard#clipboardreadbuffer",
+      "objectID": "api-clipboard#clipboardreadbuffer-experimental",
       "name": "readBuffer",
       "signature": "(format)",
       "platforms": [
@@ -10878,7 +10878,7 @@
       "fullSignature": "clipboard.readBuffer",
       "tldr": "Returns reads format type from the clipboard.",
       "slug": "clipboardreadbuffer",
-      "url": "https://electronjs.org/docs/api/clipboard#clipboardreadbuffer",
+      "url": "https://electronjs.org/docs/api/clipboard#clipboardreadbuffer-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -10891,7 +10891,7 @@
       ]
     },
     {
-      "objectID": "api-clipboard#clipboardwritebuffer",
+      "objectID": "api-clipboard#clipboardwritebuffer-experimental",
       "name": "writeBuffer",
       "signature": "(format, buffer[, type])",
       "platforms": [
@@ -10922,7 +10922,7 @@
       "fullSignature": "clipboard.writeBuffer",
       "tldr": "Writes the buffer into the clipboard as format.",
       "slug": "clipboardwritebuffer",
-      "url": "https://electronjs.org/docs/api/clipboard#clipboardwritebuffer",
+      "url": "https://electronjs.org/docs/api/clipboard#clipboardwritebuffer-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -12296,7 +12296,7 @@
       ]
     },
     {
-      "objectID": "api-crash-reporter#crashreportergetuploadtoserver",
+      "objectID": "api-crash-reporter#crashreportergetuploadtoserver-linux-macos",
       "name": "getUploadToServer",
       "signature": "()",
       "platforms": [
@@ -12313,7 +12313,7 @@
       "fullSignature": "crashReporter.getUploadToServer",
       "tldr": "Note: This API can only be called from the main process.",
       "slug": "crashreportergetuploadtoserver",
-      "url": "https://electronjs.org/docs/api/crash-reporter#crashreportergetuploadtoserver",
+      "url": "https://electronjs.org/docs/api/crash-reporter#crashreportergetuploadtoserver-linux-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -12326,7 +12326,7 @@
       ]
     },
     {
-      "objectID": "api-crash-reporter#crashreportersetuploadtoserver",
+      "objectID": "api-crash-reporter#crashreportersetuploadtoserver-linux-macos",
       "name": "setUploadToServer",
       "signature": "(uploadToServer)",
       "platforms": [
@@ -12347,7 +12347,7 @@
       "fullSignature": "crashReporter.setUploadToServer",
       "tldr": "This would normally be controlled by user preferences.",
       "slug": "crashreportersetuploadtoserver",
-      "url": "https://electronjs.org/docs/api/crash-reporter#crashreportersetuploadtoserver",
+      "url": "https://electronjs.org/docs/api/crash-reporter#crashreportersetuploadtoserver-linux-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -12360,7 +12360,7 @@
       ]
     },
     {
-      "objectID": "api-crash-reporter#crashreporteraddextraparameter",
+      "objectID": "api-crash-reporter#crashreporteraddextraparameter-macos",
       "name": "addExtraParameter",
       "signature": "(key, value)",
       "platforms": [
@@ -12387,7 +12387,7 @@
       "fullSignature": "crashReporter.addExtraParameter",
       "tldr": "Set an extra parameter to be sent with the crash report.",
       "slug": "crashreporteraddextraparameter",
-      "url": "https://electronjs.org/docs/api/crash-reporter#crashreporteraddextraparameter",
+      "url": "https://electronjs.org/docs/api/crash-reporter#crashreporteraddextraparameter-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -12400,7 +12400,7 @@
       ]
     },
     {
-      "objectID": "api-crash-reporter#crashreporterremoveextraparameter",
+      "objectID": "api-crash-reporter#crashreporterremoveextraparameter-macos",
       "name": "removeExtraParameter",
       "signature": "(key)",
       "platforms": [
@@ -12420,7 +12420,7 @@
       "fullSignature": "crashReporter.removeExtraParameter",
       "tldr": "Remove a extra parameter from the current set of parameters so that it will not be sent with the crash report.",
       "slug": "crashreporterremoveextraparameter",
-      "url": "https://electronjs.org/docs/api/crash-reporter#crashreporterremoveextraparameter",
+      "url": "https://electronjs.org/docs/api/crash-reporter#crashreporterremoveextraparameter-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -13499,7 +13499,7 @@
       ]
     },
     {
-      "objectID": "api-dialog#dialogshowcertificatetrustdialog",
+      "objectID": "api-dialog#dialogshowcertificatetrustdialog-macos-windows",
       "name": "showCertificateTrustDialog",
       "signature": "([browserWindow, ]options, callback)",
       "platforms": [
@@ -13547,7 +13547,7 @@
       "fullSignature": "dialog.showCertificateTrustDialog",
       "tldr": "On macOS, this displays a modal dialog that shows a message and certificate information, and gives the user the option of trusting/importing the certificate.",
       "slug": "dialogshowcertificatetrustdialog",
-      "url": "https://electronjs.org/docs/api/dialog#dialogshowcertificatetrustdialog",
+      "url": "https://electronjs.org/docs/api/dialog#dialogshowcertificatetrustdialog-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -16461,7 +16461,7 @@
       ]
     },
     {
-      "objectID": "api-menu#menusendactiontofirstresponderaction",
+      "objectID": "api-menu#menusendactiontofirstresponderaction-macos",
       "name": "sendActionToFirstResponder",
       "signature": "(action)",
       "platforms": [
@@ -16480,7 +16480,7 @@
       "fullSignature": "Menu.sendActionToFirstResponder(action)",
       "tldr": "Sends the action to the first responder of application.",
       "slug": "menusendactiontofirstresponderaction",
-      "url": "https://electronjs.org/docs/api/menu#menusendactiontofirstresponderaction",
+      "url": "https://electronjs.org/docs/api/menu#menusendactiontofirstresponderaction-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -17094,7 +17094,7 @@
       ]
     },
     {
-      "objectID": "api-native-image#nativeimagecreatefromnamedimage",
+      "objectID": "api-native-image#nativeimagecreatefromnamedimage-macos",
       "name": "createFromNamedImage",
       "signature": "(imageName[, hslShift])",
       "platforms": [
@@ -17123,7 +17123,7 @@
       "fullSignature": "nativeImage.createFromNamedImage",
       "tldr": "Creates a new NativeImage instance from the NSImage that maps to the given image name.",
       "slug": "nativeimagecreatefromnamedimage",
-      "url": "https://electronjs.org/docs/api/native-image#nativeimagecreatefromnamedimage",
+      "url": "https://electronjs.org/docs/api/native-image#nativeimagecreatefromnamedimage-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -17339,7 +17339,7 @@
       ]
     },
     {
-      "objectID": "api-native-image#imagegetnativehandle",
+      "objectID": "api-native-image#imagegetnativehandle-macos",
       "name": "getNativeHandle",
       "signature": "()",
       "platforms": [
@@ -17355,7 +17355,7 @@
       "fullSignature": "image.getNativeHandle()",
       "tldr": "Notice that the returned pointer is a weak pointer to the underlying native image instead of a copy, so you must ensure that the associated nativeImage instance is kept around.",
       "slug": "imagegetnativehandle",
-      "url": "https://electronjs.org/docs/api/native-image#imagegetnativehandle",
+      "url": "https://electronjs.org/docs/api/native-image#imagegetnativehandle-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -17959,7 +17959,7 @@
       ]
     },
     {
-      "objectID": "api-notification#event-reply",
+      "objectID": "api-notification#event-reply-macos",
       "name": "reply",
       "description": "Emitted when the user clicks the \"Reply\" button on a notification with hasReply: true.",
       "platforms": [
@@ -17982,7 +17982,7 @@
       ],
       "apiType": "event",
       "fullSignature": "notification.on('reply')",
-      "url": "https://electronjs.org/docs/api/notification#event-reply",
+      "url": "https://electronjs.org/docs/api/notification#event-reply-macos",
       "slug": "notificationonreply",
       "tldr": "Emitted when the user clicks the \"Reply\" button on a notification with hasReply: true.",
       "keyValuePairs": [
@@ -17997,7 +17997,7 @@
       ]
     },
     {
-      "objectID": "api-notification#event-action",
+      "objectID": "api-notification#event-action-macos",
       "name": "action",
       "platforms": [
         "macOS"
@@ -18019,7 +18019,7 @@
       ],
       "apiType": "event",
       "fullSignature": "notification.on('action')",
-      "url": "https://electronjs.org/docs/api/notification#event-action",
+      "url": "https://electronjs.org/docs/api/notification#event-action-macos",
       "slug": "notificationonaction",
       "tldr": null,
       "keyValuePairs": [
@@ -18171,7 +18171,7 @@
       ]
     },
     {
-      "objectID": "api-power-monitor#event-on-ac",
+      "objectID": "api-power-monitor#event-on-ac-windows",
       "name": "on-ac",
       "description": "Emitted when the system changes to AC power.",
       "platforms": [
@@ -18179,7 +18179,7 @@
       ],
       "apiType": "event",
       "fullSignature": "powerMonitor.on('on-ac')",
-      "url": "https://electronjs.org/docs/api/power-monitor#event-on-ac",
+      "url": "https://electronjs.org/docs/api/power-monitor#event-on-ac-windows",
       "slug": "powermonitoronon-ac",
       "tldr": "Emitted when the system changes to AC power.",
       "keyValuePairs": [
@@ -18194,7 +18194,7 @@
       ]
     },
     {
-      "objectID": "api-power-monitor#event-on-battery",
+      "objectID": "api-power-monitor#event-on-battery-windows",
       "name": "on-battery",
       "description": "Emitted when system changes to battery power.",
       "platforms": [
@@ -18202,7 +18202,7 @@
       ],
       "apiType": "event",
       "fullSignature": "powerMonitor.on('on-battery')",
-      "url": "https://electronjs.org/docs/api/power-monitor#event-on-battery",
+      "url": "https://electronjs.org/docs/api/power-monitor#event-on-battery-windows",
       "slug": "powermonitoronon-battery",
       "tldr": "Emitted when system changes to battery power.",
       "keyValuePairs": [
@@ -18217,7 +18217,7 @@
       ]
     },
     {
-      "objectID": "api-power-monitor#event-shutdown",
+      "objectID": "api-power-monitor#event-shutdown-linux-macos",
       "name": "shutdown",
       "description": "Emitted when the system is about to reboot or shut down. If the event handler invokes e.preventDefault(), Electron will attempt to delay system shutdown in order for the app to exit cleanly. If e.preventDefault() is called, the app should exit as soon as possible by calling something like app.quit().",
       "platforms": [
@@ -18226,7 +18226,7 @@
       ],
       "apiType": "event",
       "fullSignature": "powerMonitor.on('shutdown')",
-      "url": "https://electronjs.org/docs/api/power-monitor#event-shutdown",
+      "url": "https://electronjs.org/docs/api/power-monitor#event-shutdown-linux-macos",
       "slug": "powermonitoronshutdown",
       "tldr": "Emitted when the system is about to reboot or shut down.",
       "keyValuePairs": [
@@ -18241,7 +18241,7 @@
       ]
     },
     {
-      "objectID": "api-power-monitor#event-lock-screen",
+      "objectID": "api-power-monitor#event-lock-screen-macos-windows",
       "name": "lock-screen",
       "description": "Emitted when the system is about to lock the screen.",
       "platforms": [
@@ -18250,7 +18250,7 @@
       ],
       "apiType": "event",
       "fullSignature": "powerMonitor.on('lock-screen')",
-      "url": "https://electronjs.org/docs/api/power-monitor#event-lock-screen",
+      "url": "https://electronjs.org/docs/api/power-monitor#event-lock-screen-macos-windows",
       "slug": "powermonitoronlock-screen",
       "tldr": "Emitted when the system is about to lock the screen.",
       "keyValuePairs": [
@@ -18265,7 +18265,7 @@
       ]
     },
     {
-      "objectID": "api-power-monitor#event-unlock-screen",
+      "objectID": "api-power-monitor#event-unlock-screen-macos-windows",
       "name": "unlock-screen",
       "description": "Emitted as soon as the systems screen is unlocked.",
       "platforms": [
@@ -18274,7 +18274,7 @@
       ],
       "apiType": "event",
       "fullSignature": "powerMonitor.on('unlock-screen')",
-      "url": "https://electronjs.org/docs/api/power-monitor#event-unlock-screen",
+      "url": "https://electronjs.org/docs/api/power-monitor#event-unlock-screen-macos-windows",
       "slug": "powermonitoronunlock-screen",
       "tldr": "Emitted as soon as the systems screen is unlocked.",
       "keyValuePairs": [
@@ -18893,7 +18893,7 @@
       ]
     },
     {
-      "objectID": "api-process#processgetiocounters",
+      "objectID": "api-process#processgetiocounters-windows-linux",
       "name": "getIOCounters",
       "signature": "()",
       "platforms": [
@@ -18908,7 +18908,7 @@
       "fullSignature": "process.getIOCounters",
       "tldr": null,
       "slug": "processgetiocounters",
-      "url": "https://electronjs.org/docs/api/process#processgetiocounters",
+      "url": "https://electronjs.org/docs/api/process#processgetiocounters-windows-linux",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -19170,7 +19170,7 @@
       ]
     },
     {
-      "objectID": "api-process#processsetfdlimit",
+      "objectID": "api-process#processsetfdlimit-macos-linux",
       "name": "setFdLimit",
       "signature": "(maxDescriptors)",
       "platforms": [
@@ -19190,7 +19190,7 @@
       "fullSignature": "process.setFdLimit",
       "tldr": "Sets the file descriptor soft limit to maxDescriptors or the OS hard limit, whichever is lower for the current process.",
       "slug": "processsetfdlimit",
-      "url": "https://electronjs.org/docs/api/process#processsetfdlimit",
+      "url": "https://electronjs.org/docs/api/process#processsetfdlimit-macos-linux",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -21515,7 +21515,7 @@
       ]
     },
     {
-      "objectID": "api-screen#screenscreentodippoint",
+      "objectID": "api-screen#screenscreentodippoint-windows",
       "name": "screenToDipPoint",
       "signature": "(point)",
       "platforms": [
@@ -21538,7 +21538,7 @@
       "fullSignature": "screen.screenToDipPoint",
       "tldr": "Converts a screen physical point to a screen DIP point.",
       "slug": "screenscreentodippoint",
-      "url": "https://electronjs.org/docs/api/screen#screenscreentodippoint",
+      "url": "https://electronjs.org/docs/api/screen#screenscreentodippoint-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -21551,7 +21551,7 @@
       ]
     },
     {
-      "objectID": "api-screen#screendiptoscreenpoint",
+      "objectID": "api-screen#screendiptoscreenpoint-windows",
       "name": "dipToScreenPoint",
       "signature": "(point)",
       "platforms": [
@@ -21574,7 +21574,7 @@
       "fullSignature": "screen.dipToScreenPoint",
       "tldr": "Converts a screen DIP point to a screen physical point.",
       "slug": "screendiptoscreenpoint",
-      "url": "https://electronjs.org/docs/api/screen#screendiptoscreenpoint",
+      "url": "https://electronjs.org/docs/api/screen#screendiptoscreenpoint-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -21587,7 +21587,7 @@
       ]
     },
     {
-      "objectID": "api-screen#screenscreentodiprect",
+      "objectID": "api-screen#screenscreentodiprect-windows",
       "name": "screenToDipRect",
       "signature": "(window, rect)",
       "platforms": [
@@ -21625,7 +21625,7 @@
       "fullSignature": "screen.screenToDipRect",
       "tldr": "Converts a screen physical rect to a screen DIP rect.",
       "slug": "screenscreentodiprect",
-      "url": "https://electronjs.org/docs/api/screen#screenscreentodiprect",
+      "url": "https://electronjs.org/docs/api/screen#screenscreentodiprect-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -21638,7 +21638,7 @@
       ]
     },
     {
-      "objectID": "api-screen#screendiptoscreenrect",
+      "objectID": "api-screen#screendiptoscreenrect-windows",
       "name": "dipToScreenRect",
       "signature": "(window, rect)",
       "platforms": [
@@ -21676,7 +21676,7 @@
       "fullSignature": "screen.dipToScreenRect",
       "tldr": "Converts a screen DIP rect to a screen physical rect.",
       "slug": "screendiptoscreenrect",
-      "url": "https://electronjs.org/docs/api/screen#screendiptoscreenrect",
+      "url": "https://electronjs.org/docs/api/screen#screendiptoscreenrect-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -23341,7 +23341,7 @@
       ]
     },
     {
-      "objectID": "api-shell#shellwriteshortcutlink",
+      "objectID": "api-shell#shellwriteshortcutlink-windows",
       "name": "writeShortcutLink",
       "signature": "(shortcutPath[, operation], options)",
       "platforms": [
@@ -23392,7 +23392,7 @@
       "fullSignature": "shell.writeShortcutLink",
       "tldr": "Creates or updates a shortcut link at shortcutPath.",
       "slug": "shellwriteshortcutlink",
-      "url": "https://electronjs.org/docs/api/shell#shellwriteshortcutlink",
+      "url": "https://electronjs.org/docs/api/shell#shellwriteshortcutlink-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -23405,7 +23405,7 @@
       ]
     },
     {
-      "objectID": "api-shell#shellreadshortcutlink",
+      "objectID": "api-shell#shellreadshortcutlink-windows",
       "name": "readShortcutLink",
       "signature": "(shortcutPath)",
       "platforms": [
@@ -23428,7 +23428,7 @@
       "fullSignature": "shell.readShortcutLink",
       "tldr": "Resolves the shortcut link at shortcutPath.",
       "slug": "shellreadshortcutlink",
-      "url": "https://electronjs.org/docs/api/shell#shellreadshortcutlink",
+      "url": "https://electronjs.org/docs/api/shell#shellreadshortcutlink-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -23718,7 +23718,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesisdarkmode",
+      "objectID": "api-system-preferences#systempreferencesisdarkmode-macos",
       "name": "isDarkMode",
       "signature": "()",
       "platforms": [
@@ -23733,7 +23733,7 @@
       "fullSignature": "systemPreferences.isDarkMode",
       "tldr": "Returns whether the system is in Dark Mode.",
       "slug": "systempreferencesisdarkmode",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesisdarkmode",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesisdarkmode-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -23746,7 +23746,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesisswipetrackingfromscrolleventsenabled",
+      "objectID": "api-system-preferences#systempreferencesisswipetrackingfromscrolleventsenabled-macos",
       "name": "isSwipeTrackingFromScrollEventsEnabled",
       "signature": "()",
       "platforms": [
@@ -23761,7 +23761,7 @@
       "fullSignature": "systemPreferences.isSwipeTrackingFromScrollEventsEnabled",
       "tldr": "Returns whether the Swipe between pages setting is on.",
       "slug": "systempreferencesisswipetrackingfromscrolleventsenabled",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesisswipetrackingfromscrolleventsenabled",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesisswipetrackingfromscrolleventsenabled-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -23774,7 +23774,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencespostnotification",
+      "objectID": "api-system-preferences#systempreferencespostnotification-macos",
       "name": "postNotification",
       "signature": "(event, userInfo[, deliverImmediately])",
       "platforms": [
@@ -23806,7 +23806,7 @@
       "fullSignature": "systemPreferences.postNotification",
       "tldr": "Posts event as native notifications of macOS.",
       "slug": "systempreferencespostnotification",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencespostnotification",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencespostnotification-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -23819,7 +23819,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencespostlocalnotification",
+      "objectID": "api-system-preferences#systempreferencespostlocalnotification-macos",
       "name": "postLocalNotification",
       "signature": "(event, userInfo)",
       "platforms": [
@@ -23844,7 +23844,7 @@
       "fullSignature": "systemPreferences.postLocalNotification",
       "tldr": "Posts event as native notifications of macOS.",
       "slug": "systempreferencespostlocalnotification",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencespostlocalnotification",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencespostlocalnotification-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -23857,7 +23857,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencespostworkspacenotification",
+      "objectID": "api-system-preferences#systempreferencespostworkspacenotification-macos",
       "name": "postWorkspaceNotification",
       "signature": "(event, userInfo)",
       "platforms": [
@@ -23882,7 +23882,7 @@
       "fullSignature": "systemPreferences.postWorkspaceNotification",
       "tldr": "Posts event as native notifications of macOS.",
       "slug": "systempreferencespostworkspacenotification",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencespostworkspacenotification",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencespostworkspacenotification-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -23895,7 +23895,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencessubscribenotification",
+      "objectID": "api-system-preferences#systempreferencessubscribenotification-macos",
       "name": "subscribeNotification",
       "signature": "(event, callback)",
       "platforms": [
@@ -23942,7 +23942,7 @@
       "fullSignature": "systemPreferences.subscribeNotification",
       "tldr": "Subscribes to native notifications of macOS, callback will be called with callback(event, userInfo) when the corresponding event happens.",
       "slug": "systempreferencessubscribenotification",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencessubscribenotification",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencessubscribenotification-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -23955,7 +23955,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencessubscribelocalnotification",
+      "objectID": "api-system-preferences#systempreferencessubscribelocalnotification-macos",
       "name": "subscribeLocalNotification",
       "signature": "(event, callback)",
       "platforms": [
@@ -24002,7 +24002,7 @@
       "fullSignature": "systemPreferences.subscribeLocalNotification",
       "tldr": "Same as subscribeNotification, but uses NSNotificationCenter for local defaults.",
       "slug": "systempreferencessubscribelocalnotification",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencessubscribelocalnotification",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencessubscribelocalnotification-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24015,7 +24015,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencessubscribeworkspacenotification",
+      "objectID": "api-system-preferences#systempreferencessubscribeworkspacenotification-macos",
       "name": "subscribeWorkspaceNotification",
       "signature": "(event, callback)",
       "platforms": [
@@ -24057,7 +24057,7 @@
       "fullSignature": "systemPreferences.subscribeWorkspaceNotification",
       "tldr": "Same as subscribeNotification, but uses NSWorkspace.sharedWorkspace.notificationCenter.",
       "slug": "systempreferencessubscribeworkspacenotification",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencessubscribeworkspacenotification",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencessubscribeworkspacenotification-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24070,7 +24070,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesunsubscribenotification",
+      "objectID": "api-system-preferences#systempreferencesunsubscribenotification-macos",
       "name": "unsubscribeNotification",
       "signature": "(id)",
       "platforms": [
@@ -24089,7 +24089,7 @@
       "fullSignature": "systemPreferences.unsubscribeNotification",
       "tldr": "Removes the subscriber with id.",
       "slug": "systempreferencesunsubscribenotification",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesunsubscribenotification",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesunsubscribenotification-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24102,7 +24102,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesunsubscribelocalnotification",
+      "objectID": "api-system-preferences#systempreferencesunsubscribelocalnotification-macos",
       "name": "unsubscribeLocalNotification",
       "signature": "(id)",
       "platforms": [
@@ -24121,7 +24121,7 @@
       "fullSignature": "systemPreferences.unsubscribeLocalNotification",
       "tldr": "Same as unsubscribeNotification, but removes the subscriber from NSNotificationCenter.",
       "slug": "systempreferencesunsubscribelocalnotification",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesunsubscribelocalnotification",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesunsubscribelocalnotification-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24134,7 +24134,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesunsubscribeworkspacenotification",
+      "objectID": "api-system-preferences#systempreferencesunsubscribeworkspacenotification-macos",
       "name": "unsubscribeWorkspaceNotification",
       "signature": "(id)",
       "platforms": [
@@ -24153,7 +24153,7 @@
       "fullSignature": "systemPreferences.unsubscribeWorkspaceNotification",
       "tldr": "Same as unsubscribeNotification, but removes the subscriber from NSWorkspace.sharedWorkspace.notificationCenter.",
       "slug": "systempreferencesunsubscribeworkspacenotification",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesunsubscribeworkspacenotification",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesunsubscribeworkspacenotification-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24166,7 +24166,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesregisterdefaults",
+      "objectID": "api-system-preferences#systempreferencesregisterdefaults-macos",
       "name": "registerDefaults",
       "signature": "(defaults)",
       "platforms": [
@@ -24186,7 +24186,7 @@
       "fullSignature": "systemPreferences.registerDefaults",
       "tldr": "Add the specified defaults to your application's NSUserDefaults.",
       "slug": "systempreferencesregisterdefaults",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesregisterdefaults",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesregisterdefaults-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24199,7 +24199,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesgetuserdefault",
+      "objectID": "api-system-preferences#systempreferencesgetuserdefault-macos",
       "name": "getUserDefault",
       "signature": "(key, type)",
       "platforms": [
@@ -24256,7 +24256,7 @@
       "fullSignature": "systemPreferences.getUserDefault",
       "tldr": "Some popular key and types are:.",
       "slug": "systempreferencesgetuserdefault",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgetuserdefault",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgetuserdefault-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24269,7 +24269,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencessetuserdefault",
+      "objectID": "api-system-preferences#systempreferencessetuserdefault-macos",
       "name": "setUserDefault",
       "signature": "(key, type, value)",
       "platforms": [
@@ -24301,7 +24301,7 @@
       "fullSignature": "systemPreferences.setUserDefault",
       "tldr": "Set the value of key in NSUserDefaults.",
       "slug": "systempreferencessetuserdefault",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencessetuserdefault",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencessetuserdefault-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24314,7 +24314,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesremoveuserdefault",
+      "objectID": "api-system-preferences#systempreferencesremoveuserdefault-macos",
       "name": "removeUserDefault",
       "signature": "(key)",
       "platforms": [
@@ -24333,7 +24333,7 @@
       "fullSignature": "systemPreferences.removeUserDefault",
       "tldr": "Removes the key in NSUserDefaults.",
       "slug": "systempreferencesremoveuserdefault",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesremoveuserdefault",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesremoveuserdefault-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24346,7 +24346,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesisaeroglassenabled",
+      "objectID": "api-system-preferences#systempreferencesisaeroglassenabled-windows",
       "name": "isAeroGlassEnabled",
       "signature": "()",
       "platforms": [
@@ -24362,7 +24362,7 @@
       "fullSignature": "systemPreferences.isAeroGlassEnabled",
       "tldr": "An example of using it to determine if you should create a transparent window or not (transparent windows won't work correctly when DWM composition is disabled):.",
       "slug": "systempreferencesisaeroglassenabled",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesisaeroglassenabled",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesisaeroglassenabled-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24375,7 +24375,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesgetaccentcolor",
+      "objectID": "api-system-preferences#systempreferencesgetaccentcolor-windows-macos",
       "name": "getAccentColor",
       "signature": "()",
       "platforms": [
@@ -24392,7 +24392,7 @@
       "fullSignature": "systemPreferences.getAccentColor",
       "tldr": "This API is only available on macOS 10.14 Mojave or newer.",
       "slug": "systempreferencesgetaccentcolor",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgetaccentcolor",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgetaccentcolor-windows-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24405,7 +24405,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesgetcolor",
+      "objectID": "api-system-preferences#systempreferencesgetcolor-windows-macos",
       "name": "getColor",
       "signature": "(color)",
       "platforms": [
@@ -24692,7 +24692,7 @@
       "fullSignature": "systemPreferences.getColor",
       "tldr": "Returns the system color setting in RGB hexadecimal form (#ABCDEF). See the Windows docs and the MacOS docs for more details.",
       "slug": "systempreferencesgetcolor",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgetcolor",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgetcolor-windows-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24705,7 +24705,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesgetsystemcolor",
+      "objectID": "api-system-preferences#systempreferencesgetsystemcolor-macos",
       "name": "getSystemColor",
       "signature": "(color)",
       "platforms": [
@@ -24763,7 +24763,7 @@
       "fullSignature": "systemPreferences.getSystemColor",
       "tldr": "Returns one of several standard system colors that automatically adapt to vibrancy and changes in accessibility settings like 'Increase contrast' and 'Reduce transparency'.",
       "slug": "systempreferencesgetsystemcolor",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgetsystemcolor",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgetsystemcolor-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24776,7 +24776,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesisinvertedcolorscheme",
+      "objectID": "api-system-preferences#systempreferencesisinvertedcolorscheme-windows",
       "name": "isInvertedColorScheme",
       "signature": "()",
       "platforms": [
@@ -24791,7 +24791,7 @@
       "fullSignature": "systemPreferences.isInvertedColorScheme",
       "tldr": "Returns true if an inverted color scheme (a high contrast color scheme with light text and dark backgrounds) is active, false otherwise.",
       "slug": "systempreferencesisinvertedcolorscheme",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesisinvertedcolorscheme",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesisinvertedcolorscheme-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24804,7 +24804,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesishighcontrastcolorscheme",
+      "objectID": "api-system-preferences#systempreferencesishighcontrastcolorscheme-windows",
       "name": "isHighContrastColorScheme",
       "signature": "()",
       "platforms": [
@@ -24819,7 +24819,7 @@
       "fullSignature": "systemPreferences.isHighContrastColorScheme",
       "tldr": "Returns true if a high contrast theme is active, false otherwise.",
       "slug": "systempreferencesishighcontrastcolorscheme",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesishighcontrastcolorscheme",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesishighcontrastcolorscheme-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24832,7 +24832,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesgeteffectiveappearance",
+      "objectID": "api-system-preferences#systempreferencesgeteffectiveappearance-macos",
       "name": "getEffectiveAppearance",
       "signature": "()",
       "platforms": [
@@ -24859,7 +24859,7 @@
       "fullSignature": "systemPreferences.getEffectiveAppearance",
       "tldr": "Gets the macOS appearance setting that is currently applied to your application, maps to NSApplication.effectiveAppearance Please note that until Electron is built targeting the 10.14 SDK, your application's effectiveAppearance will default to 'light' and won't inherit the OS preference.",
       "slug": "systempreferencesgeteffectiveappearance",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgeteffectiveappearance",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgeteffectiveappearance-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24872,7 +24872,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesgetapplevelappearance",
+      "objectID": "api-system-preferences#systempreferencesgetapplevelappearance-macos",
       "name": "getAppLevelAppearance",
       "signature": "()",
       "platforms": [
@@ -24899,7 +24899,7 @@
       "fullSignature": "systemPreferences.getAppLevelAppearance",
       "tldr": "Gets the macOS appearance setting that you have declared you want for your application, maps to NSApplication.appearance.",
       "slug": "systempreferencesgetapplevelappearance",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgetapplevelappearance",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgetapplevelappearance-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24912,7 +24912,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencessetapplevelappearance",
+      "objectID": "api-system-preferences#systempreferencessetapplevelappearance-macos",
       "name": "setAppLevelAppearance",
       "signature": "(appearance)",
       "platforms": [
@@ -24949,7 +24949,7 @@
       "fullSignature": "systemPreferences.setAppLevelAppearance",
       "tldr": "Sets the appearance setting for your application, this should override the system default and override the value of getEffectiveAppearance.",
       "slug": "systempreferencessetapplevelappearance",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencessetapplevelappearance",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencessetapplevelappearance-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24962,7 +24962,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesistrustedaccessibilityclient",
+      "objectID": "api-system-preferences#systempreferencesistrustedaccessibilityclient-macos",
       "name": "isTrustedAccessibilityClient",
       "signature": "(prompt)",
       "platforms": [
@@ -24986,7 +24986,7 @@
       "fullSignature": "systemPreferences.isTrustedAccessibilityClient",
       "tldr": "Returns true if the current process is a trusted accessibility client and false if it is not.",
       "slug": "systempreferencesistrustedaccessibilityclient",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesistrustedaccessibilityclient",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesistrustedaccessibilityclient-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -24999,7 +24999,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesgetmediaaccessstatus",
+      "objectID": "api-system-preferences#systempreferencesgetmediaaccessstatus-macos",
       "name": "getMediaAccessStatus",
       "signature": "(mediaType)",
       "platforms": [
@@ -25041,7 +25041,7 @@
       "fullSignature": "systemPreferences.getMediaAccessStatus",
       "tldr": "This user consent was not required until macOS 10.14 Mojave, so this method will always return granted if your system is running 10.13 High Sierra or lower.",
       "slug": "systempreferencesgetmediaaccessstatus",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgetmediaaccessstatus",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesgetmediaaccessstatus-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -25054,7 +25054,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#systempreferencesaskformediaaccess",
+      "objectID": "api-system-preferences#systempreferencesaskformediaaccess-macos",
       "name": "askForMediaAccess",
       "signature": "(mediaType)",
       "platforms": [
@@ -25088,7 +25088,7 @@
       "fullSignature": "systemPreferences.askForMediaAccess",
       "tldr": "Important: In order to properly leverage this API, you must set the NSMicrophoneUsageDescription and NSCameraUsageDescription strings in your app's Info.plist file.",
       "slug": "systempreferencesaskformediaaccess",
-      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesaskformediaaccess",
+      "url": "https://electronjs.org/docs/api/system-preferences#systempreferencesaskformediaaccess-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -25101,7 +25101,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#event-accent-color-changed",
+      "objectID": "api-system-preferences#event-accent-color-changed-windows",
       "name": "accent-color-changed",
       "platforms": [
         "Windows"
@@ -25123,7 +25123,7 @@
       ],
       "apiType": "event",
       "fullSignature": "systemPreferences.on('accent-color-changed')",
-      "url": "https://electronjs.org/docs/api/system-preferences#event-accent-color-changed",
+      "url": "https://electronjs.org/docs/api/system-preferences#event-accent-color-changed-windows",
       "slug": "systempreferencesonaccent-color-changed",
       "tldr": null,
       "keyValuePairs": [
@@ -25138,7 +25138,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#event-color-changed",
+      "objectID": "api-system-preferences#event-color-changed-windows",
       "name": "color-changed",
       "platforms": [
         "Windows"
@@ -25153,7 +25153,7 @@
       ],
       "apiType": "event",
       "fullSignature": "systemPreferences.on('color-changed')",
-      "url": "https://electronjs.org/docs/api/system-preferences#event-color-changed",
+      "url": "https://electronjs.org/docs/api/system-preferences#event-color-changed-windows",
       "slug": "systempreferencesoncolor-changed",
       "tldr": null,
       "keyValuePairs": [
@@ -25168,7 +25168,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#event-inverted-color-scheme-changed",
+      "objectID": "api-system-preferences#event-inverted-color-scheme-changed-windows",
       "name": "inverted-color-scheme-changed",
       "platforms": [
         "Windows"
@@ -25190,7 +25190,7 @@
       ],
       "apiType": "event",
       "fullSignature": "systemPreferences.on('inverted-color-scheme-changed')",
-      "url": "https://electronjs.org/docs/api/system-preferences#event-inverted-color-scheme-changed",
+      "url": "https://electronjs.org/docs/api/system-preferences#event-inverted-color-scheme-changed-windows",
       "slug": "systempreferencesoninverted-color-scheme-changed",
       "tldr": null,
       "keyValuePairs": [
@@ -25205,7 +25205,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#event-high-contrast-color-scheme-changed",
+      "objectID": "api-system-preferences#event-high-contrast-color-scheme-changed-windows",
       "name": "high-contrast-color-scheme-changed",
       "platforms": [
         "Windows"
@@ -25227,7 +25227,7 @@
       ],
       "apiType": "event",
       "fullSignature": "systemPreferences.on('high-contrast-color-scheme-changed')",
-      "url": "https://electronjs.org/docs/api/system-preferences#event-high-contrast-color-scheme-changed",
+      "url": "https://electronjs.org/docs/api/system-preferences#event-high-contrast-color-scheme-changed-windows",
       "slug": "systempreferencesonhigh-contrast-color-scheme-changed",
       "tldr": null,
       "keyValuePairs": [
@@ -25242,7 +25242,7 @@
       ]
     },
     {
-      "objectID": "api-system-preferences#event-appearance-changed",
+      "objectID": "api-system-preferences#event-appearance-changed-macos",
       "name": "appearance-changed",
       "description": "NOTE: This event is only emitted after you have called startAppLevelAppearanceTrackingOS",
       "platforms": [
@@ -25267,7 +25267,7 @@
       ],
       "apiType": "event",
       "fullSignature": "systemPreferences.on('appearance-changed')",
-      "url": "https://electronjs.org/docs/api/system-preferences#event-appearance-changed",
+      "url": "https://electronjs.org/docs/api/system-preferences#event-appearance-changed-macos",
       "slug": "systempreferencesonappearance-changed",
       "tldr": "NOTE: This event is only emitted after you have called startAppLevelAppearanceTrackingOS.",
       "keyValuePairs": [
@@ -25904,7 +25904,7 @@
       ]
     },
     {
-      "objectID": "api-tray#traysetpressedimageimage",
+      "objectID": "api-tray#traysetpressedimageimage-macos",
       "name": "setPressedImage",
       "signature": "(image)",
       "platforms": [
@@ -25932,7 +25932,7 @@
       "fullSignature": "tray.setPressedImage(image)",
       "tldr": "Sets the image associated with this tray icon when pressed on macOS.",
       "slug": "traysetpressedimageimage",
-      "url": "https://electronjs.org/docs/api/tray#traysetpressedimageimage",
+      "url": "https://electronjs.org/docs/api/tray#traysetpressedimageimage-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -25974,7 +25974,7 @@
       ]
     },
     {
-      "objectID": "api-tray#traysettitletitle",
+      "objectID": "api-tray#traysettitletitle-macos",
       "name": "setTitle",
       "signature": "(title)",
       "platforms": [
@@ -25993,7 +25993,7 @@
       "fullSignature": "tray.setTitle(title)",
       "tldr": "Sets the title displayed aside of the tray icon in the status bar (Support ANSI colors).",
       "slug": "traysettitletitle",
-      "url": "https://electronjs.org/docs/api/tray#traysettitletitle",
+      "url": "https://electronjs.org/docs/api/tray#traysettitletitle-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -26006,7 +26006,7 @@
       ]
     },
     {
-      "objectID": "api-tray#traysethighlightmodemode",
+      "objectID": "api-tray#traysethighlightmodemode-macos",
       "name": "setHighlightMode",
       "signature": "(mode)",
       "platforms": [
@@ -26040,7 +26040,7 @@
       "fullSignature": "tray.setHighlightMode(mode)",
       "tldr": "Sets when the tray's icon background becomes highlighted (in blue).",
       "slug": "traysethighlightmodemode",
-      "url": "https://electronjs.org/docs/api/tray#traysethighlightmodemode",
+      "url": "https://electronjs.org/docs/api/tray#traysethighlightmodemode-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -26053,7 +26053,7 @@
       ]
     },
     {
-      "objectID": "api-tray#traysetignoredoubleclickeventsignore",
+      "objectID": "api-tray#traysetignoredoubleclickeventsignore-macos",
       "name": "setIgnoreDoubleClickEvents",
       "signature": "(ignore)",
       "platforms": [
@@ -26072,7 +26072,7 @@
       "fullSignature": "tray.setIgnoreDoubleClickEvents(ignore)",
       "tldr": "Sets the option to ignore double click events.",
       "slug": "traysetignoredoubleclickeventsignore",
-      "url": "https://electronjs.org/docs/api/tray#traysetignoredoubleclickeventsignore",
+      "url": "https://electronjs.org/docs/api/tray#traysetignoredoubleclickeventsignore-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -26085,7 +26085,7 @@
       ]
     },
     {
-      "objectID": "api-tray#traygetignoredoubleclickevents",
+      "objectID": "api-tray#traygetignoredoubleclickevents-macos",
       "name": "getIgnoreDoubleClickEvents",
       "signature": "()",
       "platforms": [
@@ -26100,7 +26100,7 @@
       "fullSignature": "tray.getIgnoreDoubleClickEvents()",
       "tldr": "Returns whether double click events will be ignored.",
       "slug": "traygetignoredoubleclickevents",
-      "url": "https://electronjs.org/docs/api/tray#traygetignoredoubleclickevents",
+      "url": "https://electronjs.org/docs/api/tray#traygetignoredoubleclickevents-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -26113,7 +26113,7 @@
       ]
     },
     {
-      "objectID": "api-tray#traydisplayballoonoptions",
+      "objectID": "api-tray#traydisplayballoonoptions-windows",
       "name": "displayBalloon",
       "signature": "(options)",
       "platforms": [
@@ -26164,7 +26164,7 @@
       "fullSignature": "tray.displayBalloon(options)",
       "tldr": "Displays a tray balloon.",
       "slug": "traydisplayballoonoptions",
-      "url": "https://electronjs.org/docs/api/tray#traydisplayballoonoptions",
+      "url": "https://electronjs.org/docs/api/tray#traydisplayballoonoptions-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -26177,7 +26177,7 @@
       ]
     },
     {
-      "objectID": "api-tray#traypopupcontextmenumenu-position",
+      "objectID": "api-tray#traypopupcontextmenumenu-position-macos-windows",
       "name": "popUpContextMenu",
       "signature": "([menu, position])",
       "platforms": [
@@ -26204,7 +26204,7 @@
       "fullSignature": "tray.popUpContextMenu([menu, position])",
       "tldr": "Pops up the context menu of the tray icon.",
       "slug": "traypopupcontextmenumenu-position",
-      "url": "https://electronjs.org/docs/api/tray#traypopupcontextmenumenu-position",
+      "url": "https://electronjs.org/docs/api/tray#traypopupcontextmenumenu-position-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -26255,7 +26255,7 @@
       ]
     },
     {
-      "objectID": "api-tray#traygetbounds",
+      "objectID": "api-tray#traygetbounds-macos-windows",
       "name": "getBounds",
       "signature": "()",
       "platforms": [
@@ -26271,7 +26271,7 @@
       "fullSignature": "tray.getBounds()",
       "tldr": "The bounds of this tray icon as Object.",
       "slug": "traygetbounds",
-      "url": "https://electronjs.org/docs/api/tray#traygetbounds",
+      "url": "https://electronjs.org/docs/api/tray#traygetbounds-macos-windows",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -26351,7 +26351,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-right-click",
+      "objectID": "api-tray#event-right-click-macos-windows",
       "name": "right-click",
       "description": "Emitted when the tray icon is right clicked.",
       "platforms": [
@@ -26375,7 +26375,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('right-click')",
-      "url": "https://electronjs.org/docs/api/tray#event-right-click",
+      "url": "https://electronjs.org/docs/api/tray#event-right-click-macos-windows",
       "slug": "trayonright-click",
       "tldr": "Emitted when the tray icon is right clicked.",
       "keyValuePairs": [
@@ -26390,7 +26390,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-double-click",
+      "objectID": "api-tray#event-double-click-macos-windows",
       "name": "double-click",
       "description": "Emitted when the tray icon is double clicked.",
       "platforms": [
@@ -26414,7 +26414,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('double-click')",
-      "url": "https://electronjs.org/docs/api/tray#event-double-click",
+      "url": "https://electronjs.org/docs/api/tray#event-double-click-macos-windows",
       "slug": "trayondouble-click",
       "tldr": "Emitted when the tray icon is double clicked.",
       "keyValuePairs": [
@@ -26429,7 +26429,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-balloon-show",
+      "objectID": "api-tray#event-balloon-show-windows",
       "name": "balloon-show",
       "description": "Emitted when the tray balloon shows.",
       "platforms": [
@@ -26437,7 +26437,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('balloon-show')",
-      "url": "https://electronjs.org/docs/api/tray#event-balloon-show",
+      "url": "https://electronjs.org/docs/api/tray#event-balloon-show-windows",
       "slug": "trayonballoon-show",
       "tldr": "Emitted when the tray balloon shows.",
       "keyValuePairs": [
@@ -26452,7 +26452,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-balloon-click",
+      "objectID": "api-tray#event-balloon-click-windows",
       "name": "balloon-click",
       "description": "Emitted when the tray balloon is clicked.",
       "platforms": [
@@ -26460,7 +26460,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('balloon-click')",
-      "url": "https://electronjs.org/docs/api/tray#event-balloon-click",
+      "url": "https://electronjs.org/docs/api/tray#event-balloon-click-windows",
       "slug": "trayonballoon-click",
       "tldr": "Emitted when the tray balloon is clicked.",
       "keyValuePairs": [
@@ -26475,7 +26475,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-balloon-closed",
+      "objectID": "api-tray#event-balloon-closed-windows",
       "name": "balloon-closed",
       "description": "Emitted when the tray balloon is closed because of timeout or user manually closes it.",
       "platforms": [
@@ -26483,7 +26483,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('balloon-closed')",
-      "url": "https://electronjs.org/docs/api/tray#event-balloon-closed",
+      "url": "https://electronjs.org/docs/api/tray#event-balloon-closed-windows",
       "slug": "trayonballoon-closed",
       "tldr": "Emitted when the tray balloon is closed because of timeout or user manually closes it.",
       "keyValuePairs": [
@@ -26498,7 +26498,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-drop",
+      "objectID": "api-tray#event-drop-macos",
       "name": "drop",
       "description": "Emitted when any dragged items are dropped on the tray icon.",
       "platforms": [
@@ -26506,7 +26506,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('drop')",
-      "url": "https://electronjs.org/docs/api/tray#event-drop",
+      "url": "https://electronjs.org/docs/api/tray#event-drop-macos",
       "slug": "trayondrop",
       "tldr": "Emitted when any dragged items are dropped on the tray icon.",
       "keyValuePairs": [
@@ -26521,7 +26521,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-drop-files",
+      "objectID": "api-tray#event-drop-files-macos",
       "name": "drop-files",
       "description": "Emitted when dragged files are dropped in the tray icon.",
       "platforms": [
@@ -26544,7 +26544,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('drop-files')",
-      "url": "https://electronjs.org/docs/api/tray#event-drop-files",
+      "url": "https://electronjs.org/docs/api/tray#event-drop-files-macos",
       "slug": "trayondrop-files",
       "tldr": "Emitted when dragged files are dropped in the tray icon.",
       "keyValuePairs": [
@@ -26559,7 +26559,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-drop-text",
+      "objectID": "api-tray#event-drop-text-macos",
       "name": "drop-text",
       "description": "Emitted when dragged text is dropped in the tray icon.",
       "platforms": [
@@ -26582,7 +26582,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('drop-text')",
-      "url": "https://electronjs.org/docs/api/tray#event-drop-text",
+      "url": "https://electronjs.org/docs/api/tray#event-drop-text-macos",
       "slug": "trayondrop-text",
       "tldr": "Emitted when dragged text is dropped in the tray icon.",
       "keyValuePairs": [
@@ -26597,7 +26597,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-drag-enter",
+      "objectID": "api-tray#event-drag-enter-macos",
       "name": "drag-enter",
       "description": "Emitted when a drag operation enters the tray icon.",
       "platforms": [
@@ -26605,7 +26605,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('drag-enter')",
-      "url": "https://electronjs.org/docs/api/tray#event-drag-enter",
+      "url": "https://electronjs.org/docs/api/tray#event-drag-enter-macos",
       "slug": "trayondrag-enter",
       "tldr": "Emitted when a drag operation enters the tray icon.",
       "keyValuePairs": [
@@ -26620,7 +26620,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-drag-leave",
+      "objectID": "api-tray#event-drag-leave-macos",
       "name": "drag-leave",
       "description": "Emitted when a drag operation exits the tray icon.",
       "platforms": [
@@ -26628,7 +26628,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('drag-leave')",
-      "url": "https://electronjs.org/docs/api/tray#event-drag-leave",
+      "url": "https://electronjs.org/docs/api/tray#event-drag-leave-macos",
       "slug": "trayondrag-leave",
       "tldr": "Emitted when a drag operation exits the tray icon.",
       "keyValuePairs": [
@@ -26643,7 +26643,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-drag-end",
+      "objectID": "api-tray#event-drag-end-macos",
       "name": "drag-end",
       "description": "Emitted when a drag operation ends on the tray or ends at another location.",
       "platforms": [
@@ -26651,7 +26651,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('drag-end')",
-      "url": "https://electronjs.org/docs/api/tray#event-drag-end",
+      "url": "https://electronjs.org/docs/api/tray#event-drag-end-macos",
       "slug": "trayondrag-end",
       "tldr": "Emitted when a drag operation ends on the tray or ends at another location.",
       "keyValuePairs": [
@@ -26666,7 +26666,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-mouse-enter",
+      "objectID": "api-tray#event-mouse-enter-macos",
       "name": "mouse-enter",
       "description": "Emitted when the mouse enters the tray icon.",
       "platforms": [
@@ -26689,7 +26689,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('mouse-enter')",
-      "url": "https://electronjs.org/docs/api/tray#event-mouse-enter",
+      "url": "https://electronjs.org/docs/api/tray#event-mouse-enter-macos",
       "slug": "trayonmouse-enter",
       "tldr": "Emitted when the mouse enters the tray icon.",
       "keyValuePairs": [
@@ -26704,7 +26704,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-mouse-leave",
+      "objectID": "api-tray#event-mouse-leave-macos",
       "name": "mouse-leave",
       "description": "Emitted when the mouse exits the tray icon.",
       "platforms": [
@@ -26727,7 +26727,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('mouse-leave')",
-      "url": "https://electronjs.org/docs/api/tray#event-mouse-leave",
+      "url": "https://electronjs.org/docs/api/tray#event-mouse-leave-macos",
       "slug": "trayonmouse-leave",
       "tldr": "Emitted when the mouse exits the tray icon.",
       "keyValuePairs": [
@@ -26742,7 +26742,7 @@
       ]
     },
     {
-      "objectID": "api-tray#event-mouse-move",
+      "objectID": "api-tray#event-mouse-move-macos",
       "name": "mouse-move",
       "description": "Emitted when the mouse moves in the tray icon.",
       "platforms": [
@@ -26765,7 +26765,7 @@
       ],
       "apiType": "event",
       "fullSignature": "tray.on('mouse-move')",
-      "url": "https://electronjs.org/docs/api/tray#event-mouse-move",
+      "url": "https://electronjs.org/docs/api/tray#event-mouse-move-macos",
       "slug": "trayonmouse-move",
       "tldr": "Emitted when the mouse moves in the tray icon.",
       "keyValuePairs": [
@@ -28072,7 +28072,7 @@
       ]
     },
     {
-      "objectID": "api-web-contents#contentssetignoremenushortcutsignore",
+      "objectID": "api-web-contents#contentssetignoremenushortcutsignore-experimental",
       "name": "setIgnoreMenuShortcuts",
       "signature": "(ignore)",
       "platforms": [
@@ -28091,7 +28091,7 @@
       "fullSignature": "contents.setIgnoreMenuShortcuts(ignore)",
       "tldr": "Ignore application menu shortcuts while this web contents is focused.",
       "slug": "contentssetignoremenushortcutsignore",
-      "url": "https://electronjs.org/docs/api/web-contents#contentssetignoremenushortcutsignore",
+      "url": "https://electronjs.org/docs/api/web-contents#contentssetignoremenushortcutsignore-experimental",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -29877,7 +29877,7 @@
       ]
     },
     {
-      "objectID": "api-web-contents#contentsshowdefinitionforselection",
+      "objectID": "api-web-contents#contentsshowdefinitionforselection-macos",
       "name": "showDefinitionForSelection",
       "signature": "()",
       "platforms": [
@@ -29888,7 +29888,7 @@
       "fullSignature": "contents.showDefinitionForSelection()",
       "tldr": "Shows pop-up dictionary that searches the selected word on the page.",
       "slug": "contentsshowdefinitionforselection",
-      "url": "https://electronjs.org/docs/api/web-contents#contentsshowdefinitionforselection",
+      "url": "https://electronjs.org/docs/api/web-contents#contentsshowdefinitionforselection-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -33218,7 +33218,7 @@
       ]
     },
     {
-      "objectID": "api-web-frame#webframesetisolatedworldcontentsecuritypolicy",
+      "objectID": "api-web-frame#webframesetisolatedworldcontentsecuritypolicy-(deprecated)",
       "name": "setIsolatedWorldContentSecurityPolicy",
       "signature": "(worldId, csp)",
       "platforms": [
@@ -33244,7 +33244,7 @@
       "fullSignature": "webFrame.setIsolatedWorldContentSecurityPolicy",
       "tldr": "Set the content security policy of the isolated world.",
       "slug": "webframesetisolatedworldcontentsecuritypolicy",
-      "url": "https://electronjs.org/docs/api/web-frame#webframesetisolatedworldcontentsecuritypolicy",
+      "url": "https://electronjs.org/docs/api/web-frame#webframesetisolatedworldcontentsecuritypolicy-(deprecated)",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -33257,7 +33257,7 @@
       ]
     },
     {
-      "objectID": "api-web-frame#webframesetisolatedworldhumanreadablename",
+      "objectID": "api-web-frame#webframesetisolatedworldhumanreadablename-(deprecated)",
       "name": "setIsolatedWorldHumanReadableName",
       "signature": "(worldId, name)",
       "platforms": [
@@ -33283,7 +33283,7 @@
       "fullSignature": "webFrame.setIsolatedWorldHumanReadableName",
       "tldr": "Set the name of the isolated world.",
       "slug": "webframesetisolatedworldhumanreadablename",
-      "url": "https://electronjs.org/docs/api/web-frame#webframesetisolatedworldhumanreadablename",
+      "url": "https://electronjs.org/docs/api/web-frame#webframesetisolatedworldhumanreadablename-(deprecated)",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -33296,7 +33296,7 @@
       ]
     },
     {
-      "objectID": "api-web-frame#webframesetisolatedworldsecurityorigin",
+      "objectID": "api-web-frame#webframesetisolatedworldsecurityorigin-(deprecated)",
       "name": "setIsolatedWorldSecurityOrigin",
       "signature": "(worldId, securityOrigin)",
       "platforms": [
@@ -33322,7 +33322,7 @@
       "fullSignature": "webFrame.setIsolatedWorldSecurityOrigin",
       "tldr": "Set the security origin of the isolated world.",
       "slug": "webframesetisolatedworldsecurityorigin",
-      "url": "https://electronjs.org/docs/api/web-frame#webframesetisolatedworldsecurityorigin",
+      "url": "https://electronjs.org/docs/api/web-frame#webframesetisolatedworldsecurityorigin-(deprecated)",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -36463,7 +36463,7 @@
       ]
     },
     {
-      "objectID": "api-webview-tag#webviewtagshowdefinitionforselection",
+      "objectID": "api-webview-tag#webviewtagshowdefinitionforselection-macos",
       "name": "showDefinitionForSelection",
       "signature": "()",
       "platforms": [
@@ -36474,7 +36474,7 @@
       "fullSignature": "webviewTag.showDefinitionForSelection",
       "tldr": "Shows pop-up dictionary that searches the selected word on the page.",
       "slug": "webviewtagshowdefinitionforselection",
-      "url": "https://electronjs.org/docs/api/webview-tag#webviewtagshowdefinitionforselection",
+      "url": "https://electronjs.org/docs/api/webview-tag#webviewtagshowdefinitionforselection-macos",
       "keyValuePairs": [
         "is:doc",
         "is:api",
