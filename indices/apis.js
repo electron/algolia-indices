@@ -1,8 +1,24 @@
+// @ts-check
+
 const AlgoliaIndex = require('../lib/algolia-index')
+// @ts-ignore
 const apis = require('../electron-api.json')
 const slugger = new (require('github-slugger'))()
 
 module.exports = new AlgoliaIndex('apis', getRecords())
+
+/**
+ * @param {Array<String>} platform
+ */
+function platformNeeded (platform) {
+  if (platform !== undefined) {
+    let platformReturn = `-${platform.join('-').toLowerCase()}`
+    if (platform.includes('(Deprecated)')) return platformReturn.replace('(deprecated)', 'deprecated')
+    return platformReturn
+  } else {
+    return ''
+  }
+}
 
 function getRecords () {
   const records = []
@@ -15,7 +31,7 @@ function getRecords () {
       property.fullSignature = `${api.name}.${property.name}`
       property.tldr = getTLDR(property)
       property.slug = slugger.slug(property.fullSignature, false)
-      property.url = `https://electronjs.org/docs/api/${api.slug}#${property.slug}${property.platforms !== undefined ? `-${property.platforms.join('-').toLowerCase()}` : ''}`
+      property.url = `https://electronjs.org/docs/api/${api.slug}#${property.slug}${platformNeeded(property.platforms)}`
       records.push(property)
     })
 
@@ -25,7 +41,7 @@ function getRecords () {
       property.fullSignature = `${api.name}.${property.name}`
       property.tldr = getTLDR(property)
       property.slug = slugger.slug(property.fullSignature, false)
-      property.url = `https://electronjs.org/docs/api/${api.slug}#${property.slug}${property.platforms !== undefined ? `-${property.platforms.join('-').toLowerCase()}` : ''}`
+      property.url = `https://electronjs.org/docs/api/${api.slug}#${property.slug}${platformNeeded(property.platforms)}`
       records.push(property)
     })
 
@@ -35,7 +51,7 @@ function getRecords () {
       method.fullSignature = `${api.name}.${method.name}`
       method.tldr = getTLDR(method)
       method.slug = slugger.slug(method.fullSignature, false)
-      method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}${method.platforms !== undefined ? `-${method.platforms.join('-').toLowerCase()}` : ''}`
+      method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}${platformNeeded(method.platforms)}`
       records.push(method)
     })
 
@@ -45,7 +61,7 @@ function getRecords () {
       method.fullSignature = `${api.name}.${method.name}${method.signature}`
       method.tldr = getTLDR(method)
       method.slug = slugger.slug(method.fullSignature, false)
-      method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}${method.platforms !== undefined ? `-${method.platforms.join('-').toLowerCase()}` : ''}`
+      method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}${platformNeeded(method.platforms)}`
       records.push(method)
     })
 
@@ -55,7 +71,7 @@ function getRecords () {
       method.fullSignature = `${api.instanceName}.${method.name}${method.signature}`
       method.tldr = getTLDR(method)
       method.slug = slugger.slug(method.fullSignature, false)
-      method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}${method.platforms !== undefined ? `-${method.platforms.join('-').toLowerCase()}` : ''}`
+      method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}${platformNeeded(method.platforms)}`
       records.push(method)
     })
 
@@ -63,7 +79,7 @@ function getRecords () {
     events.forEach(event => {
       event.apiType = 'event'
       event.fullSignature = `${api.name}.on('${event.name}')`
-      event.url = `https://electronjs.org/docs/api/${api.slug}#event-${event.name}${event.platforms !== undefined ? `-${event.platforms.join('-').toLowerCase()}` : ''}`
+      event.url = `https://electronjs.org/docs/api/${api.slug}#event-${event.name}${platformNeeded(event.platforms)}`
       event.slug = slugger.slug(event.fullSignature, false)
       event.tldr = getTLDR(event)
       records.push(event)
@@ -73,7 +89,7 @@ function getRecords () {
     instanceEvents.forEach(event => {
       event.apiType = 'event'
       event.fullSignature = `${api.instanceName}.on('${event.name}')`
-      event.url = `https://electronjs.org/docs/api/${api.slug}#event-${event.name}${event.platforms !== undefined ? `-${event.platforms.join('-').toLowerCase()}` : ''}`
+      event.url = `https://electronjs.org/docs/api/${api.slug}#event-${event.name}${platformNeeded(event.platforms)}`
       event.slug = slugger.slug(event.fullSignature, false)
       event.tldr = getTLDR(event)
       records.push(event)
