@@ -17,7 +17,7 @@ npm update electron-npm-packages
 npm update electron-releases
 
 # Update electron-api.json
-npm run update-electron
+node ./script/update-electron-apis.js
 # Buildes the indices
 npm run build
 npm test

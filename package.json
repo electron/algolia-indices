@@ -11,7 +11,6 @@
     "preupload": "npm run test",
     "upload": "node script/upload.js",
     "update-data-sources": "script/update-data-sources.sh",
-    "update-electron": "node script/dl-api.js",
     "pretest": "npm run build",
     "test": "tape test.js | tap-summary --no-progress && standard --fix",
     "lint": "standard --fix",
