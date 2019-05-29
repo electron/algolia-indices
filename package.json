@@ -23,7 +23,7 @@
     "require-directory": "^2.1.1"
   },
   "devDependencies": {
-    "algoliasearch": "^3.27.1",
+    "algoliasearch": "^3.33.0",
     "budo": "^11.2.0",
     "cheerio": "^1.0.0-rc.2",
     "count-array-values": "^1.2.1",
@@ -32,7 +32,7 @@
     "electron-i18n": "^1.1362.0",
     "electron-npm-packages": "^4.1.2",
     "github-slugger": "^1.2.0",
-    "instantsearch.js": "^3.2.1",
+    "instantsearch.js": "^3.5.1",
     "is-url": "^1.2.4",
     "local-repl": "^4.0.0",
     "lodash": "^4.17.10",
