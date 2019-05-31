@@ -26,7 +26,7 @@ action "Run tests" {
 }
 
 action "Only publish master branch" {
-  uses = "BinaryMuse/tip-of-branch@stable"
+  uses = "BinaryMuse/tip-of-branch@master"
   needs = ["Run tests"]
   args = "master"
   secrets = ["GITHUB_TOKEN"]
