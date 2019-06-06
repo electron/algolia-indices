@@ -33413,7 +33413,7 @@
       ]
     },
     {
-      "objectID": "api-web-frame#webframesetisolatedworldcontentsecuritypolicy-(deprecated)",
+      "objectID": "api-web-frame#webframesetisolatedworldcontentsecuritypolicy-deprecated",
       "name": "setIsolatedWorldContentSecurityPolicy",
       "signature": "(worldId, csp)",
       "platforms": [
@@ -33439,7 +33439,7 @@
       "fullSignature": "webFrame.setIsolatedWorldContentSecurityPolicy",
       "tldr": "Set the content security policy of the isolated world.",
       "slug": "webframesetisolatedworldcontentsecuritypolicy",
-      "url": "https://electronjs.org/docs/api/web-frame#webframesetisolatedworldcontentsecuritypolicy-(deprecated)",
+      "url": "https://electronjs.org/docs/api/web-frame#webframesetisolatedworldcontentsecuritypolicy-deprecated",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -33452,7 +33452,7 @@
       ]
     },
     {
-      "objectID": "api-web-frame#webframesetisolatedworldhumanreadablename-(deprecated)",
+      "objectID": "api-web-frame#webframesetisolatedworldhumanreadablename-deprecated",
       "name": "setIsolatedWorldHumanReadableName",
       "signature": "(worldId, name)",
       "platforms": [
@@ -33478,7 +33478,7 @@
       "fullSignature": "webFrame.setIsolatedWorldHumanReadableName",
       "tldr": "Set the name of the isolated world.",
       "slug": "webframesetisolatedworldhumanreadablename",
-      "url": "https://electronjs.org/docs/api/web-frame#webframesetisolatedworldhumanreadablename-(deprecated)",
+      "url": "https://electronjs.org/docs/api/web-frame#webframesetisolatedworldhumanreadablename-deprecated",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -33491,7 +33491,7 @@
       ]
     },
     {
-      "objectID": "api-web-frame#webframesetisolatedworldsecurityorigin-(deprecated)",
+      "objectID": "api-web-frame#webframesetisolatedworldsecurityorigin-deprecated",
       "name": "setIsolatedWorldSecurityOrigin",
       "signature": "(worldId, securityOrigin)",
       "platforms": [
@@ -33517,7 +33517,7 @@
       "fullSignature": "webFrame.setIsolatedWorldSecurityOrigin",
       "tldr": "Set the security origin of the isolated world.",
       "slug": "webframesetisolatedworldsecurityorigin",
-      "url": "https://electronjs.org/docs/api/web-frame#webframesetisolatedworldsecurityorigin-(deprecated)",
+      "url": "https://electronjs.org/docs/api/web-frame#webframesetisolatedworldsecurityorigin-deprecated",
       "keyValuePairs": [
         "is:doc",
         "is:api",
