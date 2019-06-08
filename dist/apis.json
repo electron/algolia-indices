@@ -3239,7 +3239,7 @@
     {
       "objectID": "api-app#event-second-instance",
       "name": "second-instance",
-      "description": "This event will be emitted inside the primary instance of your application when a second instance has been executed. argv is an Array of the second instance's command line arguments, and workingDirectory is its current working directory. Usually applications respond to this by making their primary window focused and non-minimized. This event is guaranteed to be emitted after the ready event of app gets emitted. Note: Extra command line arguments might be added by Chromium, such as --original-process-start-time.",
+      "description": "This event will be emitted inside the primary instance of your application when a second instance has been executed and calls app.requestSingleInstanceLock(). argv is an Array of the second instance's command line arguments, and workingDirectory is its current working directory. Usually applications respond to this by making their primary window focused and non-minimized. This event is guaranteed to be emitted after the ready event of app gets emitted. Note: Extra command line arguments might be added by Chromium, such as --original-process-start-time.",
       "returns": [
         {
           "name": "event",
@@ -3266,7 +3266,7 @@
       "fullSignature": "app.on('second-instance')",
       "url": "https://electronjs.org/docs/api/app#event-second-instance",
       "slug": "apponsecond-instance",
-      "tldr": "This event will be emitted inside the primary instance of your application when a second instance has been executed.",
+      "tldr": "This event will be emitted inside the primary instance of your application when a second instance has been executed and calls app.requestSingleInstanceLock().",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -16337,121 +16337,6 @@
       ]
     },
     {
-      "objectID": "api-memory-info#memoryinfopid",
-      "name": "pid",
-      "type": "Integer",
-      "collection": false,
-      "description": "Process id of the process.",
-      "required": true,
-      "apiType": "properties",
-      "fullSignature": "MemoryInfo.pid",
-      "tldr": "Process id of the process.",
-      "slug": "memoryinfopid",
-      "url": "https://electronjs.org/docs/api/memory-info#memoryinfopid",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:pid",
-        "api:memoryinfopid",
-        "api:MemoryInfo.pid",
-        "doc:pid",
-        "doc:memoryinfopid",
-        "doc:MemoryInfo.pid"
-      ]
-    },
-    {
-      "objectID": "api-memory-info#memoryinfoworkingsetsize",
-      "name": "workingSetSize",
-      "type": "Integer",
-      "collection": false,
-      "description": "The amount of memory currently pinned to actual physical RAM.",
-      "required": true,
-      "apiType": "properties",
-      "fullSignature": "MemoryInfo.workingSetSize",
-      "tldr": "The amount of memory currently pinned to actual physical RAM.",
-      "slug": "memoryinfoworkingsetsize",
-      "url": "https://electronjs.org/docs/api/memory-info#memoryinfoworkingsetsize",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:workingSetSize",
-        "api:memoryinfoworkingsetsize",
-        "api:MemoryInfo.workingSetSize",
-        "doc:workingSetSize",
-        "doc:memoryinfoworkingsetsize",
-        "doc:MemoryInfo.workingSetSize"
-      ]
-    },
-    {
-      "objectID": "api-memory-info#memoryinfopeakworkingsetsize",
-      "name": "peakWorkingSetSize",
-      "type": "Integer",
-      "collection": false,
-      "description": "The maximum amount of memory that has ever been pinned to actual physical RAM. On macOS its value will always be 0.",
-      "required": true,
-      "apiType": "properties",
-      "fullSignature": "MemoryInfo.peakWorkingSetSize",
-      "tldr": "The maximum amount of memory that has ever been pinned to actual physical RAM.",
-      "slug": "memoryinfopeakworkingsetsize",
-      "url": "https://electronjs.org/docs/api/memory-info#memoryinfopeakworkingsetsize",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:peakWorkingSetSize",
-        "api:memoryinfopeakworkingsetsize",
-        "api:MemoryInfo.peakWorkingSetSize",
-        "doc:peakWorkingSetSize",
-        "doc:memoryinfopeakworkingsetsize",
-        "doc:MemoryInfo.peakWorkingSetSize"
-      ]
-    },
-    {
-      "objectID": "api-memory-info#memoryinfoprivatebytes",
-      "name": "privateBytes",
-      "type": "Integer",
-      "collection": false,
-      "description": "The amount of memory not shared by other processes, such as JS heap or HTML content.",
-      "required": true,
-      "apiType": "properties",
-      "fullSignature": "MemoryInfo.privateBytes",
-      "tldr": "The amount of memory not shared by other processes, such as JS heap or HTML content.",
-      "slug": "memoryinfoprivatebytes",
-      "url": "https://electronjs.org/docs/api/memory-info#memoryinfoprivatebytes",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:privateBytes",
-        "api:memoryinfoprivatebytes",
-        "api:MemoryInfo.privateBytes",
-        "doc:privateBytes",
-        "doc:memoryinfoprivatebytes",
-        "doc:MemoryInfo.privateBytes"
-      ]
-    },
-    {
-      "objectID": "api-memory-info#memoryinfosharedbytes",
-      "name": "sharedBytes",
-      "type": "Integer",
-      "collection": false,
-      "description": "The amount of memory shared between processes, typically memory consumed by the Electron code itself",
-      "required": true,
-      "apiType": "properties",
-      "fullSignature": "MemoryInfo.sharedBytes",
-      "tldr": "The amount of memory shared between processes, typically memory consumed by the Electron code itself.",
-      "slug": "memoryinfosharedbytes",
-      "url": "https://electronjs.org/docs/api/memory-info#memoryinfosharedbytes",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:sharedBytes",
-        "api:memoryinfosharedbytes",
-        "api:MemoryInfo.sharedBytes",
-        "doc:sharedBytes",
-        "doc:memoryinfosharedbytes",
-        "doc:MemoryInfo.sharedBytes"
-      ]
-    },
-    {
       "objectID": "api-memory-usage-details#memoryusagedetailscount",
       "name": "count",
       "type": "Number",
@@ -17096,201 +16981,6 @@
       ]
     },
     {
-      "objectID": "api-native-image#nativeimagecreateempty",
-      "name": "createEmpty",
-      "signature": "()",
-      "description": "Creates an empty NativeImage instance.",
-      "returns": {
-        "type": "NativeImage",
-        "collection": false
-      },
-      "apiType": "methods",
-      "fullSignature": "nativeImage.createEmpty",
-      "tldr": "Creates an empty NativeImage instance.",
-      "slug": "nativeimagecreateempty",
-      "url": "https://electronjs.org/docs/api/native-image#nativeimagecreateempty",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:createEmpty",
-        "api:nativeimagecreateempty",
-        "api:nativeImage.createEmpty",
-        "doc:createEmpty",
-        "doc:nativeimagecreateempty",
-        "doc:nativeImage.createEmpty"
-      ]
-    },
-    {
-      "objectID": "api-native-image#nativeimagecreatefrompath",
-      "name": "createFromPath",
-      "signature": "(path)",
-      "description": "Creates a new NativeImage instance from a file located at path. This method returns an empty image if the path does not exist, cannot be read, or is not a valid image.",
-      "parameters": [
-        {
-          "name": "path",
-          "type": "String",
-          "collection": false,
-          "required": true
-        }
-      ],
-      "returns": {
-        "type": "NativeImage",
-        "collection": false
-      },
-      "apiType": "methods",
-      "fullSignature": "nativeImage.createFromPath",
-      "tldr": "Creates a new NativeImage instance from a file located at path.",
-      "slug": "nativeimagecreatefrompath",
-      "url": "https://electronjs.org/docs/api/native-image#nativeimagecreatefrompath",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:createFromPath",
-        "api:nativeimagecreatefrompath",
-        "api:nativeImage.createFromPath",
-        "doc:createFromPath",
-        "doc:nativeimagecreatefrompath",
-        "doc:nativeImage.createFromPath"
-      ]
-    },
-    {
-      "objectID": "api-native-image#nativeimagecreatefrombuffer",
-      "name": "createFromBuffer",
-      "signature": "(buffer[, options])",
-      "description": "Creates a new NativeImage instance from buffer.",
-      "parameters": [
-        {
-          "name": "buffer",
-          "type": "Buffer",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "options",
-          "type": "Object",
-          "collection": false,
-          "required": false,
-          "properties": [
-            {
-              "name": "width",
-              "type": "Integer",
-              "collection": false,
-              "description": "Required for bitmap buffers.",
-              "required": false
-            },
-            {
-              "name": "height",
-              "type": "Integer",
-              "collection": false,
-              "description": "Required for bitmap buffers.",
-              "required": false
-            },
-            {
-              "name": "scaleFactor",
-              "type": "Double",
-              "collection": false,
-              "description": "Defaults to 1.0.",
-              "required": false
-            }
-          ]
-        }
-      ],
-      "returns": {
-        "type": "NativeImage",
-        "collection": false
-      },
-      "apiType": "methods",
-      "fullSignature": "nativeImage.createFromBuffer",
-      "tldr": "Creates a new NativeImage instance from buffer.",
-      "slug": "nativeimagecreatefrombuffer",
-      "url": "https://electronjs.org/docs/api/native-image#nativeimagecreatefrombuffer",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:createFromBuffer",
-        "api:nativeimagecreatefrombuffer",
-        "api:nativeImage.createFromBuffer",
-        "doc:createFromBuffer",
-        "doc:nativeimagecreatefrombuffer",
-        "doc:nativeImage.createFromBuffer"
-      ]
-    },
-    {
-      "objectID": "api-native-image#nativeimagecreatefromdataurl",
-      "name": "createFromDataURL",
-      "signature": "(dataURL)",
-      "description": "Creates a new NativeImage instance from dataURL.",
-      "parameters": [
-        {
-          "name": "dataURL",
-          "type": "String",
-          "collection": false,
-          "required": true
-        }
-      ],
-      "returns": {
-        "type": "NativeImage",
-        "collection": false
-      },
-      "apiType": "methods",
-      "fullSignature": "nativeImage.createFromDataURL",
-      "tldr": "Creates a new NativeImage instance from dataURL.",
-      "slug": "nativeimagecreatefromdataurl",
-      "url": "https://electronjs.org/docs/api/native-image#nativeimagecreatefromdataurl",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:createFromDataURL",
-        "api:nativeimagecreatefromdataurl",
-        "api:nativeImage.createFromDataURL",
-        "doc:createFromDataURL",
-        "doc:nativeimagecreatefromdataurl",
-        "doc:nativeImage.createFromDataURL"
-      ]
-    },
-    {
-      "objectID": "api-native-image#nativeimagecreatefromnamedimage-macos",
-      "name": "createFromNamedImage",
-      "signature": "(imageName[, hslShift])",
-      "platforms": [
-        "macOS"
-      ],
-      "description": "Creates a new NativeImage instance from the NSImage that maps to the given image name. See NSImageName for a list of possible values. The hslShift is applied to the image with the following rules This means that [-1, 0, 1] will make the image completely white and [-1, 1, 0] will make the image completely black. In some cases, the NSImageName doesn't match its string representation; one example of this is NSFolderImageName, whose string representation would actually be NSFolder. Therefore, you'll need to determine the correct string representation for your image before passing it in. This can be done with the following: echo -e '#import <Cocoa/Cocoa.h>\\nint main() { NSLog(@\"%@\", SYSTEM_IMAGE_NAME); }' | clang -otest -x objective-c -framework Cocoa - && ./test where SYSTEM_IMAGE_NAME should be replaced with any value from this list.",
-      "parameters": [
-        {
-          "name": "imageName",
-          "type": "String",
-          "collection": false,
-          "required": true
-        },
-        {
-          "name": "hslShift",
-          "type": "Number",
-          "collection": true,
-          "required": true
-        }
-      ],
-      "returns": {
-        "type": "NativeImage",
-        "collection": false
-      },
-      "apiType": "methods",
-      "fullSignature": "nativeImage.createFromNamedImage",
-      "tldr": "Creates a new NativeImage instance from the NSImage that maps to the given image name.",
-      "slug": "nativeimagecreatefromnamedimage",
-      "url": "https://electronjs.org/docs/api/native-image#nativeimagecreatefromnamedimage-macos",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:createFromNamedImage",
-        "api:nativeimagecreatefromnamedimage",
-        "api:nativeImage.createFromNamedImage",
-        "doc:createFromNamedImage",
-        "doc:nativeimagecreatefromnamedimage",
-        "doc:nativeImage.createFromNamedImage"
-      ]
-    },
-    {
       "objectID": "api-native-image#imagetopngoptions",
       "name": "toPNG",
       "signature": "([options])",
@@ -17805,6 +17495,201 @@
         "doc:addRepresentation",
         "doc:imageaddrepresentationoptions",
         "doc:image.addRepresentation(options)"
+      ]
+    },
+    {
+      "objectID": "api-native-image#nativeimagecreateempty",
+      "name": "createEmpty",
+      "signature": "()",
+      "description": "Creates an empty NativeImage instance.",
+      "returns": {
+        "type": "NativeImage",
+        "collection": false
+      },
+      "apiType": "methods",
+      "fullSignature": "nativeImage.createEmpty",
+      "tldr": "Creates an empty NativeImage instance.",
+      "slug": "nativeimagecreateempty",
+      "url": "https://electronjs.org/docs/api/native-image#nativeimagecreateempty",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:createEmpty",
+        "api:nativeimagecreateempty",
+        "api:nativeImage.createEmpty",
+        "doc:createEmpty",
+        "doc:nativeimagecreateempty",
+        "doc:nativeImage.createEmpty"
+      ]
+    },
+    {
+      "objectID": "api-native-image#nativeimagecreatefrompath",
+      "name": "createFromPath",
+      "signature": "(path)",
+      "description": "Creates a new NativeImage instance from a file located at path. This method returns an empty image if the path does not exist, cannot be read, or is not a valid image.",
+      "parameters": [
+        {
+          "name": "path",
+          "type": "String",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "returns": {
+        "type": "NativeImage",
+        "collection": false
+      },
+      "apiType": "methods",
+      "fullSignature": "nativeImage.createFromPath",
+      "tldr": "Creates a new NativeImage instance from a file located at path.",
+      "slug": "nativeimagecreatefrompath",
+      "url": "https://electronjs.org/docs/api/native-image#nativeimagecreatefrompath",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:createFromPath",
+        "api:nativeimagecreatefrompath",
+        "api:nativeImage.createFromPath",
+        "doc:createFromPath",
+        "doc:nativeimagecreatefrompath",
+        "doc:nativeImage.createFromPath"
+      ]
+    },
+    {
+      "objectID": "api-native-image#nativeimagecreatefrombuffer",
+      "name": "createFromBuffer",
+      "signature": "(buffer[, options])",
+      "description": "Creates a new NativeImage instance from buffer.",
+      "parameters": [
+        {
+          "name": "buffer",
+          "type": "Buffer",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "options",
+          "type": "Object",
+          "collection": false,
+          "required": false,
+          "properties": [
+            {
+              "name": "width",
+              "type": "Integer",
+              "collection": false,
+              "description": "Required for bitmap buffers.",
+              "required": false
+            },
+            {
+              "name": "height",
+              "type": "Integer",
+              "collection": false,
+              "description": "Required for bitmap buffers.",
+              "required": false
+            },
+            {
+              "name": "scaleFactor",
+              "type": "Double",
+              "collection": false,
+              "description": "Defaults to 1.0.",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "returns": {
+        "type": "NativeImage",
+        "collection": false
+      },
+      "apiType": "methods",
+      "fullSignature": "nativeImage.createFromBuffer",
+      "tldr": "Creates a new NativeImage instance from buffer.",
+      "slug": "nativeimagecreatefrombuffer",
+      "url": "https://electronjs.org/docs/api/native-image#nativeimagecreatefrombuffer",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:createFromBuffer",
+        "api:nativeimagecreatefrombuffer",
+        "api:nativeImage.createFromBuffer",
+        "doc:createFromBuffer",
+        "doc:nativeimagecreatefrombuffer",
+        "doc:nativeImage.createFromBuffer"
+      ]
+    },
+    {
+      "objectID": "api-native-image#nativeimagecreatefromdataurl",
+      "name": "createFromDataURL",
+      "signature": "(dataURL)",
+      "description": "Creates a new NativeImage instance from dataURL.",
+      "parameters": [
+        {
+          "name": "dataURL",
+          "type": "String",
+          "collection": false,
+          "required": true
+        }
+      ],
+      "returns": {
+        "type": "NativeImage",
+        "collection": false
+      },
+      "apiType": "methods",
+      "fullSignature": "nativeImage.createFromDataURL",
+      "tldr": "Creates a new NativeImage instance from dataURL.",
+      "slug": "nativeimagecreatefromdataurl",
+      "url": "https://electronjs.org/docs/api/native-image#nativeimagecreatefromdataurl",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:createFromDataURL",
+        "api:nativeimagecreatefromdataurl",
+        "api:nativeImage.createFromDataURL",
+        "doc:createFromDataURL",
+        "doc:nativeimagecreatefromdataurl",
+        "doc:nativeImage.createFromDataURL"
+      ]
+    },
+    {
+      "objectID": "api-native-image#nativeimagecreatefromnamedimage-macos",
+      "name": "createFromNamedImage",
+      "signature": "(imageName[, hslShift])",
+      "platforms": [
+        "macOS"
+      ],
+      "description": "Creates a new NativeImage instance from the NSImage that maps to the given image name. See NSImageName for a list of possible values. The hslShift is applied to the image with the following rules This means that [-1, 0, 1] will make the image completely white and [-1, 1, 0] will make the image completely black. In some cases, the NSImageName doesn't match its string representation; one example of this is NSFolderImageName, whose string representation would actually be NSFolder. Therefore, you'll need to determine the correct string representation for your image before passing it in. This can be done with the following: echo -e '#import <Cocoa/Cocoa.h>\\nint main() { NSLog(@\"%@\", SYSTEM_IMAGE_NAME); }' | clang -otest -x objective-c -framework Cocoa - && ./test where SYSTEM_IMAGE_NAME should be replaced with any value from this list.",
+      "parameters": [
+        {
+          "name": "imageName",
+          "type": "String",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "hslShift",
+          "type": "Number",
+          "collection": true,
+          "required": true
+        }
+      ],
+      "returns": {
+        "type": "NativeImage",
+        "collection": false
+      },
+      "apiType": "methods",
+      "fullSignature": "nativeImage.createFromNamedImage",
+      "tldr": "Creates a new NativeImage instance from the NSImage that maps to the given image name.",
+      "slug": "nativeimagecreatefromnamedimage",
+      "url": "https://electronjs.org/docs/api/native-image#nativeimagecreatefromnamedimage-macos",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:createFromNamedImage",
+        "api:nativeimagecreatefromnamedimage",
+        "api:nativeImage.createFromNamedImage",
+        "doc:createFromNamedImage",
+        "doc:nativeimagecreatefromnamedimage",
+        "doc:nativeImage.createFromNamedImage"
       ]
     },
     {
