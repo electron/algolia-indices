@@ -15,9 +15,17 @@ function platformNeeded (platform) {
     let platformReturn = `-${platform.join('-').toLowerCase()}`
     if (platform.includes('(Deprecated)')) return platformReturn.replace('(deprecated)', 'deprecated')
     return platformReturn
-  } else {
-    return ''
   }
+
+  return ''
+}
+
+function signatureNeeded (signature) {
+  if (signature !== undefined) {
+    return signature
+  }
+
+  return ''
 }
 
 function getRecords () {
@@ -48,7 +56,7 @@ function getRecords () {
     const methods = api.methods || []
     methods.forEach(method => {
       method.apiType = 'methods'
-      method.fullSignature = `${api.name}.${method.name}`
+      method.fullSignature = `${api.name}.${method.name}${signatureNeeded(method.signature)}`
       method.tldr = getTLDR(method)
       method.slug = slugger.slug(method.fullSignature, false)
       method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}${platformNeeded(method.platforms)}`
@@ -58,7 +66,7 @@ function getRecords () {
     const staticMethods = api.staticMethods || []
     staticMethods.forEach(method => {
       method.apiType = 'staticMethod'
-      method.fullSignature = `${api.name}.${method.name}${method.signature}`
+      method.fullSignature = `${api.name}.${method.name}${signatureNeeded(method.signature)}`
       method.tldr = getTLDR(method)
       method.slug = slugger.slug(method.fullSignature, false)
       method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}${platformNeeded(method.platforms)}`
@@ -68,7 +76,7 @@ function getRecords () {
     const instanceMethods = api.instanceMethods || []
     instanceMethods.forEach(method => {
       method.apiType = 'instanceMethod'
-      method.fullSignature = `${api.instanceName}.${method.name}${method.signature}`
+      method.fullSignature = `${api.instanceName}.${method.name}${signatureNeeded(method.signature)}`
       method.tldr = getTLDR(method)
       method.slug = slugger.slug(method.fullSignature, false)
       method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}${platformNeeded(method.platforms)}`
