@@ -18391,6 +18391,102 @@
       ]
     },
     {
+      "objectID": "api-power-monitor#powermonitorquerysystemidlestateidlethreshold-callback",
+      "name": "querySystemIdleState",
+      "signature": "(idleThreshold, callback)",
+      "description": "Calculate the system idle state. idleThreshold is the amount of time (in seconds) before considered idle. callback will be called synchronously on some systems and with an idleState argument that describes the system's state. locked is available on supported systems only.",
+      "parameters": [
+        {
+          "name": "idleThreshold",
+          "type": "Integer",
+          "collection": false,
+          "required": true
+        },
+        {
+          "name": "callback",
+          "type": "Function",
+          "collection": false,
+          "required": true,
+          "parameters": [
+            {
+              "name": "idleState",
+              "type": "String",
+              "collection": false,
+              "description": "Can be active, idle, locked or unknown",
+              "required": true,
+              "possibleValues": [
+                {
+                  "value": "active"
+                },
+                {
+                  "value": "idle"
+                },
+                {
+                  "value": "locked"
+                },
+                {
+                  "value": "unknown"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "apiType": "methods",
+      "fullSignature": "powerMonitor.querySystemIdleState(idleThreshold, callback)",
+      "tldr": "Calculate the system idle state.",
+      "slug": "powermonitorquerysystemidlestateidlethreshold-callback",
+      "url": "https://electronjs.org/docs/api/power-monitor#powermonitorquerysystemidlestateidlethreshold-callback",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:querySystemIdleState",
+        "api:powermonitorquerysystemidlestateidlethreshold-callback",
+        "api:powerMonitor.querySystemIdleState(idleThreshold, callback)",
+        "doc:querySystemIdleState",
+        "doc:powermonitorquerysystemidlestateidlethreshold-callback",
+        "doc:powerMonitor.querySystemIdleState(idleThreshold, callback)"
+      ]
+    },
+    {
+      "objectID": "api-power-monitor#powermonitorquerysystemidletimecallback",
+      "name": "querySystemIdleTime",
+      "signature": "(callback)",
+      "description": "Calculate system idle time in seconds.",
+      "parameters": [
+        {
+          "name": "callback",
+          "type": "Function",
+          "collection": false,
+          "required": true,
+          "parameters": [
+            {
+              "name": "idleTime",
+              "type": "Integer",
+              "collection": false,
+              "description": "Idle time in seconds",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "apiType": "methods",
+      "fullSignature": "powerMonitor.querySystemIdleTime(callback)",
+      "tldr": "Calculate system idle time in seconds.",
+      "slug": "powermonitorquerysystemidletimecallback",
+      "url": "https://electronjs.org/docs/api/power-monitor#powermonitorquerysystemidletimecallback",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:querySystemIdleTime",
+        "api:powermonitorquerysystemidletimecallback",
+        "api:powerMonitor.querySystemIdleTime(callback)",
+        "doc:querySystemIdleTime",
+        "doc:powermonitorquerysystemidletimecallback",
+        "doc:powerMonitor.querySystemIdleTime(callback)"
+      ]
+    },
+    {
       "objectID": "api-power-monitor#event-suspend",
       "name": "suspend",
       "description": "Emitted when the system is suspending.",
@@ -22800,7 +22896,7 @@
               "name": "webContents",
               "type": "WebContents",
               "collection": false,
-              "description": "WebContents requesting the permission.",
+              "description": "WebContents requesting the permission. Please note that if the request comes from a subframe you should use requestingUrl to check the request origin.",
               "required": true
             },
             {
@@ -22838,14 +22934,14 @@
                   "type": "String",
                   "collection": false,
                   "description": "The url of the openExternal request.",
-                  "required": true
+                  "required": false
                 },
                 {
                   "name": "mediaTypes",
                   "type": "String",
                   "collection": true,
                   "description": "The types of media access being requested, elements can be video or audio",
-                  "required": true,
+                  "required": false,
                   "possibleValues": [
                     {
                       "value": "video"
@@ -22854,6 +22950,20 @@
                       "value": "audio"
                     }
                   ]
+                },
+                {
+                  "name": "requestingUrl",
+                  "type": "String",
+                  "collection": false,
+                  "description": "The last URL the requesting frame loaded",
+                  "required": true
+                },
+                {
+                  "name": "isMainFrame",
+                  "type": "Boolean",
+                  "collection": false,
+                  "description": "Whether the frame making the request is the main frame",
+                  "required": true
                 }
               ]
             }
@@ -22902,7 +23012,7 @@
               "name": "webContents",
               "type": "WebContents",
               "collection": false,
-              "description": "WebContents checking the permission.",
+              "description": "WebContents checking the permission. Please note that if the request comes from a subframe you should use requestingUrl to check the request origin.",
               "required": true
             },
             {
@@ -22950,6 +23060,20 @@
                       "value": "unknown"
                     }
                   ]
+                },
+                {
+                  "name": "requestingUrl",
+                  "type": "String",
+                  "collection": false,
+                  "description": "The last URL the requesting frame loaded",
+                  "required": true
+                },
+                {
+                  "name": "isMainFrame",
+                  "type": "Boolean",
+                  "collection": false,
+                  "description": "Whether the frame making the request is the main frame",
+                  "required": true
                 }
               ]
             }
@@ -25499,46 +25623,6 @@
         "doc:high-contrast-color-scheme-changed",
         "doc:systempreferencesonhigh-contrast-color-scheme-changed",
         "doc:systemPreferences.on('high-contrast-color-scheme-changed')"
-      ]
-    },
-    {
-      "objectID": "api-system-preferences#event-appearance-changed-macos",
-      "name": "appearance-changed",
-      "description": "NOTE: This event is only emitted after you have called startAppLevelAppearanceTrackingOS",
-      "platforms": [
-        "macOS"
-      ],
-      "returns": [
-        {
-          "name": "newAppearance",
-          "type": "String",
-          "collection": false,
-          "description": "Can be `dark` or `light`",
-          "required": true,
-          "possibleValues": [
-            {
-              "value": "dark"
-            },
-            {
-              "value": "light"
-            }
-          ]
-        }
-      ],
-      "apiType": "event",
-      "fullSignature": "systemPreferences.on('appearance-changed')",
-      "url": "https://electronjs.org/docs/api/system-preferences#event-appearance-changed-macos",
-      "slug": "systempreferencesonappearance-changed",
-      "tldr": "NOTE: This event is only emitted after you have called startAppLevelAppearanceTrackingOS.",
-      "keyValuePairs": [
-        "is:doc",
-        "is:api",
-        "api:appearance-changed",
-        "api:systempreferencesonappearance-changed",
-        "api:systemPreferences.on('appearance-changed')",
-        "doc:appearance-changed",
-        "doc:systempreferencesonappearance-changed",
-        "doc:systemPreferences.on('appearance-changed')"
       ]
     },
     {
