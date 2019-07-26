@@ -25,7 +25,7 @@ test('electron-search', t => {
 
   t.ok(apis.length > 450, 'lots of APIs')
 
-  let staticMethod = apis.find(api => api.fullSignature === 'Menu.getApplicationMenu()')
+  const staticMethod = apis.find(api => api.fullSignature === 'Menu.getApplicationMenu()')
   t.equal(staticMethod.url, 'https://electronjs.org/docs/api/menu#menugetapplicationmenu', 'sets proper URL on static methods')
 
   const event = apis.find(api => api.fullSignature === "win.on('page-title-updated')")

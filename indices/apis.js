@@ -12,7 +12,7 @@ module.exports = new AlgoliaIndex('apis', getRecords())
  */
 function platformNeeded (platform) {
   if (platform !== undefined) {
-    let platformReturn = `-${platform.join('-').toLowerCase()}`
+    const platformReturn = `-${platform.join('-').toLowerCase()}`
     if (platform.includes('(Deprecated)')) return platformReturn.replace('(deprecated)', 'deprecated')
     return platformReturn
   }
