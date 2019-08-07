@@ -652,7 +652,7 @@
       "objectID": "api-app#appsetapplogspathpath",
       "name": "setAppLogsPath",
       "signature": "(path)",
-      "description": "Sets or creates a directory your app's logs which can then be manipulated with app.getPath() or app.setPath(pathName, newPath). On macOS, this directory will be set by deafault to /Library/Logs/YourAppName, and on Linux and Windows it will be placed inside your userData directory.",
+      "description": "Sets or creates a directory your app's logs which can then be manipulated with app.getPath() or app.setPath(pathName, newPath). Calling app.setAppLogsPath() without a path parameter will result in this directory being set to /Library/Logs/YourAppName on macOS, and inside the userData directory on Linux and Windows.",
       "parameters": [
         {
           "name": "path",
@@ -2233,7 +2233,7 @@
               "name": "iconPath",
               "type": "String",
               "collection": false,
-              "description": "Path to the app's icon.",
+              "description": "Path to the app's icon. Will be shown as 64x64 pixels while retaining aspect ratio.",
               "required": false
             }
           ]
@@ -5493,11 +5493,12 @@
       "signature": "()",
       "returns": {
         "type": "Rectangle",
-        "collection": false
+        "collection": false,
+        "description": "The bounds of the window as Object."
       },
       "apiType": "instanceMethod",
       "fullSignature": "win.getBounds()",
-      "tldr": null,
+      "tldr": "Returns the bounds of the window as Object.",
       "slug": "wingetbounds",
       "url": "https://electronjs.org/docs/api/browser-window#wingetbounds",
       "keyValuePairs": [
@@ -5552,11 +5553,12 @@
       "signature": "()",
       "returns": {
         "type": "Rectangle",
-        "collection": false
+        "collection": false,
+        "description": "The bounds of the window's client area as Object."
       },
       "apiType": "instanceMethod",
       "fullSignature": "win.getContentBounds()",
-      "tldr": null,
+      "tldr": "Returns the bounds of the window's client area as Object.",
       "slug": "wingetcontentbounds",
       "url": "https://electronjs.org/docs/api/browser-window#wingetcontentbounds",
       "keyValuePairs": [
@@ -9189,12 +9191,9 @@
       ]
     },
     {
-      "objectID": "api-browser-window#event-always-on-top-changed-macos",
+      "objectID": "api-browser-window#event-always-on-top-changed",
       "name": "always-on-top-changed",
       "description": "Emitted when the window is set or unset to show always on top of other windows.",
-      "platforms": [
-        "macOS"
-      ],
       "returns": [
         {
           "name": "event",
@@ -9211,7 +9210,7 @@
       ],
       "apiType": "event",
       "fullSignature": "win.on('always-on-top-changed')",
-      "url": "https://electronjs.org/docs/api/browser-window#event-always-on-top-changed-macos",
+      "url": "https://electronjs.org/docs/api/browser-window#event-always-on-top-changed",
       "slug": "winonalways-on-top-changed",
       "tldr": "Emitted when the window is set or unset to show always on top of other windows.",
       "keyValuePairs": [
@@ -18249,7 +18248,7 @@
     {
       "objectID": "api-menu-item#menuitemrole",
       "name": "role",
-      "description": "A String (optional) indicating the item's role, if set. Can be undo, redo, cut, copy, paste, pasteandmatchstyle, delete, selectall, reload, forcereload, toggledevtools, resetzoom, zoomin, zoomout, togglefullscreen, window, minimize, close, help, about, services, hide, hideothers, unhide, quit, startspeaking, stopspeaking, close, minimize, zoom, front, appMenu, fileMenu, editMenu, viewMenu or windowMenu",
+      "description": "A String (optional) indicating the item's role, if set. Can be undo, redo, cut, copy, paste, pasteAndMatchStyle, delete, selectAll, reload, forceReload, toggleDevTools, resetZoom, zoomIn, zoomOut, togglefullscreen, window, minimize, close, help, about, services, hide, hideOthers, unhide, quit, startSpeaking, stopSpeaking, close, minimize, zoom, front, appMenu, fileMenu, editMenu, viewMenu, recentDocuments, toggleTabBar, selectNextTab, selectPreviousTab, mergeAllWindows, clearRecentDocuments, moveTabToNewWindow or windowMenu",
       "type": "String",
       "collection": false,
       "apiType": "instanceProperties",
@@ -36358,7 +36357,7 @@
       "objectID": "api-web-request#webrequestonbeforerequestfilter-listener",
       "name": "onBeforeRequest",
       "signature": "([filter, ]listener)",
-      "description": "The listener will be called with listener(details, callback) when a request is about to occur. The uploadData is an array of UploadData objects. The callback has to be called with an response object.",
+      "description": "The listener will be called with listener(details, callback) when a request is about to occur. The uploadData is an array of UploadData objects. The callback has to be called with an response object. Some examples of valid urls:",
       "parameters": [
         {
           "name": "filter",
