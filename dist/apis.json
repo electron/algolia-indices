@@ -7413,13 +7413,10 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsethasshadowhasshadow-macos",
+      "objectID": "api-browser-window#winsethasshadowhasshadow",
       "name": "setHasShadow",
       "signature": "(hasShadow)",
-      "platforms": [
-        "macOS"
-      ],
-      "description": "Sets whether the window should have a shadow. On Windows and Linux does nothing.",
+      "description": "Sets whether the window should have a shadow.",
       "parameters": [
         {
           "name": "hasShadow",
@@ -7432,7 +7429,7 @@
       "fullSignature": "win.setHasShadow(hasShadow)",
       "tldr": "Sets whether the window should have a shadow.",
       "slug": "winsethasshadowhasshadow",
-      "url": "https://electronjs.org/docs/api/browser-window#winsethasshadowhasshadow-macos",
+      "url": "https://electronjs.org/docs/api/browser-window#winsethasshadowhasshadow",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -7445,13 +7442,9 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winhasshadow-macos",
+      "objectID": "api-browser-window#winhasshadow",
       "name": "hasShadow",
       "signature": "()",
-      "platforms": [
-        "macOS"
-      ],
-      "description": "On Windows and Linux always returns true.",
       "returns": {
         "type": "Boolean",
         "collection": false,
@@ -7459,9 +7452,9 @@
       },
       "apiType": "instanceMethod",
       "fullSignature": "win.hasShadow()",
-      "tldr": "On Windows and Linux always returns true.",
+      "tldr": "Returns whether the window has a shadow.",
       "slug": "winhasshadow",
-      "url": "https://electronjs.org/docs/api/browser-window#winhasshadow-macos",
+      "url": "https://electronjs.org/docs/api/browser-window#winhasshadow",
       "keyValuePairs": [
         "is:doc",
         "is:api",
