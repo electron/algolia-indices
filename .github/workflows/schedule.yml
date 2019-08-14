@@ -1,0 +1,16 @@
+on:
+  schedules:
+  - cron: 15 09 * * *
+name: Update data sources
+jobs:
+  fetchLatestDataSources:
+    name: Fetch latest data sources
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Fetch latest data sources
+      uses: actions/npm@master
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      with:
+        args: run update-data-sources

@@ -1,0 +1,36 @@
+on: push
+name: Test and publish
+jobs:
+  installDependencies:
+    name: Install dependencies
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Install dependencies
+      uses: actions/npm@master
+      with:
+        args: ci
+    - name: Run tests
+      uses: actions/npm@master
+      with:
+        args: test
+    - name: Only publish master branch
+      uses: BinaryMuse/tip-of-branch@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        args: master
+    - name: Upload Algolia Indices
+      uses: actions/npm@master
+      env:
+        ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+        ALGOLIA_APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+      with:
+        args: run upload
+    - name: Publish via semantic-release
+      uses: actions/npm@master
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      with:
+        args: run semantic-release
