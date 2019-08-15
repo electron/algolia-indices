@@ -1,10 +1,10 @@
-on: push
+on: [push, pull_request]
 
 name: CI / GitHub Actions
 
 jobs:
   installDependencies:
-    name: Install dependencies
+    name: NodeJS
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
