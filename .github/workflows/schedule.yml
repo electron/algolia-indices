@@ -1,7 +1,9 @@
 on:
   schedules:
   - cron: 15 09 * * *
+
 name: Update data sources
+
 jobs:
   fetchLatestDataSources:
     name: Fetch latest data sources
