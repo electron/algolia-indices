@@ -2,7 +2,7 @@ on:
   schedules:
   - cron: 15 09 * * *
 
-name: Update data sources
+name: Update Algolia Data Sources
 
 jobs:
   fetchLatestDataSources:
