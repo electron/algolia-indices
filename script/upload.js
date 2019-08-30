@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-require('dotenv-safe').load()
+require('dotenv-safe').config()
 
 const indices = require('../indices')
 
