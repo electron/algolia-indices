@@ -13577,6 +13577,20 @@
           ]
         }
       ],
+      "returns": {
+        "type": [
+          {
+            "typeName": "String",
+            "collection": true
+          },
+          {
+            "typeName": "undefined",
+            "collection": false
+          }
+        ],
+        "collection": false,
+        "description": ", the file paths chosen by the user; if the dialog is cancelled it returns undefined."
+      },
       "apiType": "methods",
       "fullSignature": "dialog.showOpenDialogSync([browserWindow, ]options)",
       "tldr": "The browserWindow argument allows the dialog to attach itself to a parent window, making it modal.",
@@ -13711,6 +13725,13 @@
         ],
         "description": "Resolve wih an object containing the following:",
         "properties": [
+          {
+            "name": "canceled",
+            "type": "Boolean",
+            "collection": false,
+            "description": "whether or not the dialog was canceled.",
+            "required": true
+          },
           {
             "name": "filePaths",
             "type": "String",
@@ -14050,7 +14071,16 @@
             },
             {
               "name": "icon",
-              "type": "NativeImage",
+              "type": [
+                {
+                  "typeName": "NativeImage",
+                  "collection": false
+                },
+                {
+                  "typeName": "String",
+                  "collection": false
+                }
+              ],
               "collection": false,
               "description": "",
               "required": false
