@@ -38,7 +38,7 @@
     "lodash": "^4.17.10",
     "nanohtml": "^1.2.4",
     "node-fetch": "^2.6.0",
-    "prettier-standard": "^14.0.4",
+    "prettier-standard": "^15.0.0",
     "semantic-release": "^15.6.0",
     "standard": "^14.0.2",
     "tap-summary": "^4.0.0",
