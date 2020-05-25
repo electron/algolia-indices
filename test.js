@@ -28,7 +28,7 @@ test('electron-search', t => {
   const staticMethod = apis.find(api => api.fullSignature === 'Menu.getApplicationMenu()')
   t.equal(staticMethod.url, 'https://electronjs.org/docs/api/menu#menugetapplicationmenu', 'sets proper URL on static methods')
 
-  const event = apis.find(api => api.fullSignature === "win.on('page-title-updated')")
+  const event = apis.find(api => api.fullSignature === "browserWindow.on('page-title-updated')")
   t.equal(event.url, 'https://electronjs.org/docs/api/browser-window#event-page-title-updated', 'sets expected URL on events')
 
   apis.forEach(api => {
