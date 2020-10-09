@@ -1,6 +1,7 @@
 on:
   schedule:
-  - cron: 15 09 * * *
+    - cron: 15 09 * * *
+  workflow_dispatch: {}
 
 name: Update Algolia Data Sources
 
@@ -10,9 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+    - name: Install dependencies
+      run: npm ci
     - name: Fetch latest data sources
-      uses: actions/npm@master
+      run: npm run update-data-sources
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      with:
-        args: run update-data-sources
