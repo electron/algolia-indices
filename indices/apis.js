@@ -39,7 +39,7 @@ function getRecords () {
       property.fullSignature = `${api.name}.${property.name}`
       property.tldr = getTLDR(property)
       property.slug = slugger.slug(property.fullSignature, false)
-      property.url = `https://electronjs.org/docs/api/${api.slug}#${property.slug}${platformNeeded(property.platforms)}`
+      property.url = `${api.websiteUrl}#${property.slug}${platformNeeded(property.platforms)}`
       records.push(property)
     })
 
@@ -49,7 +49,7 @@ function getRecords () {
       property.fullSignature = `${api.name}.${property.name}`
       property.tldr = getTLDR(property)
       property.slug = slugger.slug(property.fullSignature, false)
-      property.url = `https://electronjs.org/docs/api/${api.slug}#${property.slug}${platformNeeded(property.platforms)}`
+      property.url = `${api.websiteUrl}#${property.slug}${platformNeeded(property.platforms)}`
       records.push(property)
     })
 
@@ -59,7 +59,7 @@ function getRecords () {
       method.fullSignature = `${api.name}.${method.name}${signatureNeeded(method.signature)}`
       method.tldr = getTLDR(method)
       method.slug = slugger.slug(method.fullSignature, false)
-      method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}${platformNeeded(method.platforms)}`
+      method.url = `${api.websiteUrl}#${method.slug}${platformNeeded(method.platforms)}`
       records.push(method)
     })
 
@@ -69,7 +69,7 @@ function getRecords () {
       method.fullSignature = `${api.name}.${method.name}${signatureNeeded(method.signature)}`
       method.tldr = getTLDR(method)
       method.slug = slugger.slug(method.fullSignature, false)
-      method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}${platformNeeded(method.platforms)}`
+      method.url = `${api.websiteUrl}#${method.slug}${platformNeeded(method.platforms)}`
       records.push(method)
     })
 
@@ -79,7 +79,7 @@ function getRecords () {
       method.fullSignature = `${api.instanceName}.${method.name}${signatureNeeded(method.signature)}`
       method.tldr = getTLDR(method)
       method.slug = slugger.slug(method.fullSignature, false)
-      method.url = `https://electronjs.org/docs/api/${api.slug}#${method.slug}${platformNeeded(method.platforms)}`
+      method.url = `${api.websiteUrl}#${method.slug}${platformNeeded(method.platforms)}`
       records.push(method)
     })
 
@@ -87,7 +87,7 @@ function getRecords () {
     events.forEach(event => {
       event.apiType = 'event'
       event.fullSignature = `${api.name}.on('${event.name}')`
-      event.url = `https://electronjs.org/docs/api/${api.slug}#event-${event.name}${platformNeeded(event.platforms)}`
+      event.url = `${api.websiteUrl}#event-${event.name}${platformNeeded(event.platforms)}`
       event.slug = slugger.slug(event.fullSignature, false)
       event.tldr = getTLDR(event)
       records.push(event)
@@ -97,7 +97,7 @@ function getRecords () {
     instanceEvents.forEach(event => {
       event.apiType = 'event'
       event.fullSignature = `${api.instanceName}.on('${event.name}')`
-      event.url = `https://electronjs.org/docs/api/${api.slug}#event-${event.name}${platformNeeded(event.platforms)}`
+      event.url = `${api.websiteUrl}#event-${event.name}${platformNeeded(event.platforms)}`
       event.slug = slugger.slug(event.fullSignature, false)
       event.tldr = getTLDR(event)
       records.push(event)
