@@ -3784,7 +3784,7 @@
                   "description": "Process ran out of memory"
                 },
                 {
-                  "value": "launch-failure",
+                  "value": "launch-failed",
                   "description": "Process never successfully launched"
                 },
                 {
@@ -35647,7 +35647,7 @@
                   "description": "Process ran out of memory"
                 },
                 {
-                  "value": "launch-failure",
+                  "value": "launch-failed",
                   "description": "Process never successfully launched"
                 },
                 {
