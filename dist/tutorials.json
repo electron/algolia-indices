@@ -242,6 +242,22 @@
       ]
     },
     {
+      "objectID": "tutorial-clang-tidy",
+      "title": "Using clang-tidy on C++ Code",
+      "githubUrl": "https://github.com/electron/electron/tree/master/docs/development/clang-tidy.md",
+      "url": "https://electronjs.org/docs/development/clang-tidy",
+      "slug": "clang-tidy",
+      "body": "Using clang-tidy on C++ Code\nclang-tidy is a tool to\nautomatically check C/C++/Objective-C code for style violations, programming\nerrors, and best practices.\nElectron's clang-tidy integration is provided as a linter script which can\nbe run with npm run lint:clang-tidy. While clang-tidy checks your on-disk\nfiles, you need to have built Electron so that it knows which compiler flags\nwere used. There is one required option for the script --output-dir, which\ntells the script which build directory to pull the compilation information\nfrom. A typical usage would be:\nnpm run lint:clang-tiy --out-dir ../out/Testing\nWith no filenames provided, all C/C++/Objective-C files will be checked.\nYou can provide a list of files to be checked by passing the filenames after\nthe options:\nnpm run lint:clang-tiy --out-dir ../out/Testing shell/browser/api/electron_api_app.cc\nWhile clang-tidy has a\nlong list\nof possible checks, in Electron only a few are enabled by default. At the\nmoment Electron doesn't have a .clang-tidy config, so clang-tidy will\nfind the one from Chromium at src/.clang-tidy and use the checks which\nChromium has enabled. You can change which checks are run by using the\n--checks= option. This is passed straight through to clang-tidy, so see\nits documentation for full details. Wildcards can be used, and checks can\nbe disabled by prefixing a -. By default any checks listed are added to\nthose in .clang-tidy, so if you'd like to limit the checks to specific\nones you should first exclude all checks then add back what you want, like\n--checks=-*,performance*.\nRunning clang-tidy is rather slow - internally it compiles each file and\nthen runs the checks so it will always be some factor slower than compilation.\nWhile you can use parallel runs to speed it up using the --jobs|-j option,\nclang-tidy also uses a lot of memory during its checks, so it can easily\nrun into out-of-memory errors. As such the default number of jobs is one.",
+      "keyValuePairs": [
+        "is:doc",
+        "is:tutorial",
+        "doc:Using clang-tidy on C++ Code",
+        "doc:clang-tidy",
+        "tutorial:Using clang-tidy on C++ Code",
+        "tutorial:clang-tidy"
+      ]
+    },
+    {
       "objectID": "tutorial-code-signing",
       "title": "Code Signing",
       "githubUrl": "https://github.com/electron/electron/tree/master/docs/tutorial/code-signing.md",
