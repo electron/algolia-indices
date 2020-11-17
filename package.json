@@ -42,7 +42,7 @@
     "semantic-release": "^17.2.1",
     "standard": "^14.3.1",
     "tap-summary": "^4.0.0",
-    "tape": "^4.9.0"
+    "tape": "^5.0.1"
   },
   "files": [
     "index.js",
