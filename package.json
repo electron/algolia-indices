@@ -40,7 +40,7 @@
     "node-fetch": "^2.6.0",
     "prettier-standard": "^16.4.1",
     "semantic-release": "^17.2.1",
-    "standard": "^14.3.1",
+    "standard": "^16.0.3",
     "tap-summary": "^4.0.0",
     "tape": "^4.9.0"
   },
