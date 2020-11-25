@@ -31717,7 +31717,7 @@
       "objectID": "api-web-contents#webcontentsfromidid",
       "name": "fromId",
       "signature": "(id)",
-      "description": "A WebContents instance with the given ID.",
+      "description": "| undefined - A WebContents instance with the given ID, or `undefined` if there is no WebContents associated with the given ID.",
       "parameters": [
         {
           "name": "id",
@@ -31735,7 +31735,7 @@
       "urlFragment": "#webcontentsfromidid",
       "apiType": "methods",
       "fullSignature": "webContents.fromId(id)",
-      "tldr": "A WebContents instance with the given ID.",
+      "tldr": "| undefined - A WebContents instance with the given ID, or `undefined` if there is no WebContents associated with the given ID.",
       "slug": "webcontentsfromidid",
       "url": "https://electronjs.org/docs/api/web-contents#webcontentsfromidid",
       "keyValuePairs": [
