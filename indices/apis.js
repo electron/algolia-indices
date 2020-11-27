@@ -108,7 +108,7 @@ function getRecords () {
     ]
 
     return Object.assign(
-      { objectID: record.url.replace('https://electronjs.org/docs/api/', 'api-') + `-${record.slug}` },
+      { objectID: `${record.url.replace('https://electronjs.org/docs/api/', 'api-')}-${record.slug}` },
       record
     )
   })
