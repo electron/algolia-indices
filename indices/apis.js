@@ -8,7 +8,7 @@ const slugger = new (require('github-slugger'))()
 module.exports = new AlgoliaIndex('apis', getRecords())
 
 function getUrlFragment (urlFragment) {
-  return urlFragment !== undefined ? urlFragment : '' 
+  return urlFragment !== undefined ? urlFragment : ''
 }
 
 function signatureNeeded (signature) {
