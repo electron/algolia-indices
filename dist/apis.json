@@ -35038,7 +35038,16 @@
           "description": "",
           "required": true,
           "collection": false,
-          "type": "Integer"
+          "type": [
+            {
+              "collection": false,
+              "type": "Integer"
+            },
+            {
+              "collection": false,
+              "type": "[number, number]"
+            }
+          ]
         },
         {
           "name": "channel",
@@ -47500,6 +47509,30 @@
       ]
     },
     {
+      "objectID": "api-structures/ipc-main-event-ipcmaineventprocessid",
+      "name": "processId",
+      "description": "The internal ID of the renderer process that sent this message",
+      "required": true,
+      "additionalTags": [],
+      "collection": false,
+      "type": "Integer",
+      "apiType": "properties",
+      "fullSignature": "IpcMainEvent.processId",
+      "tldr": "The internal ID of the renderer process that sent this message.",
+      "slug": "ipcmaineventprocessid",
+      "url": "https://electronjs.org/docs/api/structures/ipc-main-event",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:processId",
+        "api:ipcmaineventprocessid",
+        "api:IpcMainEvent.processId",
+        "doc:processId",
+        "doc:ipcmaineventprocessid",
+        "doc:IpcMainEvent.processId"
+      ]
+    },
+    {
       "objectID": "api-structures/ipc-main-event-ipcmaineventframeid",
       "name": "frameId",
       "description": "The ID of the renderer frame that sent this message",
@@ -47635,6 +47668,30 @@
         "doc:reply",
         "doc:ipcmaineventreply",
         "doc:IpcMainEvent.reply"
+      ]
+    },
+    {
+      "objectID": "api-structures/ipc-main-invoke-event-ipcmaininvokeeventprocessid",
+      "name": "processId",
+      "description": "The internal ID of the renderer process that sent this message",
+      "required": true,
+      "additionalTags": [],
+      "collection": false,
+      "type": "Integer",
+      "apiType": "properties",
+      "fullSignature": "IpcMainInvokeEvent.processId",
+      "tldr": "The internal ID of the renderer process that sent this message.",
+      "slug": "ipcmaininvokeeventprocessid",
+      "url": "https://electronjs.org/docs/api/structures/ipc-main-invoke-event",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:processId",
+        "api:ipcmaininvokeeventprocessid",
+        "api:IpcMainInvokeEvent.processId",
+        "doc:processId",
+        "doc:ipcmaininvokeeventprocessid",
+        "doc:IpcMainInvokeEvent.processId"
       ]
     },
     {
