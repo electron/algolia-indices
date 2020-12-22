@@ -31853,7 +31853,7 @@
     {
       "objectID": "api-web-contents#contentsframerate-webcontentsframerate",
       "name": "frameRate",
-      "description": "An `Integer` property that sets the frame rate of the web contents to the specified number. Only values between 1 and 60 are accepted.\n\nOnly applicable if *offscreen rendering* is enabled.",
+      "description": "An `Integer` property that sets the frame rate of the web contents to the specified number. Only values between 1 and 240 are accepted.\n\nOnly applicable if *offscreen rendering* is enabled.",
       "required": true,
       "additionalTags": [],
       "urlFragment": "#contentsframerate",
@@ -35651,7 +35651,7 @@
       "objectID": "api-web-contents#contentssetframeratefps-webcontentssetframeratefps",
       "name": "setFrameRate",
       "signature": "(fps)",
-      "description": "If *offscreen rendering* is enabled sets the frame rate to the specified number. Only values between 1 and 60 are accepted.",
+      "description": "If *offscreen rendering* is enabled sets the frame rate to the specified number. Only values between 1 and 240 are accepted.",
       "parameters": [
         {
           "name": "fps",
