@@ -6,16 +6,15 @@ module.exports = new AlgoliaIndex('tutorials', getRecords())
 
 function getRecords () {
   return chain(Object.values(require('electron-i18n').docs['en-US']))
-    .filter(tutorial => !tutorial.isApiDoc && !tutorial.isApiStructureDoc)
+    .filter(tutorial => {
+      const { isApiDoc, isApiStructureDoc, slug } = tutorial
+      return !isApiDoc && !isApiStructureDoc && slug !== 'README'
+    })
     .map(tutorial => {
       const { title, githubUrl, slug, sections, href } = tutorial
       const objectID = `tutorial-${slug}`
       const html = sections.map(section => section.html).join('\n\n')
       const body = cheerio.load(html).text()
-
-      // ignore files that have been renamed
-      if (!title && body.startsWith('Moved to')) return
-      if (slug === 'README') return
 
       const keyValuePairs = [
         'is:doc',
@@ -37,6 +36,5 @@ function getRecords () {
         keyValuePairs
       }
     })
-    .compact() // remove nulls from early returns above
     .value()
 }
