@@ -6950,10 +6950,10 @@
       ]
     },
     {
-      "objectID": "api-browser-window#winsetaspectratioaspectratio-extrasize-macos-linux-browserwindowsetaspectratioaspectratio-extrasize",
+      "objectID": "api-browser-window#winsetaspectratioaspectratio-extrasize-browserwindowsetaspectratioaspectratio-extrasize",
       "name": "setAspectRatio",
       "signature": "(aspectRatio[, extraSize])",
-      "description": "This will make a window maintain an aspect ratio. The extra size allows a developer to have space, specified in pixels, not included within the aspect ratio calculations. This API already takes into account the difference between a window's size and its content size.\n\nConsider a normal window with an HD video player and associated controls. Perhaps there are 15 pixels of controls on the left edge, 25 pixels of controls on the right edge and 50 pixels of controls below the player. In order to maintain a 16:9 aspect ratio (standard aspect ratio for HD @1920x1080) within the player itself we would call this function with arguments of 16/9 and { width: 40, height: 50 }. The second argument doesn't care where the extra width and height are within the content view--only that they exist. Sum any extra width and height areas you have within the overall content view.",
+      "description": "This will make a window maintain an aspect ratio. The extra size allows a developer to have space, specified in pixels, not included within the aspect ratio calculations. This API already takes into account the difference between a window's size and its content size.\n\nConsider a normal window with an HD video player and associated controls. Perhaps there are 15 pixels of controls on the left edge, 25 pixels of controls on the right edge and 50 pixels of controls below the player. In order to maintain a 16:9 aspect ratio (standard aspect ratio for HD @1920x1080) within the player itself we would call this function with arguments of 16/9 and { width: 40, height: 50 }. The second argument doesn't care where the extra width and height are within the content view--only that they exist. Sum any extra width and height areas you have within the overall content view.\n\nThe aspect ratio is not respected when window is resized programmingly with APIs like `win.setSize`.",
       "parameters": [
         {
           "name": "aspectRatio",
@@ -6971,16 +6971,13 @@
         }
       ],
       "returns": null,
-      "additionalTags": [
-        "os_macos",
-        "os_linux"
-      ],
-      "urlFragment": "#winsetaspectratioaspectratio-extrasize-macos-linux",
+      "additionalTags": [],
+      "urlFragment": "#winsetaspectratioaspectratio-extrasize",
       "apiType": "instanceMethod",
       "fullSignature": "browserWindow.setAspectRatio(aspectRatio[, extraSize])",
       "tldr": "This will make a window maintain an aspect ratio.",
       "slug": "browserwindowsetaspectratioaspectratio-extrasize",
-      "url": "https://electronjs.org/docs/api/browser-window#winsetaspectratioaspectratio-extrasize-macos-linux",
+      "url": "https://electronjs.org/docs/api/browser-window#winsetaspectratioaspectratio-extrasize",
       "keyValuePairs": [
         "is:doc",
         "is:api",
@@ -35035,7 +35032,7 @@
       "parameters": [
         {
           "name": "frameId",
-          "description": "",
+          "description": "the ID of the frame to send to, or a pair of `[processId, frameId]` if the frame is in a different process to the main frame.",
           "required": true,
           "collection": false,
           "type": [
