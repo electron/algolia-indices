@@ -4451,7 +4451,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-remote-require-apponremote-require",
+      "objectID": "api-app#event-remote-require-deprecated-apponremote-require",
       "name": "remote-require",
       "description": "Emitted when `remote.require()` is called in the renderer process of `webContents`. Calling `event.preventDefault()` will prevent the module from being returned. Custom value can be returned by setting `event.returnValue`.",
       "parameters": [
@@ -4478,11 +4478,13 @@
           "required": true
         }
       ],
-      "additionalTags": [],
-      "urlFragment": "#event-remote-require",
+      "additionalTags": [
+        "stability_deprecated"
+      ],
+      "urlFragment": "#event-remote-require-deprecated",
       "apiType": "event",
       "fullSignature": "app.on('remote-require')",
-      "url": "https://electronjs.org/docs/api/app#event-remote-require",
+      "url": "https://electronjs.org/docs/api/app#event-remote-require-deprecated",
       "slug": "apponremote-require",
       "tldr": "Emitted when `remote.require()` is called in the renderer process of `webContents`.",
       "keyValuePairs": [
@@ -4497,7 +4499,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-remote-get-global-apponremote-get-global",
+      "objectID": "api-app#event-remote-get-global-deprecated-apponremote-get-global",
       "name": "remote-get-global",
       "description": "Emitted when `remote.getGlobal()` is called in the renderer process of `webContents`. Calling `event.preventDefault()` will prevent the global from being returned. Custom value can be returned by setting `event.returnValue`.",
       "parameters": [
@@ -4524,11 +4526,13 @@
           "required": true
         }
       ],
-      "additionalTags": [],
-      "urlFragment": "#event-remote-get-global",
+      "additionalTags": [
+        "stability_deprecated"
+      ],
+      "urlFragment": "#event-remote-get-global-deprecated",
       "apiType": "event",
       "fullSignature": "app.on('remote-get-global')",
-      "url": "https://electronjs.org/docs/api/app#event-remote-get-global",
+      "url": "https://electronjs.org/docs/api/app#event-remote-get-global-deprecated",
       "slug": "apponremote-get-global",
       "tldr": "Emitted when `remote.getGlobal()` is called in the renderer process of `webContents`.",
       "keyValuePairs": [
@@ -4543,7 +4547,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-remote-get-builtin-apponremote-get-builtin",
+      "objectID": "api-app#event-remote-get-builtin-deprecated-apponremote-get-builtin",
       "name": "remote-get-builtin",
       "description": "Emitted when `remote.getBuiltin()` is called in the renderer process of `webContents`. Calling `event.preventDefault()` will prevent the module from being returned. Custom value can be returned by setting `event.returnValue`.",
       "parameters": [
@@ -4570,11 +4574,13 @@
           "required": true
         }
       ],
-      "additionalTags": [],
-      "urlFragment": "#event-remote-get-builtin",
+      "additionalTags": [
+        "stability_deprecated"
+      ],
+      "urlFragment": "#event-remote-get-builtin-deprecated",
       "apiType": "event",
       "fullSignature": "app.on('remote-get-builtin')",
-      "url": "https://electronjs.org/docs/api/app#event-remote-get-builtin",
+      "url": "https://electronjs.org/docs/api/app#event-remote-get-builtin-deprecated",
       "slug": "apponremote-get-builtin",
       "tldr": "Emitted when `remote.getBuiltin()` is called in the renderer process of `webContents`.",
       "keyValuePairs": [
@@ -4589,7 +4595,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-remote-get-current-window-apponremote-get-current-window",
+      "objectID": "api-app#event-remote-get-current-window-deprecated-apponremote-get-current-window",
       "name": "remote-get-current-window",
       "description": "Emitted when `remote.getCurrentWindow()` is called in the renderer process of `webContents`. Calling `event.preventDefault()` will prevent the object from being returned. Custom value can be returned by setting `event.returnValue`.",
       "parameters": [
@@ -4608,11 +4614,13 @@
           "required": true
         }
       ],
-      "additionalTags": [],
-      "urlFragment": "#event-remote-get-current-window",
+      "additionalTags": [
+        "stability_deprecated"
+      ],
+      "urlFragment": "#event-remote-get-current-window-deprecated",
       "apiType": "event",
       "fullSignature": "app.on('remote-get-current-window')",
-      "url": "https://electronjs.org/docs/api/app#event-remote-get-current-window",
+      "url": "https://electronjs.org/docs/api/app#event-remote-get-current-window-deprecated",
       "slug": "apponremote-get-current-window",
       "tldr": "Emitted when `remote.getCurrentWindow()` is called in the renderer process of `webContents`.",
       "keyValuePairs": [
@@ -4627,7 +4635,7 @@
       ]
     },
     {
-      "objectID": "api-app#event-remote-get-current-web-contents-apponremote-get-current-web-contents",
+      "objectID": "api-app#event-remote-get-current-web-contents-deprecated-apponremote-get-current-web-contents",
       "name": "remote-get-current-web-contents",
       "description": "Emitted when `remote.getCurrentWebContents()` is called in the renderer process of `webContents`. Calling `event.preventDefault()` will prevent the object from being returned. Custom value can be returned by setting `event.returnValue`.",
       "parameters": [
@@ -4646,11 +4654,13 @@
           "required": true
         }
       ],
-      "additionalTags": [],
-      "urlFragment": "#event-remote-get-current-web-contents",
+      "additionalTags": [
+        "stability_deprecated"
+      ],
+      "urlFragment": "#event-remote-get-current-web-contents-deprecated",
       "apiType": "event",
       "fullSignature": "app.on('remote-get-current-web-contents')",
-      "url": "https://electronjs.org/docs/api/app#event-remote-get-current-web-contents",
+      "url": "https://electronjs.org/docs/api/app#event-remote-get-current-web-contents-deprecated",
       "slug": "apponremote-get-current-web-contents",
       "tldr": "Emitted when `remote.getCurrentWebContents()` is called in the renderer process of `webContents`.",
       "keyValuePairs": [
@@ -10862,6 +10872,41 @@
         "doc:removeBrowserView",
         "doc:browserwindowremovebrowserviewbrowserview",
         "doc:browserWindow.removeBrowserView(browserView)"
+      ]
+    },
+    {
+      "objectID": "api-browser-window#winsettopbrowserviewbrowserview-experimental-browserwindowsettopbrowserviewbrowserview",
+      "name": "setTopBrowserView",
+      "signature": "(browserView)",
+      "description": "Raises `browserView` above other `BrowserView`s attached to `win`. Throws an error if `browserView` is not attached to `win`.",
+      "parameters": [
+        {
+          "name": "browserView",
+          "description": "",
+          "required": true,
+          "collection": false,
+          "type": "BrowserView"
+        }
+      ],
+      "returns": null,
+      "additionalTags": [
+        "stability_experimental"
+      ],
+      "urlFragment": "#winsettopbrowserviewbrowserview-experimental",
+      "apiType": "instanceMethod",
+      "fullSignature": "browserWindow.setTopBrowserView(browserView)",
+      "tldr": "Raises `browserView` above other `BrowserView`s attached to `win`.",
+      "slug": "browserwindowsettopbrowserviewbrowserview",
+      "url": "https://electronjs.org/docs/api/browser-window#winsettopbrowserviewbrowserview-experimental",
+      "keyValuePairs": [
+        "is:doc",
+        "is:api",
+        "api:setTopBrowserView",
+        "api:browserwindowsettopbrowserviewbrowserview",
+        "api:browserWindow.setTopBrowserView(browserView)",
+        "doc:setTopBrowserView",
+        "doc:browserwindowsettopbrowserviewbrowserview",
+        "doc:browserWindow.setTopBrowserView(browserView)"
       ]
     },
     {
@@ -19460,7 +19505,7 @@
       "objectID": "api-menu#menusetapplicationmenumenu-menusetapplicationmenumenu",
       "name": "setApplicationMenu",
       "signature": "(menu)",
-      "description": "Sets `menu` as the application menu on macOS. On Windows and Linux, the `menu` will be set as each window's top menu.\n\nAlso on Windows and Linux, you can use a `&` in the top-level item name to indicate which letter should get a generated accelerator. For example, using `&File` for the file menu would result in a generated `Alt-F` accelerator that opens the associated menu. The indicated character in the button label gets an underline. The `&` character is not displayed on the button label.\n\nPassing `null` will suppress the default menu. On Windows and Linux, this has the additional effect of removing the menu bar from the window.\n\n**Note:** The default menu will be created automatically if the app does not set one. It contains standard items such as `File`, `Edit`, `View`, `Window` and `Help`.",
+      "description": "Sets `menu` as the application menu on macOS. On Windows and Linux, the `menu` will be set as each window's top menu.\n\nAlso on Windows and Linux, you can use a `&` in the top-level item name to indicate which letter should get a generated accelerator. For example, using `&File` for the file menu would result in a generated `Alt-F` accelerator that opens the associated menu. The indicated character in the button label then gets an underline, and the `&` character is not displayed on the button label.\n\nIn order to escape the `&` character in an item name, add a proceeding `&`. For example, `&&File` would result in `&File` displayed on the button label.\n\nPassing `null` will suppress the default menu. On Windows and Linux, this has the additional effect of removing the menu bar from the window.\n\n**Note:** The default menu will be created automatically if the app does not set one. It contains standard items such as `File`, `Edit`, `View`, `Window` and `Help`.",
       "parameters": [
         {
           "name": "menu",
@@ -26862,9 +26907,9 @@
       ]
     },
     {
-      "objectID": "api-session#sesloadextensionpath-sessionloadextensionpath",
+      "objectID": "api-session#sesloadextensionpath-options-sessionloadextensionpath-options",
       "name": "loadExtension",
-      "signature": "(path)",
+      "signature": "(path[, options])",
       "description": "resolves when the extension is loaded.\n\nThis method will raise an exception if the extension could not be loaded. If there are warnings when installing the extension (e.g. if the extension requests an API that Electron does not support) then they will be logged to the console.\n\nNote that Electron does not support the full range of Chrome extensions APIs. See Supported Extensions APIs for more details on what is supported.\n\nNote that in previous versions of Electron, extensions that were loaded would be remembered for future runs of the application. This is no longer the case: `loadExtension` must be called on every boot of your app if you want the extension to be loaded.\n\nThis API does not support loading packed (.crx) extensions.\n\n**Note:** This API cannot be called before the `ready` event of the `app` module is emitted.\n\n**Note:** Loading extensions into in-memory (non-persistent) sessions is not supported and will throw an error.",
       "parameters": [
         {
@@ -26874,6 +26919,23 @@
           "collection": false,
           "type": "String",
           "possibleValues": null
+        },
+        {
+          "name": "options",
+          "description": "",
+          "required": false,
+          "collection": false,
+          "type": "Object",
+          "properties": [
+            {
+              "name": "allowFileAccess",
+              "description": "Whether to allow the extension to read local files over `file://` protocol and inject content scripts into `file://` pages. This is required e.g. for loading devtools extensions on `file://` URLs. Defaults to false.",
+              "required": true,
+              "additionalTags": [],
+              "collection": false,
+              "type": "Boolean"
+            }
+          ]
         }
       ],
       "returns": {
@@ -26887,21 +26949,21 @@
         ]
       },
       "additionalTags": [],
-      "urlFragment": "#sesloadextensionpath",
+      "urlFragment": "#sesloadextensionpath-options",
       "apiType": "instanceMethod",
-      "fullSignature": "session.loadExtension(path)",
+      "fullSignature": "session.loadExtension(path[, options])",
       "tldr": "resolves when the extension is loaded.\n\nThis method will raise an exception if the extension could not be loaded.",
-      "slug": "sessionloadextensionpath",
-      "url": "https://electronjs.org/docs/api/session#sesloadextensionpath",
+      "slug": "sessionloadextensionpath-options",
+      "url": "https://electronjs.org/docs/api/session#sesloadextensionpath-options",
       "keyValuePairs": [
         "is:doc",
         "is:api",
         "api:loadExtension",
-        "api:sessionloadextensionpath",
-        "api:session.loadExtension(path)",
+        "api:sessionloadextensionpath-options",
+        "api:session.loadExtension(path[, options])",
         "doc:loadExtension",
-        "doc:sessionloadextensionpath",
-        "doc:session.loadExtension(path)"
+        "doc:sessionloadextensionpath-options",
+        "doc:session.loadExtension(path[, options])"
       ]
     },
     {
@@ -38858,7 +38920,7 @@
       ]
     },
     {
-      "objectID": "api-web-contents#event-remote-require-webcontentsonremote-require",
+      "objectID": "api-web-contents#event-remote-require-deprecated-webcontentsonremote-require",
       "name": "remote-require",
       "description": "Emitted when `remote.require()` is called in the renderer process. Calling `event.preventDefault()` will prevent the module from being returned. Custom value can be returned by setting `event.returnValue`.",
       "parameters": [
@@ -38878,11 +38940,13 @@
           "required": true
         }
       ],
-      "additionalTags": [],
-      "urlFragment": "#event-remote-require",
+      "additionalTags": [
+        "stability_deprecated"
+      ],
+      "urlFragment": "#event-remote-require-deprecated",
       "apiType": "event",
       "fullSignature": "webContents.on('remote-require')",
-      "url": "https://electronjs.org/docs/api/web-contents#event-remote-require",
+      "url": "https://electronjs.org/docs/api/web-contents#event-remote-require-deprecated",
       "slug": "webcontentsonremote-require",
       "tldr": "Emitted when `remote.require()` is called in the renderer process.",
       "keyValuePairs": [
@@ -38897,7 +38961,7 @@
       ]
     },
     {
-      "objectID": "api-web-contents#event-remote-get-global-webcontentsonremote-get-global",
+      "objectID": "api-web-contents#event-remote-get-global-deprecated-webcontentsonremote-get-global",
       "name": "remote-get-global",
       "description": "Emitted when `remote.getGlobal()` is called in the renderer process. Calling `event.preventDefault()` will prevent the global from being returned. Custom value can be returned by setting `event.returnValue`.",
       "parameters": [
@@ -38917,11 +38981,13 @@
           "required": true
         }
       ],
-      "additionalTags": [],
-      "urlFragment": "#event-remote-get-global",
+      "additionalTags": [
+        "stability_deprecated"
+      ],
+      "urlFragment": "#event-remote-get-global-deprecated",
       "apiType": "event",
       "fullSignature": "webContents.on('remote-get-global')",
-      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-global",
+      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-global-deprecated",
       "slug": "webcontentsonremote-get-global",
       "tldr": "Emitted when `remote.getGlobal()` is called in the renderer process.",
       "keyValuePairs": [
@@ -38936,7 +39002,7 @@
       ]
     },
     {
-      "objectID": "api-web-contents#event-remote-get-builtin-webcontentsonremote-get-builtin",
+      "objectID": "api-web-contents#event-remote-get-builtin-deprecated-webcontentsonremote-get-builtin",
       "name": "remote-get-builtin",
       "description": "Emitted when `remote.getBuiltin()` is called in the renderer process. Calling `event.preventDefault()` will prevent the module from being returned. Custom value can be returned by setting `event.returnValue`.",
       "parameters": [
@@ -38956,11 +39022,13 @@
           "required": true
         }
       ],
-      "additionalTags": [],
-      "urlFragment": "#event-remote-get-builtin",
+      "additionalTags": [
+        "stability_deprecated"
+      ],
+      "urlFragment": "#event-remote-get-builtin-deprecated",
       "apiType": "event",
       "fullSignature": "webContents.on('remote-get-builtin')",
-      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-builtin",
+      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-builtin-deprecated",
       "slug": "webcontentsonremote-get-builtin",
       "tldr": "Emitted when `remote.getBuiltin()` is called in the renderer process.",
       "keyValuePairs": [
@@ -38975,7 +39043,7 @@
       ]
     },
     {
-      "objectID": "api-web-contents#event-remote-get-current-window-webcontentsonremote-get-current-window",
+      "objectID": "api-web-contents#event-remote-get-current-window-deprecated-webcontentsonremote-get-current-window",
       "name": "remote-get-current-window",
       "description": "Emitted when `remote.getCurrentWindow()` is called in the renderer process. Calling `event.preventDefault()` will prevent the object from being returned. Custom value can be returned by setting `event.returnValue`.",
       "parameters": [
@@ -38987,11 +39055,13 @@
           "required": true
         }
       ],
-      "additionalTags": [],
-      "urlFragment": "#event-remote-get-current-window",
+      "additionalTags": [
+        "stability_deprecated"
+      ],
+      "urlFragment": "#event-remote-get-current-window-deprecated",
       "apiType": "event",
       "fullSignature": "webContents.on('remote-get-current-window')",
-      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-current-window",
+      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-current-window-deprecated",
       "slug": "webcontentsonremote-get-current-window",
       "tldr": "Emitted when `remote.getCurrentWindow()` is called in the renderer process.",
       "keyValuePairs": [
@@ -39006,7 +39076,7 @@
       ]
     },
     {
-      "objectID": "api-web-contents#event-remote-get-current-web-contents-webcontentsonremote-get-current-web-contents",
+      "objectID": "api-web-contents#event-remote-get-current-web-contents-deprecated-webcontentsonremote-get-current-web-contents",
       "name": "remote-get-current-web-contents",
       "description": "Emitted when `remote.getCurrentWebContents()` is called in the renderer process. Calling `event.preventDefault()` will prevent the object from being returned. Custom value can be returned by setting `event.returnValue`.",
       "parameters": [
@@ -39018,11 +39088,13 @@
           "required": true
         }
       ],
-      "additionalTags": [],
-      "urlFragment": "#event-remote-get-current-web-contents",
+      "additionalTags": [
+        "stability_deprecated"
+      ],
+      "urlFragment": "#event-remote-get-current-web-contents-deprecated",
       "apiType": "event",
       "fullSignature": "webContents.on('remote-get-current-web-contents')",
-      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-current-web-contents",
+      "url": "https://electronjs.org/docs/api/web-contents#event-remote-get-current-web-contents-deprecated",
       "slug": "webcontentsonremote-get-current-web-contents",
       "tldr": "Emitted when `remote.getCurrentWebContents()` is called in the renderer process.",
       "keyValuePairs": [
@@ -41585,7 +41657,7 @@
     {
       "objectID": "api-webview-tag#enableremotemodule-webviewtagenableremotemodule",
       "name": "enableremotemodule",
-      "description": "A `Boolean`. When this attribute is `false` the guest page in `webview` will not have access to the `remote` module. The remote module is available by default.",
+      "description": "A `Boolean`. When this attribute is `false` the guest page in `webview` will not have access to the `remote` module. The remote module is unavailable by default.",
       "required": true,
       "additionalTags": [],
       "urlFragment": "#enableremotemodule",
