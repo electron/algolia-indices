@@ -22,7 +22,7 @@
     "require-directory": "^2.1.1"
   },
   "devDependencies": {
-    "algoliasearch": "^3.35.1",
+    "algoliasearch": "^4.8.5",
     "budo": "^11.2.0",
     "cheerio": "^1.0.0-rc.2",
     "count-array-values": "^1.2.1",
