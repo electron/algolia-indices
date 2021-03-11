@@ -8979,7 +8979,7 @@
       "objectID": "api-browser-window#wincapturepagerect-browserwindowcapturepagerect",
       "name": "capturePage",
       "signature": "([rect])",
-      "description": "Resolves with a NativeImage\n\nCaptures a snapshot of the page within `rect`. Omitting `rect` will capture the whole visible page.",
+      "description": "Resolves with a NativeImage\n\nCaptures a snapshot of the page within `rect`. Omitting `rect` will capture the whole visible page. If the page is not visible, `rect` may be empty.",
       "parameters": [
         {
           "name": "rect",
