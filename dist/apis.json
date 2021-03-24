@@ -8668,7 +8668,22 @@
           "required": true,
           "collection": false,
           "type": "Function",
-          "parameters": [],
+          "parameters": [
+            {
+              "name": "wParam",
+              "description": "The `wParam` provided to the WndProc",
+              "required": true,
+              "collection": false,
+              "type": "any"
+            },
+            {
+              "name": "lParam",
+              "description": "The `lParam` provided to the WndProc",
+              "required": true,
+              "collection": false,
+              "type": "any"
+            }
+          ],
           "returns": null
         }
       ],
@@ -14309,7 +14324,58 @@
       "objectID": "api-cookies#event-changed-cookiesonchanged",
       "name": "changed",
       "description": "Emitted when a cookie is changed because it was added, edited, removed, or expired.",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "event",
+          "description": "",
+          "collection": false,
+          "type": "Event",
+          "required": true
+        },
+        {
+          "name": "cookie",
+          "description": "The cookie that was changed.",
+          "collection": false,
+          "type": "Cookie",
+          "required": true
+        },
+        {
+          "name": "cause",
+          "description": "The cause of the change with one of the following values:",
+          "collection": false,
+          "type": "String",
+          "possibleValues": [
+            {
+              "value": "explicit",
+              "description": "The cookie was changed directly by a consumer's action."
+            },
+            {
+              "value": "overwrite",
+              "description": "The cookie was automatically removed due to an insert operation that overwrote it."
+            },
+            {
+              "value": "expired",
+              "description": "The cookie was automatically removed as it expired."
+            },
+            {
+              "value": "evicted",
+              "description": "The cookie was automatically evicted during garbage collection."
+            },
+            {
+              "value": "expired-overwrite",
+              "description": "The cookie was overwritten with an already-expired expiration date."
+            }
+          ],
+          "required": true
+        },
+        {
+          "name": "removed",
+          "description": "`true` if the cookie was removed, `false` otherwise.",
+          "collection": false,
+          "type": "Boolean",
+          "required": true
+        }
+      ],
       "additionalTags": [],
       "urlFragment": "#event-changed",
       "apiType": "event",
