@@ -27,7 +27,7 @@
     "cheerio": "^1.0.0-rc.2",
     "count-array-values": "^1.2.1",
     "dotenv-safe": "^8.2.0",
-    "electron-apps": "^1.8651.0",
+    "electron-apps": "^1.8653.0",
     "electron-i18n": "^1.2947.0",
     "electron-npm-packages": "^4.1.2",
     "electron-releases": "^3.651.0",
